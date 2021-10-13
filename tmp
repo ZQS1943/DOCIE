@@ -1,0 +1,6 @@
+longest context:492
+{'input_token_ids_1': tensor([[    0,    20,  5155,  ...,     1,     1,     1],
+        [    0,    20, 20824,  ...,     1,     1,     1]]), 'input_attn_mask_1': tensor([[ True,  True,  True,  ..., False, False, False],
+        [ True,  True,  True,  ..., False, False, False]]), 'input_token_ids_2': tensor([[    0,    20,  5155,  ...,     1,     1,     1],
+        [    0,    20, 20824,  ...,     1,     1,     1]]), 'input_attn_mask_2': tensor([[ True,  True,  True,  ..., False, False, False],
+        [ True,  True,  True,  ..., False, False, False]]), 'doc_key': ['suicide_ied_1', 'JC002YBW2']}
