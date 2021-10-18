@@ -43,8 +43,8 @@ def my_collate_finetune(batch):
     input_token_ids_1 = torch.stack([torch.LongTensor(ex['input_token_ids_1']) for ex in batch]) 
     input_attn_mask_1 = torch.stack([torch.BoolTensor(ex['input_attn_mask_1']) for ex in batch])
     argument_mask_1 = torch.stack([torch.BoolTensor(ex['argument_mask_1']) for ex in batch])
-    input_token_ids_2 = torch.stack([torch.LongTensor(ex['input_token_ids_1']) for ex in batch]) 
-    input_attn_mask_2 = torch.stack([torch.BoolTensor(ex['input_attn_mask_1']) for ex in batch])
+    input_token_ids_2 = torch.stack([torch.LongTensor(ex['input_token_ids_2']) for ex in batch]) 
+    input_attn_mask_2 = torch.stack([torch.BoolTensor(ex['input_attn_mask_2']) for ex in batch])
     argument_mask_2 = torch.stack([torch.BoolTensor(ex['argument_mask_2']) for ex in batch])
 
     return {
@@ -54,6 +54,49 @@ def my_collate_finetune(batch):
         'input_token_ids_2': input_token_ids_2,
         'input_attn_mask_2': input_attn_mask_2,
         'argument_mask_2': argument_mask_2,
+        'doc_key': doc_keys,
+    }
+
+def my_collate_multitask(batch):
+    '''
+    'event_idx',
+    'input_token_ids':input_tokens['input_ids'],
+    'input_attn_mask': input_tokens['attention_mask'],
+    'tgt_token_ids': tgt_tokens['input_ids'],
+    'tgt_attn_mask': tgt_tokens['attention_mask'],
+                            'doc_key': ex['doc_key'],
+                            'input_token_ids_1',
+                            'input_attn_mask_1',
+                            'argument_mask_1',
+                            'input_token_ids_2',
+                            'input_attn_mask_2',
+                            'argument_mask_2',
+    ''
+    '''
+    doc_keys = [ex['doc_key'] for ex in batch]
+    input_token_ids = torch.stack([torch.LongTensor(ex['input_token_ids']) for ex in batch]) 
+    input_attn_mask = torch.stack([torch.BoolTensor(ex['input_attn_mask']) for ex in batch])
+    tgt_token_ids = torch.stack([torch.LongTensor(ex['tgt_token_ids']) for ex in batch]) 
+    tgt_attn_mask = torch.stack([torch.BoolTensor(ex['tgt_attn_mask']) for ex in batch])
+
+    input_token_ids_1 = torch.stack([torch.LongTensor(ex['input_token_ids_1']) for ex in batch]) 
+    input_attn_mask_1 = torch.stack([torch.BoolTensor(ex['input_attn_mask_1']) for ex in batch])
+    argument_mask_1 = torch.stack([torch.BoolTensor(ex['argument_mask_1']) for ex in batch])
+    input_token_ids_2 = torch.stack([torch.LongTensor(ex['input_token_ids_2']) for ex in batch]) 
+    input_attn_mask_2 = torch.stack([torch.BoolTensor(ex['input_attn_mask_2']) for ex in batch])
+    argument_mask_2 = torch.stack([torch.BoolTensor(ex['argument_mask_2']) for ex in batch])
+
+    return {
+        'input_token_ids_1': input_token_ids_1,
+        'input_attn_mask_1': input_attn_mask_1,
+        'argument_mask_1': argument_mask_1,
+        'input_token_ids_2': input_token_ids_2,
+        'input_attn_mask_2': input_attn_mask_2,
+        'argument_mask_2': argument_mask_2,
+        'input_token_ids': input_token_ids,
+        'input_attn_mask': input_attn_mask,
+        'tgt_token_ids': tgt_token_ids,
+        'tgt_attn_mask': tgt_attn_mask,
         'doc_key': doc_keys,
     }
 

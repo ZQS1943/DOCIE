@@ -145,7 +145,12 @@ class KAIROSDataFinetuneModule(pl.LightningDataModule):
 
         # print("_"*40)
         # print(context_words_token)
+        tmp = "".join(context_words_token)
+        print(tmp.replace("Ġ"," "))
         # print(added_context_words)
+        tmp = "".join(added_context_words)
+        print(tmp.replace("Ġ"," "))
+        assert 1==0
         # print(argument_mask_token)
         # print(added_argument_mask)
         assert sum(argument_mask_token) == sum(added_argument_mask)

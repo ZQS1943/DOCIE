@@ -22,7 +22,7 @@ class GenIEModel(pl.LightningModule):
 
         self.config=BartConfig.from_pretrained('facebook/bart-large')
         self.tokenizer = BartTokenizer.from_pretrained('facebook/bart-large')
-        self.tokenizer.add_tokens([' <arg>',' <tgr>'])
+        self.tokenizer.add_tokens([' <arg>',' <tgr>',' <tag>'])
 
         
         if self.hparams.model=='gen':
@@ -58,9 +58,6 @@ class GenIEModel(pl.LightningModule):
                     "decoder_attention_mask": batch["tgt_attn_mask"],   
                     "task": 0 
                 }
-        # print(inputs)
-        # print(inputs["input_ids"].shape)
-
         outputs = self.model(**inputs)
         loss = outputs[0]
         loss = torch.mean(loss)

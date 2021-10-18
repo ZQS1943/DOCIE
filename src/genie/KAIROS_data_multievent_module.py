@@ -18,7 +18,7 @@ MAX_CONTEXT_LENGTH=400 # measured in words
 MAX_LENGTH=512
 MAX_TGT_LENGTH=70
 
-class KAIROSDataModule(pl.LightningDataModule):
+class KAIROSDataMultiEventModule(pl.LightningDataModule):
     '''
     Dataset processing for KAIROS. Involves chunking for long documents.
     '''
@@ -26,9 +26,9 @@ class KAIROSDataModule(pl.LightningDataModule):
         super().__init__() 
         self.hparams.update(vars(args))
         self.tokenizer = BartTokenizer.from_pretrained('facebook/bart-large')
-        self.tokenizer.add_tokens([' <arg>',' <tgr>'])
-    
+        self.tokenizer.add_tokens([' <arg>',' <tgr>', ' <tag>'])
 
+    
     def create_gold_gen(self, ex, ontology_dict,mark_trigger=True, index=0, ent2info=None, use_info=False):
         '''
         If there are multiple events per example, use index parameter.
@@ -164,10 +164,12 @@ class KAIROSDataModule(pl.LightningDataModule):
 
     
 
-
             
     def prepare_data(self):
-        data_dir = 'preprocessed_{}'.format(self.hparams.dataset)
+        cnt = 0
+        two_cnt = 0
+        one_cnt = 0
+        data_dir = 'preprocessed_multievent_{}'.format(self.hparams.dataset)
         if not os.path.exists(data_dir):
             os.makedirs(data_dir)
             ontology_dict = load_ontology(self.hparams.dataset) 
@@ -189,7 +191,22 @@ class KAIROSDataModule(pl.LightningDataModule):
                         for cidx, cluster in enumerate(corefs['clusters']):
                             for eid in cluster:
                                 ent2info[eid] = corefs['informative_mentions'][cidx]
-                            
+                        
+                        # mapping from entity id to entity info
+                        id2ent = {}
+                        for entity in ex["entity_mentions"]:
+                            id2ent[entity["id"]] = entity
+
+                        evnt_range = {}
+                        for i in range(len(ex['event_mentions'])):
+                            if len(ex['event_mentions'][i]['arguments']) > 0:
+                                args = [id2ent[x['entity_id']] for x in ex['event_mentions'][i]['arguments']]
+                                arg_start = [x['start'] for x in args]
+                                arg_end = [x['end'] for x in args]
+                                start = min(arg_start)
+                                end = min(arg_start)
+                                evnt_range[i] = {'start':start,'end':end}
+                        
 
                         for i in range(len(ex['event_mentions'])):
                             if split=='train' and len(ex['event_mentions'][i]['arguments']) ==0:
@@ -199,10 +216,18 @@ class KAIROSDataModule(pl.LightningDataModule):
 
                             if evt_type not in ontology_dict: # should be a rare event type 
                                 continue 
+
                             
                             input_template, output_template, context= self.create_gold_gen(ex, ontology_dict, self.hparams.mark_trigger, 
                                 index=i, ent2info=ent2info, use_info=self.hparams.use_info)
-                            
+                            if i in evnt_range:
+                                evnt_range[i] = {
+                                    'start':evnt_range[i]['start'],
+                                    'end':evnt_range[i]['end'],
+                                    'input_template':input_template,
+                                    'output_template':output_template,
+                                    'context':context
+                                }
                             
                             max_tokens = max(len(context) + len(input_template) +2, max_tokens)
                                 # print(len(context) + len(input_template) +2 ) 
@@ -230,13 +255,86 @@ class KAIROSDataModule(pl.LightningDataModule):
                                 'tgt_attn_mask': tgt_tokens['attention_mask'],
                             }
                             writer.write(json.dumps(processed_ex) + '\n')
+                            one_cnt += 1
+
+                        evnt_ids = evnt_range.keys()
+                        evnt_ids = sorted(evnt_ids,key=lambda x:evnt_range[x]["start"])
+                        for idx in range(len(evnt_ids) - 1):
+                            id1 = evnt_ids[idx]
+                            id2 = evnt_ids[idx+1]
+                            if evnt_range[id1]['start'] == evnt_range[id2]['start'] or evnt_range[id1]['end'] >= evnt_range[id2]['start']:
+                                trg1_start = evnt_range[id1]['context'].index(' <tgr>')
+                                trg1_end = evnt_range[id1]['context'].index(' <tgr>',trg1_start + 1)
+                                trg2_start = evnt_range[id2]['context'].index(' <tgr>')
+                                trg2_end = evnt_range[id2]['context'].index(' <tgr>',trg2_start + 1)
+                                if trg1_start == trg2_start:
+                                    continue
+                                if trg2_start < trg1_start:
+                                    context = evnt_range[id2]['context'][:trg2_end+1] + evnt_range[id1]['context'][trg2_end - 1:]
+                                    input_template = evnt_range[id2]['input_template'] + [";"] +  evnt_range[id1]['input_template']
+                                    output_template = evnt_range[id2]['output_template'] + [";"] +  evnt_range[id1]['output_template']
+                                else:
+                                    context = evnt_range[id1]['context'][:trg1_end+1] + evnt_range[id2]['context'][trg1_end - 1:]
+                                    input_template = evnt_range[id1]['input_template'] + [";"] +  evnt_range[id2]['input_template']
+                                    output_template = evnt_range[id1]['output_template'] + [";"] +  evnt_range[id2]['output_template']
+
+                                if len(input_template)+2+2+len(context) <= MAX_LENGTH:
+                                    max_tokens = max(len(context) + len(input_template) +2, max_tokens)
+                                    max_tgt = max(len(output_template) +1 , max_tgt)
+                                    assert(len(output_template) < MAX_TGT_LENGTH)
+                                    # tmp = input_template + [" <s>"]+context
+                                    # tmp = "".join(tmp)
+                                    # print(tmp.replace("Ġ"," "))
+                                    # tmp = "".join(output_template)
+                                    # print(tmp.replace("Ġ"," "))
+                                    # assert 1==0
+                                    input_tokens = self.tokenizer.encode_plus(input_template, context, 
+                                            add_special_tokens=True,
+                                            add_prefix_space=True,
+                                            max_length=MAX_LENGTH,
+                                            truncation='only_second',
+                                            padding='max_length')
+                                    tgt_tokens = self.tokenizer.encode_plus(output_template, 
+                                    add_special_tokens=True,
+                                    add_prefix_space=True, 
+                                    max_length=MAX_TGT_LENGTH,
+                                    truncation=True,
+                                    padding='max_length')
+
+                                    processed_ex = {
+                                        'event_idx': i, 
+                                        'doc_key': ex['doc_id'], 
+                                        'input_token_ids':input_tokens['input_ids'],
+                                        'input_attn_mask': input_tokens['attention_mask'],
+                                        'tgt_token_ids': tgt_tokens['input_ids'],
+                                        'tgt_attn_mask': tgt_tokens['attention_mask'],
+                                    }
+                                    if split == "test":
+                                        writer.write(json.dumps(processed_ex) + '\n')
+                                        two_cnt += 1
+                                    else:
+                                        writer.write(json.dumps(processed_ex) + '\n')
+                                        two_cnt += 1
+                                        writer.write(json.dumps(processed_ex) + '\n')
+                                        two_cnt += 1
+                                        writer.write(json.dumps(processed_ex) + '\n')
+                                        two_cnt += 1
+                                        writer.write(json.dumps(processed_ex) + '\n')
+                                        two_cnt += 1
+                                        writer.write(json.dumps(processed_ex) + '\n')
+                                        two_cnt += 1
+                                else:
+                                    cnt += 1
+                       
+
             
 
             print('longest context:{}'.format(max_tokens))
             print('longest target {}'.format(max_tgt))
+            print(cnt,one_cnt,two_cnt)
     
     def train_dataloader(self):
-        dataset = IEDataset('preprocessed_{}/train.jsonl'.format(self.hparams.dataset))
+        dataset = IEDataset('preprocessed_multievent_{}/train.jsonl'.format(self.hparams.dataset))
         
         dataloader = DataLoader(dataset, 
             pin_memory=True, num_workers=2, 
@@ -247,7 +345,7 @@ class KAIROSDataModule(pl.LightningDataModule):
 
     
     def val_dataloader(self):
-        dataset = IEDataset('preprocessed_{}/val.jsonl'.format(self.hparams.dataset))
+        dataset = IEDataset('preprocessed_multievent_{}/val.jsonl'.format(self.hparams.dataset))
         
         dataloader = DataLoader(dataset, pin_memory=True, num_workers=2, 
             collate_fn=my_collate,
@@ -255,7 +353,7 @@ class KAIROSDataModule(pl.LightningDataModule):
         return dataloader
 
     def test_dataloader(self):
-        dataset = IEDataset('preprocessed_{}/test.jsonl'.format(self.hparams.dataset))
+        dataset = IEDataset('preprocessed_multievent_{}/test.jsonl'.format(self.hparams.dataset))
         
         dataloader = DataLoader(dataset, pin_memory=True, num_workers=2, 
             collate_fn=my_collate, 
@@ -277,7 +375,7 @@ if __name__ == '__main__':
     parser.add_argument('--mark-trigger', action='store_true', default=True)
     args = parser.parse_args() 
 
-    dm = KAIROSDataModule(args=args)
+    dm = KAIROSDataMultiEventModule(args=args)
     dm.prepare_data() 
 
     # training dataloader 
