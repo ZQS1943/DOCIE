@@ -92,7 +92,8 @@ def load_ontology(dataset):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser() 
-    parser.add_argument('--result-file',type=str, default='checkpoints/tmp-pred/predictions.jsonl')
+    parser.add_argument('--result-file',type=str, default='checkpoints/gen-KAIROS-m-s-pred/predictions.jsonl')
+    parser.add_argument('--result-file-better',type=str, default='chechpoints/gen-KAIROS-m-pred/predictions.jsonl')
     parser.add_argument('--test-file', type=str, default='data/wikievents/test.jsonl')
     parser.add_argument('--gold', action='store_true')
     args = parser.parse_args() 
@@ -102,6 +103,7 @@ if __name__ == "__main__":
     render_dicts = [] 
 
     pred_lines = open(args.result_file, 'r').read().splitlines()
+    pred_lines_better = open(args.result_file_better, 'r').read().splitlines()
     ptr_pred = 0
     with open(args.test_file,'r') as f:
         for line in f:
@@ -126,17 +128,21 @@ if __name__ == "__main__":
 
             
             for eidx, e in enumerate(doc['event_mentions']):
+                evt_type = e['event_type']
+                if evt_type not in ontology_dict:
+                    continue
+                label = 'E{}-{}'.format(eidx, e['event_type']) 
                 predicted = json.loads(pred_lines[ptr_pred])
+                predicted_better = json.loads(pred_lines_better[ptr_pred])
                 ptr_pred += 1
                 print(ptr_pred,eidx, doc["doc_id"], predicted["doc_key"], len(doc['event_mentions']))
                 print(predicted)
-                assert doc["doc_id"] == predicted["doc_key"]
+                print(predicted_better)
+                assert doc["doc_id"] == predicted["doc_key"] and doc["doc_id"] == predicted_better["doc_key"]
                 filled_template = predicted['predicted']
-                evt_type = e['event_type']
-                if evt_type not in ontology_dict:
-                    ptr_pred -= 1
-                    continue
-                label = 'E{}-{}'.format(eidx, e['event_type']) 
+                filled_template_better = predicted_better['predicted']
+
+                
                 trigger_start= e['trigger']['start']
                 trigger_end = e['trigger']['end'] -1 
                 trigger_tup = [trigger_start, trigger_end, label]
@@ -163,6 +169,7 @@ if __name__ == "__main__":
                 template = ontology_dict[evt_type]['template']
                 # extract argument text 
                 predicted_args = extract_args_from_template(filled_template,template, ontology_dict, evt_type)
+                predicted_args_better = extract_args_from_template(filled_template_better,template, ontology_dict, evt_type)
                 # get trigger 
                 # extract argument span
                 for argname in predicted_args:

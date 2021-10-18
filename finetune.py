@@ -22,8 +22,8 @@ from src.genie.finetune_model import GenIEFinetuneModel
 
 logger = logging.getLogger(__name__)
 
-import os
-os.environ["CUDA_VISIBLE_DEVICES"] = "1"
+# import os
+# os.environ["CUDA_VISIBLE_DEVICES"] = "1"
 
 
 def main():
@@ -106,7 +106,7 @@ def main():
     )
     parser.add_argument("--warmup_steps", default=0, type=int, help="Linear warmup over warmup_steps.")
     
-    parser.add_argument("--gpus", default=1, help='-1 means train on all the gpus')
+    parser.add_argument("--gpus", type=str, default=1, help='-1 means train on all the gpus')
     parser.add_argument("--seed", type=int, default=42, help="random seed for initialization")
     parser.add_argument(
         "--fp16",
@@ -177,6 +177,7 @@ def main():
         max_epochs=args.num_train_epochs, 
         gpus=args.gpus, 
         # checkpoint_callback=checkpoint_callback, 
+        weights_save_path=args.ckpt_dir,
         accumulate_grad_batches=args.accumulate_grad_batches,
         gradient_clip_val=args.gradient_clip_val, 
         num_sanity_val_steps=0, 

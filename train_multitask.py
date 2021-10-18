@@ -16,9 +16,8 @@ from pytorch_lightning.utilities.seed import seed_everything
 
 from src.genie.data_module import RAMSDataModule
 from src.genie.ACE_data_module import ACEDataModule
-from src.genie.KAIROS_data_module import KAIROSDataModule 
-from src.genie.KAIROS_data_multievent_module import KAIROSDataMultiEventModule
-from src.genie.model import GenIEModel 
+from src.genie.KAIROS_data_multitask_module import KAIROSDataMultiTaskModule
+from src.genie.multitask_model import GenIEMultiTaskModel 
 
 
 logger = logging.getLogger(__name__)
@@ -86,9 +85,6 @@ def main():
     parser.add_argument(
         "--eval_only", action="store_true",
     )
-    parser.add_argument(
-        "--multievent", action="store_true",
-    )
     parser.add_argument("--learning_rate", default=5e-5, type=float, help="The initial learning rate for Adam.")
     parser.add_argument(
         "--accumulate_grad_batches",
@@ -110,7 +106,7 @@ def main():
     )
     parser.add_argument("--warmup_steps", default=0, type=int, help="Linear warmup over warmup_steps.")
     
-    parser.add_argument("--gpus", type=str, default=1, help='-1 means train on all the gpus')
+    parser.add_argument("--gpus",type=str, default=1, help='-1 means train on all the gpus')
     parser.add_argument("--seed", type=int, default=42, help="random seed for initialization")
     parser.add_argument(
         "--fp16",
@@ -159,16 +155,13 @@ def main():
     lr_logger = LearningRateMonitor() 
     tb_logger = TensorBoardLogger('logs/')
 
-    model = GenIEModel(args)
+    model = GenIEMultiTaskModel(args)
     if args.dataset == 'RAMS':
         dm = RAMSDataModule(args)
     elif args.dataset == 'ACE':
         dm = ACEDataModule(args)
     elif args.dataset == 'KAIROS':
-        if args.multievent:
-            dm = KAIROSDataMultiEventModule(args)
-        else:
-            dm = KAIROSDataModule(args)
+        dm = KAIROSDataMultiTaskModule(args)
 
 
 
@@ -183,12 +176,14 @@ def main():
         min_epochs=args.num_train_epochs,
         max_epochs=args.num_train_epochs, 
         gpus=args.gpus, 
+        checkpoint_callback=True,
         accumulate_grad_batches=args.accumulate_grad_batches,
         gradient_clip_val=args.gradient_clip_val, 
         num_sanity_val_steps=0, 
         val_check_interval=0.5, # use float to check every n epochs 
         precision=16 if args.fp16 else 32,
         callbacks = [lr_logger, checkpoint_callback],
+
     )  
 
     if args.load_ckpt:
