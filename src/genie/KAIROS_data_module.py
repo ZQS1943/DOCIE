@@ -24,9 +24,9 @@ class KAIROSDataModule(pl.LightningDataModule):
     '''
     def __init__(self, args):
         super().__init__() 
-        self.hparams.update(vars(args))
+        self.hparams = args
         self.tokenizer = BartTokenizer.from_pretrained('facebook/bart-large')
-        self.tokenizer.add_tokens([' <arg>',' <tgr>'])
+        self.tokenizer.add_tokens([' <arg>',' <tgr>',' <tag>', '</tag>'])
     
 
     def create_gold_gen(self, ex, ontology_dict,mark_trigger=True, index=0, ent2info=None, use_info=False):
@@ -229,6 +229,7 @@ class KAIROSDataModule(pl.LightningDataModule):
                                 'tgt_token_ids': tgt_tokens['input_ids'],
                                 'tgt_attn_mask': tgt_tokens['attention_mask'],
                             }
+                            
                             writer.write(json.dumps(processed_ex) + '\n')
             
 
@@ -270,7 +271,7 @@ if __name__ == '__main__':
     parser.add_argument('--val-file', type=str, default='data/wikievents/dev.jsonl')
     parser.add_argument('--test-file', type=str, default='data/wikievents/test.jsonl')
     parser.add_argument('--coref-dir', type=str, default='data/wikievents/coref')
-    parser.add_argument('--use_info', action='store_true', default=True, help='use informative mentions instead of the nearest mention.')
+    parser.add_argument('--use_info', action='store_true', default=False, help='use informative mentions instead of the nearest mention.')
     parser.add_argument('--train_batch_size', type=int, default=2)
     parser.add_argument('--eval_batch_size', type=int, default=4)
     parser.add_argument('--dataset', type=str, default='KAIROS')

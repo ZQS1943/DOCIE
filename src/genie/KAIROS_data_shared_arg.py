@@ -12,16 +12,15 @@ from torch.utils.data import DataLoader
 import pytorch_lightning as pl
 from transformers.file_utils import torch_required 
 
-from .data import IEDataset, my_collate_event_aware
-from .utils import load_ontology, check_pronoun, clean_mention
+from data import IEDataset, my_collate_event_aware
+from utils import load_ontology, check_pronoun, clean_mention
 
 MAX_CONTEXT_LENGTH=350 # measured in words
 WORDS_PER_EVENT=10 
 MAX_LENGTH=512
 MAX_TGT_LENGTH=70
-TGR_DIS = 20
 
-class KAIROSDataEventAwareModule(pl.LightningDataModule):
+class KAIROSDataSharedArgModule(pl.LightningDataModule):
     '''
     Dataset processing for KAIROS. Involves chunking for long documents.
     '''
@@ -185,24 +184,20 @@ class KAIROSDataEventAwareModule(pl.LightningDataModule):
                     original_mask[i] = 1
 
             # get the tokens need to be tagged (E2)
+            arg_1 = set(x['entity_id'] for x in ex['event_mentions'][index]['arguments'])
             add_tag = defaultdict(list)
             add_tag[(trigger_start, trigger_end)].append('trigger')
             for eid in close_events:
-                arguments = ex["event_mentions"][eid]["arguments"]
+                arguments = ex['event_mentions'][eid]['arguments']
                 event_type = self.simple_type(ex["event_mentions"][eid]['event_type'])
                 trigger = ex["event_mentions"][eid]["trigger"]
                 for arg in arguments:
-                    arg_start = id2entity[arg['entity_id']]['start'] - offset
-                    arg_end = id2entity[arg['entity_id']]['end'] - offset
-                    if arg_start < 0 or arg_end >= len(context):
-                        continue
+                    if arg['entity_id'] in arg_1:
+                        arg_start = id2entity[arg['entity_id']]['start'] - offset
+                        arg_end = id2entity[arg['entity_id']]['end'] - offset
+                        if arg_start < 0 or arg_end >= len(context):
+                            continue
                     add_tag[(arg_start,arg_end)].append((event_type, arg["role"]))
-            
-                arg_start = trigger['start'] - offset
-                arg_end = trigger['end'] - offset
-                if arg_start < 0 or arg_end >= len(context):
-                    continue
-                add_tag[(arg_start,arg_end)].append((event_type, 'trigger'))
 
             # for start, end in add_tag.keys():
             #     if 'trigger' in add_tag[(start, end)]:
@@ -262,7 +257,7 @@ class KAIROSDataEventAwareModule(pl.LightningDataModule):
 
             
     def prepare_data(self):
-        data_dir = 'preprocessed_event_aware_{}'.format(self.hparams.dataset)
+        data_dir = 'preprocessed_shared_arg_{}'.format(self.hparams.dataset)
         if not os.path.exists(data_dir):
             os.makedirs(data_dir)
             ontology_dict = load_ontology(self.hparams.dataset) 
@@ -284,13 +279,11 @@ class KAIROSDataEventAwareModule(pl.LightningDataModule):
                         for entity in ex["entity_mentions"]:
                             id2entity[entity["id"]] = entity
                         
-                        event_range = {}
+                        event_arg = {}
                         for i in range(len(ex['event_mentions'])):
                             if len(ex['event_mentions'][i]['arguments']) > 0:
-                                start = ex['event_mentions'][i]["trigger"]['start']
-                                end =ex['event_mentions'][i]["trigger"]['end']
-                                event_range[i] = {'start':start,'end':end}
-                        events = event_range.keys()
+                                event_arg[i] = set(x['entity_id'] for x in ex['event_mentions'][i]['arguments'])
+                        events = event_arg.keys()
                         # events = sorted(events, key = lambda x:event_range[x]['start'])
 
 
@@ -302,8 +295,8 @@ class KAIROSDataEventAwareModule(pl.LightningDataModule):
                             if evt_type not in ontology_dict: # should be a rare event type 
                                 continue 
 
-                            close_events = list(filter(lambda x:abs(event_range[x]['start'] - event_range[i]['start']) <= TGR_DIS and x!=i, events)) # events whose triggers are close to the current trigger
-                            
+                            close_events = list(filter(lambda x: len(event_arg[i].intersection(event_arg[x])) and x!=i, events)) # events sharing the same arguments with the current event
+
                             input_template, output_template, context_tag_trigger, context_tag_trigger_mask, context_tag_other_events, context_tag_other_events_mask = self.create_instance(ex, ontology_dict, index=i, close_events=close_events, id2entity=id2entity)
                             
                             max_tokens = max(len(context_tag_trigger) + len(input_template) + 4, max_tokens)
@@ -386,10 +379,10 @@ class KAIROSDataEventAwareModule(pl.LightningDataModule):
 
             print('longest context:{}'.format(max_tokens))
             print('longest target {}'.format(max_tgt))
-            print(cnt)
+            print(f'special event: {cnt}')
     
     def train_dataloader(self):
-        dataset = IEDataset('preprocessed_event_aware_{}/train.jsonl'.format(self.hparams.dataset))
+        dataset = IEDataset('preprocessed_shared_arg_{}/train.jsonl'.format(self.hparams.dataset))
         
         dataloader = DataLoader(dataset, 
             pin_memory=True, num_workers=2, 
@@ -400,7 +393,7 @@ class KAIROSDataEventAwareModule(pl.LightningDataModule):
 
     
     def val_dataloader(self):
-        dataset = IEDataset('preprocessed_event_aware_{}/val.jsonl'.format(self.hparams.dataset))
+        dataset = IEDataset('preprocessed_shared_arg_{}/val.jsonl'.format(self.hparams.dataset))
         
         dataloader = DataLoader(dataset, pin_memory=True, num_workers=2, 
             collate_fn=my_collate_event_aware,
@@ -408,7 +401,7 @@ class KAIROSDataEventAwareModule(pl.LightningDataModule):
         return dataloader
 
     def test_dataloader(self):
-        dataset = IEDataset('preprocessed_event_aware_{}/test.jsonl'.format(self.hparams.dataset))
+        dataset = IEDataset('preprocessed_shared_arg_{}/test.jsonl'.format(self.hparams.dataset))
         
         dataloader = DataLoader(dataset, pin_memory=True, num_workers=2, 
             collate_fn=my_collate_event_aware, 
@@ -430,7 +423,7 @@ if __name__ == '__main__':
     parser.add_argument('--mark-trigger', action='store_true', default=True)
     args = parser.parse_args() 
 
-    dm = KAIROSDataEventAwareModule(args=args)
+    dm = KAIROSDataSharedArgModule(args=args)
     dm.prepare_data() 
 
     # training dataloader 

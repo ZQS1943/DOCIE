@@ -11,10 +11,11 @@ from transformers import AdamW, get_linear_schedule_with_warmup
 
 from .network import BartGen
 from .constrained_gen import BartConstrainedGen
+import torch.nn as nn
 
 logger = logging.getLogger(__name__)
 
-class GenIEModel(pl.LightningModule):
+class GenIEEventAwareModel(pl.LightningModule):
     def __init__(self, args):
         super().__init__() 
         self.hparams.update(vars(args))
@@ -22,18 +23,14 @@ class GenIEModel(pl.LightningModule):
 
         self.config=BartConfig.from_pretrained('facebook/bart-large')
         self.tokenizer = BartTokenizer.from_pretrained('facebook/bart-large')
-        self.tokenizer.add_tokens([' <arg>',' <tgr>',' <tag>', ' </tag>'])
+        self.tokenizer.add_tokens([' <arg>',' <tgr>',' <tag>',' </tag>'])
 
+        assert self.hparams.model=='constrained-gen'
+        self.model = BartConstrainedGen(self.config, self.tokenizer)
+        self.model.resize_token_embeddings() 
+
+        self.loss_1 = nn.MSELoss()
         
-        if self.hparams.model=='gen':
-            self.model = BartGen(self.config, self.tokenizer)
-            self.model.resize_token_embeddings() 
-        elif self.hparams.model == 'constrained-gen':
-            self.model = BartConstrainedGen(self.config, self.tokenizer)
-            self.model.resize_token_embeddings() 
-        else:
-            raise NotImplementedError
-
 
 
     def forward(self, inputs):
@@ -43,13 +40,18 @@ class GenIEModel(pl.LightningModule):
 
     def training_step(self, batch, batch_idx):
         '''
-        processed_ex = {
-                            'doc_key': ex['doc_key'],
-                            'input_tokens_ids':input_tokens['input_ids'],
-                            'input_attn_mask': input_tokens['attention_mask'],
-                            'tgt_token_ids': tgt_tokens['input_ids'],
-                            'tgt_attn_mask': tgt_tokens['attention_mask'],
-                        }
+        {
+        'input_token_ids': input_token_ids,
+        'input_attn_mask': input_attn_mask,
+        'input_mask': input_mask,
+        'compare_token_ids': compare_token_ids,
+        'compare_attn_mask': compare_attn_mask,
+        'compare_mask': compare_mask,
+        'tgt_token_ids': tgt_token_ids,
+        'tgt_attn_mask': tgt_attn_mask,
+        'doc_key': doc_keys,
+        'compare': compare,
+        }
         '''
         inputs = {
                     "input_ids": batch["input_token_ids"],
@@ -59,14 +61,65 @@ class GenIEModel(pl.LightningModule):
                     "task": 0 
                 }
         outputs = self.model(**inputs)
-        loss = outputs[0]
-        loss = torch.mean(loss)
-
+        loss_2 = outputs[0]
+        loss_2 = torch.mean(loss_2)
         log = {
-            'train/loss': loss, 
+            'train/loss': loss_2
         } 
+
+        if sum(batch['compare']):
+            inputs_1 = {
+                        "input_ids": batch["input_token_ids"],
+                        "attention_mask": batch["input_attn_mask"]
+                    }
+            encoder_outputs_1 = self.model.transformer.encoder(**inputs_1)
+            inputs_2 = {
+                        "input_ids": batch["compare_token_ids"],
+                        "attention_mask": batch["compare_attn_mask"]
+                    }
+            # print(inputs_2)
+            encoder_outputs_2 = self.model.transformer.encoder(**inputs_2)
+
+            argument_hidden_state_1 = encoder_outputs_1.last_hidden_state[batch['input_mask']]
+            argument_hidden_state_2 = encoder_outputs_2.last_hidden_state[batch['compare_mask']]
+
+            loss_1 = self.loss_1(argument_hidden_state_1, argument_hidden_state_2)
+
+            def get_magnitude(number):
+                number = float(number)
+                s = str(number)
+                number = s.split('.')
+                if s[0] == '0':
+                    if number[1].startswith('0000'):
+                        return 0.00001
+                    if number[1].startswith('000'):
+                        return 0.0001
+                    if number[1].startswith('00'):
+                        return 0.001
+                    if number[1].startswith('0'):
+                        return 0.01
+                    return 0.1
+                else:
+                    return int('1'+'0'*(len(number[0]) - 1))
+            if self.hparams.lambda_value == -1:
+                loss = loss_2 + get_magnitude(loss_2 / loss_1) * loss_1
+            else:
+                loss = loss_2 + self.hparams.lambda_value * loss_1 
+            if torch.isnan(loss):
+                return None
+            print('loss : ',float(loss_1), float(loss_2), float(loss))
+            log = {
+                'train/loss': loss
+            }   
+            
+            return {
+                'loss':loss,
+                'log':log
+            } 
+        if torch.isnan(loss_2):
+            return None
         return {
-            'loss': loss, 
+            'loss': loss_2, 
             'log': log 
         }
     
@@ -76,25 +129,24 @@ class GenIEModel(pl.LightningModule):
                     "input_ids": batch["input_token_ids"],
                     "attention_mask": batch["input_attn_mask"],
                     "decoder_input_ids": batch['tgt_token_ids'],
-                    "decoder_attention_mask": batch["tgt_attn_mask"],  
-                    "task" :0,   
+                    "decoder_attention_mask": batch["tgt_attn_mask"],   
+                    "task": 0 
                 }
         outputs = self.model(**inputs)
-        loss = outputs[0]
-        loss = torch.mean(loss)
-
-       
+        loss_2 = outputs[0]
+        loss_2 = torch.mean(loss_2)
+        log = {
+            'val/loss': loss_2
+        } 
+        return loss_2
         
-        return loss  
-
-    
     def validation_epoch_end(self, outputs):
         avg_loss = torch.mean(torch.stack(outputs))
         log = {
             'val/loss': avg_loss, 
         } 
         return {
-            'loss': avg_loss, 
+            'val/loss': avg_loss, 
             'log': log 
         }
         
