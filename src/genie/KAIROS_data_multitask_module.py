@@ -481,7 +481,7 @@ class KAIROSDataMultiTaskModule(pl.LightningDataModule):
 
             
     def prepare_data(self):
-        data_dir = 'preprocessed_multitask_{}'.format(self.hparams.dataset)
+        data_dir = self.hparams.data_file
         if not os.path.exists(data_dir):
             os.makedirs(data_dir)
             ontology_dict = load_ontology(self.hparams.dataset) 
@@ -583,7 +583,7 @@ class KAIROSDataMultiTaskModule(pl.LightningDataModule):
             print('longest target {}'.format(max_tgt))
     
     def train_dataloader(self):
-        dataset = IEDataset('preprocessed_multitask_{}/train.jsonl'.format(self.hparams.dataset))
+        dataset = IEDataset(f'{self.hparams.data_file}/train.jsonl')
         
         dataloader = DataLoader(dataset, 
             pin_memory=True, num_workers=2, 
@@ -594,7 +594,7 @@ class KAIROSDataMultiTaskModule(pl.LightningDataModule):
 
     
     def val_dataloader(self):
-        dataset = IEDataset('preprocessed_multitask_{}/val.jsonl'.format(self.hparams.dataset))
+        dataset = IEDataset(f'{self.hparams.data_file}/val.jsonl')
         
         dataloader = DataLoader(dataset, pin_memory=True, num_workers=2, 
             collate_fn=my_collate_multitask,
@@ -602,7 +602,7 @@ class KAIROSDataMultiTaskModule(pl.LightningDataModule):
         return dataloader
 
     def test_dataloader(self):
-        dataset = IEDataset('preprocessed_multitask_{}/test.jsonl'.format(self.hparams.dataset))
+        dataset = IEDataset(f'{self.hparams.data_file}/test.jsonl')
         
         dataloader = DataLoader(dataset, pin_memory=True, num_workers=2, 
             collate_fn=my_collate_multitask, 

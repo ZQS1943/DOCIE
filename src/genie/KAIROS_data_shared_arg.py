@@ -12,8 +12,8 @@ from torch.utils.data import DataLoader
 import pytorch_lightning as pl
 from transformers.file_utils import torch_required 
 
-from data import IEDataset, my_collate_event_aware
-from utils import load_ontology, check_pronoun, clean_mention
+from .data import IEDataset, my_collate_event_aware
+from .utils import load_ontology, check_pronoun, clean_mention
 
 MAX_CONTEXT_LENGTH=350 # measured in words
 WORDS_PER_EVENT=10 
@@ -215,12 +215,15 @@ class KAIROSDataSharedArgModule(pl.LightningDataModule):
             for arg in add_tag:
                 pre_words, pre_words_labels = self.tokenize_with_labels(context[curr:arg[0][0]], original_mask[curr:arg[0][0]])
                 if 'trigger' not in arg[1]:
-                    prefix = self.tokenizer.tokenize(' '.join(f"{x[0]} - {x[1]}" for x in arg[1])+' :', add_prefix_space=True)
+                    # prefix = self.tokenizer.tokenize(' '.join(f"{x[0]} - {x[1]}" for x in arg[1])+' :', add_prefix_space=True)
+                    prefix = self.tokenizer.tokenize(' '.join(f"{arg[1][0][1]}" for x in arg[1]), add_prefix_space=True)
                     prefix_labels = [0]*len(prefix)
                 arg_words, arg_words_labels = self.tokenize_with_labels(context[arg[0][0]:arg[0][1]], original_mask[arg[0][0]:arg[0][1]])
                 if 'trigger' not in arg[1]:
-                    context_tag_other_events += pre_words + [" <tag>", ] + prefix + arg_words + [' </tag>', ]
-                    context_tag_other_events_mask += pre_words_labels + [0] + prefix_labels + arg_words_labels + [0]
+                    context_tag_other_events += pre_words + [" <tag>", ] + prefix + [' </tag>', ]  + arg_words
+                    context_tag_other_events_mask += pre_words_labels + [0] + prefix_labels + [0] + arg_words_labels
+                    # context_tag_other_events += pre_words + [" <tag>", ] + prefix + arg_words + [' </tag>', ]
+                    # context_tag_other_events_mask += pre_words_labels + [0] + prefix_labels + arg_words_labels + [0]
                 else:
                     context_tag_other_events += pre_words + [" <tgr>", ] + arg_words + [' <tgr>', ]
                     context_tag_other_events_mask += pre_words_labels + [0] + arg_words_labels + [0]
@@ -257,15 +260,18 @@ class KAIROSDataSharedArgModule(pl.LightningDataModule):
 
             
     def prepare_data(self):
-        data_dir = 'preprocessed_shared_arg_{}'.format(self.hparams.dataset)
+        data_dir = self.hparams.data_file
         if not os.path.exists(data_dir):
             os.makedirs(data_dir)
             ontology_dict = load_ontology(self.hparams.dataset) 
             max_tokens = 0
             max_tgt =0 
-            cnt = 0
 
             for split,f in [('train',self.hparams.train_file), ('val',self.hparams.val_file), ('test',self.hparams.test_file)]:
+                cnt = 0
+                total_cnt = 0
+                print(split)
+
                 coref_split = 'dev' if split=='val' else split 
                 coref_reader = open(os.path.join(self.hparams.coref_dir, '{}.jsonlines'.format(coref_split)))
                 with open(f,'r') as reader,  open(os.path.join(data_dir,'{}.jsonl'.format(split)), 'w') as writer:
@@ -281,14 +287,14 @@ class KAIROSDataSharedArgModule(pl.LightningDataModule):
                         
                         event_arg = {}
                         for i in range(len(ex['event_mentions'])):
-                            if len(ex['event_mentions'][i]['arguments']) > 0:
-                                event_arg[i] = set(x['entity_id'] for x in ex['event_mentions'][i]['arguments'])
+                            # if len(ex['event_mentions'][i]['arguments']) > 0:
+                            event_arg[i] = set(x['entity_id'] for x in ex['event_mentions'][i]['arguments'])
                         events = event_arg.keys()
                         # events = sorted(events, key = lambda x:event_range[x]['start'])
 
 
                         for i in range(len(ex['event_mentions'])):
-                            if len(ex['event_mentions'][i]['arguments']) ==0:
+                            if split=='train' and len(ex['event_mentions'][i]['arguments']) ==0:
                                 # skip mentions with no arguments 
                                 continue 
                             evt_type = ex['event_mentions'][i]['event_type']
@@ -359,7 +365,6 @@ class KAIROSDataSharedArgModule(pl.LightningDataModule):
                                 processed_ex['compare_attn_mask'] = compare_tokens['attention_mask'] 
                                 processed_ex['compare_mask'] = compare_mask
                                 processed_ex['compare'] = True
-                                cnt += 1
 
                                 # tokens = self.tokenizer.convert_ids_to_tokens(processed_ex["input_token_ids"])
                                 # # input_1 = "".join(tokens)
@@ -369,20 +374,26 @@ class KAIROSDataSharedArgModule(pl.LightningDataModule):
                                 # tokens = self.tokenizer.convert_ids_to_tokens(processed_ex["compare_token_ids"])
                                 # # input_2 = "".join(tokens)
                                 # # print("input_2:", input_2.replace("Ġ"," "))
-                                # print("_"*20)
                                 # for i,_ in enumerate(zip(tokens, processed_ex['compare_mask'])):
                                 #     print(i,_)
                                 # assert 1==0
                                 # print("_"*50)
+                                # if split != 'test':
+                                #     for _ in range(3):
+                                #         writer.write(json.dumps(processed_ex) + '\n')
+                                #         total_cnt += 1
+                                #         cnt += 1
+                                cnt += 1
                             writer.write(json.dumps(processed_ex) + '\n')
-            
+                            total_cnt += 1
+                print(f'total_event: {total_cnt}')
+                print(f'special event: {cnt}')
 
             print('longest context:{}'.format(max_tokens))
             print('longest target {}'.format(max_tgt))
-            print(f'special event: {cnt}')
     
     def train_dataloader(self):
-        dataset = IEDataset('preprocessed_shared_arg_{}/train.jsonl'.format(self.hparams.dataset))
+        dataset = IEDataset(f'{self.hparams.data_file}/train.jsonl')
         
         dataloader = DataLoader(dataset, 
             pin_memory=True, num_workers=2, 
@@ -393,7 +404,7 @@ class KAIROSDataSharedArgModule(pl.LightningDataModule):
 
     
     def val_dataloader(self):
-        dataset = IEDataset('preprocessed_shared_arg_{}/val.jsonl'.format(self.hparams.dataset))
+        dataset = IEDataset(f'{self.hparams.data_file}/val.jsonl')
         
         dataloader = DataLoader(dataset, pin_memory=True, num_workers=2, 
             collate_fn=my_collate_event_aware,
@@ -401,10 +412,10 @@ class KAIROSDataSharedArgModule(pl.LightningDataModule):
         return dataloader
 
     def test_dataloader(self):
-        dataset = IEDataset('preprocessed_shared_arg_{}/test.jsonl'.format(self.hparams.dataset))
+        dataset = IEDataset(f'{self.hparams.data_file}/test.jsonl')
         
         dataloader = DataLoader(dataset, pin_memory=True, num_workers=2, 
-            collate_fn=my_collate_event_aware, 
+            collate_fn=my_collate, 
             batch_size=self.hparams.eval_batch_size, shuffle=False)
 
         return dataloader

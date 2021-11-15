@@ -72,12 +72,12 @@ def extract_args_from_template(ex, template, ontology_dict,):
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
-    parser.add_argument('--gen-file',type=str,default='checkpoints/gen-all-ACE-freq-pred/predictions.jsonl' )
-    parser.add_argument('--test-file', type=str,default='data/ace/zs-freq-10/test.oneie.json')
-    parser.add_argument('--coref-file', type=str)
-    parser.add_argument('--head-only', action='store_true')
-    parser.add_argument('--coref', action='store_true')
-    parser.add_argument('--dataset',type=str, default='ACE', choices=['ACE', 'KAIROS','AIDA'])
+    parser.add_argument('--gen-file',type=str,default='checkpoints/m-shared-arg-1-3e-5-pred/predictions.jsonl' )
+    parser.add_argument('--test-file', type=str,default='data/wikievents/test.jsonl')
+    parser.add_argument('--coref-file', type=str,default='data/wikievents/coref/test.jsonlines')
+    parser.add_argument('--head-only', action='store_true',default=True)
+    parser.add_argument('--coref', action='store_true',default=True)
+    parser.add_argument('--dataset',type=str, default='KAIROS', choices=['ACE', 'KAIROS','AIDA'])
     args = parser.parse_args() 
 
 
@@ -155,7 +155,10 @@ if __name__ == '__main__':
     event_idn_num =0
     event_class_num =0
     cnt = 0
-    for key,ex in tqdm(examples.items()):
+
+    doc_events = defaultdict(list)
+    items = list(examples.items())
+    for key,ex in tqdm(items):
         context_words = ex['tokens']
         doc_id = ex['doc_id']
         doc = None 
@@ -205,10 +208,12 @@ if __name__ == '__main__':
                     
         # get gold spans         
         gold_set = set() 
+        event_arg = {}
         gold_canonical_set = set() # set of canonical mention ids, singleton mentions will not be here 
         for arg in ex['event']['arguments']:
             argname = arg['role']
             entity_id = arg['entity_id']
+            event_arg[entity_id] = {"role":argname,"predict":False}
             span = get_entity_span(ex, entity_id)
             span = (span[0], span[1]-1)
             span = clean_span(ex, span)
@@ -216,7 +221,7 @@ if __name__ == '__main__':
             if args.head_only and span[0]!=span[1]:
                 span = find_head(span[0], span[1], doc=doc) 
             
-            gold_set.add((span[0], span[1], evt_type, argname))
+            gold_set.add((span[0], span[1], evt_type, entity_id, argname))
             if args.coref:
                 if span in coref_mapping[doc_id]:
                     canonical_id = coref_mapping[doc_id][span]
@@ -243,6 +248,8 @@ if __name__ == '__main__':
                 if gold_class:
                     arg_class_num += 1
                     arg_class_num_tmp += 1
+                    for item in gold_class:
+                        event_arg[item[3]]["predict"] = True
             elif args.coref:# check coref matches 
                 arg_start, arg_end, event_type, role = pred_arg
                 span = (arg_start, arg_end)
@@ -271,8 +278,22 @@ if __name__ == '__main__':
             event_idn_num += 1
             event_class_num += 1
             examples[key]["exact_match"] = True
-        
-            
+
+        doc_events[doc_id].append(event_arg)
+
+    
+    pair_arg = []
+    for doc_id in doc_events:
+        events = doc_events[doc_id]
+        for ei in range(len(events) - 1):
+            for ej in range(ei + 1, len(events)):
+                for entity_id in events[ei]:
+                    if entity_id in events[ej]:
+                        pair_arg.append((events[ei][entity_id], events[ej][entity_id]))
+    for item in pair_arg:
+        print(item)
+    pair_arg_inconsistent = [1 if x[0]['predict'] != x[1]['predict'] else 0 for x in pair_arg]
+    print(f'paired args: {len(pair_arg)}, inconsistent args: {sum(pair_arg_inconsistent)}, raito: {sum(pair_arg_inconsistent)/len(pair_arg)}')      
         
     if args.head_only:
         print('Evaluation by matching head words only....')

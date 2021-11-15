@@ -12,16 +12,15 @@ from torch.utils.data import DataLoader
 import pytorch_lightning as pl
 from transformers.file_utils import torch_required 
 
-from .data import IEDataset, my_collate_event_aware
+from .data import IEDataset, my_collate
 from .utils import load_ontology, check_pronoun, clean_mention
 
 MAX_CONTEXT_LENGTH=350 # measured in words
 WORDS_PER_EVENT=10 
 MAX_LENGTH=512
 MAX_TGT_LENGTH=70
-TGR_DIS = 20
 
-class KAIROSDataEventAwareModule(pl.LightningDataModule):
+class KAIROSDataOnlyArgModule(pl.LightningDataModule):
     '''
     Dataset processing for KAIROS. Involves chunking for long documents.
     '''
@@ -185,24 +184,20 @@ class KAIROSDataEventAwareModule(pl.LightningDataModule):
                     original_mask[i] = 1
 
             # get the tokens need to be tagged (E2)
+            arg_1 = set(x['entity_id'] for x in ex['event_mentions'][index]['arguments'])
             add_tag = defaultdict(list)
             add_tag[(trigger_start, trigger_end)].append('trigger')
             for eid in close_events:
-                arguments = ex["event_mentions"][eid]["arguments"]
+                arguments = ex['event_mentions'][eid]['arguments']
                 event_type = self.simple_type(ex["event_mentions"][eid]['event_type'])
                 trigger = ex["event_mentions"][eid]["trigger"]
                 for arg in arguments:
-                    arg_start = id2entity[arg['entity_id']]['start'] - offset
-                    arg_end = id2entity[arg['entity_id']]['end'] - offset
-                    if arg_start < 0 or arg_end >= len(context):
-                        continue
+                    if arg['entity_id'] in arg_1:
+                        arg_start = id2entity[arg['entity_id']]['start'] - offset
+                        arg_end = id2entity[arg['entity_id']]['end'] - offset
+                        if arg_start < 0 or arg_end >= len(context):
+                            continue
                     add_tag[(arg_start,arg_end)].append((event_type, arg["role"]))
-            
-                # arg_start = trigger['start'] - offset
-                # arg_end = trigger['end'] - offset
-                # if arg_start < 0 or arg_end >= len(context):
-                #     continue
-                # add_tag[(arg_start,arg_end)].append((event_type, 'trigger'))
 
             # for start, end in add_tag.keys():
             #     if 'trigger' in add_tag[(start, end)]:
@@ -225,10 +220,12 @@ class KAIROSDataEventAwareModule(pl.LightningDataModule):
                     prefix_labels = [0]*len(prefix)
                 arg_words, arg_words_labels = self.tokenize_with_labels(context[arg[0][0]:arg[0][1]], original_mask[arg[0][0]:arg[0][1]])
                 if 'trigger' not in arg[1]:
-                    context_tag_other_events += pre_words + [" <tag>", ] + prefix + [' </tag>', ]  + arg_words
-                    context_tag_other_events_mask += pre_words_labels + [0] + prefix_labels + [0] + arg_words_labels
                     # context_tag_other_events += pre_words + [" <tag>", ] + prefix + arg_words + [' </tag>', ]
                     # context_tag_other_events_mask += pre_words_labels + [0] + prefix_labels + arg_words_labels + [0]
+                    context_tag_other_events += pre_words + [" <tag>", ] + prefix + [' </tag>', ] + arg_words 
+                    context_tag_other_events_mask += pre_words_labels + [0] + prefix_labels  + [0] + arg_words_labels
+                    # context_tag_other_events += pre_words + arg_words 
+                    # context_tag_other_events_mask += pre_words_labels + arg_words_labels
                 else:
                     context_tag_other_events += pre_words + [" <tgr>", ] + arg_words + [' <tgr>', ]
                     context_tag_other_events_mask += pre_words_labels + [0] + arg_words_labels + [0]
@@ -291,26 +288,24 @@ class KAIROSDataEventAwareModule(pl.LightningDataModule):
                         for entity in ex["entity_mentions"]:
                             id2entity[entity["id"]] = entity
                         
-                        event_range = {}
+                        event_arg = {}
                         for i in range(len(ex['event_mentions'])):
-                            if len(ex['event_mentions'][i]['arguments']) > 0:
-                                start = ex['event_mentions'][i]["trigger"]['start']
-                                end =ex['event_mentions'][i]["trigger"]['end']
-                                event_range[i] = {'start':start,'end':end}
-                        events = event_range.keys()
+                            # if len(ex['event_mentions'][i]['arguments']) > 0:
+                            event_arg[i] = set(x['entity_id'] for x in ex['event_mentions'][i]['arguments'])
+                        events = event_arg.keys()
                         # events = sorted(events, key = lambda x:event_range[x]['start'])
 
 
                         for i in range(len(ex['event_mentions'])):
-                            if len(ex['event_mentions'][i]['arguments']) ==0:
+                            if split=='train' and len(ex['event_mentions'][i]['arguments']) ==0:
                                 # skip mentions with no arguments 
                                 continue 
                             evt_type = ex['event_mentions'][i]['event_type']
                             if evt_type not in ontology_dict: # should be a rare event type 
                                 continue 
 
-                            close_events = list(filter(lambda x:abs(event_range[x]['start'] - event_range[i]['start']) <= TGR_DIS and x!=i, events)) # events whose triggers are close to the current trigger
-                            
+                            close_events = list(filter(lambda x: len(event_arg[i].intersection(event_arg[x])) and x!=i, events)) # events sharing the same arguments with the current event
+
                             input_template, output_template, context_tag_trigger, context_tag_trigger_mask, context_tag_other_events, context_tag_other_events_mask = self.create_instance(ex, ontology_dict, index=i, close_events=close_events, id2entity=id2entity)
                             
                             max_tokens = max(len(context_tag_trigger) + len(input_template) + 4, max_tokens)
@@ -343,12 +338,6 @@ class KAIROSDataEventAwareModule(pl.LightningDataModule):
                                 'input_attn_mask': input_tokens['attention_mask'],
                                 'tgt_token_ids': tgt_tokens['input_ids'],
                                 'tgt_attn_mask': tgt_tokens['attention_mask'],
-
-                                'compare': False,
-                                'input_mask': [0]*MAX_LENGTH,
-                                'compare_token_ids': [0]*MAX_LENGTH,
-                                'compare_attn_mask': [0]*MAX_LENGTH,
-                                'compare_mask': [0]*MAX_LENGTH
                             }
 
                             if len(close_events):
@@ -368,48 +357,41 @@ class KAIROSDataEventAwareModule(pl.LightningDataModule):
                                 assert len(input_mask) == len(input_tokens['input_ids'])
 
                             
-                                processed_ex['input_mask'] = input_mask
-                                processed_ex['compare_token_ids'] = compare_tokens['input_ids']
-                                processed_ex['compare_attn_mask'] = compare_tokens['attention_mask'] 
-                                processed_ex['compare_mask'] = compare_mask
-                                processed_ex['compare'] = True
+                                processed_ex['input_token_ids'] = compare_tokens['input_ids']
+                                processed_ex['input_attn_mask'] = compare_tokens['attention_mask'] 
+
+                                if split != 'test':
+                                    for _ in range(3):
+                                        writer.write(json.dumps(processed_ex) + '\n')
+                                        total_cnt += 1
+                                        cnt += 1
                                 cnt += 1
 
-                                # if split != 'test':
-                                #     for _ in range(3):
-                                #         writer.write(json.dumps(processed_ex) + '\n')
-                                #         total_cnt += 1
-                                #         cnt += 1
-                                # cnt += 1
 
                                 # tokens = self.tokenizer.convert_ids_to_tokens(processed_ex["input_token_ids"])
-                                # # input_1 = "".join(tokens)
-                                # # print("input_1:", input_1.replace("Ġ"," "))
-                                # for i,_ in enumerate(zip(tokens, processed_ex['input_mask'])):
+                                # input_1 = "".join(tokens)
+                                # print("input_1:", input_1.replace("Ġ"," "))
+                                # for i,_ in enumerate(tokens):
                                 #     print(i,_)
-                                # tokens = self.tokenizer.convert_ids_to_tokens(processed_ex["compare_token_ids"])
-                                # # # input_2 = "".join(tokens)
-                                # # # print("input_2:", input_2.replace("Ġ"," "))
-                                # # print("_"*20)
-                                # for i,_ in enumerate(zip(tokens, processed_ex['compare_mask'])):
-                                #     print(i,_)
-                                # if cnt == 5:
-                                #     assert 1==0
-                                # print("_"*50)
+                            # tokens = ' '.join(self.tokenizer.convert_ids_to_tokens(processed_ex["input_token_ids"]))
+                            # tokens = tokens.replace(' Ġ',' ')
+                            # print(tokens)
                             writer.write(json.dumps(processed_ex) + '\n')
                             total_cnt += 1
+                        
                 print(f'total_event: {total_cnt}')
                 print(f'special event: {cnt}')
 
             print('longest context:{}'.format(max_tokens))
             print('longest target {}'.format(max_tgt))
+            
     
     def train_dataloader(self):
         dataset = IEDataset(f'{self.hparams.data_file}/train.jsonl')
         
         dataloader = DataLoader(dataset, 
             pin_memory=True, num_workers=2, 
-            collate_fn=my_collate_event_aware,
+            collate_fn=my_collate,
             batch_size=self.hparams.train_batch_size, 
             shuffle=True)
         return dataloader 
@@ -419,7 +401,7 @@ class KAIROSDataEventAwareModule(pl.LightningDataModule):
         dataset = IEDataset(f'{self.hparams.data_file}/val.jsonl')
         
         dataloader = DataLoader(dataset, pin_memory=True, num_workers=2, 
-            collate_fn=my_collate_event_aware,
+            collate_fn=my_collate,
             batch_size=self.hparams.eval_batch_size, shuffle=False)
         return dataloader
 
@@ -427,7 +409,7 @@ class KAIROSDataEventAwareModule(pl.LightningDataModule):
         dataset = IEDataset(f'{self.hparams.data_file}/test.jsonl')
         
         dataloader = DataLoader(dataset, pin_memory=True, num_workers=2, 
-            collate_fn=my_collate_event_aware, 
+            collate_fn=my_collate, 
             batch_size=self.hparams.eval_batch_size, shuffle=False)
 
         return dataloader
@@ -444,9 +426,10 @@ if __name__ == '__main__':
     parser.add_argument('--eval_batch_size', type=int, default=4)
     parser.add_argument('--dataset', type=str, default='KAIROS')
     parser.add_argument('--mark-trigger', action='store_true', default=True)
+    parser.add_argument('--data_file', type=str,default="copy_move")
     args = parser.parse_args() 
 
-    dm = KAIROSDataEventAwareModule(args=args)
+    dm = KAIROSDataOnlyArgModule(args=args)
     dm.prepare_data() 
 
     # training dataloader 

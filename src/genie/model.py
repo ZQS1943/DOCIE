@@ -58,7 +58,7 @@ class GenIEModel(pl.LightningModule):
                     "decoder_attention_mask": batch["tgt_attn_mask"],   
                     "task": 0 
                 }
-        outputs = self.model(**inputs)
+        outputs,_ = self.model(**inputs)
         loss = outputs[0]
         loss = torch.mean(loss)
 
@@ -79,7 +79,7 @@ class GenIEModel(pl.LightningModule):
                     "decoder_attention_mask": batch["tgt_attn_mask"],  
                     "task" :0,   
                 }
-        outputs = self.model(**inputs)
+        outputs,_ = self.model(**inputs)
         loss = outputs[0]
         loss = torch.mean(loss)
 

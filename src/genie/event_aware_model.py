@@ -60,7 +60,7 @@ class GenIEEventAwareModel(pl.LightningModule):
                     "decoder_attention_mask": batch["tgt_attn_mask"],   
                     "task": 0 
                 }
-        outputs = self.model(**inputs)
+        outputs,encoder_last_hidden_state = self.model(**inputs)
         loss_2 = outputs[0]
         loss_2 = torch.mean(loss_2)
         log = {
@@ -68,20 +68,46 @@ class GenIEEventAwareModel(pl.LightningModule):
         } 
 
         if sum(batch['compare']):
-            inputs_1 = {
-                        "input_ids": batch["input_token_ids"],
-                        "attention_mask": batch["input_attn_mask"]
-                    }
-            encoder_outputs_1 = self.model.transformer.encoder(**inputs_1)
-            inputs_2 = {
-                        "input_ids": batch["compare_token_ids"],
-                        "attention_mask": batch["compare_attn_mask"]
-                    }
-            # print(inputs_2)
-            encoder_outputs_2 = self.model.transformer.encoder(**inputs_2)
+            # compare_token_ids = batch["compare_token_ids"][batch['compare']]
+            # compare_attn_mask = batch["compare_attn_mask"][batch['compare']]
+            decoder_input_ids = batch['tgt_token_ids'][batch['compare']]
+            decoder_attention_mask = batch['tgt_attn_mask'][batch['compare']]
+            # inputs = {
+            #         "input_ids": compare_token_ids,
+            #         "attention_mask": compare_attn_mask,
+            #         "decoder_input_ids": decoder_input_ids,
+            #         "decoder_attention_mask": decoder_attention_mask,   
+            #         "task": 0 
+            #     }
+            
+            inputs = {
+                "input_ids": batch["compare_token_ids"],
+                "attention_mask": batch["compare_attn_mask"],
+                "decoder_input_ids": decoder_input_ids,
+                "decoder_attention_mask": decoder_attention_mask,   
+                "task": 0 
+            }
+            outputs, encoder_last_hidden_state_compare = self.model(**inputs)
+            loss_3 = outputs[0]
+            loss_3 = torch.mean(loss_3)
 
-            argument_hidden_state_1 = encoder_outputs_1.last_hidden_state[batch['input_mask']]
-            argument_hidden_state_2 = encoder_outputs_2.last_hidden_state[batch['compare_mask']]
+            # batch['input_mask'][:,0] = True
+            # batch['compare_mask'][:,0] = True
+            
+            # inputs_1 = {
+            #             "input_ids": batch["input_token_ids"],
+            #             "attention_mask": batch["input_attn_mask"]
+            #         }
+            # encoder_outputs_1 = self.model.transformer.encoder(**inputs_1)
+            # inputs_2 = {
+            #             "input_ids": batch["compare_token_ids"],
+            #             "attention_mask": batch["compare_attn_mask"]
+            #         }
+            # # print(inputs_2)
+            # encoder_outputs_2 = self.model.transformer.encoder(**inputs_2)
+            encoder_last_hidden_state = encoder_last_hidden_state[batch['compare']]
+            argument_hidden_state_1 = encoder_last_hidden_state[batch['input_mask']]
+            argument_hidden_state_2 = encoder_last_hidden_state_compare[batch['compare_mask']]
 
             loss_1 = self.loss_1(argument_hidden_state_1, argument_hidden_state_2)
 
@@ -102,12 +128,13 @@ class GenIEEventAwareModel(pl.LightningModule):
                 else:
                     return int('1'+'0'*(len(number[0]) - 1))
             if self.hparams.lambda_value == -1:
-                loss = loss_2 + get_magnitude(loss_2 / loss_1) * loss_1
+                loss = loss_2 + self.hparams.lambda_value_3 * loss_3 + get_magnitude(loss_2 / loss_1) * loss_1
             else:
-                loss = loss_2 + self.hparams.lambda_value * loss_1 
+                loss = loss_2 + self.hparams.lambda_value_3 * loss_3 + self.hparams.lambda_value * loss_1 
+                # loss = loss_2 + self.hparams.lambda_value * loss_1 
             if torch.isnan(loss):
                 return None
-            print('loss : ',float(loss_1), float(loss_2), float(loss))
+            print('loss : ',float(loss_1), float(loss_2), float(loss_3), float(loss))
             log = {
                 'train/loss': loss
             }   
@@ -132,7 +159,7 @@ class GenIEEventAwareModel(pl.LightningModule):
                     "decoder_attention_mask": batch["tgt_attn_mask"],   
                     "task": 0 
                 }
-        outputs = self.model(**inputs)
+        outputs, _ = self.model(**inputs)
         loss_2 = outputs[0]
         loss_2 = torch.mean(loss_2)
         log = {

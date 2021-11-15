@@ -125,9 +125,13 @@ def my_collate_event_aware(batch):
 
     compare = [ex['compare'] for ex in batch]
     input_mask = torch.stack([torch.BoolTensor(ex['input_mask']) for ex in batch])
+    input_mask = input_mask[compare]
     compare_token_ids = torch.stack([torch.LongTensor(ex['compare_token_ids']) for ex in batch]) 
+    compare_token_ids = compare_token_ids[compare]
     compare_attn_mask = torch.stack([torch.BoolTensor(ex['compare_attn_mask']) for ex in batch])
+    compare_attn_mask = compare_attn_mask[compare]
     compare_mask = torch.stack([torch.BoolTensor(ex['compare_mask']) for ex in batch])
+    compare_mask = compare_mask[compare]
    
     return {
         'input_token_ids': input_token_ids,

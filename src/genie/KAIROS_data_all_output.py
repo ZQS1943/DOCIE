@@ -198,11 +198,11 @@ class KAIROSDataEventAwareModule(pl.LightningDataModule):
                         continue
                     add_tag[(arg_start,arg_end)].append((event_type, arg["role"]))
             
-                # arg_start = trigger['start'] - offset
-                # arg_end = trigger['end'] - offset
-                # if arg_start < 0 or arg_end >= len(context):
-                #     continue
-                # add_tag[(arg_start,arg_end)].append((event_type, 'trigger'))
+                arg_start = trigger['start'] - offset
+                arg_end = trigger['end'] - offset
+                if arg_start < 0 or arg_end >= len(context):
+                    continue
+                add_tag[(arg_start,arg_end)].append((event_type, 'trigger'))
 
             # for start, end in add_tag.keys():
             #     if 'trigger' in add_tag[(start, end)]:
@@ -375,26 +375,25 @@ class KAIROSDataEventAwareModule(pl.LightningDataModule):
                                 processed_ex['compare'] = True
                                 cnt += 1
 
-                                # if split != 'test':
-                                #     for _ in range(3):
-                                #         writer.write(json.dumps(processed_ex) + '\n')
-                                #         total_cnt += 1
-                                #         cnt += 1
-                                # cnt += 1
+                                if split != 'test':
+                                    for _ in range(3):
+                                        writer.write(json.dumps(processed_ex) + '\n')
+                                        total_cnt += 1
+                                        cnt += 1
+                                cnt += 1
 
-                                # tokens = self.tokenizer.convert_ids_to_tokens(processed_ex["input_token_ids"])
-                                # # input_1 = "".join(tokens)
-                                # # print("input_1:", input_1.replace("Ġ"," "))
-                                # for i,_ in enumerate(zip(tokens, processed_ex['input_mask'])):
-                                #     print(i,_)
-                                # tokens = self.tokenizer.convert_ids_to_tokens(processed_ex["compare_token_ids"])
-                                # # # input_2 = "".join(tokens)
-                                # # # print("input_2:", input_2.replace("Ġ"," "))
-                                # # print("_"*20)
-                                # for i,_ in enumerate(zip(tokens, processed_ex['compare_mask'])):
-                                #     print(i,_)
-                                # if cnt == 5:
-                                #     assert 1==0
+                                tokens = self.tokenizer.convert_ids_to_tokens(processed_ex["input_token_ids"])
+                                # input_1 = "".join(tokens)
+                                # print("input_1:", input_1.replace("Ġ"," "))
+                                for i,_ in enumerate(zip(tokens, processed_ex['input_mask'])):
+                                    print(i,_)
+                                tokens = self.tokenizer.convert_ids_to_tokens(processed_ex["compare_token_ids"])
+                                # # input_2 = "".join(tokens)
+                                # # print("input_2:", input_2.replace("Ġ"," "))
+                                # print("_"*20)
+                                for i,_ in enumerate(zip(tokens, processed_ex['compare_mask'])):
+                                    print(i,_)
+                                assert 1==0
                                 # print("_"*50)
                             writer.write(json.dumps(processed_ex) + '\n')
                             total_cnt += 1

@@ -16,8 +16,9 @@ from pytorch_lightning.utilities.seed import seed_everything
 
 from src.genie.data_module import RAMSDataModule
 from src.genie.ACE_data_module import ACEDataModule
-from src.genie.KAIROS_data_shared_arg import KAIROSDataSharedArgModule
-from src.genie.event_aware_model import GenIEEventAwareModel 
+from src.genie.KAIROS_data_module import KAIROSDataModule 
+from src.genie.KAIROS_data_only_arg import KAIROSDataOnlyArgModule
+from src.genie.model import GenIEModel 
 
 
 logger = logging.getLogger(__name__)
@@ -33,13 +34,13 @@ def main():
     parser.add_argument(
         "--model", 
         type=str, 
-        default='constrained-gen',        
+        required=True,
         choices=['gen','constrained-gen']
     )
     parser.add_argument(
         "--dataset",
         type=str,
-        default='KAIROS',
+        required=True,
         choices=['RAMS', 'ACE', 'KAIROS']
     )
     parser.add_argument('--tmp_dir', type=str)
@@ -56,14 +57,14 @@ def main():
     )
     parser.add_argument(
         "--train_file",
-        default='data/wikievents/train.jsonl',
+        default=None,
         type=str,
         help="The input training file. If a data dir is specified, will look for the file there"
         + "If no data dir or train/predict files are specified, will run with tensorflow_datasets.",
     )
     parser.add_argument(
         "--val_file",
-        default='data/wikievents/dev.jsonl',
+        default=None,
         type=str,
         help="The input evaluation file. If a data dir is specified, will look for the file there"
         + "If no data dir or train/predict files are specified, will run with tensorflow_datasets.",
@@ -71,33 +72,35 @@ def main():
     parser.add_argument(
         '--test_file',
         type=str,
-        default='data/wikievents/test.jsonl',
+        default=None,
     )
     parser.add_argument('--input_dir', type=str, default=None)
     parser.add_argument('--coref_dir', type=str, default='data/wikievents/coref')
     parser.add_argument('--use_info', action='store_true', default=False, help='use informative mentions instead of the nearest mention.')
-    parser.add_argument('--mark_trigger', default=True, action='store_true')
+    parser.add_argument('--mark_trigger', action='store_true')
     parser.add_argument('--sample-gen', action='store_true', help='Do sampling when generation.')
     parser.add_argument("--train_batch_size", default=8, type=int, help="Batch size per GPU/CPU for training.")
     parser.add_argument(
-        "--eval_batch_size", default=4, type=int, help="Batch size per GPU/CPU for evaluation."
+        "--eval_batch_size", default=8, type=int, help="Batch size per GPU/CPU for evaluation."
     )
     parser.add_argument(
         "--eval_only", action="store_true",
     )
-    parser.add_argument("--learning_rate", default=3e-5, type=float, help="The initial learning rate for Adam.")
+    parser.add_argument(
+        "--multievent", action="store_true",
+    )
+    parser.add_argument("--learning_rate", default=5e-5, type=float, help="The initial learning rate for Adam.")
     parser.add_argument(
         "--accumulate_grad_batches",
         type=int,
-        default=8,
+        default=1,
         help="Number of updates steps to accumulate before performing a backward/update pass.",
     )
     parser.add_argument("--weight_decay", default=0.0, type=float, help="Weight decay if we apply some.")
     parser.add_argument("--adam_epsilon", default=1e-8, type=float, help="Epsilon for Adam optimizer.")
     parser.add_argument("--gradient_clip_val", default=1.0, type=float, help="Max gradient norm.")
-    parser.add_argument("--data_file", type=str, required=True, help='dir to cache the preprocessed data')
     parser.add_argument(
-        "--num_train_epochs", default=6, type=int, help="Total number of training epochs to perform."
+        "--num_train_epochs", default=3, type=int, help="Total number of training epochs to perform."
     )
     parser.add_argument(
         "--max_steps",
@@ -107,10 +110,9 @@ def main():
     )
     parser.add_argument("--warmup_steps", default=0, type=int, help="Linear warmup over warmup_steps.")
     
-    parser.add_argument("--gpus",type=str, default=1, help='-1 means train on all the gpus')
+    parser.add_argument("--gpus", type=str, default=1, help='-1 means train on all the gpus')
+    parser.add_argument("--data_file", type=str, required=True, help='dir to cache the preprocessed data')
     parser.add_argument("--seed", type=int, default=42, help="random seed for initialization")
-    parser.add_argument("--lambda_value", type=float, default=1, help="loss = loss_extraction + lambda_value * loss_dis, -1 means automatic")
-    parser.add_argument("--lambda_value_3", type=float, default=1, help="loss = loss_extraction + lambda_value * loss_dis, -1 means automatic")
     parser.add_argument(
         "--fp16",
         action="store_true",
@@ -144,11 +146,12 @@ def main():
 
     checkpoint_callback = ModelCheckpoint(
         dirpath=args.ckpt_dir,
-        save_weights_only=True,
         save_top_k=5,
         monitor='val/loss',
         mode='min',
+        save_weights_only=True,
         filename='{epoch}', # this cannot contain slashes 
+
     )
 
    
@@ -157,13 +160,13 @@ def main():
     lr_logger = LearningRateMonitor() 
     tb_logger = TensorBoardLogger('logs/')
 
-    model = GenIEEventAwareModel(args)
+    model = GenIEModel(args)
     if args.dataset == 'RAMS':
         dm = RAMSDataModule(args)
     elif args.dataset == 'ACE':
         dm = ACEDataModule(args)
     elif args.dataset == 'KAIROS':
-        dm = KAIROSDataSharedArgModule(args)
+        dm = KAIROSDataOnlyArgModule(args)
 
 
 
@@ -177,15 +180,14 @@ def main():
         logger=tb_logger,
         min_epochs=args.num_train_epochs,
         max_epochs=args.num_train_epochs, 
+        gpus=args.gpus,
         checkpoint_callback=checkpoint_callback,
-        gpus=args.gpus, 
-        # gpus=None, 
         accumulate_grad_batches=args.accumulate_grad_batches,
         gradient_clip_val=args.gradient_clip_val, 
         num_sanity_val_steps=0, 
         val_check_interval=0.5, # use float to check every n epochs 
         precision=16 if args.fp16 else 32,
-        callbacks = [lr_logger]
+        callbacks = [lr_logger],
     )  
 
     if args.load_ckpt:

@@ -208,6 +208,7 @@ class BartConstrainedGen(PreTrainedModel):
             output_attentions=output_attentions,
             output_hidden_states=output_hidden_states,
             return_dict=return_dict,)
+            encoder_last_hidden_state = outputs.encoder_last_hidden_state
             
             decoder_output = outputs[0] #(batch, seq_len, hidden_dim)
             encoder_output = outputs[1] # (batch, input_seq_len, hidden_dim)
@@ -227,7 +228,7 @@ class BartConstrainedGen(PreTrainedModel):
             masked_lm_loss = loss_fct(lm_logits.view(-1, self.vocab_size), labels.view(-1))
             outputs = (masked_lm_loss,) + outputs
 
-            return outputs
+            return outputs, encoder_last_hidden_state
 
     
 

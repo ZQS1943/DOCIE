@@ -33,13 +33,13 @@ def main():
     parser.add_argument(
         "--model", 
         type=str, 
-        required=True,
+        default='constrained-gen',        
         choices=['gen','constrained-gen']
     )
     parser.add_argument(
         "--dataset",
         type=str,
-        required=True,
+        default='KAIROS',
         choices=['RAMS', 'ACE', 'KAIROS']
     )
     parser.add_argument('--tmp_dir', type=str)
@@ -56,14 +56,14 @@ def main():
     )
     parser.add_argument(
         "--train_file",
-        default=None,
+        default='data/wikievents/train.jsonl',
         type=str,
         help="The input training file. If a data dir is specified, will look for the file there"
         + "If no data dir or train/predict files are specified, will run with tensorflow_datasets.",
     )
     parser.add_argument(
         "--val_file",
-        default=None,
+        default='data/wikievents/dev.jsonl',
         type=str,
         help="The input evaluation file. If a data dir is specified, will look for the file there"
         + "If no data dir or train/predict files are specified, will run with tensorflow_datasets.",
@@ -71,32 +71,33 @@ def main():
     parser.add_argument(
         '--test_file',
         type=str,
-        default=None,
+        default='data/wikievents/test.jsonl',
     )
     parser.add_argument('--input_dir', type=str, default=None)
-    parser.add_argument('--coref_dir', type=str, default='data/kairos/coref_outputs')
+    parser.add_argument('--coref_dir', type=str, default='data/wikievents/coref')
     parser.add_argument('--use_info', action='store_true', default=False, help='use informative mentions instead of the nearest mention.')
-    parser.add_argument('--mark_trigger', action='store_true')
+    parser.add_argument('--mark_trigger', default=True, action='store_true')
     parser.add_argument('--sample-gen', action='store_true', help='Do sampling when generation.')
     parser.add_argument("--train_batch_size", default=8, type=int, help="Batch size per GPU/CPU for training.")
     parser.add_argument(
-        "--eval_batch_size", default=8, type=int, help="Batch size per GPU/CPU for evaluation."
+        "--eval_batch_size", default=4, type=int, help="Batch size per GPU/CPU for evaluation."
     )
     parser.add_argument(
         "--eval_only", action="store_true",
     )
-    parser.add_argument("--learning_rate", default=5e-5, type=float, help="The initial learning rate for Adam.")
+    parser.add_argument("--learning_rate", default=3e-5, type=float, help="The initial learning rate for Adam.")
     parser.add_argument(
         "--accumulate_grad_batches",
         type=int,
-        default=1,
+        default=8,
         help="Number of updates steps to accumulate before performing a backward/update pass.",
     )
     parser.add_argument("--weight_decay", default=0.0, type=float, help="Weight decay if we apply some.")
     parser.add_argument("--adam_epsilon", default=1e-8, type=float, help="Epsilon for Adam optimizer.")
     parser.add_argument("--gradient_clip_val", default=1.0, type=float, help="Max gradient norm.")
+    parser.add_argument("--data_file", type=str, required=True, help='dir to cache the preprocessed data')
     parser.add_argument(
-        "--num_train_epochs", default=3, type=int, help="Total number of training epochs to perform."
+        "--num_train_epochs", default=6, type=int, help="Total number of training epochs to perform."
     )
     parser.add_argument(
         "--max_steps",
@@ -108,7 +109,8 @@ def main():
     
     parser.add_argument("--gpus",type=str, default=1, help='-1 means train on all the gpus')
     parser.add_argument("--seed", type=int, default=42, help="random seed for initialization")
-    parser.add_argument("--lambda_value", type=int, default=1, help="loss = loss_extraction + lambda_value * loss_dis, -1 means automatic")
+    parser.add_argument("--lambda_value", type=float, default=1, help="loss = loss_extraction + lambda_value * loss_dis, -1 means automatic")
+    parser.add_argument("--lambda_value_3", type=float, default=1, help="loss = loss_extraction + lambda_value * loss_dis, -1 means automatic")
     parser.add_argument(
         "--fp16",
         action="store_true",
