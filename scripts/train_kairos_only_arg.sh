@@ -3,22 +3,16 @@ set -e
 set -x 
 
 # CKPT_NAME='gen-KAIROS-WFinetune'
-CKPT_NAME='only_arg_copy_3_move'
+CKPT_NAME='only_arg_all_args'
 rm -rf checkpoints/${CKPT_NAME}
 
 # does not use informative mentions 
-python train_only_arg.py --model=constrained-gen --ckpt_name=${CKPT_NAME} \
-    --dataset=KAIROS \
-    --train_file=data/wikievents/train.jsonl \
-    --val_file=data/wikievents/dev.jsonl \
-    --test_file=data/wikievents/test.jsonl \
+python train_only_arg.py \
+    --ckpt_name=${CKPT_NAME} \
     --train_batch_size=4 \
-    --eval_batch_size=4 \
-    --learning_rate=3e-5 \
-    --accumulate_grad_batches=8 \
-    --num_train_epochs=10 \
-    --mark_trigger \
-    --coref_dir=data/wikievents/coref \
-    --gpus 3 \
-    --data_file=preprocessed_copy_3_move
+    --gpus 1 \
+    --learning_rate 3e-5 \
+    --lambda_value 1 \
+    --lambda_value_3 0 \
+    --data_file=preprocessed_only_arg_all_args
     # --load_ckpt=checkpoints/gen-KAIROS-finetune/default/version_59/checkpoints/epoch=0-step=42.ckpt

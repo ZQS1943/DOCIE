@@ -1,16 +1,16 @@
 #!/usr/bin/env bash
 set -e 
 set -x 
-CKPT_NAME=dis_20_m_0_1
+CKPT_NAME=debug_origin
 DATA_NAME=preprocessed_KAIROS
-GPU=1
+GPU=2
 MODEL=constrained-gen
-CKPT_NUM=('2' '3' '3-v0')
+CKPT_NUM=('1' '2' '2-v0' '4' '4-v0')
 
 for zone in "${CKPT_NUM[@]}"
 do
 rm -rf checkpoints/${CKPT_NAME}-pred 
-python train_only_arg.py --model=$MODEL --ckpt_name=${CKPT_NAME}-pred \
+python train_type.py --model=$MODEL --ckpt_name=${CKPT_NAME}-pred \
      --load_ckpt=checkpoints/${CKPT_NAME}/epoch=${zone}.ckpt \
      --dataset=KAIROS \
      --eval_only \

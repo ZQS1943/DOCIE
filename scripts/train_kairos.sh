@@ -3,22 +3,19 @@ set -e
 set -x 
 
 # CKPT_NAME='gen-KAIROS-WFinetune'
-CKPT_NAME='s_21'
+CKPT_NAME='info_try'
 rm -rf checkpoints/${CKPT_NAME}
 
 # does not use informative mentions 
 python train.py --model=constrained-gen --ckpt_name=${CKPT_NAME} \
     --dataset=KAIROS \
-    --train_file=data/wikievents/train.jsonl \
-    --val_file=data/wikievents/dev.jsonl \
-    --test_file=data/wikievents/test.jsonl \
     --train_batch_size=4 \
-    --eval_batch_size=4 \
-    --learning_rate=3e-5 \
-    --accumulate_grad_batches=8 \
-    --num_train_epochs=10 \
-    --mark_trigger \
-    --coref_dir=data/wikievents/coref \
-    --gpus 4 \
-    --seed 21
+    --learning_rate=1e-5 \
+    --num_train_epochs=6 \
+    --gpus 1 \
+    --data_file=preprocessed_KAIROS_info_try \
+    --use_info \
+    --train_file=data/wikievents/train_info_no_ontology.jsonl \
+    --val_file=data/wikievents/dev_info_no_ontology.jsonl \
+    --test_file=data/wikievents/test_info_no_ontology.jsonl \
     # --load_ckpt=checkpoints/gen-KAIROS-finetune/default/version_59/checkpoints/epoch=0-step=42.ckpt
