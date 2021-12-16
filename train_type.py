@@ -16,8 +16,8 @@ from pytorch_lightning.utilities.seed import seed_everything
 
 from src.genie.data_module import RAMSDataModule
 from src.genie.ACE_data_module import ACEDataModule
-from src.genie.KAIROS_data_multitask_module import KAIROSDataMultiTaskModule
-from src.genie.multitask_model import GenIEMultiTaskModel 
+from src.genie.KAIROS_data_event_aware_type import KAIROSDataTypeModule
+from src.genie.event_aware_type_model import GenIETypeModel
 
 
 logger = logging.getLogger(__name__)
@@ -55,12 +55,11 @@ def main():
 
     checkpoint_callback = ModelCheckpoint(
         dirpath=args.ckpt_dir,
+        save_weights_only=True,
         save_top_k=args.save_top_k,
         monitor='val/loss',
         mode='min',
-        save_weights_only=True,
         filename='{epoch}', # this cannot contain slashes 
-
     )
 
    
@@ -69,38 +68,36 @@ def main():
     lr_logger = LearningRateMonitor() 
     tb_logger = TensorBoardLogger('logs/')
 
-    model = GenIEMultiTaskModel(args)
+    model = GenIETypeModel(args)
     if args.dataset == 'RAMS':
         dm = RAMSDataModule(args)
     elif args.dataset == 'ACE':
         dm = ACEDataModule(args)
     elif args.dataset == 'KAIROS':
-        dm = KAIROSDataMultiTaskModule(args)
+        dm = KAIROSDataTypeModule(args)
 
 
 
     if args.max_steps < 0 :
         args.max_epochs = args.min_epochs = args.num_train_epochs 
-    
-    # print(args.gpus)
-    # assert 1==0
 
     trainer = Trainer(
         logger=tb_logger,
         min_epochs=args.num_train_epochs,
         max_epochs=args.num_train_epochs, 
+        checkpoint_callback=checkpoint_callback,
         gpus=args.gpus, 
-        checkpoint_callback=True,
+        # gpus=None, 
         accumulate_grad_batches=args.accumulate_grad_batches,
         gradient_clip_val=args.gradient_clip_val, 
         num_sanity_val_steps=0, 
         val_check_interval=0.5, # use float to check every n epochs 
         precision=16 if args.fp16 else 32,
-        callbacks = [lr_logger, checkpoint_callback],
-
+        callbacks = [lr_logger]
     )  
 
     if args.load_ckpt:
+        print(args.load_ckpt)
         model.load_state_dict(torch.load(args.load_ckpt,map_location=model.device)['state_dict']) 
 
     if args.eval_only: 

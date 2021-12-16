@@ -8,7 +8,7 @@ from tqdm import tqdm
 import spacy 
 
 
-from utils import load_ontology,find_arg_span, compute_f1, get_entity_span, find_head, WhitespaceTokenizer
+from .utils import load_ontology,find_arg_span, compute_f1, get_entity_span, find_head, WhitespaceTokenizer
 
 nlp = spacy.load('en_core_web_sm')
 nlp.tokenizer = WhitespaceTokenizer(nlp.vocab)
@@ -64,23 +64,10 @@ def extract_args_from_template(ex, template, ontology_dict,):
     
     return predicted_args
 
-
-
-
-
-
-
-if __name__ == '__main__':
-    parser = argparse.ArgumentParser()
-    parser.add_argument('--gen-file',type=str,default='checkpoints/m-shared-arg-1-3e-5-pred/predictions.jsonl' )
-    parser.add_argument('--test-file', type=str,default='data/wikievents/test.jsonl')
-    parser.add_argument('--coref-file', type=str,default='data/wikievents/coref/test.jsonlines')
-    parser.add_argument('--head-only', action='store_true',default=True)
-    parser.add_argument('--coref', action='store_true',default=True)
-    parser.add_argument('--dataset',type=str, default='KAIROS', choices=['ACE', 'KAIROS','AIDA'])
-    args = parser.parse_args() 
-
-
+def scorer(args):
+    print(f"gen_file:{args.gen_file}")
+    print(f"test_file:{args.test_file}")
+    # print(f'coref_file:{args.coref_file}')
     ontology_dict = load_ontology(dataset=args.dataset)
 
     if args.dataset == 'KAIROS' and args.coref and not args.coref_file:
@@ -89,10 +76,7 @@ if __name__ == '__main__':
     if args.dataset == 'AIDA' and args.coref:
         raise NotImplementedError
 
-    print(args.gen_file)
-    if not os.path.exists(args.gen_file):
-        print('gen file does not exist')
-        quit()
+    docid2doc = {}
 
     examples = {}
     doc2ex = defaultdict(list) # a document contains multiple events 
@@ -102,13 +86,19 @@ if __name__ == '__main__':
             examples[lidx] = {
                 'predicted': pred['predicted'],
                 'gold': pred['gold'],
-                'doc_id': pred['doc_key']
+                'doc_id': pred['doc_key'],
             }
             doc2ex[pred['doc_key']].append(lidx)
-        
+
     with open(args.test_file, 'r') as f:
         for line in f:
             doc = json.loads(line.strip())
+            docid2doc[doc['doc_id']] = {
+                "doc_id": doc["doc_id"],
+                "tokens": doc["tokens"],
+                "sentences": doc["sentences"],
+                'event_mentions': []
+            }
             if 'sent_id' in doc.keys():
                 doc_id = doc['sent_id']
                 # print('evaluating on sentence level')
@@ -119,7 +109,7 @@ if __name__ == '__main__':
                 examples[eid]['tokens'] = doc['tokens']
                 examples[eid]['event'] = doc['event_mentions'][idx]
                 examples[eid]['entity_mentions'] = doc['entity_mentions']
-    
+
     coref_mapping = defaultdict(dict) # span to canonical entity_id mapping for each doc 
     if args.coref:
         if args.dataset == 'KAIROS' and args.coref_file:
@@ -159,7 +149,6 @@ if __name__ == '__main__':
 
     event_idn_num =0
     event_class_num =0
-    cnt = 0
 
     doc_events = defaultdict(list)
     items = list(examples.items())
@@ -173,22 +162,26 @@ if __name__ == '__main__':
         # get template 
         evt_type = ex['event']['event_type']
 
-        if evt_type not in ontology_dict:
-            cnt += 1
-            continue 
+        assert evt_type in ontology_dict
+        
         template = ontology_dict[evt_type]['template']
         # extract argument text 
         predicted_args = extract_args_from_template(ex,template, ontology_dict)
+        # {'Victim': [['members']], 'Killer': [['Taliban']]}
+
         # get trigger 
         # extract argument span
         trigger_start = ex['event']['trigger']['start']
         trigger_end = ex['event']['trigger']['end']
         
+        # (start, end, evt_type, argname)
         predicted_set = set() 
         for argname in predicted_args:
             for entity in predicted_args[argname]:# this argument span is inclusive, FIXME: this might be problematic 
                 arg_span = find_arg_span(entity, context_words, 
                     trigger_start, trigger_end, head_only=args.head_only, doc=doc) 
+                # print(entity, arg_span)
+                # ['members'] (6, 6)
                 
                 if arg_span:# if None means hullucination
                     
@@ -209,9 +202,26 @@ if __name__ == '__main__':
                         arg_span = find_arg_span(new_entity, context_words, trigger_start, trigger_end, 
                         head_only=args.head_only, doc=doc)
                         if arg_span: predicted_set.add((arg_span[0], arg_span[1], evt_type, argname))
-                        
+        
+        
+        arguments = []
+        for start, end, _, argname in predicted_set:
+            # print(context_words[start:end + 1], argname)
+            arguments.append({
+                "start":start,
+                "end": end + 1,
+                "role": argname,
+                "text": " ".join(context_words[start:end + 1])
+            })
+        docid2doc[doc_id]["event_mentions"].append({
+            "event_type": evt_type,
+            "trigger": ex['event']['trigger'],
+            "arguments": arguments
+        })
+        # assert 1==0
                     
-        # get gold spans         
+        # get gold spans 
+        # (span[0], span[1], evt_type, entity_id, argname)        
         gold_set = set() 
         event_arg = {}
         gold_canonical_set = set() # set of canonical mention ids, singleton mentions will not be here 
@@ -295,10 +305,11 @@ if __name__ == '__main__':
                 for entity_id in events[ei]:
                     if entity_id in events[ej]:
                         pair_arg.append((events[ei][entity_id], events[ej][entity_id]))
-    for item in pair_arg:
-        print(item)
+    # for item in pair_arg:
+    #     print(item)
     pair_arg_inconsistent = [1 if x[0]['predict'] != x[1]['predict'] else 0 for x in pair_arg]
-    print(f'paired args: {len(pair_arg)}, inconsistent args: {sum(pair_arg_inconsistent)}, raito: {sum(pair_arg_inconsistent)/len(pair_arg)}')      
+    if len(pair_arg):
+        print(f'paired args: {len(pair_arg)}, inconsistent args: {sum(pair_arg_inconsistent)}, raito: {sum(pair_arg_inconsistent)/len(pair_arg)}')      
         
     if args.head_only:
         print('Evaluation by matching head words only....')
@@ -309,7 +320,6 @@ if __name__ == '__main__':
     role_prec, role_rec, role_f = compute_f1(
         pred_arg_num, gold_arg_num, arg_class_num)
 
-    print(f"no ontology: {cnt}")
     print("Event-level identification: P: {:.2f}".format(event_idn_num/len(examples)*100.0))
     print("Event-level : P: {:.2f}".format(event_class_num/len(examples)*100.0))
 
@@ -332,7 +342,28 @@ if __name__ == '__main__':
             role_prec * 100.0, role_rec * 100.0, role_f * 100.0))
 
     with open(args.gen_file.replace("predictions","eval_results")[:-1],'w') as f:
-        f.write(json.dumps(examples,indent=True))        
+        f.write(json.dumps(examples,indent=True))   
+
+    with open(args.gen_file.replace("predictions","results_for_predict")[:-1],'w') as f:
+        for docid in docid2doc:
+            f.write(json.dumps(docid2doc[docid]) + '\n')       
+
+
+
+if __name__ == '__main__':
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--gen-file',type=str,default=f'checkpoints/None/epoch_0_step_0_predictions.jsonl' )
+    parser.add_argument('--test-file', type=str,default='data/wikievents/test.jsonl')
+    parser.add_argument('--coref-file', type=str,default='data/wikievents/coref/test.jsonlines')
+    parser.add_argument('--head-only', action='store_true',default=True)
+    parser.add_argument('--coref', action='store_true',default=True)
+    parser.add_argument('--dataset',type=str, default='KAIROS', choices=['ACE', 'KAIROS','AIDA'])
+    arg_scorer = parser.parse_args() 
+
+    scorer(arg_scorer)
+
+
+    
 
                     
 

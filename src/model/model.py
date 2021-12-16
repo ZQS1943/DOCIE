@@ -61,7 +61,7 @@ class GenIEModel(pl.LightningModule):
         outputs,_ = self.model(**inputs)
         loss = outputs[0]
         loss = torch.mean(loss)
-
+        print('\n', batch_idx, loss)
         log = {
             'train/loss': loss, 
         } 
