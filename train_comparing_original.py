@@ -6,6 +6,7 @@ import timeit
 from datetime import datetime 
 
 import torch 
+from torch.nn import MSELoss
 from torch.nn.utils import clip_grad_norm_
 from torch.utils.data import DataLoader
 from transformers.modeling_utils import unwrap_model 
@@ -15,7 +16,7 @@ from transformers.modeling_utils import unwrap_model
 from src.genie.get_new_data_file import get_new_data_file
 from src.genie.scorer_class import scorer
 from src.model.constrained_gen import BartConstrainedGen
-from src.data.get_data import get_data_tag_only, get_data_normal
+from src.data.get_data import get_data_tag_comparing
 
 
 logger = logging.getLogger(__name__)
@@ -25,7 +26,7 @@ from args.options import parse_arguments
 from transformers import set_seed, AdamW, get_linear_schedule_with_warmup
 
 from transformers import BartTokenizer, BartConfig
-from src.data.data import IEDataset, my_collate
+from src.data.data import IEDataset, my_collate_comparing, my_collate
 
 from tqdm import tqdm
 import json
@@ -78,47 +79,23 @@ def main():
         model.load_state_dict(torch.load(args.load_ckpt,map_location=model.device)['state_dict']) 
     # assert 1==0
     
-    if args.dataset == "ACE":
-        source = './data/ace05/train.wikievents.json'
-        target = f'./{args.data_file}/train_data.jsonl'
-        get_data_normal(source = source, target = target, tokenizer = tokenizer, dataset = args.dataset) 
-        train_dataset = IEDataset(target)
-    elif args.dataset == "KAIROS":
-        if args.use_info:
-            train_dataset = IEDataset('preprocessed/preprocessed_KAIROS_info/train.jsonl', tokenizer = tokenizer)    
-        else:
-            train_dataset = IEDataset('preprocessed/preprocessed_KAIROS/train.jsonl', tokenizer = tokenizer)    
-    train_dataloader = DataLoader(train_dataset,
-            pin_memory=True, num_workers=2,
-            collate_fn=my_collate,
+    if args.use_info:
+        source = './data/wikievents/train_info_no_ontology.jsonl'   
+    else:
+        source = './data/wikievents/train_no_ontology.jsonl'
+    # source = './data/wikievents/train_no_ontology.jsonl'
+    target = f'./{args.data_file}/train_data_comparing.jsonl'
+    get_data_tag_comparing(source = source, target = target, tokenizer = tokenizer, trigger_dis=args.trg_dis)
+    train_dataset = IEDataset(target)
+    train_dataloader = DataLoader(train_dataset, 
+            collate_fn=my_collate_comparing,
             batch_size=args.train_batch_size, 
             shuffle=True)
-    
-    if args.dataset == "ACE":
-        source = './data/ace05/train.wikievents.json'
-    elif args.dataset == "KAIROS":
-        if args.use_info:
-            source = './data/wikievents/train_info_no_ontology.jsonl'    
-        else:
-            source = './data/wikievents/train_no_ontology.jsonl'
-    target = f'./{args.data_file}/train_data_tag_other.jsonl'
-    get_data_tag_only(source = source, target = target, tokenizer = tokenizer, trigger_dis = args.trg_dis, dataset = args.dataset)
-    train_dataset_tag = IEDataset(target, tokenizer = tokenizer)
-    train_dataloader_tag = DataLoader(train_dataset_tag, 
-            collate_fn=my_collate,
-            batch_size=args.eval_batch_size, 
-            shuffle=False)
 
-    if args.dataset == "ACE":
-        source = './data/ace05/dev.wikievents.json'
-        target = f'./{args.data_file}/dev_data.jsonl'
-        get_data_normal(source = source, target = target, tokenizer = tokenizer, dataset = args.dataset) 
-        eval_dataset = IEDataset(target)
-    elif args.dataset == "KAIROS":
-        if args.use_info:
-            eval_dataset = IEDataset('preprocessed/preprocessed_KAIROS_info/val.jsonl', tokenizer = tokenizer)    
-        else:
-            eval_dataset = IEDataset('preprocessed/preprocessed_KAIROS/val.jsonl', tokenizer = tokenizer)
+    if args.use_info:
+        eval_dataset = IEDataset('preprocessed/preprocessed_KAIROS_info/val.jsonl', tokenizer = tokenizer)    
+    else:
+        eval_dataset = IEDataset('preprocessed/preprocessed_KAIROS/val.jsonl', tokenizer = tokenizer)
     eval_dataloader = DataLoader(eval_dataset, num_workers=2, 
             collate_fn=my_collate,
             batch_size=args.eval_batch_size, 
@@ -150,12 +127,12 @@ def main():
     
 
     min_eval_loss = 1000
-
+    mseloss = MSELoss()
     for epoch in range(args.num_train_epochs):
         print("start training")
         pbar = tqdm(total=len(train_dataloader))
         model.train()
-        for step, (batch, batch_tag) in enumerate(zip(train_dataloader, train_dataloader_tag)):
+        for step, batch in enumerate(train_dataloader):
             if step and step % args.accumulate_grad_batches == 0 or step == len(train_dataloader) - 1:
                 clip_grad_norm_(model.parameters(), max_norm=args.gradient_clip_val)
                 optimizer.step()
@@ -169,27 +146,34 @@ def main():
                     "decoder_attention_mask": batch["tgt_attn_mask"].to(device),   
                     "task": 0 
                 }
-            outputs,_ = model(**inputs)
+            outputs, encoder_last_hidden_state = model(**inputs)
             loss = outputs[0]
             loss1 = torch.mean(loss) 
-            loss = loss1 / args.accumulate_grad_batches
-            loss.backward()
+            # loss = loss1 / args.accumulate_grad_batches
+            # loss.backward()
 
             inputs = {
-                    "input_ids": batch_tag["input_token_ids"].to(device),
-                    "attention_mask": batch_tag["input_attn_mask"].to(device),
-                    "decoder_input_ids": batch_tag['tgt_token_ids'].to(device),
-                    "decoder_attention_mask": batch_tag["tgt_attn_mask"].to(device),   
+                    "input_ids": batch["compare_token_ids"].to(device),
+                    "attention_mask": batch["compare_attn_mask"].to(device),
+                    "decoder_input_ids": batch['tgt_token_ids'].to(device),
+                    "decoder_attention_mask": batch["tgt_attn_mask"].to(device),   
                     "task": 0 
                 }
-            outputs,_ = model(**inputs)
+            outputs,encoder_last_hidden_state_compare = model(**inputs)
             loss = outputs[0]
             loss2 = torch.mean(loss) 
-            loss = loss2 / args.accumulate_grad_batches
+            # loss = loss2 / args.accumulate_grad_batches
+            # loss.backward()
+
+            argument_hidden_state_1 = encoder_last_hidden_state[batch['input_mask']]
+            argument_hidden_state_2 = encoder_last_hidden_state_compare[batch['compare_mask']]
+            loss3 = mseloss(argument_hidden_state_1, argument_hidden_state_2)
+
+            loss = (loss1 + loss2 + args.alpha * loss3) / args.accumulate_grad_batches
             loss.backward()
 
             pbar.update(1)
-            pbar.set_postfix({'loss1': float(loss1), 'loss2':float(loss2)})
+            pbar.set_postfix({'loss1': float(loss1), 'loss2':float(loss2), 'loss3':float(loss3)})
             # pbar.set_postfix({'loss1': float(loss1)})
 
 

@@ -16,7 +16,7 @@ from transformers.modeling_utils import unwrap_model
 from src.genie.get_new_data_file import get_new_data_file
 from src.genie.scorer_class import scorer
 from src.model.constrained_gen import BartConstrainedGen
-from src.data.get_data import get_data_tag_comparing
+from src.data.get_data import get_data_tag_comparing, get_data_normal
 
 
 logger = logging.getLogger(__name__)
@@ -79,23 +79,32 @@ def main():
         model.load_state_dict(torch.load(args.load_ckpt,map_location=model.device)['state_dict']) 
     # assert 1==0
     
-    if args.use_info:
-        source = './data/wikievents/train_info_no_ontology.jsonl'   
-    else:
-        source = './data/wikievents/train_no_ontology.jsonl'
+    if args.dataset == "ACE":
+        source = './data/ace05/train.wikievents.json'
+    elif args.dataset == "KAIROS":
+        if args.use_info:
+            source = './data/wikievents/train_info_no_ontology.jsonl'    
+        else:
+            source = './data/wikievents/train_no_ontology.jsonl'
     # source = './data/wikievents/train_no_ontology.jsonl'
     target = f'./{args.data_file}/train_data_comparing.jsonl'
-    get_data_tag_comparing(source = source, target = target, tokenizer = tokenizer, trigger_dis=args.trg_dis)
+    get_data_tag_comparing(source = source, target = target, tokenizer = tokenizer, trigger_dis=args.trg_dis, dataset = args.dataset)
     train_dataset = IEDataset(target)
     train_dataloader = DataLoader(train_dataset, 
             collate_fn=my_collate_comparing,
             batch_size=args.train_batch_size, 
             shuffle=True)
 
-    if args.use_info:
-        eval_dataset = IEDataset('preprocessed/preprocessed_KAIROS_info/val.jsonl', tokenizer = tokenizer)    
-    else:
-        eval_dataset = IEDataset('preprocessed/preprocessed_KAIROS/val.jsonl', tokenizer = tokenizer)
+    if args.dataset == "ACE":
+        source = './data/ace05/dev.wikievents.json'
+        target = f'./{args.data_file}/dev_data.jsonl'
+        get_data_normal(source = source, target = target, tokenizer = tokenizer, dataset = args.dataset) 
+        eval_dataset = IEDataset(target)
+    elif args.dataset == "KAIROS":
+        if args.use_info:
+            eval_dataset = IEDataset('preprocessed/preprocessed_KAIROS_info/val.jsonl', tokenizer = tokenizer)    
+        else:
+            eval_dataset = IEDataset('preprocessed/preprocessed_KAIROS/val.jsonl', tokenizer = tokenizer)
     eval_dataloader = DataLoader(eval_dataset, num_workers=2, 
             collate_fn=my_collate,
             batch_size=args.eval_batch_size, 

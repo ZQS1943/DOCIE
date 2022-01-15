@@ -16,7 +16,7 @@ from transformers.modeling_utils import unwrap_model
 from src.genie.get_new_data_file import get_new_data_file
 from src.genie.scorer_class import scorer
 from src.model.constrained_gen import BartConstrainedGen
-from src.data.get_data import get_data_tag_comparing
+from src.data.get_data import get_data_normal
 
 
 logger = logging.getLogger(__name__)
@@ -80,26 +80,31 @@ def main():
     # assert 1==0
     
 
-    # source = './data/wikievents/train_no_ontology.jsonl'
-    # target = f'./{args.data_file}/train_data.jsonl'
-    # get_data_tag_comparing(source = source, target = target, tokenizer = tokenizer)
-    if args.use_info:
-        target = 'preprocessed/preprocessed_KAIROS_info/train.jsonl'
-        # eval_dataset = IEDataset('preprocessed/preprocessed_KAIROS_info/val.jsonl', tokenizer = tokenizer)    
-    else:
-        target = 'preprocessed/preprocessed_KAIROS/train.jsonl'
-        # eval_dataset = IEDataset('preprocessed/preprocessed_KAIROS/val.jsonl', tokenizer = tokenizer)
-    
+    if args.dataset == "ACE":
+        source = './data/ace05/train.wikievents.json'
+    elif args.dataset == "KAIROS":
+        if args.use_info:
+            source = './data/wikievents/train_info_no_ontology.jsonl'
+        else:
+            source = './data/wikievents/train_no_ontology.jsonl'
+    target = f'./{args.data_file}/train_data.jsonl'
+    get_data_normal(source = source, target = target, tokenizer = tokenizer, dataset = args.dataset) 
     train_dataset = IEDataset(target)
     train_dataloader = DataLoader(train_dataset, 
             collate_fn=my_collate,
             batch_size=args.train_batch_size, 
             shuffle=True)
 
-    if args.use_info:
-        eval_dataset = IEDataset('preprocessed/preprocessed_KAIROS_info/val.jsonl', tokenizer = tokenizer)    
-    else:
-        eval_dataset = IEDataset('preprocessed/preprocessed_KAIROS/val.jsonl', tokenizer = tokenizer)
+    if args.dataset == "ACE":
+        source = './data/ace05/dev.wikievents.json'
+    elif args.dataset == "KAIROS":
+        if args.use_info:
+            source = './data/wikievents/dev_info_no_ontology.jsonl'
+        else:
+            source = './data/wikievents/dev_no_ontology.jsonl'
+    target = f'./{args.data_file}/dev_data.jsonl'
+    get_data_normal(source = source, target = target, tokenizer = tokenizer, dataset = args.dataset)
+    eval_dataset = IEDataset(target)
     eval_dataloader = DataLoader(eval_dataset, num_workers=2, 
             collate_fn=my_collate,
             batch_size=args.eval_batch_size, 
