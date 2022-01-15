@@ -6,6 +6,8 @@ import timeit
 from datetime import datetime 
 
 import torch 
+from torch import nn
+from torch.nn import MSELoss
 from torch.nn.utils import clip_grad_norm_
 from torch.utils.data import DataLoader
 from transformers.modeling_utils import unwrap_model 
@@ -15,7 +17,7 @@ from transformers.modeling_utils import unwrap_model
 from src.genie.get_new_data_file import get_new_data_file
 from src.genie.scorer_class import scorer
 from src.model.constrained_gen import BartConstrainedGen
-from src.data.get_data import get_data_normal_sentence_selection
+from src.data.get_data import get_data_seq
 
 
 logger = logging.getLogger(__name__)
@@ -24,12 +26,17 @@ import os
 from args.options import parse_arguments
 from transformers import set_seed, AdamW, get_linear_schedule_with_warmup
 
-from transformers import BartTokenizer, BartConfig
-from src.data.data import IEDataset, my_collate
+from transformers import BertTokenizer, BertForTokenClassification, BertModel
+from src.data.data import IEDataset, my_collate_comparing, my_collate_seq
 
 from tqdm import tqdm
 import json
 
+class MyBertForTokenClassification(BertForTokenClassification):
+
+    def __init__(self, config):
+        config.num_labels = 81
+        super().__init__(config)
 
 
 
@@ -65,11 +72,8 @@ def main():
 
     
 
-    config = BartConfig.from_pretrained('facebook/bart-large')
-    tokenizer = BartTokenizer.from_pretrained('facebook/bart-large')
-    tokenizer.add_tokens([' <arg>',' <tgr>',' <tag>', ' </tag>'])
-    model = BartConstrainedGen(config, tokenizer)
-    model.resize_token_embeddings()
+    tokenizer = BertTokenizer.from_pretrained('bert-large-cased')
+    model = MyBertForTokenClassification.from_pretrained('bert-large-cased')
     device = f'cuda:{args.gpus}'
     model.to(device)
 
@@ -77,71 +81,36 @@ def main():
         print(f"load from {args.load_ckpt}")
         model.load_state_dict(torch.load(args.load_ckpt,map_location=model.device)['state_dict']) 
     # assert 1==0
-
-    if args.eval_only:
-        source = './data/wikievents/test_info_no_ontology.jsonl'
-        coref = './data/wikievents/coref/test.jsonlines'
-        target = f'./{args.data_file}/test_info.jsonl'
-        get_data_normal_sentence_selection(source = source, target = target, tokenizer = tokenizer, coref = coref)
-        test_dataset = IEDataset(target)   
-        # test_dataset = IEDataset('preprocessed_KAIROS/test.jsonl') 
-        eval_dataloader = DataLoader(test_dataset,
-                pin_memory=True, num_workers=2,
-                collate_fn=my_collate,
-                batch_size=args.eval_batch_size, 
-                shuffle=False)
-
-        pbar_et = tqdm(total=len(eval_dataloader))
-        result_dir = (args.load_ckpt).replace(".ckpt","_test_predictions.jsonl")
-        model.eval()
-        with open(result_dir, 'w') as writer:
-            for step, batch in enumerate(eval_dataloader):
-                input = batch['input_token_ids'].to(device)
-                sample_output = model.generate(input, do_sample=False, max_length=30, num_return_sequences=1,num_beams=1,)
-
-                sample_output = sample_output.reshape(batch['input_token_ids'].size(0), 1, -1)
-                doc_key = batch['doc_key'] # list 
-                tgt_token_ids = batch['tgt_token_ids']
-                
-
-                for idx in range(len(doc_key)):
-                    pred = {
-                        'doc_key': doc_key[idx],
-                        'predicted': tokenizer.decode(sample_output[idx].squeeze(0), skip_special_tokens=True),
-                        'gold': tokenizer.decode(tgt_token_ids[idx].squeeze(0), skip_special_tokens=True) 
-                    }
-                    writer.write(json.dumps(pred)+'\n')
-                pbar_et.update(1)
-            
-        print("start scoring")
-        test_file = source
-        coref_file = coref
-        scorer(score_args(result_dir, test_file, coref_file))
-
-        return 0
-    
     
 
-    source = './data/wikievents/train_info_no_ontology.jsonl'
-    coref = './data/wikievents/coref/train.jsonlines'
-    target = f'./{args.data_file}/train_info.jsonl'
-    get_data_normal_sentence_selection(source = source, target = target, tokenizer = tokenizer, coref = coref)
-    train_dataset = IEDataset(target)    
-    # train_dataset = IEDataset('preprocessed_KAIROS/train.jsonl')
-    train_dataloader = DataLoader(train_dataset,
-            pin_memory=True, num_workers=2,
-            collate_fn=my_collate,
+    if args.dataset == "ACE":
+        source = './data/ace05/train.wikievents.json'
+    elif args.dataset == "KAIROS":
+        if args.use_info:
+            source = './data/wikievents/train_info_no_ontology.jsonl'
+        else:
+            source = './data/wikievents/train_no_ontology.jsonl'
+    target = f'./{args.data_file}/train_data.jsonl'
+    get_data_seq(source = source, target = target, tokenizer = tokenizer, dataset = args.dataset)
+    train_dataset = IEDataset(target)
+    train_dataloader = DataLoader(train_dataset, 
+            collate_fn=my_collate_seq,
             batch_size=args.train_batch_size, 
             shuffle=True)
 
-    source = './data/wikievents/dev_info_no_ontology.jsonl'
-    coref = './data/wikievents/coref/dev.jsonlines'
-    target = f'./{args.data_file}/dev_info.jsonl'
-    get_data_normal_sentence_selection(source = source, target = target, tokenizer = tokenizer, coref = coref)
-    eval_dataset = IEDataset(target)   
-    # eval_dataset = IEDataset('preprocessed_KAIROS/val.jsonl') 
+
+    if args.dataset == "ACE":
+        source = './data/ace05/dev.wikievents.json'
+    elif args.dataset == "KAIROS":
+        if args.use_info:
+            source = './data/wikievents/dev_info_no_ontology.jsonl'
+        else:
+            source = './data/wikievents/dev_no_ontology.jsonl'
+    target = f'./{args.data_file}/dev_data.jsonl'
+    get_data_seq(source = source, target = target, tokenizer = tokenizer, dataset = args.dataset)
+    eval_dataset = IEDataset(target)    
     eval_dataloader = DataLoader(eval_dataset, num_workers=2, 
-            collate_fn=my_collate,
+            collate_fn=my_collate_seq,
             batch_size=args.eval_batch_size, 
             shuffle=True)
 
@@ -171,7 +140,7 @@ def main():
     
 
     min_eval_loss = 1000
-
+    mseloss = MSELoss()
     for epoch in range(args.num_train_epochs):
         print("start training")
         pbar = tqdm(total=len(train_dataloader))
@@ -186,21 +155,19 @@ def main():
             inputs = {
                     "input_ids": batch["input_token_ids"].to(device),
                     "attention_mask": batch["input_attn_mask"].to(device),
-                    "decoder_input_ids": batch['tgt_token_ids'].to(device),
-                    "decoder_attention_mask": batch["tgt_attn_mask"].to(device),   
-                    "task": 0 
+                    "labels":batch['labels'].to(device)
                 }
-            outputs,_ = model(**inputs)
-            loss = outputs[0]
-            loss1 = torch.mean(loss) 
-            loss = loss1 / args.accumulate_grad_batches
+            outputs = model(**inputs)
+            loss = outputs.loss
             loss.backward()
 
             pbar.update(1)
-            pbar.set_postfix({'loss': float(loss1)})
+            pbar.set_postfix({'loss1': float(loss)})
             # pbar.set_postfix({'loss1': float(loss1)})
 
 
+            
+        
         print("start evaluating on evalset")
         model.eval()
         avg_loss = []
@@ -210,13 +177,11 @@ def main():
                 inputs = {
                     "input_ids": batch["input_token_ids"].to(device),
                     "attention_mask": batch["input_attn_mask"].to(device),
-                    "decoder_input_ids": batch['tgt_token_ids'].to(device),
-                    "decoder_attention_mask": batch["tgt_attn_mask"].to(device),   
-                    "task": 0 
+                    "labels":batch['labels'].to(device)
                 }
                 
-                outputs,_ = model(**inputs)
-                loss = outputs[0]
+                outputs = model(**inputs)
+                loss = outputs.loss
                 loss = torch.mean(loss)
                 avg_loss.append(loss)
                 pbar.update(1)
@@ -227,6 +192,7 @@ def main():
             print(f"new better ckpt {epoch}")
         save_dir = f'./checkpoints/{args.ckpt_name}/epoch_{epoch}.ckpt'
 
+        # model.save_pretrained(save_dir)
         torch.save({
         'epoch': epoch,
         'state_dict': model.state_dict(),

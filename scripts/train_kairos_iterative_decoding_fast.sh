@@ -3,19 +3,29 @@ set -e
 set -x 
 
 # CKPT_NAME='gen-KAIROS-WFinetune'
-CKPT_NAME='iterative_fast_5e_5_200_info'
+
+# SEED=('12' '21' '100')
+GPU='0'
+SEED=('42' '9' '12' '21')
 # rm -rf checkpoints/${CKPT_NAME}
 
 # does not use informative mentions 
+for zone in "${SEED[@]}"
+do
+CKPT_NAME='iterative_decoding_info_'${zone}
 python train_iterative_decoding_fast.py \
     --ckpt_name=${CKPT_NAME} \
-    --train_batch_size=4 \
-    --gpus 1 \
-    --learning_rate 5e-5 \
-    --data_file=preprocessed_iterative_fast_5e_5_200_info \
+    --gpus ${GPU} \
+    --learning_rate 3e-5 \
+    --data_file=preprocessed/preprocessed_${CKPT_NAME} \
     --accumulate_grad_batches=4 \
+    --use_info \
+    --seed ${zone}
+
+    # --seed 21
     # --load_ckpt=checkpoints/iterative_tag_other_finetune/epoch_2.ckpt \
     # --eval_only
+done
 
 # Event-level identification: P: 48.35
 # Event-level : P: 48.35

@@ -26,7 +26,7 @@ from args.options import parse_arguments
 from transformers import set_seed, AdamW, get_linear_schedule_with_warmup
 
 from transformers import BartTokenizer, BartConfig
-from src.data.data import IEDataset, my_collate_comparing
+from src.data.data import IEDataset, my_collate_comparing, my_collate
 
 from tqdm import tqdm
 import json
@@ -79,24 +79,27 @@ def main():
         model.load_state_dict(torch.load(args.load_ckpt,map_location=model.device)['state_dict']) 
     # assert 1==0
     
-
-    source = './data/wikievents/train_no_ontology.jsonl'
+    if args.use_info:
+        source = './data/wikievents/train_info_no_ontology.jsonl'   
+    else:
+        source = './data/wikievents/train_no_ontology.jsonl'
+    # source = './data/wikievents/train_no_ontology.jsonl'
     target = f'./{args.data_file}/train_data_comparing.jsonl'
-    # get_data_tag_comparing(source = source, target = target, tokenizer = tokenizer)
+    get_data_tag_comparing(source = source, target = target, tokenizer = tokenizer, trigger_dis=args.trg_dis)
     train_dataset = IEDataset(target)
     train_dataloader = DataLoader(train_dataset, 
             collate_fn=my_collate_comparing,
             batch_size=args.train_batch_size, 
             shuffle=True)
 
-    source = './data/wikievents/dev_no_ontology.jsonl'
-    target = f'./{args.data_file}/dev_data_comparing.jsonl'
-    # get_data_tag_comparing(source = source, tadrget = target, tokenizer = tokenizer)
-    eval_dataset = IEDataset(target)    
-    eval_dataloader = DataLoader(eval_dataset, 
-            collate_fn=my_collate_comparing,
+    if args.use_info:
+        eval_dataset = IEDataset('preprocessed/preprocessed_KAIROS_info/val.jsonl', tokenizer = tokenizer)    
+    else:
+        eval_dataset = IEDataset('preprocessed/preprocessed_KAIROS/val.jsonl', tokenizer = tokenizer)
+    eval_dataloader = DataLoader(eval_dataset, num_workers=2, 
+            collate_fn=my_collate,
             batch_size=args.eval_batch_size, 
-            shuffle=False)
+            shuffle=True)
 
     
 
@@ -166,7 +169,7 @@ def main():
             argument_hidden_state_2 = encoder_last_hidden_state_compare[batch['compare_mask']]
             loss3 = mseloss(argument_hidden_state_1, argument_hidden_state_2)
 
-            loss = (loss1 + loss2 + loss3) / args.accumulate_grad_batches
+            loss = (loss1 + loss2 + args.alpha * loss3) / args.accumulate_grad_batches
             loss.backward()
 
             pbar.update(1)

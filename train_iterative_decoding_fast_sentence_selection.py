@@ -82,7 +82,7 @@ def main():
         source = './data/wikievents/test_no_ontology.jsonl'
         coref = './data/wikievents/coref/test.jsonlines'
         target = f'./{args.data_file}/test_data.jsonl'
-        get_data_tag_only_sentence_selection(source = source, target = target, tokenizer = tokenizer, coref = coref)
+        # get_data_tag_only_sentence_selection(source = source, target = target, tokenizer = tokenizer, coref = coref)
         # train_dataset_tag = IEDataset(target)
         test_dataset = IEDataset(target)    
         eval_dataloader = DataLoader(test_dataset,
@@ -121,16 +121,16 @@ def main():
         return 0
     
     
-    train_dataset = IEDataset('preprocessed_sentence_selection/train_data.jsonl')    
+    train_dataset = IEDataset('preprocessed_sentence_selection_info/train_info.jsonl')    
     train_dataloader = DataLoader(train_dataset,
             pin_memory=True, num_workers=2,
             collate_fn=my_collate,
             batch_size=args.train_batch_size, 
             shuffle=True)
 
-    source = './data/wikievents/train_no_ontology.jsonl'
+    source = './data/wikievents/train_info_no_ontology.jsonl'
     coref = './data/wikievents/coref/train.jsonlines'
-    target = f'./{args.data_file}/train_data_tag_other.jsonl'
+    target = f'./{args.data_file}/train_info_tag_other.jsonl'
     get_data_tag_only_sentence_selection(source = source, target = target, tokenizer = tokenizer, coref = coref)
     train_dataset_tag = IEDataset(target)    
     train_dataloader_tag = DataLoader(train_dataset_tag,
@@ -140,7 +140,7 @@ def main():
             shuffle=False)
 
 
-    eval_dataset = IEDataset('preprocessed_sentence_selection/dev_data.jsonl')    
+    eval_dataset = IEDataset('preprocessed_sentence_selection_info/dev_info.jsonl')    
     eval_dataloader = DataLoader(eval_dataset, num_workers=2, 
             collate_fn=my_collate,
             batch_size=args.eval_batch_size, 

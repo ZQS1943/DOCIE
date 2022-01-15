@@ -267,13 +267,13 @@ def scorer(args):
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
-    parser.add_argument('--gen_good_file',type=str,default=f'checkpoints/debug_iter/epoch_5_test_step_2_predictions.jsonl' )
+    parser.add_argument('--gen_good_file',type=str,default=f'checkpoints/debug_iter/epoch_5_test_step_1_predictions.jsonl' )
     # parser.add_argument('--gen_good_file',type=str,default=f'checkpoints/siterative_fast_5e_5_40_info/epoch_5_test_step_0_predictions.jsonl' )
     # parser.add_argument('--gen_bad_file', type=str,default='checkpoints/s_12-pred/predictions.jsonl')
     parser.add_argument('--gen_bad_file', type=str,default='checkpoints/debug_iter/epoch_5_test_step_0_predictions.jsonl')
     # parser.add_argument('--gen_bad_file', type=str,default='checkpoints/iterative_fast_5e_5_40_info/epoch_5_test_step_2_predictions.jsonl')
 
-    parser.add_argument('--input_good',type=str,default=f'preprocessed_iterative_fast_5e_5/test_step_1_data.json' )
+    parser.add_argument('--input_good',type=str,default=f'preprocessed/preprocessed_debug_iter/test_step_0_data.json' )
     # parser.add_argument('--input_good',type=str,default=f'/test.jsonl' )
     parser.add_argument('--input_bad',type=str,default=f'preprocessed_KAIROS/test.jsonl' )
     # parser.add_argument('--input_bad',type=str,default=f'preprocessed_iterative_fast_5e_5_40_info/test_step_1_data.json' )

@@ -3,7 +3,7 @@ set -e
 set -x 
 
 # CKPT_NAME='gen-KAIROS-WFinetune'
-CKPT_NAME='iter_fast_sentence_selection'
+CKPT_NAME='sentence_selection_info_iter'
 # rm -rf checkpoints/${CKPT_NAME}
 
 # does not use informative mentions 
@@ -11,8 +11,8 @@ python train_iterative_decoding_fast_sentence_selection.py \
     --ckpt_name=${CKPT_NAME} \
     --train_batch_size=4 \
     --gpus 1 \
-    --learning_rate 1e-5 \
-    --data_file=preprocessed_iter_sentence_selection \
+    --learning_rate 3e-5 \
+    --data_file=preprocessed_sentence_selection_info_iter \
     --accumulate_grad_batches=4 \
     # --load_ckpt=checkpoints/iterative_tag_other_finetune/epoch_2.ckpt \
     # --eval_only

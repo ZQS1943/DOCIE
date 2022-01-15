@@ -104,6 +104,27 @@ def find_arg_span(arg, context_words, trigger_start, trigger_end, head_only=Fals
         match = find_head(match[0], match[1], doc)
     return match 
 
+def find_arg_span_original_text(arg, context_words, trigger_start, trigger_end, head_only=False, doc=None):
+    match = None 
+    arg_len = len(arg)
+    min_dis = len(context_words) # minimum distance to trigger 
+    for i, w in enumerate(context_words):
+        if context_words[i:i+arg_len] == arg:
+            if i < trigger_start:
+                dis = abs(trigger_start-i-arg_len)
+            else:
+                dis = abs(i-trigger_end)
+            if dis< min_dis:
+                match = (i, i+arg_len-1)
+                min_dis = dis 
+    
+    if match and head_only:
+        assert(doc!=None)
+        head_match = find_head(match[0], match[1], doc)
+        return match, head_match
+    else:
+        return match, match
+
 def get_entity_span(ex, entity_id):
     for ent in ex['entity_mentions']:
         if ent['id'] == entity_id:

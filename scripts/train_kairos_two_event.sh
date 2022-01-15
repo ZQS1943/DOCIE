@@ -3,17 +3,17 @@ set -e
 set -x 
 
 # CKPT_NAME='gen-KAIROS-WFinetune'
-CKPT_NAME='sentence_selection_info'
+CKPT_NAME='two_event_simicolon'
 # rm -rf checkpoints/${CKPT_NAME}
 
 # does not use informative mentions 
-python train_sentence_selection.py \
+python train_two_event.py \
     --ckpt_name=${CKPT_NAME} \
     --train_batch_size=4 \
-    --gpus 2 \
+    --gpus 0 \
     --learning_rate 3e-5 \
-    --data_file=preprocessed_sentence_selection_info \
-    --accumulate_grad_batches=4 \
+    --data_file=preprocessed/preprocessed_two_event_simicolon \
+    # --seed 21
     # --load_ckpt=checkpoints/iterative_tag_other_finetune/epoch_2.ckpt \
     # --eval_only
 
