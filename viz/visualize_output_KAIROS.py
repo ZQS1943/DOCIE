@@ -92,8 +92,8 @@ def load_ontology(dataset):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser() 
-    parser.add_argument('--result-file',type=str, default='checkpoints/gen-KAIROS-pred/predictions.jsonl')
-    parser.add_argument('--test-file', type=str, default='data/wikievents/test.jsonl')
+    parser.add_argument('--result-file',type=str, default='checkpoints/s_info-pred/predictions.jsonl')
+    parser.add_argument('--test-file', type=str, default='data/wikievents/test_info_no_ontology.jsonl')
     parser.add_argument('--gold', action='store_true')
     args = parser.parse_args() 
 

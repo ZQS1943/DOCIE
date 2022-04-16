@@ -92,8 +92,8 @@ def load_ontology(dataset):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser() 
-    parser.add_argument('--result-file',type=str, default='checkpoints/gen-KAIROS-m-s-pred/predictions.jsonl')
-    parser.add_argument('--result-file-better',type=str, default='chechpoints/gen-KAIROS-m-pred/predictions.jsonl')
+    parser.add_argument('--result-file',type=str, default='checkpoints/s-pred/predictions.jsonl')
+    parser.add_argument('--result-file-better',type=str, default='checkpoints/only_arg_copy_3_move-pred/predictions.jsonl')
     parser.add_argument('--test-file', type=str, default='data/wikievents/test.jsonl')
     parser.add_argument('--gold', action='store_true')
     args = parser.parse_args() 
@@ -182,6 +182,8 @@ if __name__ == "__main__":
                             if f"{arg_span[0]}_{arg_span[1]}" not in link_dict:
                                 link_dict[f"{arg_span[0]}_{arg_span[1]}"] = []
                             link_dict[f"{arg_span[0]}_{arg_span[1]}"].append(label)
+
+                
                             
             
             # for span in link_dict:

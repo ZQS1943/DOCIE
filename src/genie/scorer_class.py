@@ -687,14 +687,19 @@ def scorer(args):
     role_prec, role_rec, role_f = compute_f1(
         pred_arg_num, gold_arg_num, arg_class_num)
 
+    result = {}
+
     print("Event-level identification: P: {:.2f}".format(event_idn_num/len(examples)*100.0))
     print("Event-level : P: {:.2f}".format(event_class_num/len(examples)*100.0))
-
+    
     print(f"gold arg num: {gold_arg_num}")    
     print('Role identification: P: {:.2f}, R: {:.2f}, F: {:.2f}'.format(
         role_id_prec * 100.0, role_id_rec * 100.0, role_id_f * 100.0))
     print('Role: P: {:.2f}, R: {:.2f}, F: {:.2f}'.format(
         role_prec * 100.0, role_rec * 100.0, role_f * 100.0))
+
+    result["Role identification"] = {"P": role_id_prec, "R": role_id_rec, "F": role_id_f}
+    result["Role"] = {"P": role_prec, "R": role_rec, "F": role_f}
 
     if args.coref:
         role_id_prec, role_id_rec, role_id_f = compute_f1(
@@ -707,6 +712,8 @@ def scorer(args):
             role_id_prec * 100.0, role_id_rec * 100.0, role_id_f * 100.0))
         print('Coref Role: P: {:.2f}, R: {:.2f}, F: {:.2f}'.format(
             role_prec * 100.0, role_rec * 100.0, role_f * 100.0))
+        result["Coref Role identification"] = {"P": role_id_prec, "R": role_id_rec, "F": role_id_f}
+        result["Coref Role"] = {"P": role_prec, "R": role_rec, "F": role_f}
 
         print('len:',len(ic_cc), len(ic_cf), len(if_))
         print('mean:',np.mean(ic_cc), np.mean(ic_cf), np.mean(if_))
@@ -719,7 +726,9 @@ def scorer(args):
 
     with open(args.gen_file.replace("predictions","results_for_predict")[:-1],'w') as f:
         for docid in docid2doc:
-            f.write(json.dumps(docid2doc[docid]) + '\n')       
+            f.write(json.dumps(docid2doc[docid]) + '\n')   
+
+    return result    
 
 
 

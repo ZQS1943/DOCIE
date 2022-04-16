@@ -387,6 +387,11 @@ def get_data_normal(source = None, target = None, tokenizer = None, dataset = "K
                     'tgt_token_ids': tgt_tokens['input_ids'],
                     'tgt_attn_mask': tgt_tokens['attention_mask']
                 }
+                print(input_template)
+                print(context_tag_trigger)
+                tokens = tokenizer.convert_ids_to_tokens(input_tokens['input_ids'])
+                print(tokens)
+                assert 1==0
 
                 # tokens = tokenizer.decode(processed_ex["input_token_ids"], skip_special_tokens=True)
                 
