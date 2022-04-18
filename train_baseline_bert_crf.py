@@ -213,7 +213,6 @@ def main():
             print(f"new better ckpt {epoch}")
         save_dir = f'./checkpoints/{args.ckpt_name}/epoch_{epoch}.ckpt'
 
-        # model.save_pretrained(save_dir)
         torch.save({
         'epoch': epoch,
         'state_dict': model.state_dict(),

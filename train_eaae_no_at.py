@@ -15,7 +15,7 @@ from transformers.modeling_utils import unwrap_model
 
 from src.genie.scorer_class import scorer
 from src.model.constrained_gen import BartConstrainedGen
-from src.data.get_data import get_data_tag_only
+from src.data.get_data import get_data_tag_only, get_data_normal
 
 
 logger = logging.getLogger(__name__)
@@ -76,69 +76,23 @@ def main():
     if args.load_ckpt:
         print(f"load from {args.load_ckpt}")
         model.load_state_dict(torch.load(args.load_ckpt,map_location=model.device)['state_dict']) 
-    # assert 1==0
     
 
-    if args.eval_only:
-        # source = './data/wikievents/test_info_no_ontology.jsonl'
-        # target = f'./{args.data_file}/test_data_tag_gold_args_info.jsonl'
-        source = './data/wikievents/test_no_ontology.jsonl'
-        target = f'tmp.jsonl'
-        get_data_tag_only(source = source, target = target, tokenizer = tokenizer)
-        assert 1==0
-
-        # eval_dataset = IEDataset('preprocessed_KAIROS/test.jsonl')   
-        eval_dataset = IEDataset(target) 
-        eval_dataloader = DataLoader(eval_dataset, num_workers=2, 
-                collate_fn=my_collate,
-                batch_size=args.eval_batch_size, 
-                shuffle=False)
-
-        pbar_et = tqdm(total=len(eval_dataloader))
-        result_dir = (args.load_ckpt).replace(".ckpt","_test_predictions.jsonl")
-        model.eval()
-        with open(result_dir, 'w') as writer:
-            for step, batch in enumerate(eval_dataloader):
-                input = batch['input_token_ids'].to(device)
-                sample_output = model.generate(input, do_sample=False, max_length=30, num_return_sequences=1,num_beams=1,)
-
-                sample_output = sample_output.reshape(batch['input_token_ids'].size(0), 1, -1)
-                doc_key = batch['doc_key'] # list 
-                tgt_token_ids = batch['tgt_token_ids']
-                
-
-                for idx in range(len(doc_key)):
-                    pred = {
-                        'doc_key': doc_key[idx],
-                        'predicted': tokenizer.decode(sample_output[idx].squeeze(0), skip_special_tokens=True),
-                        'gold': tokenizer.decode(tgt_token_ids[idx].squeeze(0), skip_special_tokens=True) 
-                    }
-                    writer.write(json.dumps(pred)+'\n')
-                pbar_et.update(1)
-            
-        print("start scoring")
-        test_file = 'data/wikievents/test_info_no_ontology.jsonl'
-        coref_file = 'data/wikievents/coref/test.jsonlines'
-        scorer(score_args(result_dir, test_file, coref_file))
-
-        return 0
-        
-
-    if args.use_info:
-        train_dataset = IEDataset('preprocessed/preprocessed_KAIROS_info/train.jsonl', tokenizer = tokenizer)    
-    else:
-        train_dataset = IEDataset('preprocessed/preprocessed_KAIROS/train.jsonl', tokenizer = tokenizer)
-    
+    if args.dataset == "ACE":
+        source = './data/ace05/train.wikievents.json'
+    elif args.dataset == "KAIROS":
+        if args.use_info:
+            source = './data/wikievents/train_info_no_ontology.jsonl'
+        else:
+            source = './data/wikievents/train_no_ontology.jsonl'
+    target = f'./{args.data_file}/train_data_normal.jsonl'
+    get_data_normal(source = source, target = target, tokenizer = tokenizer, dataset = args.dataset) 
+    train_dataset = IEDataset(target, tokenizer = tokenizer)
     train_dataloader = DataLoader(train_dataset,
             pin_memory=True, num_workers=2,
             collate_fn=my_collate,
             batch_size=args.train_batch_size, 
             shuffle=True)
-    
-    if args.use_info:
-        source = './data/wikievents/train_info_no_ontology.jsonl'    
-    else:
-        source = './data/wikievents/train_no_ontology.jsonl'
 
     target = f'./{args.data_file}/train_data_tag_other.jsonl'
     get_data_tag_only(source = source, target = target, tokenizer = tokenizer, trigger_dis = args.trg_dis)
@@ -148,10 +102,16 @@ def main():
             batch_size=args.eval_batch_size, 
             shuffle=False)
 
-    if args.use_info:
-        eval_dataset = IEDataset('preprocessed/preprocessed_KAIROS_info/val.jsonl', tokenizer = tokenizer)    
-    else:
-        eval_dataset = IEDataset('preprocessed/preprocessed_KAIROS/val.jsonl', tokenizer = tokenizer)
+    if args.dataset == "ACE":
+        source = './data/ace05/dev.wikievents.json'
+    elif args.dataset == "KAIROS":
+        if args.use_info:
+            source = './data/wikievents/dev_info_no_ontology.jsonl'
+        else:
+            source = './data/wikievents/dev_no_ontology.jsonl'
+    target = f'./{args.data_file}/dev_data_normal.jsonl'
+    get_data_normal(source = source, target = target, tokenizer = tokenizer, dataset = args.dataset) 
+    eval_dataset = IEDataset(target, tokenizer = tokenizer)
     eval_dataloader = DataLoader(eval_dataset, num_workers=2, 
             collate_fn=my_collate,
             batch_size=args.eval_batch_size, 
@@ -165,7 +125,6 @@ def main():
         args.num_train_epochs = args.max_steps // train_len // args.accumulate_grad_batches + 1
     else:
         t_total = train_len // args.accumulate_grad_batches * args.num_train_epochs
-
     no_decay = ["bias", "LayerNorm.weight"]
     optimizer_grouped_parameters = [
         {
@@ -175,7 +134,6 @@ def main():
         {"params": [p for n, p in model.named_parameters() if any(nd in n for nd in no_decay)], "weight_decay": 0.0},
     ]
     optimizer = AdamW(optimizer_grouped_parameters, lr=args.learning_rate, eps=args.adam_epsilon)
-
     scheduler =  get_linear_schedule_with_warmup(optimizer, num_warmup_steps=args.warmup_steps, num_training_steps=t_total)
 
 
@@ -223,7 +181,6 @@ def main():
 
             pbar.update(1)
             pbar.set_postfix({'loss1': float(loss1), 'loss2':float(loss2)})
-            # pbar.set_postfix({'loss1': float(loss1)})
 
 
             
@@ -254,7 +211,6 @@ def main():
             print(f"new better ckpt {epoch}")
         save_dir = f'./checkpoints/{args.ckpt_name}/epoch_{epoch}.ckpt'
 
-        # model.save_pretrained(save_dir)
         torch.save({
         'epoch': epoch,
         'state_dict': model.state_dict(),

@@ -77,7 +77,6 @@ def main():
     if args.load_ckpt:
         print(f"load from {args.load_ckpt}")
         model.load_state_dict(torch.load(args.load_ckpt,map_location=model.device)['state_dict']) 
-    # assert 1==0
     
     if args.dataset == "ACE":
         source = './data/ace05/train.wikievents.json'
@@ -86,7 +85,6 @@ def main():
             source = './data/wikievents/train_info_no_ontology.jsonl'    
         else:
             source = './data/wikievents/train_no_ontology.jsonl'
-    # source = './data/wikievents/train_no_ontology.jsonl'
     target = f'./{args.data_file}/train_data_comparing.jsonl'
     get_data_tag_comparing(source = source, target = target, tokenizer = tokenizer, trigger_dis=args.trg_dis, dataset = args.dataset)
     train_dataset = IEDataset(target)
@@ -97,14 +95,14 @@ def main():
 
     if args.dataset == "ACE":
         source = './data/ace05/dev.wikievents.json'
-        target = f'./{args.data_file}/dev_data.jsonl'
-        get_data_normal(source = source, target = target, tokenizer = tokenizer, dataset = args.dataset) 
-        eval_dataset = IEDataset(target)
     elif args.dataset == "KAIROS":
         if args.use_info:
-            eval_dataset = IEDataset('preprocessed/preprocessed_KAIROS_info/val.jsonl', tokenizer = tokenizer)    
+            source = './data/wikievents/dev_info_no_ontology.jsonl'
         else:
-            eval_dataset = IEDataset('preprocessed/preprocessed_KAIROS/val.jsonl', tokenizer = tokenizer)
+            source = './data/wikievents/dev_no_ontology.jsonl'
+    target = f'./{args.data_file}/dev_data_normal.jsonl'
+    get_data_normal(source = source, target = target, tokenizer = tokenizer, dataset = args.dataset) 
+    eval_dataset = IEDataset(target, tokenizer = tokenizer)
     eval_dataloader = DataLoader(eval_dataset, num_workers=2, 
             collate_fn=my_collate,
             batch_size=args.eval_batch_size, 
@@ -158,8 +156,6 @@ def main():
             outputs, encoder_last_hidden_state = model(**inputs)
             loss = outputs[0]
             loss1 = torch.mean(loss) 
-            # loss = loss1 / args.accumulate_grad_batches
-            # loss.backward()
 
             inputs = {
                     "input_ids": batch["compare_token_ids"].to(device),
@@ -171,8 +167,6 @@ def main():
             outputs,encoder_last_hidden_state_compare = model(**inputs)
             loss = outputs[0]
             loss2 = torch.mean(loss) 
-            # loss = loss2 / args.accumulate_grad_batches
-            # loss.backward()
 
             argument_hidden_state_1 = encoder_last_hidden_state[batch['input_mask']]
             argument_hidden_state_2 = encoder_last_hidden_state_compare[batch['compare_mask']]
@@ -183,7 +177,6 @@ def main():
 
             pbar.update(1)
             pbar.set_postfix({'loss1': float(loss1), 'loss2':float(loss2), 'loss3':float(loss3)})
-            # pbar.set_postfix({'loss1': float(loss1)})
 
 
             
@@ -214,7 +207,6 @@ def main():
             print(f"new better ckpt {epoch}")
         save_dir = f'./checkpoints/{args.ckpt_name}/epoch_{epoch}.ckpt'
 
-        # model.save_pretrained(save_dir)
         torch.save({
         'epoch': epoch,
         'state_dict': model.state_dict(),

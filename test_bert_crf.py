@@ -104,7 +104,6 @@ def main():
 
     print(f"load from {args.load_ckpt}")
     model.load_state_dict(torch.load(args.load_ckpt,map_location=model.device)['state_dict']) 
-    # assert 1==0
     
 
     if args.dataset == "ACE":
@@ -191,11 +190,8 @@ def main():
             test_file = 'data/wikievents/test_info_no_ontology.jsonl'
         else:
             test_file = 'data/wikievents/test_no_ontology.jsonl'
-    
         coref_file = 'data/wikievents/coref/test.jsonlines'
     
-    # test_file = f'data/wikievents/10fold/fold_{args.fold_num}/test.jsonl'
-    # coref_file = f'data/wikievents/10fold/fold_{args.fold_num}/test_coref.jsonl'
     scorer_bert_crf(score_args(result_dir, test_file, coref_file, args.score_th, args.dataset))
 
 
