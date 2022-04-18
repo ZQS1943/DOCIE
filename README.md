@@ -16,7 +16,7 @@ To train and test the EA$^2$E model, use
 sh scripts/train_eaae.sh
 sh scripts/test_bart_gen.sh
 ```
-In Tesla P100, the training takes about 10min for each epoch.
+In Tesla P100, the training takes about 15min for each epoch.
 
 ## Datasets
 - ACE05 (Access from LDC[https://catalog.ldc.upenn.edu/LDC2006T06] and preprocessing following OneIE[http://blender.cs.illinois.edu/software/oneie/])
