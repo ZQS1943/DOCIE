@@ -1,62 +1,0 @@
-checkpoints/iterative_tag_other_finetune/epoch_2.ckpt
-Testing: 0it [00:00, ?it/s]Testing:   1%|          | 1/91 [00:00<00:56,  1.60it/s]Testing:   2%|▏         | 2/91 [00:01<00:43,  2.04it/s]Testing:   3%|▎         | 3/91 [00:01<00:40,  2.17it/s]Testing:   4%|▍         | 4/91 [00:01<00:37,  2.34it/s]Testing:   5%|▌         | 5/91 [00:02<00:37,  2.30it/s]Testing:   7%|▋         | 6/91 [00:02<00:37,  2.26it/s]Testing:   8%|▊         | 7/91 [00:03<00:36,  2.28it/s]Testing:   9%|▉         | 8/91 [00:03<00:34,  2.38it/s]Testing:  10%|▉         | 9/91 [00:03<00:34,  2.35it/s]Testing:  11%|█         | 10/91 [00:04<00:33,  2.39it/s]Testing:  12%|█▏        | 11/91 [00:04<00:32,  2.47it/s]Testing:  13%|█▎        | 12/91 [00:05<00:30,  2.56it/s]Testing:  14%|█▍        | 13/91 [00:05<00:32,  2.37it/s]Testing:  15%|█▌        | 14/91 [00:06<00:32,  2.41it/s]Testing:  16%|█▋        | 15/91 [00:06<00:30,  2.47it/s]Testing:  18%|█▊        | 16/91 [00:06<00:29,  2.53it/s]Testing:  19%|█▊        | 17/91 [00:07<00:28,  2.60it/s]Testing:  20%|█▉        | 18/91 [00:07<00:28,  2.59it/s]Testing:  21%|██        | 19/91 [00:07<00:29,  2.46it/s]Testing:  22%|██▏       | 20/91 [00:08<00:29,  2.43it/s]Testing:  23%|██▎       | 21/91 [00:08<00:29,  2.41it/s]Testing:  24%|██▍       | 22/91 [00:09<00:28,  2.45it/s]Testing:  25%|██▌       | 23/91 [00:09<00:28,  2.36it/s]Testing:  26%|██▋       | 24/91 [00:10<00:27,  2.44it/s]Testing:  27%|██▋       | 25/91 [00:10<00:31,  2.12it/s]Testing:  29%|██▊       | 26/91 [00:11<00:29,  2.18it/s]Testing:  30%|██▉       | 27/91 [00:11<00:28,  2.22it/s]Testing:  31%|███       | 28/91 [00:11<00:28,  2.20it/s]Testing:  32%|███▏      | 29/91 [00:12<00:28,  2.14it/s]Testing:  33%|███▎      | 30/91 [00:12<00:28,  2.11it/s]Testing:  34%|███▍      | 31/91 [00:13<00:27,  2.15it/s]Testing:  35%|███▌      | 32/91 [00:13<00:26,  2.20it/s]Testing:  36%|███▋      | 33/91 [00:14<00:25,  2.24it/s]Testing:  37%|███▋      | 34/91 [00:14<00:25,  2.22it/s]Testing:  38%|███▊      | 35/91 [00:15<00:24,  2.26it/s]Testing:  40%|███▉      | 36/91 [00:15<00:24,  2.26it/s]Testing:  41%|████      | 37/91 [00:16<00:23,  2.27it/s]Testing:  42%|████▏     | 38/91 [00:16<00:23,  2.30it/s]Testing:  43%|████▎     | 39/91 [00:16<00:22,  2.29it/s]Testing:  44%|████▍     | 40/91 [00:17<00:22,  2.30it/s]Testing:  45%|████▌     | 41/91 [00:17<00:21,  2.35it/s]Testing:  46%|████▌     | 42/91 [00:18<00:20,  2.35it/s]Testing:  47%|████▋     | 43/91 [00:18<00:20,  2.32it/s]Testing:  48%|████▊     | 44/91 [00:19<00:20,  2.33it/s]Testing:  49%|████▉     | 45/91 [00:19<00:21,  2.18it/s]Testing:  51%|█████     | 46/91 [00:20<00:22,  2.02it/s]Testing:  52%|█████▏    | 47/91 [00:20<00:22,  1.96it/s]Testing:  53%|█████▎    | 48/91 [00:21<00:22,  1.88it/s]Testing:  54%|█████▍    | 49/91 [00:21<00:23,  1.75it/s]Testing:  55%|█████▍    | 50/91 [00:22<00:22,  1.80it/s]Testing:  56%|█████▌    | 51/91 [00:22<00:20,  1.91it/s]Testing:  57%|█████▋    | 52/91 [00:23<00:19,  1.99it/s]Testing:  58%|█████▊    | 53/91 [00:23<00:18,  2.11it/s]Testing:  59%|█████▉    | 54/91 [00:24<00:16,  2.23it/s]Testing:  60%|██████    | 55/91 [00:24<00:15,  2.32it/s]Testing:  62%|██████▏   | 56/91 [00:24<00:14,  2.39it/s]Testing:  63%|██████▎   | 57/91 [00:25<00:13,  2.44it/s]Testing:  64%|██████▎   | 58/91 [00:25<00:13,  2.47it/s]Testing:  65%|██████▍   | 59/91 [00:26<00:13,  2.44it/s]Testing:  66%|██████▌   | 60/91 [00:26<00:12,  2.48it/s]Testing:  67%|██████▋   | 61/91 [00:26<00:12,  2.45it/s]Testing:  68%|██████▊   | 62/91 [00:27<00:12,  2.26it/s]Testing:  69%|██████▉   | 63/91 [00:27<00:12,  2.27it/s]Testing:  70%|███████   | 64/91 [00:28<00:13,  2.07it/s]Testing:  71%|███████▏  | 65/91 [00:28<00:12,  2.13it/s]Testing:  73%|███████▎  | 66/91 [00:29<00:12,  1.98it/s]Testing:  74%|███████▎  | 67/91 [00:30<00:12,  1.91it/s]Testing:  75%|███████▍  | 68/91 [00:30<00:11,  2.03it/s]Testing:  76%|███████▌  | 69/91 [00:31<00:11,  1.92it/s]Testing:  77%|███████▋  | 70/91 [00:31<00:11,  1.82it/s]Testing:  78%|███████▊  | 71/91 [00:32<00:10,  1.98it/s]Testing:  79%|███████▉  | 72/91 [00:32<00:08,  2.12it/s]Testing:  80%|████████  | 73/91 [00:33<00:09,  1.97it/s]Testing:  81%|████████▏ | 74/91 [00:33<00:09,  1.83it/s]Testing:  82%|████████▏ | 75/91 [00:34<00:08,  1.91it/s]Testing:  84%|████████▎ | 76/91 [00:34<00:07,  1.95it/s]Testing:  85%|████████▍ | 77/91 [00:35<00:06,  2.05it/s]Testing:  86%|████████▌ | 78/91 [00:35<00:06,  2.15it/s]Testing:  87%|████████▋ | 79/91 [00:36<00:06,  1.97it/s]Testing:  88%|████████▊ | 80/91 [00:36<00:05,  1.90it/s]Testing:  89%|████████▉ | 81/91 [00:37<00:05,  1.87it/s]Testing:  90%|█████████ | 82/91 [00:37<00:04,  2.00it/s]Testing:  91%|█████████ | 83/91 [00:38<00:03,  2.14it/s]Testing:  92%|█████████▏| 84/91 [00:38<00:03,  2.20it/s]Testing:  93%|█████████▎| 85/91 [00:39<00:03,  1.99it/s]Testing:  95%|█████████▍| 86/91 [00:39<00:02,  1.87it/s]Testing:  96%|█████████▌| 87/91 [00:40<00:02,  1.81it/s]Testing:  97%|█████████▋| 88/91 [00:40<00:01,  1.77it/s]Testing:  98%|█████████▊| 89/91 [00:41<00:00,  2.02it/s]Testing:  99%|█████████▉| 90/91 [00:41<00:00,  2.29it/s]Testing: 100%|██████████| 91/91 [00:41<00:00,  2.53it/s]--------------------------------------------------------------------------------
-Testing: 100%|██████████| 91/91 [00:42<00:00,  2.12it/s]
-({'role': 'Place', 'predict': False}, {'role': 'Place', 'predict': False})
-({'role': 'Victim', 'predict': True}, {'role': 'Target', 'predict': False})
-({'role': 'Killer', 'predict': False}, {'role': 'Injurer', 'predict': False})
-({'role': 'Victim', 'predict': True}, {'role': 'Victim', 'predict': True})
-({'role': 'Defendant', 'predict': True}, {'role': 'Victim', 'predict': False})
-({'role': 'Damager', 'predict': False}, {'role': 'Damager', 'predict': False})
-({'role': 'Killer', 'predict': False}, {'role': 'Injurer', 'predict': True})
-({'role': 'Target', 'predict': False}, {'role': 'Victim', 'predict': False})
-({'role': 'Victim', 'predict': True}, {'role': 'Target', 'predict': True})
-({'role': 'Killer', 'predict': False}, {'role': 'Attacker', 'predict': False})
-({'role': 'Target', 'predict': False}, {'role': 'Victim', 'predict': True})
-({'role': 'Victim', 'predict': False}, {'role': 'Target', 'predict': False})
-({'role': 'Killer', 'predict': False}, {'role': 'Attacker', 'predict': False})
-({'role': 'Killer', 'predict': False}, {'role': 'Injurer', 'predict': False})
-({'role': 'Killer', 'predict': False}, {'role': 'Damager', 'predict': False})
-({'role': 'Injurer', 'predict': False}, {'role': 'Damager', 'predict': False})
-({'role': 'Victim', 'predict': True}, {'role': 'PassengerArtifact', 'predict': True})
-({'role': 'Defendant', 'predict': False}, {'role': 'Attacker', 'predict': True})
-({'role': 'Defendant', 'predict': False}, {'role': 'Injurer', 'predict': False})
-({'role': 'Attacker', 'predict': True}, {'role': 'Injurer', 'predict': False})
-({'role': 'Killer', 'predict': True}, {'role': 'Jailer', 'predict': False})
-({'role': 'Victim', 'predict': True}, {'role': 'Attacker', 'predict': False})
-({'role': 'Detainee', 'predict': True}, {'role': 'Attacker', 'predict': False})
-({'role': 'Attacker', 'predict': True}, {'role': 'Killer', 'predict': False})
-({'role': 'Attacker', 'predict': True}, {'role': 'Injurer', 'predict': False})
-({'role': 'Killer', 'predict': False}, {'role': 'Injurer', 'predict': False})
-({'role': 'Recipient', 'predict': False}, {'role': 'Giver', 'predict': False})
-({'role': 'ObservedEntity', 'predict': True}, {'role': 'Instrument', 'predict': False})
-({'role': 'Recipient', 'predict': False}, {'role': 'Participant', 'predict': False})
-({'role': 'Giver', 'predict': False}, {'role': 'Participant', 'predict': False})
-({'role': 'Attacker', 'predict': True}, {'role': 'Attacker', 'predict': False})
-({'role': 'Victim', 'predict': True}, {'role': 'Target', 'predict': False})
-({'role': 'Victim', 'predict': True}, {'role': 'Target', 'predict': False})
-({'role': 'Victim', 'predict': True}, {'role': 'Target', 'predict': False})
-({'role': 'PassengerArtifact', 'predict': True}, {'role': 'ExplosiveDevice', 'predict': True})
-({'role': 'Victim', 'predict': True}, {'role': 'Target', 'predict': True})
-({'role': 'Target', 'predict': False}, {'role': 'Victim', 'predict': True})
-({'role': 'Communicator', 'predict': True}, {'role': 'Communicator', 'predict': True})
-({'role': 'Communicator', 'predict': False}, {'role': 'Communicator', 'predict': False})
-({'role': 'Defendant', 'predict': True}, {'role': 'PassengerArtifact', 'predict': True})
-({'role': 'Attacker', 'predict': False}, {'role': 'Place', 'predict': False})
-({'role': 'Attacker', 'predict': False}, {'role': 'Killer', 'predict': False})
-({'role': 'Place', 'predict': True}, {'role': 'Place', 'predict': False})
-({'role': 'Attacker', 'predict': True}, {'role': 'Killer', 'predict': False})
-({'role': 'Attacker', 'predict': True}, {'role': 'Victim', 'predict': False})
-({'role': 'Killer', 'predict': False}, {'role': 'Victim', 'predict': False})
-({'role': 'Place', 'predict': False}, {'role': 'Place', 'predict': False})
-({'role': 'Recipient', 'predict': False}, {'role': 'Impeder', 'predict': True})
-({'role': 'Killer', 'predict': False}, {'role': 'Attacker', 'predict': False})
-paired args: 49, inconsistent args: 21, raito: 0.42857142857142855
-Evaluation by matching head words only....
-no ontology: 1
-Event-level identification: P: 48.35
-Event-level : P: 48.35
-gold arg num: 561
-Role identification: P: 66.45, R: 54.01, F: 59.59
-Role: P: 58.33, R: 47.42, F: 52.31
-Coref Role identification: P: 67.98, R: 55.26, F: 60.96
-Coref Role: P: 59.87, R: 48.66, F: 53.69
