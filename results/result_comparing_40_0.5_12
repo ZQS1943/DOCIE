@@ -1,0 +1,51 @@
+load from checkpoints/comparing_40_0.5_12/epoch_5.ckpt
+start scoring
+gen_file:checkpoints/comparing_40_0.5_12/epoch_5_test_step_0_predictions.jsonl
+test_file:data/wikievents/test_no_ontology.jsonl
+paired args: 49, inconsistent args: 24, raito: 0.4897959183673469
+Evaluation by matching head words only....
+Event-level identification: P: 61.81
+Event-level : P: 61.81
+gold arg num: 563
+Role identification: P: 74.47, R: 68.92, F: 71.59
+Role: P: 68.71, R: 63.59, F: 66.05
+Coref Role identification: P: 75.43, R: 69.80, F: 72.51
+Coref Role: P: 69.67, R: 64.48, F: 66.97
+len: 363 30 61
+mean: 0.9606406129479299 0.9130254339840677 0.9083345541102855
+var: 0.006649833954039997 0.023658422333449215 0.015977231578257253
+min: 0.5355620980262756 0.4685182273387909 0.5833685398101807
+max: 1.0 0.9999995231628418 0.999999463558197
+start getting new testset
+source:checkpoints/comparing_40_0.5_12/epoch_5_test_step_0_results_for_predict.json
+target:preprocessed/preprocessed_comparing_40_0.5_12/test_step_0_data.json
+trigger_dis:40
+total_event: 364
+has close events: 332
+longest context:429
+longest target 36
+start scoring
+gen_file:checkpoints/comparing_40_0.5_12/epoch_5_test_step_1_predictions.jsonl
+test_file:data/wikievents/test_no_ontology.jsonl
+paired args: 49, inconsistent args: 24, raito: 0.4897959183673469
+Evaluation by matching head words only....
+Event-level identification: P: 62.91
+Event-level : P: 62.91
+gold arg num: 563
+Role identification: P: 75.93, R: 68.92, F: 72.25
+Role: P: 69.67, R: 63.23, F: 66.29
+Coref Role identification: P: 77.10, R: 69.98, F: 73.37
+Coref Role: P: 70.84, R: 64.30, F: 67.41
+len: 362 32 59
+mean: 0.9632563685656435 0.9399093355251742 0.901173991335314
+var: 0.007241193804950881 0.009390210706270196 0.02089848108797258
+min: 0.3939999043941498 0.5399799942970276 0.4829885959625244
+max: 1.0 0.9999998807907104 0.9999999403953552
+start getting new testset
+source:checkpoints/comparing_40_0.5_12/epoch_5_test_step_1_results_for_predict.json
+target:preprocessed/preprocessed_comparing_40_0.5_12/test_step_1_data.json
+trigger_dis:40
+total_event: 364
+has close events: 332
+longest context:429
+longest target 37

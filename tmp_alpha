@@ -1,0 +1,82 @@
+source:./data/wikievents/train_no_ontology.jsonl
+target:./preprocessed/preprocessed_comparing_40_0.1_42/train_data_comparing.jsonl
+trigger dis:40
+dataset:KAIROS
+total_event: 3230
+has close events: 2802
+longest context:476
+longest target 48
+start training
+start evaluating on evalset
+new better ckpt 0
+start training
+start evaluating on evalset
+start training
+start evaluating on evalset
+new better ckpt 2
+start training
+start evaluating on evalset
+start training
+start evaluating on evalset
+source:./data/wikievents/train_no_ontology.jsonl
+target:./preprocessed/preprocessed_comparing_40_0.5_42/train_data_comparing.jsonl
+trigger dis:40
+dataset:KAIROS
+total_event: 3230
+has close events: 2802
+longest context:476
+longest target 48
+start training
+start evaluating on evalset
+new better ckpt 0
+start training
+start evaluating on evalset
+start training
+start evaluating on evalset
+new better ckpt 2
+start training
+start evaluating on evalset
+start training
+start evaluating on evalset
+source:./data/wikievents/train_no_ontology.jsonl
+target:./preprocessed/preprocessed_comparing_40_1_42/train_data_comparing.jsonl
+trigger dis:40
+dataset:KAIROS
+total_event: 3230
+has close events: 2802
+longest context:476
+longest target 48
+start training
+start evaluating on evalset
+new better ckpt 0
+start training
+start evaluating on evalset
+start training
+start evaluating on evalset
+new better ckpt 2
+start training
+start evaluating on evalset
+start training
+start evaluating on evalset
+source:./data/wikievents/train_no_ontology.jsonl
+target:./preprocessed/preprocessed_comparing_40_0.1_9/train_data_comparing.jsonl
+trigger dis:40
+dataset:KAIROS
+total_event: 3230
+has close events: 2802
+longest context:476
+longest target 48
+start training
+start evaluating on evalset
+new better ckpt 0
+start training
+start evaluating on evalset
+new better ckpt 1
+start training
+start evaluating on evalset
+new better ckpt 2
+start training
+start evaluating on evalset
+start training
+start evaluating on evalset
+new better ckpt 4

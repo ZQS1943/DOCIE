@@ -1,0 +1,452 @@
+load from checkpoints/iterative_decoding_ace_9/epoch_5.ckpt
+source:./data/ace05/test.wikievents.json
+target:./preprocessed/preprocessed_iterative_decoding_ace_9/test_data.jsonl
+dataset:ACE
+total_event: 403
+longest context:429
+longest target 22
+start scoring
+gen_file:checkpoints/iterative_decoding_ace_9/epoch_5_test_step_0_predictions.jsonl
+test_file:data/ace05/test.wikievents.json
+paired args: 68, inconsistent args: 26, raito: 0.38235294117647056
+Evaluation by matching head words only....
+Event-level identification: P: 68.98
+Event-level : P: 68.98
+gold arg num: 576
+Role identification: P: 72.20, R: 73.96, F: 73.07
+Role: P: 68.98, R: 70.66, F: 69.81
+start getting new testset
+source:checkpoints/iterative_decoding_ace_9/epoch_5_test_step_0_results_for_predict.json
+target:preprocessed/preprocessed_iterative_decoding_ace_9/test_step_0_data.json
+trigger_dis:40
+dataset:ACE
+total_event: 403
+has close events: 356
+longest context:424
+longest target 21
+start scoring
+gen_file:checkpoints/iterative_decoding_ace_9/epoch_5_test_step_1_predictions.jsonl
+test_file:data/ace05/test.wikievents.json
+paired args: 68, inconsistent args: 26, raito: 0.38235294117647056
+Evaluation by matching head words only....
+Event-level identification: P: 68.49
+Event-level : P: 68.49
+gold arg num: 576
+Role identification: P: 73.16, R: 74.31, F: 73.73
+Role: P: 70.26, R: 71.35, F: 70.80
+start getting new testset
+source:checkpoints/iterative_decoding_ace_9/epoch_5_test_step_1_results_for_predict.json
+target:preprocessed/preprocessed_iterative_decoding_ace_9/test_step_1_data.json
+trigger_dis:40
+dataset:ACE
+total_event: 403
+has close events: 356
+longest context:424
+longest target 21
+start scoring
+gen_file:checkpoints/iterative_decoding_ace_9/epoch_5_test_step_2_predictions.jsonl
+test_file:data/ace05/test.wikievents.json
+paired args: 68, inconsistent args: 28, raito: 0.4117647058823529
+Evaluation by matching head words only....
+Event-level identification: P: 68.49
+Event-level : P: 68.49
+gold arg num: 576
+Role identification: P: 73.08, R: 74.48, F: 73.77
+Role: P: 70.19, R: 71.53, F: 70.85
+start getting new testset
+source:checkpoints/iterative_decoding_ace_9/epoch_5_test_step_2_results_for_predict.json
+target:preprocessed/preprocessed_iterative_decoding_ace_9/test_step_2_data.json
+trigger_dis:40
+dataset:ACE
+total_event: 403
+has close events: 356
+longest context:424
+longest target 21
+start scoring
+gen_file:checkpoints/iterative_decoding_ace_9/epoch_5_test_step_3_predictions.jsonl
+test_file:data/ace05/test.wikievents.json
+paired args: 68, inconsistent args: 28, raito: 0.4117647058823529
+Evaluation by matching head words only....
+Event-level identification: P: 68.49
+Event-level : P: 68.49
+gold arg num: 576
+Role identification: P: 73.41, R: 74.31, F: 73.86
+Role: P: 70.50, R: 71.35, F: 70.92
+start getting new testset
+source:checkpoints/iterative_decoding_ace_9/epoch_5_test_step_3_results_for_predict.json
+target:preprocessed/preprocessed_iterative_decoding_ace_9/test_step_3_data.json
+trigger_dis:40
+dataset:ACE
+total_event: 403
+has close events: 356
+longest context:424
+longest target 21
+start scoring
+gen_file:checkpoints/iterative_decoding_ace_9/epoch_5_test_step_4_predictions.jsonl
+test_file:data/ace05/test.wikievents.json
+paired args: 68, inconsistent args: 28, raito: 0.4117647058823529
+Evaluation by matching head words only....
+Event-level identification: P: 68.49
+Event-level : P: 68.49
+gold arg num: 576
+Role identification: P: 73.16, R: 74.31, F: 73.73
+Role: P: 70.26, R: 71.35, F: 70.80
+start getting new testset
+source:checkpoints/iterative_decoding_ace_9/epoch_5_test_step_4_results_for_predict.json
+target:preprocessed/preprocessed_iterative_decoding_ace_9/test_step_4_data.json
+trigger_dis:40
+dataset:ACE
+total_event: 403
+has close events: 356
+longest context:424
+longest target 21
+start scoring
+gen_file:checkpoints/iterative_decoding_ace_9/epoch_5_test_step_5_predictions.jsonl
+test_file:data/ace05/test.wikievents.json
+paired args: 68, inconsistent args: 28, raito: 0.4117647058823529
+Evaluation by matching head words only....
+Event-level identification: P: 68.49
+Event-level : P: 68.49
+gold arg num: 576
+Role identification: P: 73.41, R: 74.31, F: 73.86
+Role: P: 70.50, R: 71.35, F: 70.92
+--------------------------------------------------------------------------------
+load from checkpoints/iterative_decoding_ace_9/epoch_4.ckpt
+source:./data/ace05/test.wikievents.json
+target:./preprocessed/preprocessed_iterative_decoding_ace_9/test_data.jsonl
+dataset:ACE
+total_event: 403
+longest context:429
+longest target 22
+start scoring
+gen_file:checkpoints/iterative_decoding_ace_9/epoch_4_test_step_0_predictions.jsonl
+test_file:data/ace05/test.wikievents.json
+paired args: 68, inconsistent args: 22, raito: 0.3235294117647059
+Evaluation by matching head words only....
+Event-level identification: P: 70.22
+Event-level : P: 70.22
+gold arg num: 576
+Role identification: P: 71.83, R: 74.83, F: 73.30
+Role: P: 68.33, R: 71.18, F: 69.73
+start getting new testset
+source:checkpoints/iterative_decoding_ace_9/epoch_4_test_step_0_results_for_predict.json
+target:preprocessed/preprocessed_iterative_decoding_ace_9/test_step_0_data.json
+trigger_dis:40
+dataset:ACE
+total_event: 403
+has close events: 356
+longest context:427
+longest target 21
+start scoring
+gen_file:checkpoints/iterative_decoding_ace_9/epoch_4_test_step_1_predictions.jsonl
+test_file:data/ace05/test.wikievents.json
+paired args: 68, inconsistent args: 25, raito: 0.36764705882352944
+Evaluation by matching head words only....
+Event-level identification: P: 69.48
+Event-level : P: 69.48
+gold arg num: 576
+Role identification: P: 72.19, R: 74.83, F: 73.49
+Role: P: 69.18, R: 71.70, F: 70.42
+start getting new testset
+source:checkpoints/iterative_decoding_ace_9/epoch_4_test_step_1_results_for_predict.json
+target:preprocessed/preprocessed_iterative_decoding_ace_9/test_step_1_data.json
+trigger_dis:40
+dataset:ACE
+total_event: 403
+has close events: 356
+longest context:427
+longest target 21
+start scoring
+gen_file:checkpoints/iterative_decoding_ace_9/epoch_4_test_step_2_predictions.jsonl
+test_file:data/ace05/test.wikievents.json
+paired args: 68, inconsistent args: 25, raito: 0.36764705882352944
+Evaluation by matching head words only....
+Event-level identification: P: 69.23
+Event-level : P: 69.23
+gold arg num: 576
+Role identification: P: 71.29, R: 74.13, F: 72.68
+Role: P: 68.28, R: 71.01, F: 69.62
+start getting new testset
+source:checkpoints/iterative_decoding_ace_9/epoch_4_test_step_2_results_for_predict.json
+target:preprocessed/preprocessed_iterative_decoding_ace_9/test_step_2_data.json
+trigger_dis:40
+dataset:ACE
+total_event: 403
+has close events: 356
+longest context:427
+longest target 21
+start scoring
+gen_file:checkpoints/iterative_decoding_ace_9/epoch_4_test_step_3_predictions.jsonl
+test_file:data/ace05/test.wikievents.json
+paired args: 68, inconsistent args: 25, raito: 0.36764705882352944
+Evaluation by matching head words only....
+Event-level identification: P: 69.48
+Event-level : P: 69.48
+gold arg num: 576
+Role identification: P: 71.79, R: 74.65, F: 73.19
+Role: P: 68.78, R: 71.53, F: 70.13
+start getting new testset
+source:checkpoints/iterative_decoding_ace_9/epoch_4_test_step_3_results_for_predict.json
+target:preprocessed/preprocessed_iterative_decoding_ace_9/test_step_3_data.json
+trigger_dis:40
+dataset:ACE
+total_event: 403
+has close events: 356
+longest context:427
+longest target 21
+start scoring
+gen_file:checkpoints/iterative_decoding_ace_9/epoch_4_test_step_4_predictions.jsonl
+test_file:data/ace05/test.wikievents.json
+paired args: 68, inconsistent args: 25, raito: 0.36764705882352944
+Evaluation by matching head words only....
+Event-level identification: P: 69.23
+Event-level : P: 69.23
+gold arg num: 576
+Role identification: P: 71.45, R: 74.31, F: 72.85
+Role: P: 68.45, R: 71.18, F: 69.79
+start getting new testset
+source:checkpoints/iterative_decoding_ace_9/epoch_4_test_step_4_results_for_predict.json
+target:preprocessed/preprocessed_iterative_decoding_ace_9/test_step_4_data.json
+trigger_dis:40
+dataset:ACE
+total_event: 403
+has close events: 356
+longest context:427
+longest target 21
+start scoring
+gen_file:checkpoints/iterative_decoding_ace_9/epoch_4_test_step_5_predictions.jsonl
+test_file:data/ace05/test.wikievents.json
+paired args: 68, inconsistent args: 25, raito: 0.36764705882352944
+Evaluation by matching head words only....
+Event-level identification: P: 69.48
+Event-level : P: 69.48
+gold arg num: 576
+Role identification: P: 71.79, R: 74.65, F: 73.19
+Role: P: 68.78, R: 71.53, F: 70.13
+--------------------------------------------------------------------------------
+load from checkpoints/iterative_decoding_ace_9/epoch_3.ckpt
+source:./data/ace05/test.wikievents.json
+target:./preprocessed/preprocessed_iterative_decoding_ace_9/test_data.jsonl
+dataset:ACE
+total_event: 403
+longest context:429
+longest target 22
+start scoring
+gen_file:checkpoints/iterative_decoding_ace_9/epoch_3_test_step_0_predictions.jsonl
+test_file:data/ace05/test.wikievents.json
+paired args: 68, inconsistent args: 16, raito: 0.23529411764705882
+Evaluation by matching head words only....
+Event-level identification: P: 69.23
+Event-level : P: 69.23
+gold arg num: 576
+Role identification: P: 70.60, R: 73.78, F: 72.16
+Role: P: 67.61, R: 70.66, F: 69.10
+start getting new testset
+source:checkpoints/iterative_decoding_ace_9/epoch_3_test_step_0_results_for_predict.json
+target:preprocessed/preprocessed_iterative_decoding_ace_9/test_step_0_data.json
+trigger_dis:40
+dataset:ACE
+total_event: 403
+has close events: 356
+longest context:421
+longest target 21
+start scoring
+gen_file:checkpoints/iterative_decoding_ace_9/epoch_3_test_step_1_predictions.jsonl
+test_file:data/ace05/test.wikievents.json
+paired args: 68, inconsistent args: 31, raito: 0.45588235294117646
+Evaluation by matching head words only....
+Event-level identification: P: 67.25
+Event-level : P: 67.25
+gold arg num: 576
+Role identification: P: 70.54, R: 72.74, F: 71.62
+Role: P: 67.00, R: 69.10, F: 68.03
+start getting new testset
+source:checkpoints/iterative_decoding_ace_9/epoch_3_test_step_1_results_for_predict.json
+target:preprocessed/preprocessed_iterative_decoding_ace_9/test_step_1_data.json
+trigger_dis:40
+dataset:ACE
+total_event: 403
+has close events: 356
+longest context:419
+longest target 21
+start scoring
+gen_file:checkpoints/iterative_decoding_ace_9/epoch_3_test_step_2_predictions.jsonl
+test_file:data/ace05/test.wikievents.json
+paired args: 68, inconsistent args: 25, raito: 0.36764705882352944
+Evaluation by matching head words only....
+Event-level identification: P: 67.25
+Event-level : P: 67.25
+gold arg num: 576
+Role identification: P: 70.78, R: 72.74, F: 71.75
+Role: P: 67.40, R: 69.27, F: 68.32
+start getting new testset
+source:checkpoints/iterative_decoding_ace_9/epoch_3_test_step_2_results_for_predict.json
+target:preprocessed/preprocessed_iterative_decoding_ace_9/test_step_2_data.json
+trigger_dis:40
+dataset:ACE
+total_event: 403
+has close events: 356
+longest context:418
+longest target 21
+start scoring
+gen_file:checkpoints/iterative_decoding_ace_9/epoch_3_test_step_3_predictions.jsonl
+test_file:data/ace05/test.wikievents.json
+paired args: 68, inconsistent args: 27, raito: 0.39705882352941174
+Evaluation by matching head words only....
+Event-level identification: P: 67.25
+Event-level : P: 67.25
+gold arg num: 576
+Role identification: P: 70.85, R: 72.57, F: 71.70
+Role: P: 67.46, R: 69.10, F: 68.27
+start getting new testset
+source:checkpoints/iterative_decoding_ace_9/epoch_3_test_step_3_results_for_predict.json
+target:preprocessed/preprocessed_iterative_decoding_ace_9/test_step_3_data.json
+trigger_dis:40
+dataset:ACE
+total_event: 403
+has close events: 356
+longest context:419
+longest target 21
+start scoring
+gen_file:checkpoints/iterative_decoding_ace_9/epoch_3_test_step_4_predictions.jsonl
+test_file:data/ace05/test.wikievents.json
+paired args: 68, inconsistent args: 31, raito: 0.45588235294117646
+Evaluation by matching head words only....
+Event-level identification: P: 67.25
+Event-level : P: 67.25
+gold arg num: 576
+Role identification: P: 70.78, R: 72.74, F: 71.75
+Role: P: 67.40, R: 69.27, F: 68.32
+start getting new testset
+source:checkpoints/iterative_decoding_ace_9/epoch_3_test_step_4_results_for_predict.json
+target:preprocessed/preprocessed_iterative_decoding_ace_9/test_step_4_data.json
+trigger_dis:40
+dataset:ACE
+total_event: 403
+has close events: 356
+longest context:419
+longest target 21
+start scoring
+gen_file:checkpoints/iterative_decoding_ace_9/epoch_3_test_step_5_predictions.jsonl
+test_file:data/ace05/test.wikievents.json
+paired args: 68, inconsistent args: 25, raito: 0.36764705882352944
+Evaluation by matching head words only....
+Event-level identification: P: 67.25
+Event-level : P: 67.25
+gold arg num: 576
+Role identification: P: 70.95, R: 72.92, F: 71.92
+Role: P: 67.57, R: 69.44, F: 68.49
+--------------------------------------------------------------------------------
+load from checkpoints/iterative_decoding_ace_12/epoch_5.ckpt
+source:./data/ace05/test.wikievents.json
+target:./preprocessed/preprocessed_iterative_decoding_ace_12/test_data.jsonl
+dataset:ACE
+total_event: 403
+longest context:429
+longest target 22
+start scoring
+gen_file:checkpoints/iterative_decoding_ace_12/epoch_5_test_step_0_predictions.jsonl
+test_file:data/ace05/test.wikievents.json
+paired args: 68, inconsistent args: 26, raito: 0.38235294117647056
+Evaluation by matching head words only....
+Event-level identification: P: 69.98
+Event-level : P: 69.98
+gold arg num: 576
+Role identification: P: 73.42, R: 74.83, F: 74.12
+Role: P: 70.36, R: 71.70, F: 71.02
+start getting new testset
+source:checkpoints/iterative_decoding_ace_12/epoch_5_test_step_0_results_for_predict.json
+target:preprocessed/preprocessed_iterative_decoding_ace_12/test_step_0_data.json
+trigger_dis:40
+dataset:ACE
+total_event: 403
+has close events: 356
+longest context:421
+longest target 21
+start scoring
+gen_file:checkpoints/iterative_decoding_ace_12/epoch_5_test_step_1_predictions.jsonl
+test_file:data/ace05/test.wikievents.json
+paired args: 68, inconsistent args: 29, raito: 0.4264705882352941
+Evaluation by matching head words only....
+Event-level identification: P: 69.48
+Event-level : P: 69.48
+gold arg num: 576
+Role identification: P: 74.05, R: 74.31, F: 74.18
+Role: P: 70.42, R: 70.66, F: 70.54
+start getting new testset
+source:checkpoints/iterative_decoding_ace_12/epoch_5_test_step_1_results_for_predict.json
+target:preprocessed/preprocessed_iterative_decoding_ace_12/test_step_1_data.json
+trigger_dis:40
+dataset:ACE
+total_event: 403
+has close events: 356
+longest context:424
+longest target 21
+start scoring
+gen_file:checkpoints/iterative_decoding_ace_12/epoch_5_test_step_2_predictions.jsonl
+test_file:data/ace05/test.wikievents.json
+paired args: 68, inconsistent args: 29, raito: 0.4264705882352941
+Evaluation by matching head words only....
+Event-level identification: P: 68.98
+Event-level : P: 68.98
+gold arg num: 576
+Role identification: P: 73.53, R: 73.78, F: 73.66
+Role: P: 70.07, R: 70.31, F: 70.19
+start getting new testset
+source:checkpoints/iterative_decoding_ace_12/epoch_5_test_step_2_results_for_predict.json
+target:preprocessed/preprocessed_iterative_decoding_ace_12/test_step_2_data.json
+trigger_dis:40
+dataset:ACE
+total_event: 403
+has close events: 356
+longest context:418
+longest target 21
+start scoring
+gen_file:checkpoints/iterative_decoding_ace_12/epoch_5_test_step_3_predictions.jsonl
+test_file:data/ace05/test.wikievents.json
+paired args: 68, inconsistent args: 29, raito: 0.4264705882352941
+Evaluation by matching head words only....
+Event-level identification: P: 69.73
+Event-level : P: 69.73
+gold arg num: 576
+Role identification: P: 74.31, R: 74.31, F: 74.31
+Role: P: 70.83, R: 70.83, F: 70.83
+start getting new testset
+source:checkpoints/iterative_decoding_ace_12/epoch_5_test_step_3_results_for_predict.json
+target:preprocessed/preprocessed_iterative_decoding_ace_12/test_step_3_data.json
+trigger_dis:40
+dataset:ACE
+total_event: 403
+has close events: 356
+longest context:415
+longest target 21
+start scoring
+gen_file:checkpoints/iterative_decoding_ace_12/epoch_5_test_step_4_predictions.jsonl
+test_file:data/ace05/test.wikievents.json
+paired args: 68, inconsistent args: 29, raito: 0.4264705882352941
+Evaluation by matching head words only....
+Event-level identification: P: 69.23
+Event-level : P: 69.23
+gold arg num: 576
+Role identification: P: 73.96, R: 73.96, F: 73.96
+Role: P: 70.49, R: 70.49, F: 70.49
+start getting new testset
+source:checkpoints/iterative_decoding_ace_12/epoch_5_test_step_4_results_for_predict.json
+target:preprocessed/preprocessed_iterative_decoding_ace_12/test_step_4_data.json
+trigger_dis:40
+dataset:ACE
+total_event: 403
+has close events: 356
+longest context:421
+longest target 21
+start scoring
+gen_file:checkpoints/iterative_decoding_ace_12/epoch_5_test_step_5_predictions.jsonl
+test_file:data/ace05/test.wikievents.json
+paired args: 68, inconsistent args: 29, raito: 0.4264705882352941
+Evaluation by matching head words only....
+Event-level identification: P: 69.48
+Event-level : P: 69.48
+gold arg num: 576
+Role identification: P: 74.00, R: 74.13, F: 74.07
+Role: P: 70.54, R: 70.66, F: 70.60
+--------------------------------------------------------------------------------

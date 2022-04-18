@@ -1,0 +1,193 @@
+load from checkpoints/debug_iter/epoch_5.ckpt
+**********
+INIT DATA FILE: preprocessed/preprocessed_KAIROS/test.jsonl
+sample:327
+input:
+ <arg>  arrested or jailed  <arg>  for  <arg>  crime at  <arg>  place But he was later told that the IRA unit involved had tried to use “ a succession of phone boxes ” which were out of order, significantly delaying the bomb - warning call. Video Loading Video Unavailable Click to play Tap to play The video will start in 8 Cancel Play now Listen to our recreation of the Birmingham pub bombings warning call - made to the Birmingham Post & Mail newsroom Conway, who makes the admissions in his new memoir, also revealed that soon after the bombings the IRA ’ s England Operational Commander and his adjutant “ made it back home ” to Dublin for an urgent de - brief and to assess the impact of the disaster as far as the terrorists were concerned. Birmingham pub bombings : Minute by minute - 24 hours that changed our city forever Funding for the terrorists dried up almost overnight and the bombings, which left 21 dead and almost 200 injured, including many maimed for life, cost them hugely in the propaganda war. And in an interview he confirmed that the IRA hierarchy in Dublin knew all along that the six Irishmen  <tgr>  arrested  <tgr>  for the explosions were innocent “ from the get go, from the very start. ” Now, Julie and Brian Hambleton, who lost their sister Maxine in the bombings and lead the city ’ s Justice4the21 campaign, called on West Midlands Police and David Cameron to take immediate action. Julie said : “ I am expecting West Midlands Police Chief Constable Chris Sims and West Midlands Police Force to interview with Mr Conway with immediate effect. “ And I hope that Mr Cameron, who a week ago told The House of Commons that the pub bombers must be found, takes note of this development and ensures that the police follow this through. ” Brian added : “ The police keep saying they won ’ t do anything because there is no fresh evidence. Well, here it is in black and white. It ’ s an admission. They have got to do something with this information. ” The Birmingham pub bombings - The 28 numbers that add up to a cover - up, say campaigners
+output:
+ <arg>  arrested or jailed Irishmen for  <arg>  crime at  <arg>  place
+**********
+checkpoints/debug_iter/epoch_5_test_step_0_predictions.jsonl
+start scoring
+gen_file:checkpoints/debug_iter/epoch_5_test_step_0_predictions.jsonl
+test_file:data/wikievents/test_no_ontology.jsonl
+paired args: 49, inconsistent args: 23, raito: 0.46938775510204084
+Evaluation by matching head words only....
+Event-level identification: P: 62.36
+Event-level : P: 62.36
+gold arg num: 563
+Role identification: P: 74.76, R: 69.98, F: 72.29
+Role: P: 68.12, R: 63.77, F: 65.87
+Coref Role identification: P: 75.90, R: 71.05, F: 73.39
+Coref Role: P: 69.26, R: 64.83, F: 66.97
+len: 365 35 63
+mean: 0.9468976948767492 0.9285858250799632 0.8787815987643322
+var: 0.012336363799138602 0.017054920875525344 0.028436681808626803
+min: 0.384491890668869 0.45634278655052185 0.44089552760124207
+max: 1.0 0.9999996821085612 1.0
+start getting new testset
+source:checkpoints/debug_iter/epoch_5_test_step_0_results_for_predict.json
+target:preprocessed/preprocessed_debug_iter/test_step_0_data.json
+total_event: 364
+has close events: 341
+longest context:456
+longest target 35
+**********
+INIT DATA FILE: preprocessed/preprocessed_debug_iter/test_step_0_data.json
+sample:95
+input:
+ <arg>  court or judge sentenced  <arg>  for  <arg>  crime to  <arg>  sentence in  <arg>  place == The bombing == The Balcombe Street Gang planted a time bomb in the Caterham Arms public house in Caterham, Surrey. The IRA unit placed the 7lb bomb in a duffel bag under a seat. There was no warning and the bomb exploded at 9 : 20, injuring 23 civilians and 10 off - duty soldiers. The pub was used by members of the Welsh Guards who were based at the barracks nearby. Some of the injuries were very serious, with at least three soldiers losing limbs. The blast blew the roof off the pub in the process. This attack marked the start of a renewed bombing campaign ( Phase Two ) in England and the end of the truce with the British Government. The next day, the same IRA  <tag>  Injurer  </tag>  unit exploded a  <tag>  Instrument  </tag>  bomb in Oxford Street, injuring several  <tag>  Victim  </tag>  people. == Aftermath == One of the police  <tag>  Researcher  </tag>  officers in charge of the investigation into the bombing described it as a " carbon copy " of the Guildford pub bombings in October 1974 for which four people were already serving their  <tgr>  sentences  <tgr> . The cell's campaign would continue until December 1975 when  <tag>  Detainee  </tag>  they were caught at the siege of Balcombe Street. The unit would eventually end up planting close to 50 bombs in London and elsewhere in southern England and carrying out several shootings which, along with the bombings, caused the deaths of nearly 20 people, injured hundreds and caused millions of pounds worth of damage to property. == See also == * Chronology of Provisional Irish Republican Army actions ( 1970 – 79 ) == References ==
+output:
+ <arg>  court or judge sentenced people for  <arg>  crime to  <arg>  sentence in  <arg>  place
+**********
+checkpoints/debug_iter/epoch_5_test_step_1_predictions.jsonl
+start scoring
+gen_file:checkpoints/debug_iter/epoch_5_test_step_1_predictions.jsonl
+test_file:data/wikievents/test_no_ontology.jsonl
+paired args: 49, inconsistent args: 25, raito: 0.5102040816326531
+Evaluation by matching head words only....
+Event-level identification: P: 62.09
+Event-level : P: 62.09
+gold arg num: 563
+Role identification: P: 77.07, R: 71.05, F: 73.94
+Role: P: 70.13, R: 64.65, F: 67.28
+Coref Role identification: P: 78.23, R: 72.11, F: 75.05
+Coref Role: P: 71.29, R: 65.72, F: 68.39
+len: 370 36 55
+mean: 0.9464754798134372 0.9549937532554387 0.9105945891202099
+var: 0.010831611951230637 0.004898346141466046 0.016308099898838725
+min: 0.3549732267856598 0.6163883209228516 0.46334540843963623
+max: 1.0 0.9999996821085612 1.0
+start getting new testset
+source:checkpoints/debug_iter/epoch_5_test_step_1_results_for_predict.json
+target:preprocessed/preprocessed_debug_iter/test_step_1_data.json
+total_event: 364
+has close events: 341
+longest context:456
+longest target 35
+**********
+INIT DATA FILE: preprocessed/preprocessed_debug_iter/test_step_1_data.json
+sample:56
+input:
+ <arg>  court or judge sentenced  <arg>  for  <arg>  crime to  <arg>  sentence in  <arg>  place Rebekah Gregory, a Texas woman who lost a leg in the bombing, defiantly told Tsarnaev she was not his victim. “ While your intention was to destroy America, what you have really accomplished is actually quite the opposite — you've unified us, ” she said. " We are Boston strong, we are America strong, and choosing to mess with us was a terrible idea. So how's that for your VICTIM impact statement? ”'He is a leech'Several victims condemned Tsarnaev for coming to the U. S. as an immigrant from Russia, enjoying the benefits of living here and then attacking American citizens. “ He is a leech, abusing the privilege of American freedom, and he spit in the face of the American dream, ” said Jennifer Rogers, an older sister of slain MIT Officer Sean Collier. Bill Richard, whose 8 - year - old son, Martin, was the youngest person killed in the bombing, said Tsarnaev could have backed out of the plot and reported his brother to authorities. Instead, Richard said, “ he chose hate.  <tag>  Destroyer  </tag>  He chose destruction.  <tag>  Victim  </tag>  He chose death. This is all on him. ” Richard noted that his family would have preferred that Tsarnaev receive a life  <tgr>  sentence  <tgr>  so that he could have had “ a lifetime to reconcile with himself what he did that day. ” Richard said his family has chosen love, kindness and peace, adding : “ That is what makes us different than him. ” Fatima Tlisova of VOA's Russian service contributed to this report from Boston. Some information for this report came from Reuters and AP.
+output:
+ <arg>  court or judge sentenced Tsarnaev for  <arg>  crime to  <arg>  sentence in  <arg>  place
+**********
+checkpoints/debug_iter/epoch_5_test_step_2_predictions.jsonl
+start scoring
+gen_file:checkpoints/debug_iter/epoch_5_test_step_2_predictions.jsonl
+test_file:data/wikievents/test_no_ontology.jsonl
+paired args: 49, inconsistent args: 25, raito: 0.5102040816326531
+Evaluation by matching head words only....
+Event-level identification: P: 62.36
+Event-level : P: 62.36
+gold arg num: 563
+Role identification: P: 76.97, R: 71.23, F: 73.99
+Role: P: 70.06, R: 64.83, F: 67.34
+Coref Role identification: P: 78.12, R: 72.29, F: 75.09
+Coref Role: P: 71.21, R: 65.90, F: 68.45
+len: 371 36 53
+mean: 0.9455584288035389 0.9506138899910545 0.9180222294865414
+var: 0.011564149596887901 0.005756324469325068 0.014038220629688628
+min: 0.3549732267856598 0.6163883209228516 0.46334540843963623
+max: 1.0 0.9999998013178507 1.0
+start getting new testset
+source:checkpoints/debug_iter/epoch_5_test_step_2_results_for_predict.json
+target:preprocessed/preprocessed_debug_iter/test_step_2_data.json
+total_event: 364
+has close events: 341
+longest context:456
+longest target 35
+**********
+INIT DATA FILE: preprocessed/preprocessed_debug_iter/test_step_2_data.json
+sample:28
+input:
+ <arg>  damaged  <arg>  using  <arg>  instrument in  <arg>  place Boston Marathon Bomber Apologizes to Survivors BOSTON — Moments before a federal judge sentenced him to death, Boston Marathon bomber Dzhokhar Tsarnaev rose to his feet Wednesday and apologized to the victims and their loved ones for the first time. " I pray for your relief, for your healing,'' he said. Amid deep silence in the courtroom, the 21 - year - old ethnic Chechen said, " I am sorry for the lives that I've taken, for the suffering that I've caused you, for the  <tgr>  damage  <tgr>  that I've done — irreparable damage.'' It was the first time Tsarnaev, who did not speak in his own defense at trial, had addressed the court. After Tsarnaev finished, U. S. District Judge George O'Toole Jr. began to speak, with his voice breaking several times. He officially imposed the death sentence on Tsarnaev that jurors had recommended unanimously. In May, after a 12 - week trial, Tsarnaev was found guilty of killing three people and injuring 264 in the April 15, 2013, bombing at the world - renowned race, where he and his brother, Tamerlan, 26, set off two pressure - cooker bombs near the finish line. Tsarnaev was also found guilty in the fatal shooting of a Massachusetts Institute of Technology police officer three days later as he and his brother fled. Tamerlan was killed during the getaway. Tsarnaev was found guilty of all 30 terrorism and other charges against him. Of those, 17 carried the possibility of a death sentence. During the penalty phase of the judicial proceedings, prosecutors brushed off defense arguments that Tsarnaev was under the strong influence of his older, radicalized brother. Victims speak out
+output:
+ <arg>  damaged  <arg>  using  <arg>  instrument in  <arg>  place
+**********
+checkpoints/debug_iter/epoch_5_test_step_3_predictions.jsonl
+start scoring
+gen_file:checkpoints/debug_iter/epoch_5_test_step_3_predictions.jsonl
+test_file:data/wikievents/test_no_ontology.jsonl
+paired args: 49, inconsistent args: 25, raito: 0.5102040816326531
+Evaluation by matching head words only....
+Event-level identification: P: 62.36
+Event-level : P: 62.36
+gold arg num: 563
+Role identification: P: 76.97, R: 71.23, F: 73.99
+Role: P: 70.06, R: 64.83, F: 67.34
+Coref Role identification: P: 78.12, R: 72.29, F: 75.09
+Coref Role: P: 71.21, R: 65.90, F: 68.45
+len: 371 36 53
+mean: 0.9465061925736881 0.9506185143180783 0.9182826110651907
+var: 0.010860636664746496 0.005756722367909151 0.013988076034750276
+min: 0.3549732267856598 0.6163883209228516 0.46334540843963623
+max: 1.0 0.9999998013178507 1.0
+start getting new testset
+source:checkpoints/debug_iter/epoch_5_test_step_3_results_for_predict.json
+target:preprocessed/preprocessed_debug_iter/test_step_3_data.json
+total_event: 364
+has close events: 341
+longest context:456
+longest target 35
+**********
+INIT DATA FILE: preprocessed/preprocessed_debug_iter/test_step_3_data.json
+sample:79
+input:
+ <arg>  was injured by  <arg>  using  <arg>  in  <arg>  body part with  <arg>  medical issue at  <arg>  place On 27 August 1975 a Provisional IRA bomb exploded without warning at the Caterham Arms public house in Caterham, Surrey, England. There were no fatalities but 33 people were injured, some severely. Two off - duty soldiers lost their legs as a result of the bombing. == Background == In February 1975 the Provisional Irish Republican Army agreed to a truce and ceasefire with the British government and the Northern Ireland Office. Seven " incident centres " were established in Irish nationalist areas in Northern Ireland to monitor the ceasefire and the activity of the security forces. Before the truce, the IRA active service unit ( ASU ) later dubbed the Balcombe Street Gang ( due to the December 1975 Balcombe Street siege ) had been carrying out bomb and gun attacks in Southern England since autumn 1974, mostly in and around London. Their last previous attack was an assassination attempt on former Prime Minister Edward Heath but he was not home when the attackers threw a bomb into his bedroom window on 22 December 1974. == The bombing == The  <tag>  ManufacturerAssembler  </tag>  Balcombe Street Gang planted a time  <tag>  Artifact  </tag>  bomb in the Caterham Arms public house in Caterham, Surrey. The IRA  <tag>  ManufacturerAssembler  </tag>  unit placed the 7lb  <tag>  Artifact  </tag>  bomb in a duffel bag under a seat. There was no warning and the  <tag>  ExplosiveDevice  </tag>  bomb exploded at 9 : 20,  <tgr>  injuring  <tgr>  23 civilians and 10 off - duty soldiers. The pub was used by members of the Welsh Guards who were based at the barracks nearby. Some of the injuries were very serious, with at least three  <tag>  Victim Victim  </tag>  soldiers losing limbs. The blast blew the  <tag>  Artifact  </tag>  roof off the pub in the process. This attack marked the start of a renewed bombing campaign ( Phase Two ) in England and the end of the truce with the British Government. The next day, the same IRA unit exploded a bomb in Oxford Street, injuring several people. == Aftermath ==
+output:
+ civilians and soldiers was injured by  <arg>  using  <arg>  in  <arg>  body part with  <arg>  medical issue at  <arg>  place
+**********
+checkpoints/debug_iter/epoch_5_test_step_4_predictions.jsonl
+start scoring
+gen_file:checkpoints/debug_iter/epoch_5_test_step_4_predictions.jsonl
+test_file:data/wikievents/test_no_ontology.jsonl
+paired args: 49, inconsistent args: 25, raito: 0.5102040816326531
+Evaluation by matching head words only....
+Event-level identification: P: 62.36
+Event-level : P: 62.36
+gold arg num: 563
+Role identification: P: 76.97, R: 71.23, F: 73.99
+Role: P: 70.06, R: 64.83, F: 67.34
+Coref Role identification: P: 78.12, R: 72.29, F: 75.09
+Coref Role: P: 71.21, R: 65.90, F: 68.45
+len: 371 36 53
+mean: 0.9465061925736881 0.9506185143180783 0.9182826110651907
+var: 0.010860636664746496 0.005756722367909151 0.013988076034750276
+min: 0.3549732267856598 0.6163883209228516 0.46334540843963623
+max: 1.0 0.9999998013178507 1.0
+start getting new testset
+source:checkpoints/debug_iter/epoch_5_test_step_4_results_for_predict.json
+target:preprocessed/preprocessed_debug_iter/test_step_4_data.json
+total_event: 364
+has close events: 341
+longest context:456
+longest target 35
+**********
+INIT DATA FILE: preprocessed/preprocessed_debug_iter/test_step_4_data.json
+sample:324
+input:
+ <arg>  died at  <arg>  place from  <arg>  medical issue, killed by  <arg>  killer At first he feared that the timing of the attacks - with very little warning - had been deliberate because “ tempers were high ”. But he was later told that the IRA unit involved had tried to use “ a succession of phone boxes ” which were out of order, significantly delaying the bomb - warning call. Video Loading Video Unavailable Click to play Tap to play The video will start in 8 Cancel Play now Listen to our recreation of the Birmingham pub bombings warning call - made to the Birmingham Post & Mail newsroom Conway, who makes the admissions in his new memoir, also revealed that soon after the bombings the IRA ’ s England Operational Commander and his adjutant “ made it back home ” to Dublin for an urgent de - brief and to assess the impact of the disaster as far as the terrorists were concerned.  <tag>  Place  </tag>  Birmingham  <tag>  Target  </tag>  pub bombings : Minute by minute - 24 hours that changed our city forever Funding for the terrorists dried up almost overnight and the bombings, which left 21  <tgr>  dead  <tgr>  and almost  <tag>  Victim  </tag>  200 injured, including  <tag>  Victim  </tag>  many maimed for life, cost them hugely in the propaganda war. And in an interview he confirmed that the IRA hierarchy in Dublin knew all along that the six  <tag>  Detainee  </tag>  Irishmen arrested for the explosions were innocent “ from the get go, from the very start. ” Now, Julie and Brian Hambleton, who lost their sister Maxine in the bombings and lead the city ’ s Justice4the21 campaign, called on West Midlands Police and David Cameron to take immediate action. Julie said : “ I am expecting West Midlands Police Chief Constable Chris Sims and West Midlands Police Force to interview with Mr Conway with immediate effect. “ And I hope that Mr Cameron, who a week ago told The House of Commons that the pub bombers must be found, takes note of this development and ensures that the police follow this through. ”
+output:
+ 21 died at  <arg>  place from  <arg>  medical issue, killed by  <arg>  killer
+**********
+checkpoints/debug_iter/epoch_5_test_step_5_predictions.jsonl
+start scoring
+gen_file:checkpoints/debug_iter/epoch_5_test_step_5_predictions.jsonl
+test_file:data/wikievents/test_no_ontology.jsonl
+paired args: 49, inconsistent args: 25, raito: 0.5102040816326531
+Evaluation by matching head words only....
+Event-level identification: P: 62.36
+Event-level : P: 62.36
+gold arg num: 563
+Role identification: P: 76.97, R: 71.23, F: 73.99
+Role: P: 70.06, R: 64.83, F: 67.34
+Coref Role identification: P: 78.12, R: 72.29, F: 75.09
+Coref Role: P: 71.21, R: 65.90, F: 68.45
+len: 371 36 53
+mean: 0.9465061925736881 0.9506185143180783 0.9182826110651907
+var: 0.010860636664746496 0.005756722367909151 0.013988076034750276
+min: 0.3549732267856598 0.6163883209228516 0.46334540843963623
+max: 1.0 0.9999998013178507 1.0
+--------------------------------------------------------------------------------

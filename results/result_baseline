@@ -1,0 +1,81 @@
+load from checkpoints/baseline/epoch_3.ckpt
+**********
+INIT DATA FILE: preprocessed/preprocessed_KAIROS/test.jsonl
+sample:327
+input:
+ <arg>  arrested or jailed  <arg>  for  <arg>  crime at  <arg>  place But he was later told that the IRA unit involved had tried to use “ a succession of phone boxes ” which were out of order, significantly delaying the bomb - warning call. Video Loading Video Unavailable Click to play Tap to play The video will start in 8 Cancel Play now Listen to our recreation of the Birmingham pub bombings warning call - made to the Birmingham Post & Mail newsroom Conway, who makes the admissions in his new memoir, also revealed that soon after the bombings the IRA ’ s England Operational Commander and his adjutant “ made it back home ” to Dublin for an urgent de - brief and to assess the impact of the disaster as far as the terrorists were concerned. Birmingham pub bombings : Minute by minute - 24 hours that changed our city forever Funding for the terrorists dried up almost overnight and the bombings, which left 21 dead and almost 200 injured, including many maimed for life, cost them hugely in the propaganda war. And in an interview he confirmed that the IRA hierarchy in Dublin knew all along that the six Irishmen  <tgr>  arrested  <tgr>  for the explosions were innocent “ from the get go, from the very start. ” Now, Julie and Brian Hambleton, who lost their sister Maxine in the bombings and lead the city ’ s Justice4the21 campaign, called on West Midlands Police and David Cameron to take immediate action. Julie said : “ I am expecting West Midlands Police Chief Constable Chris Sims and West Midlands Police Force to interview with Mr Conway with immediate effect. “ And I hope that Mr Cameron, who a week ago told The House of Commons that the pub bombers must be found, takes note of this development and ensures that the police follow this through. ” Brian added : “ The police keep saying they won ’ t do anything because there is no fresh evidence. Well, here it is in black and white. It ’ s an admission. They have got to do something with this information. ” The Birmingham pub bombings - The 28 numbers that add up to a cover - up, say campaigners
+output:
+ <arg>  arrested or jailed Irishmen for  <arg>  crime at  <arg>  place
+**********
+start scoring
+gen_file:checkpoints/baseline/epoch_3_test_step_0_predictions.jsonl
+test_file:data/wikievents/test_no_ontology.jsonl
+paired args: 49, inconsistent args: 24, raito: 0.4897959183673469
+Evaluation by matching head words only....
+Event-level identification: P: 63.46
+Event-level : P: 63.46
+gold arg num: 563
+Role identification: P: 72.78, R: 71.23, F: 71.99
+Role: P: 67.51, R: 66.07, F: 66.79
+Coref Role identification: P: 74.05, R: 72.47, F: 73.25
+Coref Role: P: 68.60, R: 67.14, F: 67.86
+len: 378 30 70
+mean: 0.8946926694122136 0.8491286460724142 0.728018085019929
+var: 0.016262394678029583 0.033774461268165946 0.03948300369739973
+min: 0.3778321146965027 0.39968428015708923 0.3344004154205322
+max: 0.9999204874038696 0.9991502364476521 0.9977423548698425
+--------------------------------------------------------------------------------
+load from checkpoints/baseline/epoch_4.ckpt
+**********
+INIT DATA FILE: preprocessed/preprocessed_KAIROS/test.jsonl
+sample:327
+input:
+ <arg>  arrested or jailed  <arg>  for  <arg>  crime at  <arg>  place But he was later told that the IRA unit involved had tried to use “ a succession of phone boxes ” which were out of order, significantly delaying the bomb - warning call. Video Loading Video Unavailable Click to play Tap to play The video will start in 8 Cancel Play now Listen to our recreation of the Birmingham pub bombings warning call - made to the Birmingham Post & Mail newsroom Conway, who makes the admissions in his new memoir, also revealed that soon after the bombings the IRA ’ s England Operational Commander and his adjutant “ made it back home ” to Dublin for an urgent de - brief and to assess the impact of the disaster as far as the terrorists were concerned. Birmingham pub bombings : Minute by minute - 24 hours that changed our city forever Funding for the terrorists dried up almost overnight and the bombings, which left 21 dead and almost 200 injured, including many maimed for life, cost them hugely in the propaganda war. And in an interview he confirmed that the IRA hierarchy in Dublin knew all along that the six Irishmen  <tgr>  arrested  <tgr>  for the explosions were innocent “ from the get go, from the very start. ” Now, Julie and Brian Hambleton, who lost their sister Maxine in the bombings and lead the city ’ s Justice4the21 campaign, called on West Midlands Police and David Cameron to take immediate action. Julie said : “ I am expecting West Midlands Police Chief Constable Chris Sims and West Midlands Police Force to interview with Mr Conway with immediate effect. “ And I hope that Mr Cameron, who a week ago told The House of Commons that the pub bombers must be found, takes note of this development and ensures that the police follow this through. ” Brian added : “ The police keep saying they won ’ t do anything because there is no fresh evidence. Well, here it is in black and white. It ’ s an admission. They have got to do something with this information. ” The Birmingham pub bombings - The 28 numbers that add up to a cover - up, say campaigners
+output:
+ <arg>  arrested or jailed Irishmen for  <arg>  crime at  <arg>  place
+**********
+start scoring
+gen_file:checkpoints/baseline/epoch_4_test_step_0_predictions.jsonl
+test_file:data/wikievents/test_no_ontology.jsonl
+paired args: 49, inconsistent args: 21, raito: 0.42857142857142855
+Evaluation by matching head words only....
+Event-level identification: P: 64.84
+Event-level : P: 64.84
+gold arg num: 563
+Role identification: P: 71.30, R: 71.94, F: 71.62
+Role: P: 66.02, R: 66.61, F: 66.31
+Coref Role identification: P: 72.71, R: 73.36, F: 73.03
+Coref Role: P: 67.25, R: 67.85, F: 67.55
+len: 382 31 72
+mean: 0.9063147076803021 0.8655930938579702 0.8038539669855878
+var: 0.015291814997150406 0.028947388319748954 0.030162414210958235
+min: 0.4126798212528229 0.47151079773902893 0.35477596521377563
+max: 0.9999940395355225 0.9997935394446056 0.999419093132019
+--------------------------------------------------------------------------------
+load from checkpoints/baseline/epoch_5.ckpt
+**********
+INIT DATA FILE: preprocessed/preprocessed_KAIROS/test.jsonl
+sample:327
+input:
+ <arg>  arrested or jailed  <arg>  for  <arg>  crime at  <arg>  place But he was later told that the IRA unit involved had tried to use “ a succession of phone boxes ” which were out of order, significantly delaying the bomb - warning call. Video Loading Video Unavailable Click to play Tap to play The video will start in 8 Cancel Play now Listen to our recreation of the Birmingham pub bombings warning call - made to the Birmingham Post & Mail newsroom Conway, who makes the admissions in his new memoir, also revealed that soon after the bombings the IRA ’ s England Operational Commander and his adjutant “ made it back home ” to Dublin for an urgent de - brief and to assess the impact of the disaster as far as the terrorists were concerned. Birmingham pub bombings : Minute by minute - 24 hours that changed our city forever Funding for the terrorists dried up almost overnight and the bombings, which left 21 dead and almost 200 injured, including many maimed for life, cost them hugely in the propaganda war. And in an interview he confirmed that the IRA hierarchy in Dublin knew all along that the six Irishmen  <tgr>  arrested  <tgr>  for the explosions were innocent “ from the get go, from the very start. ” Now, Julie and Brian Hambleton, who lost their sister Maxine in the bombings and lead the city ’ s Justice4the21 campaign, called on West Midlands Police and David Cameron to take immediate action. Julie said : “ I am expecting West Midlands Police Chief Constable Chris Sims and West Midlands Police Force to interview with Mr Conway with immediate effect. “ And I hope that Mr Cameron, who a week ago told The House of Commons that the pub bombers must be found, takes note of this development and ensures that the police follow this through. ” Brian added : “ The police keep saying they won ’ t do anything because there is no fresh evidence. Well, here it is in black and white. It ’ s an admission. They have got to do something with this information. ” The Birmingham pub bombings - The 28 numbers that add up to a cover - up, say campaigners
+output:
+ <arg>  arrested or jailed Irishmen for  <arg>  crime at  <arg>  place
+**********
+start scoring
+gen_file:checkpoints/baseline/epoch_5_test_step_0_predictions.jsonl
+test_file:data/wikievents/test_no_ontology.jsonl
+paired args: 49, inconsistent args: 21, raito: 0.42857142857142855
+Evaluation by matching head words only....
+Event-level identification: P: 64.56
+Event-level : P: 64.56
+gold arg num: 563
+Role identification: P: 72.08, R: 72.47, F: 72.28
+Role: P: 66.61, R: 66.96, F: 66.78
+Coref Role identification: P: 73.14, R: 73.53, F: 73.34
+Coref Role: P: 67.49, R: 67.85, F: 67.67
+len: 382 32 68
+mean: 0.9118985156714172 0.8542313546252748 0.7913901117307688
+var: 0.013180726501863521 0.029973337613781802 0.03877340343556118
+min: 0.4284351170063019 0.4551888257265091 0.24061235785484314
+max: 0.9999963045120239 0.9998558859030406 0.9999206066131592
+--------------------------------------------------------------------------------

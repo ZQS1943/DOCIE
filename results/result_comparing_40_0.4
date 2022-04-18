@@ -1,0 +1,748 @@
+load from checkpoints/comparing_40_0.4/epoch_2.ckpt
+**********
+INIT DATA FILE: preprocessed/preprocessed_KAIROS/test.jsonl
+sample:327
+input:
+ <arg>  arrested or jailed  <arg>  for  <arg>  crime at  <arg>  place But he was later told that the IRA unit involved had tried to use “ a succession of phone boxes ” which were out of order, significantly delaying the bomb - warning call. Video Loading Video Unavailable Click to play Tap to play The video will start in 8 Cancel Play now Listen to our recreation of the Birmingham pub bombings warning call - made to the Birmingham Post & Mail newsroom Conway, who makes the admissions in his new memoir, also revealed that soon after the bombings the IRA ’ s England Operational Commander and his adjutant “ made it back home ” to Dublin for an urgent de - brief and to assess the impact of the disaster as far as the terrorists were concerned. Birmingham pub bombings : Minute by minute - 24 hours that changed our city forever Funding for the terrorists dried up almost overnight and the bombings, which left 21 dead and almost 200 injured, including many maimed for life, cost them hugely in the propaganda war. And in an interview he confirmed that the IRA hierarchy in Dublin knew all along that the six Irishmen  <tgr>  arrested  <tgr>  for the explosions were innocent “ from the get go, from the very start. ” Now, Julie and Brian Hambleton, who lost their sister Maxine in the bombings and lead the city ’ s Justice4the21 campaign, called on West Midlands Police and David Cameron to take immediate action. Julie said : “ I am expecting West Midlands Police Chief Constable Chris Sims and West Midlands Police Force to interview with Mr Conway with immediate effect. “ And I hope that Mr Cameron, who a week ago told The House of Commons that the pub bombers must be found, takes note of this development and ensures that the police follow this through. ” Brian added : “ The police keep saying they won ’ t do anything because there is no fresh evidence. Well, here it is in black and white. It ’ s an admission. They have got to do something with this information. ” The Birmingham pub bombings - The 28 numbers that add up to a cover - up, say campaigners
+output:
+ <arg>  arrested or jailed Irishmen for  <arg>  crime at  <arg>  place
+**********
+start scoring
+gen_file:checkpoints/comparing_40_0.4/epoch_2_test_step_0_predictions.jsonl
+test_file:data/wikievents/test_no_ontology.jsonl
+paired args: 49, inconsistent args: 20, raito: 0.40816326530612246
+Evaluation by matching head words only....
+Event-level identification: P: 62.09
+Event-level : P: 62.09
+gold arg num: 563
+Role identification: P: 73.94, R: 68.03, F: 70.86
+Role: P: 68.34, R: 62.88, F: 65.49
+Coref Role identification: P: 75.48, R: 69.45, F: 72.34
+Coref Role: P: 69.69, R: 64.12, F: 66.79
+len: 361 30 55
+mean: 0.9014085160684735 0.8356456605924499 0.796796339714166
+var: 0.01545977989540221 0.03308400299820188 0.031821972953776076
+min: 0.4100049138069153 0.4804260730743408 0.25825175642967224
+max: 0.9998227953910828 0.9997295339902241 0.9975306391716003
+start getting new testset
+source:checkpoints/comparing_40_0.4/epoch_2_test_step_0_results_for_predict.json
+target:preprocessed/preprocessed_comparing_0.4/test_step_0_data.json
+total_event: 364
+has close events: 332
+longest context:461
+longest target 38
+**********
+INIT DATA FILE: preprocessed/preprocessed_comparing_0.4/test_step_0_data.json
+sample:176
+input:
+ <arg>  bought, sold, or traded  <arg>  to  <arg>  in exchange for  <arg>  for the benefit of  <arg>  at  <arg>  place April 8, 2013 Tamerlan bought remote - control car devices from RC Cars in Malden, which prosecutors say are related to the equipment needed by the Tsarnaevs to remotely trigger the bombs. April 13, 2013 Tamerlan Tsarnaev purchases ammunition from a store in New Hampshire and sends $ 900 in cash through Moneygram to his and Dzhokhar ’ s mother, Zubeidat, through a location in Somerville. April 14, 2013 Dzhokhar Tsarnaev opens a prepaid cellphone account under the name Jahar Tsarni. He would use this phone while at the Boston Marathon the next day. On the same day, Tamerlan Tsarnaev buys two backpacks at a Target in Watertown that were used to carry the bombs. Federal Public Defender Office April 15, 2013 At about 2 : 50 p. m., two homemade pressure - cooker bombs are detonated remotely by the Tsarnaevs near the finish line of the Boston Marathon, killing three and injuring some 260 others. Seventeen people lost limbs. April 15, 2013 Less than a half hour after the bombs went off, Dzhokhar Tsarnaev was seen entering the Whole Foods at Prospect Street in Cambridge and looking over different milk products. He buys a carton of whole milk for $ 3. 49, then returns to parked car in the store lot. He enters the passenger side, suggesting another person, possibly Tamerlan Tsarnaev, was at the wheel. Within seconds, Dzhokhar Tsarnaev gets out of the car and  <tgr>  exchanges  <tgr>  his purchase for a different type of milk. April 26, 2013 Days later, the  <tag>  Observer  </tag>  FBI recovered a  <tag>  ObservedEntity  </tag>  backpack belonging to Dzhokhar Tsarnaev, which contained tubes of fireworks. In his dorm  <tag>  Place  </tag>  room,  <tag>  Observer  </tag>  they also found a  <tag>  ObservedEntity  </tag>  receipt for a BB gun, which was recovered from the Watertown shootout scene. US Department of Justice Patricia Wen can be reached at wen @ globe. com. Follow her on Twitter at @ GlobePatty.
+output:
+ <arg>  bought, sold, or traded  <arg>  to Dzhokhar Tsarnaev in exchange for  <arg>  for the benefit of  <arg>  at  <arg>  place
+**********
+start scoring
+gen_file:checkpoints/comparing_40_0.4/epoch_2_test_step_1_predictions.jsonl
+test_file:data/wikievents/test_no_ontology.jsonl
+paired args: 49, inconsistent args: 22, raito: 0.4489795918367347
+Evaluation by matching head words only....
+Event-level identification: P: 62.36
+Event-level : P: 62.36
+gold arg num: 563
+Role identification: P: 75.98, R: 69.09, F: 72.37
+Role: P: 69.92, R: 63.59, F: 66.60
+Coref Role identification: P: 77.54, R: 70.52, F: 73.86
+Coref Role: P: 71.29, R: 64.83, F: 67.91
+len: 365 32 52
+mean: 0.9021002701775397 0.8458882390211027 0.8042798087573969
+var: 0.01568626332162306 0.031760073077605894 0.028589981673523553
+min: 0.3671944737434387 0.3777221739292145 0.39004939794540405
+max: 0.9999361038208008 0.9996622602144878 0.9993018209934235
+start getting new testset
+source:checkpoints/comparing_40_0.4/epoch_2_test_step_1_results_for_predict.json
+target:preprocessed/preprocessed_comparing_0.4/test_step_1_data.json
+total_event: 364
+has close events: 332
+longest context:461
+longest target 38
+**********
+INIT DATA FILE: preprocessed/preprocessed_comparing_0.4/test_step_1_data.json
+sample:77
+input:
+ <arg>  attacked  <arg>  using  <arg>  at  <arg>  place On 27 August 1975 a Provisional IRA bomb exploded without warning at the Caterham Arms public house in Caterham, Surrey, England. There were no fatalities but 33 people were injured, some severely. Two off - duty soldiers lost their legs as a result of the bombing. == Background == In February 1975 the Provisional Irish Republican Army agreed to a truce and ceasefire with the British government and the Northern Ireland Office. Seven " incident centres " were established in Irish nationalist areas in Northern Ireland to monitor the ceasefire and the activity of the security forces. Before the truce, the IRA active service unit ( ASU ) later dubbed the Balcombe Street Gang ( due to the December 1975 Balcombe Street siege ) had been carrying out bomb and gun  <tgr>  attacks  <tgr>  in Southern England since autumn 1974, mostly in and around London.  <tag>  Attacker  </tag>  Their last previous attack was an assassination attempt on former Prime Minister  <tag>  Target  </tag>  Edward Heath but he was not home when the  <tag>  Attacker  </tag>  attackers threw a  <tag>  ExplosiveDevice  </tag>  bomb into  <tag>  Target  </tag>  his bedroom window on 22 December 1974. == The bombing == The Balcombe Street Gang planted a time bomb in the Caterham Arms public house in Caterham, Surrey. The IRA unit placed the 7lb bomb in a duffel bag under a seat. There was no warning and the bomb exploded at 9 : 20, injuring 23 civilians and 10 off - duty soldiers. The pub was used by members of the Welsh Guards who were based at the barracks nearby. Some of the injuries were very serious, with at least three soldiers losing limbs. The blast blew the roof off the pub in the process. This attack marked the start of a renewed bombing campaign ( Phase Two ) in England and the end of the truce with the British Government. The next day, the same IRA unit exploded a bomb in Oxford Street, injuring several people. == Aftermath ==
+output:
+ <arg>  attacked  <arg>  using bomb and gun at England place
+**********
+start scoring
+gen_file:checkpoints/comparing_40_0.4/epoch_2_test_step_2_predictions.jsonl
+test_file:data/wikievents/test_no_ontology.jsonl
+paired args: 49, inconsistent args: 22, raito: 0.4489795918367347
+Evaluation by matching head words only....
+Event-level identification: P: 62.36
+Event-level : P: 62.36
+gold arg num: 563
+Role identification: P: 75.68, R: 69.09, F: 72.24
+Role: P: 69.65, R: 63.59, F: 66.48
+Coref Role identification: P: 77.24, R: 70.52, F: 73.72
+Coref Role: P: 71.01, R: 64.83, F: 67.78
+len: 365 32 54
+mean: 0.9021465379677861 0.8452103442978114 0.7933355313024403
+var: 0.015934496031338355 0.033704528219499166 0.03105115892682777
+min: 0.3925008773803711 0.3777221739292145 0.39004939794540405
+max: 0.9999361038208008 0.9996622602144878 0.9993018209934235
+start getting new testset
+source:checkpoints/comparing_40_0.4/epoch_2_test_step_2_results_for_predict.json
+target:preprocessed/preprocessed_comparing_0.4/test_step_2_data.json
+total_event: 364
+has close events: 332
+longest context:461
+longest target 38
+**********
+INIT DATA FILE: preprocessed/preprocessed_comparing_0.4/test_step_2_data.json
+sample:291
+input:
+ <arg>  communicated with  <arg>  about  <arg>  topic at  <arg>  place (document does not specify in person or not, or one-way or not) The Venezuelan government has claimed the drones used were DJI Matrice 600s, each carrying approximately 1kg of C4 plastic explosive and, when detonated, capable of causing damage at a radius of around 50 meters. DJI Matrice 600 drones are a commercial model, normally used for industrial work — with a U. S. price tag of around $ 5, 000 apiece, suggesting the attack could have cost little over $ 10k to carry out — with 1kg of plastic explosive available commercially ( for demolition purposes ) at a cost of around $ 30. Bellingcat says its analysis supports the government ’ s claim that the drone model used was a DJI Matrice 600, noting that the drones involved in the event each had six rotors. It also points to a photo of drone wreckage which appears to show the distinctive silver rotor tip of the model, although it also notes the drones appear to have had their legs removed. Venezuela ’ s interior minister, Nestor Reverol, also  <tgr>  claimed  <tgr>  the government thwarted the attack using " special techniques and [ radio ] signal inhibitors ", which " disoriented " the  <tag>  ExplosiveDevice ExplosiveDevice  </tag>  drone that detonated closest to the presidential  <tag>  Place  </tag>  stand — a capability Bellingcat notes the Venezuelan security services are reported to have. The second drone was said by Reverol to have " lost control " and crashed into a nearby building. Bellingcat says it is possible to geolocate the video of the falling drone to the same location as the fire in the apartment that firefighters had claimed was caused by a gas canister explosion. It adds that images taken of this location during the fire show a hole in the wall of the apartment in the vicinity of where the drone would have crashed.
+output:
+ minister communicated with  <arg>  about  <arg>  topic at  <arg>  place (document does not specify in person or not, or one-way or not)
+**********
+start scoring
+gen_file:checkpoints/comparing_40_0.4/epoch_2_test_step_3_predictions.jsonl
+test_file:data/wikievents/test_no_ontology.jsonl
+paired args: 49, inconsistent args: 22, raito: 0.4489795918367347
+Evaluation by matching head words only....
+Event-level identification: P: 62.36
+Event-level : P: 62.36
+gold arg num: 563
+Role identification: P: 75.68, R: 69.09, F: 72.24
+Role: P: 69.65, R: 63.59, F: 66.48
+Coref Role identification: P: 77.24, R: 70.52, F: 73.72
+Coref Role: P: 71.01, R: 64.83, F: 67.78
+len: 365 32 54
+mean: 0.90225044690288 0.8473786010872573 0.7920873769271521
+var: 0.01593722145679799 0.03248267079168316 0.030689738455703906
+min: 0.3925008773803711 0.3777221739292145 0.39004939794540405
+max: 0.9999361038208008 0.9996622602144878 0.9993018209934235
+start getting new testset
+source:checkpoints/comparing_40_0.4/epoch_2_test_step_3_results_for_predict.json
+target:preprocessed/preprocessed_comparing_0.4/test_step_3_data.json
+total_event: 364
+has close events: 332
+longest context:461
+longest target 38
+**********
+INIT DATA FILE: preprocessed/preprocessed_comparing_0.4/test_step_3_data.json
+sample:361
+input:
+ <arg>  committed a crime against  <arg>  at  <arg>  place ABDULLAH AHMED ABDULLAH Murder of U. S. Nationals Outside the United States ; Conspiracy to Murder U. S.  <tag>  Victim  </tag>  Nationals Outside the United States ; Attack on a  <tag>  Target  </tag>  Federal Facility Resulting in Death ; Conspiracy to Kill U. S.  <tag>  Victim  </tag>  Nationals, to  <tgr>  Murder  <tgr> , to Destroy  <tag>  Artifact  </tag>  Buildings and Property of the United States, and to Destroy the  <tag>  Artifact  </tag>  National Defense Utilities of the United States Images Aliases : Abu Mohamed Al - Masri, Abu Muhammad al Masri, Saleh, Abu Mariam, Abdullah Ahmed Abdullah Ali, Abu Mohammed
+output:
+ <arg>  committed a crime against  <arg>  at  <arg>  place
+**********
+start scoring
+gen_file:checkpoints/comparing_40_0.4/epoch_2_test_step_4_predictions.jsonl
+test_file:data/wikievents/test_no_ontology.jsonl
+paired args: 49, inconsistent args: 22, raito: 0.4489795918367347
+Evaluation by matching head words only....
+Event-level identification: P: 62.36
+Event-level : P: 62.36
+gold arg num: 563
+Role identification: P: 75.68, R: 69.09, F: 72.24
+Role: P: 69.65, R: 63.59, F: 66.48
+Coref Role identification: P: 77.24, R: 70.52, F: 73.72
+Coref Role: P: 71.01, R: 64.83, F: 67.78
+len: 365 32 54
+mean: 0.90225044690288 0.8473786010872573 0.7920873769271521
+var: 0.01593722145679799 0.03248267079168316 0.030689738455703906
+min: 0.3925008773803711 0.3777221739292145 0.39004939794540405
+max: 0.9999361038208008 0.9996622602144878 0.9993018209934235
+start getting new testset
+source:checkpoints/comparing_40_0.4/epoch_2_test_step_4_results_for_predict.json
+target:preprocessed/preprocessed_comparing_0.4/test_step_4_data.json
+total_event: 364
+has close events: 332
+longest context:461
+longest target 38
+**********
+INIT DATA FILE: preprocessed/preprocessed_comparing_0.4/test_step_4_data.json
+sample:351
+input:
+ <arg>  person in  <arg>  vehicle crashed into  <arg>  at  <arg>  place Fukui is home to about a quarter of Japan's 48 reactors, which are currently all offline following the 2011 tsunami - triggered Fukushima plant disaster. Abe's administration wants to restart as many of the idled plants as possible. The drone was carrying a small camera and a plastic bottle containing what police suspect was the source of radioactive cesium, levels of which were too low to affect humans or the environment. The suspect said he used the sand from an unspecified location in Fukushima, where radiation levels are still high due to fallouts from the Fukushima Dai - ichi meltdowns, NHK said. The government has set up a task force to work on regulations for the use of small drones while ensuring the security of key government facilities. Drones have become increasingly popular in Japan for industrial, service and entertainment use. At a meeting Friday, task force members cautioned against excessive restrictions on the emerging market for drones. It is not clear exactly when the drone landed because workers at the office in central Tokyo rarely go up to the roof. An official taking new employees on a building tour reportedly spotted the drone. A blog with an anti - nuclear theme managed under the name " Kantei ( prime minister's office ) Santa " contained photos of a drone that looked like the one found Wednesday. In one entry, the anonymous writer said he drove from his hometown in Obama city in Fukui to Tokyo and flew the drone in the early hours of April 9, trying to have it land in the yard of the prime minister's office, but that he eventually lost track of the device. In the United States in January, a drone flown by an off - duty intelligence employee  <tgr>  crashed  <tgr>  on the White House grounds.
+output:
+ employee person in drone vehicle crashed into White House grounds at  <arg>  place
+**********
+start scoring
+gen_file:checkpoints/comparing_40_0.4/epoch_2_test_step_5_predictions.jsonl
+test_file:data/wikievents/test_no_ontology.jsonl
+paired args: 49, inconsistent args: 22, raito: 0.4489795918367347
+Evaluation by matching head words only....
+Event-level identification: P: 62.36
+Event-level : P: 62.36
+gold arg num: 563
+Role identification: P: 75.68, R: 69.09, F: 72.24
+Role: P: 69.65, R: 63.59, F: 66.48
+Coref Role identification: P: 77.24, R: 70.52, F: 73.72
+Coref Role: P: 71.01, R: 64.83, F: 67.78
+len: 365 32 54
+mean: 0.90225044690288 0.8473786010872573 0.7920873769271521
+var: 0.01593722145679799 0.03248267079168316 0.030689738455703906
+min: 0.3925008773803711 0.3777221739292145 0.39004939794540405
+max: 0.9999361038208008 0.9996622602144878 0.9993018209934235
+--------------------------------------------------------------------------------
+load from checkpoints/comparing_40_0.4/epoch_3.ckpt
+**********
+INIT DATA FILE: preprocessed/preprocessed_KAIROS/test.jsonl
+sample:327
+input:
+ <arg>  arrested or jailed  <arg>  for  <arg>  crime at  <arg>  place But he was later told that the IRA unit involved had tried to use “ a succession of phone boxes ” which were out of order, significantly delaying the bomb - warning call. Video Loading Video Unavailable Click to play Tap to play The video will start in 8 Cancel Play now Listen to our recreation of the Birmingham pub bombings warning call - made to the Birmingham Post & Mail newsroom Conway, who makes the admissions in his new memoir, also revealed that soon after the bombings the IRA ’ s England Operational Commander and his adjutant “ made it back home ” to Dublin for an urgent de - brief and to assess the impact of the disaster as far as the terrorists were concerned. Birmingham pub bombings : Minute by minute - 24 hours that changed our city forever Funding for the terrorists dried up almost overnight and the bombings, which left 21 dead and almost 200 injured, including many maimed for life, cost them hugely in the propaganda war. And in an interview he confirmed that the IRA hierarchy in Dublin knew all along that the six Irishmen  <tgr>  arrested  <tgr>  for the explosions were innocent “ from the get go, from the very start. ” Now, Julie and Brian Hambleton, who lost their sister Maxine in the bombings and lead the city ’ s Justice4the21 campaign, called on West Midlands Police and David Cameron to take immediate action. Julie said : “ I am expecting West Midlands Police Chief Constable Chris Sims and West Midlands Police Force to interview with Mr Conway with immediate effect. “ And I hope that Mr Cameron, who a week ago told The House of Commons that the pub bombers must be found, takes note of this development and ensures that the police follow this through. ” Brian added : “ The police keep saying they won ’ t do anything because there is no fresh evidence. Well, here it is in black and white. It ’ s an admission. They have got to do something with this information. ” The Birmingham pub bombings - The 28 numbers that add up to a cover - up, say campaigners
+output:
+ <arg>  arrested or jailed Irishmen for  <arg>  crime at  <arg>  place
+**********
+start scoring
+gen_file:checkpoints/comparing_40_0.4/epoch_3_test_step_0_predictions.jsonl
+test_file:data/wikievents/test_no_ontology.jsonl
+paired args: 49, inconsistent args: 25, raito: 0.5102040816326531
+Evaluation by matching head words only....
+Event-level identification: P: 60.71
+Event-level : P: 60.71
+gold arg num: 563
+Role identification: P: 74.51, R: 67.50, F: 70.83
+Role: P: 68.63, R: 62.17, F: 65.24
+Coref Role identification: P: 75.88, R: 68.74, F: 72.13
+Coref Role: P: 70.00, R: 63.41, F: 66.54
+len: 357 30 59
+mean: 0.9318616958471275 0.8913434376319249 0.8441215402213418
+var: 0.012096483756121029 0.02259032034767506 0.026025429824600613
+min: 0.4159955680370331 0.4400005042552948 0.3634841740131378
+max: 0.9999985694885254 0.999950538078944 0.9999454021453857
+start getting new testset
+source:checkpoints/comparing_40_0.4/epoch_3_test_step_0_results_for_predict.json
+target:preprocessed/preprocessed_comparing_0.4/test_step_0_data.json
+total_event: 364
+has close events: 332
+longest context:455
+longest target 36
+**********
+INIT DATA FILE: preprocessed/preprocessed_comparing_0.4/test_step_0_data.json
+sample:205
+input:
+ <arg>  died at  <arg>  place from  <arg>  medical issue, killed by  <arg>  killer On 17 September 2019, two suicide bombings  <tgr>  killed  <tgr>  over 48 people in  <tag>  Place  </tag>  Charikar and Kabul, Afghanistan. The first attack occurred at a rally for president Ashraf Ghani which killed over  <tag>  Victim  </tag>  26 and wounded over  <tag>  Victim  </tag>  42. Ghani was unharmed in the incident. The second bombing occurred in  <tag>  Place  </tag>  Kabul near the US embassy. In this incident 22 were killed and another 38 were injured in the explosion. Children and women are among the dead and wounded in both attacks, also multiple soldiers were killed. The Taliban claimed responsibility for the attacks, and said they will commit more attacks to discourage people from voting in the upcoming presidential elections. == Attacks == === Charikar === The attack took place in Charikar, at a police training ground. At the time, Afghan president Ashraf Ghani was holding a political rally at the site, attended by thousands of people. A suicide bomber riding a motorcycle drove into a crowd near a security checkpoint and detonated his explosives. 26 people and the bomber were killed, and 42 others injured. Women and children were among the victims of the attack. President Ghani was unharmed in the attack, remaining protected by a secure compound about half a mile from the site of the blast. === Kabul === A few hours after the first attack, a second suicide bombing took place in Massoud Square near the Kabul Green Zone, in an area where several government buildings, the US embassy and NATO headquarters, are located. 22 people were killed in this attack and 38 injured. == Responsibility == The Taliban claimed responsibility for both attacks, and stated that the attacks were aimed at disrupting the Afghan presidential election, scheduled to take place on September 28. == References ==
+output:
+ people died at Charikar and Kabul place from  <arg>  medical issue, killed by  <arg>  killer
+**********
+start scoring
+gen_file:checkpoints/comparing_40_0.4/epoch_3_test_step_1_predictions.jsonl
+test_file:data/wikievents/test_no_ontology.jsonl
+paired args: 49, inconsistent args: 27, raito: 0.5510204081632653
+Evaluation by matching head words only....
+Event-level identification: P: 61.81
+Event-level : P: 61.81
+gold arg num: 563
+Role identification: P: 74.65, R: 66.96, F: 70.60
+Role: P: 69.11, R: 61.99, F: 65.36
+Coref Role identification: P: 76.24, R: 68.38, F: 72.10
+Coref Role: P: 70.50, R: 63.23, F: 66.67
+len: 356 29 61
+mean: 0.938793601919333 0.9064245969057083 0.8025952298838801
+var: 0.009889292071579547 0.018021745506729036 0.030949498264907654
+min: 0.44121259450912476 0.5567299723625183 0.4489285945892334
+max: 0.999998927116394 0.9999483029047649 0.9998106360435486
+start getting new testset
+source:checkpoints/comparing_40_0.4/epoch_3_test_step_1_results_for_predict.json
+target:preprocessed/preprocessed_comparing_0.4/test_step_1_data.json
+total_event: 364
+has close events: 332
+longest context:455
+longest target 36
+**********
+INIT DATA FILE: preprocessed/preprocessed_comparing_0.4/test_step_1_data.json
+sample:99
+input:
+ <arg>  communicated with  <arg>  about  <arg>  topic at  <arg>  place (document does not specify in person or not, or one-way or not) This device appeared to be similar to a pressure cooker and had wiring on it, according to a law enforcement official who spoke on the condition of anonymity to discuss the ongoing investigation. Pressure cookers were used in the two bombs detonated at the Boston Marathon in 2013. The bomb squad safely removed the second device, New York police tweeted early Sunday. Police officers, firefighters and other first responders had rushed to the scene of the blast, which closed a major roadway and forced people out of nearby buildings. New York Mayor Bill de Blasio ( D ) said Sunday that the explosion was “ intentional, ” but noted that few details were available because the investigation was in its early stages. “ We know there was a bombing, ” de Blasio said. “ We know it was a very serious incident, but we have a lot more work to do to be able to say what kind of motivation was behind this. ” AD AD He also echoed his comments from Saturday night that there was no specific, credible  <tgr>  threat  <tgr>  against New York from any terrorist group. The FBI and NYPD are trying to understand what motivation lay behind the blast. “ We will look at individuals. We will look at associations. We will look at social media, ” William Sweeney, Assistant Director in Charge of the FBI New York Field Office, said. “ Until we have that information it is not fair for us to give a conclusion [ as to motivation ], ” DeBlasio said. “ Let the law enforcement experts draw the conclusions. ” Police Commissioner James O ’ Neill, whose first day in the position was Saturday, told reporters on Sunday that police were still gathering evidence. AD “ We did find some components indicative of an IED … that went off intentionally, ” O ’ Neill said.
+output:
+ group communicated with  <arg>  about  <arg>  topic at  <arg>  place (document does not specify in person or not, or one-way or not)
+**********
+start scoring
+gen_file:checkpoints/comparing_40_0.4/epoch_3_test_step_2_predictions.jsonl
+test_file:data/wikievents/test_no_ontology.jsonl
+paired args: 49, inconsistent args: 27, raito: 0.5510204081632653
+Evaluation by matching head words only....
+Event-level identification: P: 62.36
+Event-level : P: 62.36
+gold arg num: 563
+Role identification: P: 74.85, R: 67.67, F: 71.08
+Role: P: 69.16, R: 62.52, F: 65.67
+Coref Role identification: P: 76.42, R: 69.09, F: 72.57
+Coref Role: P: 70.53, R: 63.77, F: 66.98
+len: 359 30 62
+mean: 0.9358583127214458 0.9097411200404167 0.7992325999777378
+var: 0.010800731820347088 0.01741984388435475 0.031753689059447136
+min: 0.44121259450912476 0.5567299723625183 0.4489285945892334
+max: 0.999998927116394 0.9999483029047649 0.9998106360435486
+start getting new testset
+source:checkpoints/comparing_40_0.4/epoch_3_test_step_2_results_for_predict.json
+target:preprocessed/preprocessed_comparing_0.4/test_step_2_data.json
+total_event: 364
+has close events: 332
+longest context:455
+longest target 36
+**********
+INIT DATA FILE: preprocessed/preprocessed_comparing_0.4/test_step_2_data.json
+sample:123
+input:
+ <arg>  communicated to  <arg>  about  <arg>  topic using  <arg>  at  <arg>  place (one-way communication) AD Authorities have said they have not yet found anything connecting the Chelsea and New Jersey incidents but are continuing to investigate. On Sunday, Cuomo said the “ bombs ” in Chelsea “ appear to be different ” from those discovered earlier in the day in New Jersey, though the devices from both states were being shipped to the FBI lab in Quantico for further assessment. He said the devices in New Jersey were “ pipe bombs, ” and those in Chelsea were not. Cuomo said agents in New York were in touch with those in New Jersey. AD Cuomo said officials “ have no reason to believe at this time that there is any further immediate threat, ” though the National Guard and the New York State Police were deploying an additional 1, 000 personnel to bus terminals, airports and subways “ just to err on the side of caution. ” AD  <tag>  Communicator  </tag>  Cuomo said the blast in Chelsea “ caused significant property damage, ” though he a nearby subway station was structurally safe. He  <tgr>  said  <tgr>  law enforcement would work diligently to identify and locate those responsible. “ Whoever placed these bombs, we will find, and they will be brought to justice, ”  <tag>  Communicator  </tag>  Cuomo said. The explosion in the area of 23rd Street between Sixth and Seventh avenues occurred about 8 : 30 p. m. police said. Several of those injured were brought to area hospitals, Donald, the police spokesman, posted on Twitter. AD All victims were treated and released by Sunday morning, Cuomo said. A spokeswoman for Lenox Health Greenwich Village, which treated nine of the victims, said patients were treated for minor injuries that included lacerations to the head and body. Other hospitals declined to provide specifics about the extent of patients ’ injuries from the explosion. AD
+output:
+ He communicated to  <arg>  about  <arg>  topic using  <arg>  at  <arg>  place (one-way communication)
+**********
+start scoring
+gen_file:checkpoints/comparing_40_0.4/epoch_3_test_step_3_predictions.jsonl
+test_file:data/wikievents/test_no_ontology.jsonl
+paired args: 49, inconsistent args: 27, raito: 0.5510204081632653
+Evaluation by matching head words only....
+Event-level identification: P: 62.36
+Event-level : P: 62.36
+gold arg num: 563
+Role identification: P: 74.71, R: 67.67, F: 71.02
+Role: P: 69.02, R: 62.52, F: 65.61
+Coref Role identification: P: 76.27, R: 69.09, F: 72.51
+Coref Role: P: 70.39, R: 63.77, F: 66.92
+len: 359 30 63
+mean: 0.9360715053807247 0.9097411200404167 0.7959532410116633
+var: 0.010540066582895502 0.01741984388435475 0.03204437289789395
+min: 0.44121259450912476 0.5567299723625183 0.4489285945892334
+max: 0.999998927116394 0.9999483029047649 0.9998106360435486
+start getting new testset
+source:checkpoints/comparing_40_0.4/epoch_3_test_step_3_results_for_predict.json
+target:preprocessed/preprocessed_comparing_0.4/test_step_3_data.json
+total_event: 364
+has close events: 332
+longest context:455
+longest target 36
+**********
+INIT DATA FILE: preprocessed/preprocessed_comparing_0.4/test_step_3_data.json
+sample:31
+input:
+ <arg>  died at  <arg>  place from  <arg>  medical issue, killed by  <arg>  killer Boston Marathon Bomber Apologizes to Survivors BOSTON — Moments before a federal judge sentenced him to death, Boston Marathon bomber Dzhokhar Tsarnaev rose to his feet Wednesday and apologized to the victims and their loved ones for the first time. " I pray for your relief, for your healing,'' he said. Amid deep silence in the courtroom, the 21 - year - old ethnic Chechen said, " I am sorry for the lives that I've taken, for the suffering that I've caused you, for the damage that I've done — irreparable damage.'' It was the first time Tsarnaev, who did not speak in his own defense at trial, had addressed the court. After Tsarnaev finished, U. S. District Judge George O'Toole Jr. began to speak, with his voice breaking several times. He officially imposed the  <tgr>  death  <tgr>  sentence on  <tag>  Defendant  </tag>  Tsarnaev that jurors had recommended unanimously. In May, after a 12 - week trial,  <tag>  Killer Killer  </tag>  Tsarnaev was found guilty of killing three  <tag>  Victim  </tag>  people and injuring  <tag>  Victim  </tag>  264 in the April 15, 2013, bombing at the world - renowned race, where he and his brother, Tamerlan, 26, set off two pressure - cooker bombs near the finish line. Tsarnaev was also found guilty in the fatal shooting of a Massachusetts Institute of Technology police officer three days later as he and his brother fled. Tamerlan was killed during the getaway. Tsarnaev was found guilty of all 30 terrorism and other charges against him. Of those, 17 carried the possibility of a death sentence. During the penalty phase of the judicial proceedings, prosecutors brushed off defense arguments that Tsarnaev was under the strong influence of his older, radicalized brother. Victims speak out
+output:
+ Tsarnaev died at  <arg>  place from  <arg>  medical issue, killed by  <arg>  killer
+**********
+start scoring
+gen_file:checkpoints/comparing_40_0.4/epoch_3_test_step_4_predictions.jsonl
+test_file:data/wikievents/test_no_ontology.jsonl
+paired args: 49, inconsistent args: 27, raito: 0.5510204081632653
+Evaluation by matching head words only....
+Event-level identification: P: 62.36
+Event-level : P: 62.36
+gold arg num: 563
+Role identification: P: 74.71, R: 67.67, F: 71.02
+Role: P: 69.02, R: 62.52, F: 65.61
+Coref Role identification: P: 76.27, R: 69.09, F: 72.51
+Coref Role: P: 70.39, R: 63.77, F: 66.92
+len: 359 30 63
+mean: 0.9359795007468449 0.9097411200404167 0.7956534866039926
+var: 0.010568555122835057 0.01741984388435475 0.03210412122181072
+min: 0.44121259450912476 0.5567299723625183 0.4489285945892334
+max: 0.999998927116394 0.9999483029047649 0.9998106360435486
+start getting new testset
+source:checkpoints/comparing_40_0.4/epoch_3_test_step_4_results_for_predict.json
+target:preprocessed/preprocessed_comparing_0.4/test_step_4_data.json
+total_event: 364
+has close events: 332
+longest context:455
+longest target 36
+**********
+INIT DATA FILE: preprocessed/preprocessed_comparing_0.4/test_step_4_data.json
+sample:93
+input:
+ <arg>  manufactured or assembled or produced  <arg>  from  <arg>  components using  <arg>  at  <arg>  place On 27 August 1975 a Provisional IRA bomb exploded without warning at the Caterham Arms public house in Caterham, Surrey, England. There were no fatalities but 33 people were injured, some severely. Two off - duty soldiers lost their legs as a result of the bombing. == Background == In February 1975 the Provisional Irish Republican Army agreed to a truce and ceasefire with the British government and the Northern Ireland Office. Seven " incident centres " were established in Irish nationalist areas in Northern Ireland to monitor the ceasefire and the activity of the security forces. Before the truce, the IRA active service unit ( ASU ) later dubbed the Balcombe Street Gang ( due to the December 1975 Balcombe Street siege ) had been carrying out bomb and gun attacks in Southern England since autumn 1974, mostly in and around London. Their last previous attack was an assassination attempt on former Prime Minister Edward Heath but he was not home when the  <tag>  Attacker  </tag>  attackers threw a  <tag>  ExplosiveDevice  </tag>  bomb into his  <tag>  Place  </tag>  bedroom window on 22 December 1974. == The bombing == The  <tag>  ManufacturerAssembler  </tag>  Balcombe Street Gang planted a time  <tag>  Artifact  </tag>  bomb in the  <tag>  Place  </tag>  Caterham Arms public house in Caterham, Surrey. The IRA unit  <tgr>  placed  <tgr>  the 7lb bomb in a duffel bag under a seat. There was no warning and the  <tag>  ExplosiveDevice ExplosiveDevice  </tag>  bomb exploded at 9 : 20, injuring 23  <tag>  Victim  </tag>  civilians and 10 off - duty  <tag>  Victim  </tag>  soldiers. The pub was used by members of the Welsh Guards who were based at the barracks nearby. Some of the injuries were very serious, with at least three soldiers losing limbs. The blast blew the roof off the pub in the process. This attack marked the start of a renewed bombing campaign ( Phase Two ) in England and the end of the truce with the British Government. The next day, the same IRA unit exploded a bomb in Oxford Street, injuring several people. == Aftermath ==
+output:
+ unit manufactured or assembled or produced bomb from duffel bag components using  <arg>  at  <arg>  place
+**********
+start scoring
+gen_file:checkpoints/comparing_40_0.4/epoch_3_test_step_5_predictions.jsonl
+test_file:data/wikievents/test_no_ontology.jsonl
+paired args: 49, inconsistent args: 27, raito: 0.5510204081632653
+Evaluation by matching head words only....
+Event-level identification: P: 62.36
+Event-level : P: 62.36
+gold arg num: 563
+Role identification: P: 74.71, R: 67.67, F: 71.02
+Role: P: 69.02, R: 62.52, F: 65.61
+Coref Role identification: P: 76.27, R: 69.09, F: 72.51
+Coref Role: P: 70.39, R: 63.77, F: 66.92
+len: 359 30 63
+mean: 0.9359795007468449 0.9097411200404167 0.7956534866039926
+var: 0.010568555122835057 0.01741984388435475 0.03210412122181072
+min: 0.44121259450912476 0.5567299723625183 0.4489285945892334
+max: 0.999998927116394 0.9999483029047649 0.9998106360435486
+--------------------------------------------------------------------------------
+load from checkpoints/comparing_40_0.4/epoch_4.ckpt
+**********
+INIT DATA FILE: preprocessed/preprocessed_KAIROS/test.jsonl
+sample:327
+input:
+ <arg>  arrested or jailed  <arg>  for  <arg>  crime at  <arg>  place But he was later told that the IRA unit involved had tried to use “ a succession of phone boxes ” which were out of order, significantly delaying the bomb - warning call. Video Loading Video Unavailable Click to play Tap to play The video will start in 8 Cancel Play now Listen to our recreation of the Birmingham pub bombings warning call - made to the Birmingham Post & Mail newsroom Conway, who makes the admissions in his new memoir, also revealed that soon after the bombings the IRA ’ s England Operational Commander and his adjutant “ made it back home ” to Dublin for an urgent de - brief and to assess the impact of the disaster as far as the terrorists were concerned. Birmingham pub bombings : Minute by minute - 24 hours that changed our city forever Funding for the terrorists dried up almost overnight and the bombings, which left 21 dead and almost 200 injured, including many maimed for life, cost them hugely in the propaganda war. And in an interview he confirmed that the IRA hierarchy in Dublin knew all along that the six Irishmen  <tgr>  arrested  <tgr>  for the explosions were innocent “ from the get go, from the very start. ” Now, Julie and Brian Hambleton, who lost their sister Maxine in the bombings and lead the city ’ s Justice4the21 campaign, called on West Midlands Police and David Cameron to take immediate action. Julie said : “ I am expecting West Midlands Police Chief Constable Chris Sims and West Midlands Police Force to interview with Mr Conway with immediate effect. “ And I hope that Mr Cameron, who a week ago told The House of Commons that the pub bombers must be found, takes note of this development and ensures that the police follow this through. ” Brian added : “ The police keep saying they won ’ t do anything because there is no fresh evidence. Well, here it is in black and white. It ’ s an admission. They have got to do something with this information. ” The Birmingham pub bombings - The 28 numbers that add up to a cover - up, say campaigners
+output:
+ <arg>  arrested or jailed Irishmen for  <arg>  crime at  <arg>  place
+**********
+start scoring
+gen_file:checkpoints/comparing_40_0.4/epoch_4_test_step_0_predictions.jsonl
+test_file:data/wikievents/test_no_ontology.jsonl
+paired args: 49, inconsistent args: 24, raito: 0.4897959183673469
+Evaluation by matching head words only....
+Event-level identification: P: 64.01
+Event-level : P: 64.01
+gold arg num: 563
+Role identification: P: 74.68, R: 71.76, F: 73.19
+Role: P: 68.02, R: 65.36, F: 66.67
+Coref Role identification: P: 75.79, R: 72.82, F: 74.28
+Coref Role: P: 68.95, R: 66.25, F: 67.57
+len: 373 37 61
+mean: 0.9269958478697806 0.8895519624019528 0.8378768568156195
+var: 0.016000643541017014 0.029130085449455514 0.031722509407911
+min: 0.3477890193462372 0.29149729013442993 0.399147093296051
+max: 0.9999995231628418 0.999997079372406 0.9999289512634277
+start getting new testset
+source:checkpoints/comparing_40_0.4/epoch_4_test_step_0_results_for_predict.json
+target:preprocessed/preprocessed_comparing_0.4/test_step_0_data.json
+total_event: 364
+has close events: 332
+longest context:455
+longest target 36
+**********
+INIT DATA FILE: preprocessed/preprocessed_comparing_0.4/test_step_0_data.json
+sample:178
+input:
+ <arg>  identified  <arg>  as  <arg>  at  <arg>  place April 8, 2013 Tamerlan bought remote - control car devices from RC Cars in Malden, which prosecutors say are related to the equipment needed by the Tsarnaevs to remotely trigger the bombs. April 13, 2013 Tamerlan Tsarnaev purchases ammunition from a store in New Hampshire and sends $ 900 in cash through Moneygram to his and Dzhokhar ’ s mother, Zubeidat, through a location in Somerville. April 14, 2013 Dzhokhar Tsarnaev opens a prepaid cellphone account under the name Jahar Tsarni. He would use this phone while at the Boston Marathon the next day. On the same day, Tamerlan Tsarnaev buys two backpacks at a Target in Watertown that were used to carry the bombs. Federal Public Defender Office April 15, 2013 At about 2 : 50 p. m., two homemade pressure - cooker bombs are detonated remotely by the  <tag>  Killer  </tag>  Tsarnaevs near the finish line of the Boston Marathon, killing  <tag>  Victim  </tag>  three and injuring some 260  <tag>  Victim  </tag>  others. Seventeen  <tag>  Victim  </tag>  people lost  <tag>  BodyPart  </tag>  limbs. April 15, 2013 Less than a half hour after the bombs went off, Dzhokhar Tsarnaev was  <tgr>  seen  <tgr>  entering the Whole Foods at Prospect Street in Cambridge and looking over different milk products.  <tag>  Recipient  </tag>  He buys a carton of  <tag>  AcquiredEntity  </tag>  whole milk for $ 3. 49, then returns to parked car in the store lot. He enters the passenger side, suggesting another person, possibly Tamerlan Tsarnaev, was at the wheel. Within seconds, Dzhokhar Tsarnaev gets out of the car and exchanges his purchase for a different type of milk. April 26, 2013 Days later, the FBI recovered a backpack belonging to Dzhokhar Tsarnaev, which contained tubes of fireworks. In his dorm room, they also found a receipt for a BB gun, which was recovered from the Watertown shootout scene. US Department of Justice Patricia Wen can be reached at wen @ globe. com. Follow her on Twitter at @ GlobePatty.
+output:
+ <arg>  identified Dzhokhar Tsarnaev as  <arg>  at Whole Foods place
+**********
+start scoring
+gen_file:checkpoints/comparing_40_0.4/epoch_4_test_step_1_predictions.jsonl
+test_file:data/wikievents/test_no_ontology.jsonl
+paired args: 49, inconsistent args: 22, raito: 0.4489795918367347
+Evaluation by matching head words only....
+Event-level identification: P: 63.74
+Event-level : P: 63.74
+gold arg num: 563
+Role identification: P: 74.16, R: 70.87, F: 72.48
+Role: P: 67.47, R: 64.48, F: 65.94
+Coref Role identification: P: 75.46, R: 72.11, F: 73.75
+Coref Role: P: 68.59, R: 65.54, F: 67.03
+len: 369 37 62
+mean: 0.9357412612442497 0.9111451150195019 0.8498763168584489
+var: 0.013280038610764211 0.016261286611660895 0.020078958181951417
+min: 0.3356549143791199 0.5349460244178772 0.47250691056251526
+max: 0.9999998807907104 0.9999926090240479 0.9999417662620544
+start getting new testset
+source:checkpoints/comparing_40_0.4/epoch_4_test_step_1_results_for_predict.json
+target:preprocessed/preprocessed_comparing_0.4/test_step_1_data.json
+total_event: 364
+has close events: 332
+longest context:455
+longest target 35
+**********
+INIT DATA FILE: preprocessed/preprocessed_comparing_0.4/test_step_1_data.json
+sample:361
+input:
+ <arg>  committed a crime against  <arg>  at  <arg>  place ABDULLAH AHMED ABDULLAH Murder of U. S. Nationals Outside the United States ; Conspiracy to Murder U. S.  <tag>  Victim  </tag>  Nationals Outside the United States ; Attack on a  <tag>  Target  </tag>  Federal Facility Resulting in Death ; Conspiracy to Kill U. S.  <tag>  Victim  </tag>  Nationals, to  <tgr>  Murder  <tgr> , to Destroy  <tag>  Artifact  </tag>  Buildings and Property of the United States, and to Destroy the  <tag>  Artifact  </tag>  National Defense Utilities of the United States Images Aliases : Abu Mohamed Al - Masri, Abu Muhammad al Masri, Saleh, Abu Mariam, Abdullah Ahmed Abdullah Ali, Abu Mohammed
+output:
+ <arg>  committed a crime against  <arg>  at  <arg>  place
+**********
+start scoring
+gen_file:checkpoints/comparing_40_0.4/epoch_4_test_step_2_predictions.jsonl
+test_file:data/wikievents/test_no_ontology.jsonl
+paired args: 49, inconsistent args: 24, raito: 0.4897959183673469
+Evaluation by matching head words only....
+Event-level identification: P: 63.74
+Event-level : P: 63.74
+gold arg num: 563
+Role identification: P: 74.40, R: 71.23, F: 72.78
+Role: P: 67.72, R: 64.83, F: 66.24
+Coref Role identification: P: 75.70, R: 72.47, F: 74.05
+Coref Role: P: 68.83, R: 65.90, F: 67.33
+len: 371 37 61
+mean: 0.9363014763195404 0.9220263875416808 0.850184265273082
+var: 0.01275249001075573 0.012659072209990543 0.02113681770671482
+min: 0.3356549143791199 0.5417277812957764 0.47250691056251526
+max: 0.9999998807907104 0.9999926090240479 0.9999182224273682
+start getting new testset
+source:checkpoints/comparing_40_0.4/epoch_4_test_step_2_results_for_predict.json
+target:preprocessed/preprocessed_comparing_0.4/test_step_2_data.json
+total_event: 364
+has close events: 332
+longest context:455
+longest target 36
+**********
+INIT DATA FILE: preprocessed/preprocessed_comparing_0.4/test_step_2_data.json
+sample:345
+input:
+ <arg>  communicated remotely with  <arg>  about  <arg>  topic using  <arg>  at  <arg>  place He said he told two other senior IRA figures, Dave O ’ Connell and Kevin Mallon “ exactly what I thought ” when they met up. “ In fact, both men were themselves furious, fully recognising not just the damage the bombing had caused to the IRA but its immorality as well. ” McDade, a lieutenant in the Birmingham Brigade of the IRA, blew himself up while trying to plant a bomb at Coventry Telephone exchange a week before the pub bombings. Neither The Mulberry Bush nor The Tavern in The Town had any military connection. Normal IRA procedure at the time for any attack on non - military targets was to give a 30 - minute warning in order for full evacuations to take place. Read our docudrama minute - by - minute recreation of the events of November 21 1974 The Birmingham Mail received an ambiguous  <tgr>  call  <tgr>  at 8. 11pm on November 21. The caller did not identify either pub, referring instead to The Rotunda, above The Mulberry Bush and the New Street Tax Office, which was above the underground Tavern in The Town. The first bomb destroyed The Mulberry Bush just six minutes later. The Tavern was destroyed at 8. 27pm. Conway was not directly involved in the debrief with the England Operational Commander. But he said he was later told “ that the early indications were that the casualties were the result of yet another failure in the warning system, a succession of phone boxes from which the warning might have been relayed having proved to be inoperable. ” In an interview with a national newspaper he described the Birmingham pub bombings as “ a total disaster. ” He added that the secret ‘ Feakle Talks ’, held a couple of weeks after the bombings, were used by the IRA to try to start to repair its image after the Birmingham and the Guildford pub bombings.
+output:
+ Birmingham Mail communicated remotely with caller about  <arg>  topic using  <arg>  at  <arg>  place
+**********
+start scoring
+gen_file:checkpoints/comparing_40_0.4/epoch_4_test_step_3_predictions.jsonl
+test_file:data/wikievents/test_no_ontology.jsonl
+paired args: 49, inconsistent args: 24, raito: 0.4897959183673469
+Evaluation by matching head words only....
+Event-level identification: P: 63.74
+Event-level : P: 63.74
+gold arg num: 563
+Role identification: P: 74.40, R: 71.23, F: 72.78
+Role: P: 67.72, R: 64.83, F: 66.24
+Coref Role identification: P: 75.70, R: 72.47, F: 74.05
+Coref Role: P: 68.83, R: 65.90, F: 67.33
+len: 371 37 61
+mean: 0.9361651644375576 0.9249860932295387 0.8503889052811434
+var: 0.012767454825269083 0.012185570900019857 0.021189071306885666
+min: 0.3356549143791199 0.5417277812957764 0.47250691056251526
+max: 0.9999998807907104 0.9999926090240479 0.9999182224273682
+start getting new testset
+source:checkpoints/comparing_40_0.4/epoch_4_test_step_3_results_for_predict.json
+target:preprocessed/preprocessed_comparing_0.4/test_step_3_data.json
+total_event: 364
+has close events: 332
+longest context:455
+longest target 36
+**********
+INIT DATA FILE: preprocessed/preprocessed_comparing_0.4/test_step_3_data.json
+sample:140
+input:
+ <arg>  detonated or exploded  <arg>  explosive device using  <arg>  to attack  <arg>  target at  <arg>  place US law enforcement and intelligence officials across the country and overseas, scrambling to identify the source of the explosives, are now worried that the marathon sidewalk bombing could mark a new chapter in the struggle to secure the American homeland. Advertisement “ We ’ ve seen this around the world, but what is so concerning about this is that it hadn ’ t happened here, not like this. Until yesterday, ’’ said a senior homeland security official in Washington. The Boston bombs were packed into pressure cookers and hidden in backpacks or duffel bags, according to multiple press accounts citing unidentified sources, another similarity with some Mideast attacks using “ improvised explosive devices, ’’ or IEDs. One of the bombs used in a foiled attack in New York ’ s Times Square in 2010 was fashioned from a pressure cooker. A joint warning issued by the FBI and the Department of Homeland Security in 2010 said pressure cookers has been used for bombs in multiple  <tgr>  attacks  <tgr>  in Afghanistan, Pakistan, India, and Nepal. Reports from medical staff at Boston hospitals who treated victims in the marathon attack indicate the bombs in this case were packed with BB ’ s, nails, and other projectiles intended to maximize human carnage. That contrasts with the large truck bombs that were used in Oklahoma City in 1995 and in the garage of the World Trade Center North Tower in 1993, which were intended to inflict damage on buildings, as well as people. IED ’ s pack a much smaller punch, are cheaper, and easier to carry. They have been used in Iraq and Afghanistan with devastating effect on American troops in convoys of military vehicles. Advertisement No one has taken responsibility for the twin bombings on Boylston Street that killed three people and injured more than 150 near the Boston marathon finish line.
+output:
+ <arg>  detonated or exploded bombs explosive device using  <arg>  to attack India and Pakistan and Afghanistan target at  <arg>  place
+**********
+start scoring
+gen_file:checkpoints/comparing_40_0.4/epoch_4_test_step_4_predictions.jsonl
+test_file:data/wikievents/test_no_ontology.jsonl
+paired args: 49, inconsistent args: 24, raito: 0.4897959183673469
+Evaluation by matching head words only....
+Event-level identification: P: 63.74
+Event-level : P: 63.74
+gold arg num: 563
+Role identification: P: 74.40, R: 71.23, F: 72.78
+Role: P: 67.72, R: 64.83, F: 66.24
+Coref Role identification: P: 75.70, R: 72.47, F: 74.05
+Coref Role: P: 68.83, R: 65.90, F: 67.33
+len: 371 37 61
+mean: 0.9361651644375576 0.9249860932295387 0.8503889052811434
+var: 0.012767454825269083 0.012185570900019857 0.021189071306885666
+min: 0.3356549143791199 0.5417277812957764 0.47250691056251526
+max: 0.9999998807907104 0.9999926090240479 0.9999182224273682
+start getting new testset
+source:checkpoints/comparing_40_0.4/epoch_4_test_step_4_results_for_predict.json
+target:preprocessed/preprocessed_comparing_0.4/test_step_4_data.json
+total_event: 364
+has close events: 332
+longest context:455
+longest target 36
+**********
+INIT DATA FILE: preprocessed/preprocessed_comparing_0.4/test_step_4_data.json
+sample:188
+input:
+ <arg>  observed  <arg>  using  <arg>  in  <arg>  place April 8, 2013 Tamerlan bought remote - control car devices from RC Cars in Malden, which prosecutors say are related to the equipment needed by the Tsarnaevs to remotely trigger the bombs. April 13, 2013 Tamerlan Tsarnaev purchases ammunition from a store in New Hampshire and sends $ 900 in cash through Moneygram to his and Dzhokhar ’ s mother, Zubeidat, through a location in Somerville. April 14, 2013 Dzhokhar Tsarnaev opens a prepaid cellphone account under the name Jahar Tsarni. He would use this phone while at the Boston Marathon the next day. On the same day, Tamerlan Tsarnaev buys two backpacks at a Target in Watertown that were used to carry the bombs. Federal Public Defender Office April 15, 2013 At about 2 : 50 p. m., two homemade pressure - cooker bombs are detonated remotely by the Tsarnaevs near the finish line of the Boston Marathon, killing three and injuring some 260 others. Seventeen people lost limbs. April 15, 2013 Less than a half hour after the bombs went off, Dzhokhar Tsarnaev was seen entering the Whole Foods at Prospect Street in Cambridge and looking over different milk products. He buys a carton of whole milk for $ 3. 49, then returns to parked car in the store lot. He enters the passenger side, suggesting another person, possibly Tamerlan Tsarnaev, was at the wheel. Within seconds,  <tag>  Recipient  </tag>  Dzhokhar Tsarnaev gets out of the car and exchanges his purchase for a different type of milk. April 26, 2013 Days later, the  <tag>  Observer  </tag>  FBI recovered a  <tag>  ObservedEntity  </tag>  backpack belonging to Dzhokhar Tsarnaev, which contained tubes of fireworks. In his dorm room, they also  <tgr>  found  <tgr>  a receipt for a BB gun, which was recovered from the  <tag>  Place  </tag>  Watertown shootout scene. US Department of Justice Patricia Wen can be reached at wen @ globe. com. Follow her on Twitter at @ GlobePatty.
+output:
+ they observed BB gun using  <arg>  in room place
+**********
+start scoring
+gen_file:checkpoints/comparing_40_0.4/epoch_4_test_step_5_predictions.jsonl
+test_file:data/wikievents/test_no_ontology.jsonl
+paired args: 49, inconsistent args: 24, raito: 0.4897959183673469
+Evaluation by matching head words only....
+Event-level identification: P: 63.74
+Event-level : P: 63.74
+gold arg num: 563
+Role identification: P: 74.40, R: 71.23, F: 72.78
+Role: P: 67.72, R: 64.83, F: 66.24
+Coref Role identification: P: 75.70, R: 72.47, F: 74.05
+Coref Role: P: 68.83, R: 65.90, F: 67.33
+len: 371 37 61
+mean: 0.9361651644375576 0.9249860932295387 0.8503889052811434
+var: 0.012767454825269083 0.012185570900019857 0.021189071306885666
+min: 0.3356549143791199 0.5417277812957764 0.47250691056251526
+max: 0.9999998807907104 0.9999926090240479 0.9999182224273682
+--------------------------------------------------------------------------------
+load from checkpoints/comparing_40_0.4/epoch_5.ckpt
+**********
+INIT DATA FILE: preprocessed/preprocessed_KAIROS/test.jsonl
+sample:327
+input:
+ <arg>  arrested or jailed  <arg>  for  <arg>  crime at  <arg>  place But he was later told that the IRA unit involved had tried to use “ a succession of phone boxes ” which were out of order, significantly delaying the bomb - warning call. Video Loading Video Unavailable Click to play Tap to play The video will start in 8 Cancel Play now Listen to our recreation of the Birmingham pub bombings warning call - made to the Birmingham Post & Mail newsroom Conway, who makes the admissions in his new memoir, also revealed that soon after the bombings the IRA ’ s England Operational Commander and his adjutant “ made it back home ” to Dublin for an urgent de - brief and to assess the impact of the disaster as far as the terrorists were concerned. Birmingham pub bombings : Minute by minute - 24 hours that changed our city forever Funding for the terrorists dried up almost overnight and the bombings, which left 21 dead and almost 200 injured, including many maimed for life, cost them hugely in the propaganda war. And in an interview he confirmed that the IRA hierarchy in Dublin knew all along that the six Irishmen  <tgr>  arrested  <tgr>  for the explosions were innocent “ from the get go, from the very start. ” Now, Julie and Brian Hambleton, who lost their sister Maxine in the bombings and lead the city ’ s Justice4the21 campaign, called on West Midlands Police and David Cameron to take immediate action. Julie said : “ I am expecting West Midlands Police Chief Constable Chris Sims and West Midlands Police Force to interview with Mr Conway with immediate effect. “ And I hope that Mr Cameron, who a week ago told The House of Commons that the pub bombers must be found, takes note of this development and ensures that the police follow this through. ” Brian added : “ The police keep saying they won ’ t do anything because there is no fresh evidence. Well, here it is in black and white. It ’ s an admission. They have got to do something with this information. ” The Birmingham pub bombings - The 28 numbers that add up to a cover - up, say campaigners
+output:
+ <arg>  arrested or jailed Irishmen for  <arg>  crime at  <arg>  place
+**********
+start scoring
+gen_file:checkpoints/comparing_40_0.4/epoch_5_test_step_0_predictions.jsonl
+test_file:data/wikievents/test_no_ontology.jsonl
+paired args: 49, inconsistent args: 21, raito: 0.42857142857142855
+Evaluation by matching head words only....
+Event-level identification: P: 63.46
+Event-level : P: 63.46
+gold arg num: 563
+Role identification: P: 74.67, R: 70.69, F: 72.63
+Role: P: 68.48, R: 64.83, F: 66.61
+Coref Role identification: P: 76.17, R: 72.11, F: 74.09
+Coref Role: P: 69.98, R: 66.25, F: 68.07
+len: 373 33 63
+mean: 0.9395022417446836 0.9345020388412957 0.8576678896365552
+var: 0.012928545670828795 0.011706044649831071 0.02446002138083222
+min: 0.4334208369255066 0.5548655986785889 0.47800132632255554
+max: 1.0 0.9999997615814209 0.9999914169311523
+start getting new testset
+source:checkpoints/comparing_40_0.4/epoch_5_test_step_0_results_for_predict.json
+target:preprocessed/preprocessed_comparing_0.4/test_step_0_data.json
+total_event: 364
+has close events: 332
+longest context:455
+longest target 35
+**********
+INIT DATA FILE: preprocessed/preprocessed_comparing_0.4/test_step_0_data.json
+sample:257
+input:
+ <arg>  transported  <arg>  in  <arg>  from  <arg>  place to  <arg>  place Thai officials have said the blast was carried out by a people - smuggling gang seeking revenge on Thai authorities for cracking down on their operation. The August 17 blast at the Erawan Shrine - a popular tourist destination - was one of the most deadly acts of violence in Bangkok in decades, and left 20 people dead and more than 120 injured. Of the dead, 14 were tourists. The attack shocked the residents of the capital because of the apparent randomness, which drove home the point that no place is immune to acts of terror. Authorities, however, have declined to call it an act of terrorism out of apparent fear that it would hurt the country's huge tourism industry. Police initially appeared at first to be at a loss, but soon claimed success with a series of raids and two arrests. Arrest warrants have been issued for 15 others. The two suspects were brought to the court in handcuffs wearing brown prison garb. Members of the media were not allowed to enter the court and the indictments took place before the two  <tag>  Defendant  </tag>  suspects  <tgr>  arrived  <tgr> , said defense lawyer  <tag>  Participant  </tag>  Chuchart Kanpai. Doubts about motive Early speculation about the bombing had suggested it might be the work of Uighur separatists who were angry that  <tag>  Transporter  </tag>  Thailand in July forcibly repatriated more than 100  <tag>  PassengerArtifact  </tag>  Uighurs to  <tag>  Destination  </tag>  China, where it is feared they face persecution. The theory was bolstered by the fact that the Erawan Shrine is popular among Chinese tourists, who figured prominently among the victims of the bombing. But Thai officials reject any political or religious motive, sticking to the theory that it was a revenge for disrupting a human - smuggling gang. Still, skepticism about the police explanation on the shrine attack has abounded because of leaks, contradictions, misstatements and secrecy surrounding the investigation.
+output:
+ <arg>  transported suspects in  <arg>  from  <arg>  place to  <arg>  place
+**********
+start scoring
+gen_file:checkpoints/comparing_40_0.4/epoch_5_test_step_1_predictions.jsonl
+test_file:data/wikievents/test_no_ontology.jsonl
+paired args: 49, inconsistent args: 23, raito: 0.46938775510204084
+Evaluation by matching head words only....
+Event-level identification: P: 62.64
+Event-level : P: 62.64
+gold arg num: 563
+Role identification: P: 74.01, R: 69.80, F: 71.85
+Role: P: 67.42, R: 63.59, F: 65.45
+Coref Role identification: P: 75.14, R: 70.87, F: 72.94
+Coref Role: P: 68.36, R: 64.48, F: 66.36
+len: 363 36 61
+mean: 0.9502509476242236 0.9176808116198689 0.8463100983606878
+var: 0.010191553304324346 0.016139051198634794 0.03132981568576548
+min: 0.4235636591911316 0.5206231474876404 0.3747471868991852
+max: 1.0 0.9999995231628418 0.9999954700469971
+start getting new testset
+source:checkpoints/comparing_40_0.4/epoch_5_test_step_1_results_for_predict.json
+target:preprocessed/preprocessed_comparing_0.4/test_step_1_data.json
+total_event: 364
+has close events: 332
+longest context:455
+longest target 38
+**********
+INIT DATA FILE: preprocessed/preprocessed_comparing_0.4/test_step_1_data.json
+sample:189
+input:
+ <arg>  started working in  <arg>  position at  <arg>  organization in  <arg>  place Dzhokhar Tsarnaev apologizes for suffering caused by Marathon bombing January 2013 Tsarnaev, then 19, talks to his close friend, Stephen Silva, about borrowing Silva ’ s 9mm P95 Ruger semi - automatic pistol. Tsarnaev and Silva both graduated from Cambridge Rindge and Latin School in 2001, and  <tgr>  worked  <tgr>  as lifeguards together at the Harvard pool. Starting in college, both became very involved in selling marijuana, and  <tag>  Recipient  </tag>  Silva had obtained  <tag>  AcquiredEntity  </tag>  a gun, in part, to help him protect his drug business. A Ruger semi - automatic handgun presented in the trial. Jan. 30, 2013 Tamerlan, 26, allegedly buys two Fager pressure - cookers at Macy ’ s at the Square One Mall in Saugus. The remains of a pressure cooker bomb. Feb. 8, 2013 Tamerlan Tsarnaev used his credit card to make an online purchase of a remote - controlled car set, batteries, and a transmitter and receiver from NitroRCX. com. Prosecutors said these items were used to help remotely - detonate the bombs February, 2013 Dzhokhar Tsarnaev visits Silva and borrows the Ruger pistol — the gun that was later used to kill MIT police officer Sean Collier and during the shootout with police in Watertown. March 11, 2013 Dzhokhar Tsarnaev creates a secret Twitter account, @ Al - FirdausiA, with the user name Ghuraba and posted six Tweets in three days. The first post on March 11, 2013 reads : " I want the highest levels of Jannah, I want to be able to see Allah every single day for that is the best of pleasures. " He also maintains his original Twitter account that includes mostly typical teenage postings, but some that could be signs of growing radicalization. March Tamerlan Tsarnaev purchases some BBs at Walmart in New Hampshire. March 20, 2013
+output:
+ Tsarnaev and Silva started working in  <arg>  position at pool organization in  <arg>  place
+**********
+start scoring
+gen_file:checkpoints/comparing_40_0.4/epoch_5_test_step_2_predictions.jsonl
+test_file:data/wikievents/test_no_ontology.jsonl
+paired args: 49, inconsistent args: 24, raito: 0.4897959183673469
+Evaluation by matching head words only....
+Event-level identification: P: 62.91
+Event-level : P: 62.91
+gold arg num: 563
+Role identification: P: 74.20, R: 69.98, F: 72.03
+Role: P: 67.80, R: 63.94, F: 65.81
+Coref Role identification: P: 75.33, R: 71.05, F: 73.13
+Coref Role: P: 68.74, R: 64.83, F: 66.73
+len: 365 35 59
+mean: 0.9501260825668268 0.9303419996585165 0.8529971825116772
+var: 0.010219853914250891 0.013929757887645333 0.02984745298703339
+min: 0.4235636591911316 0.5663822293281555 0.3747471868991852
+max: 1.0 0.9999996423721313 0.9999954700469971
+start getting new testset
+source:checkpoints/comparing_40_0.4/epoch_5_test_step_2_results_for_predict.json
+target:preprocessed/preprocessed_comparing_0.4/test_step_2_data.json
+total_event: 364
+has close events: 332
+longest context:455
+longest target 35
+**********
+INIT DATA FILE: preprocessed/preprocessed_comparing_0.4/test_step_2_data.json
+sample:300
+input:
+ <arg>  died at  <arg>  place from  <arg>  medical issue, killed by  <arg>  killer " I heard explosions in the distance so I left my house and I saw a car outside, " said 40 - year - old Taji resident Abu Mohammed, who added that police inspectors concluded the vehicle was a car bomb. " We asked the neighbors to leave their houses, but when they were leaving, the bomb went off. " Abu Mohammed said he witnessed the deaths of an elderly woman carrying a newborn baby and of the policeman who had first concluded the car was packed with explosives. An Agence France Presse reporter at the scene said a row of houses were completely destroyed, and residents were rummaging through the rubble in search of victims and their belongings. In Baghdad, meanwhile, a car bomb outside a government office responsible for producing identity papers in the Shiite bastion of Sadr City  <tgr>  killed  <tgr>  at least 12 people and wounded 22 others, security and medical officials said. " This attack is a terrible crime against humanity, because they did it during Ramadan, while people are fasting, " said one elderly witness who declined to be identified. An AFP journalist said eight nearby cars were badly burned and many of the victims of the 9 : 30 am ( 0630 GMT ) attack could not be identified because their papers were inside the offices that were targeted. Two other explosions in the Baghdad neighborhoods of Husseiniyah and Yarmouk killed at least four people and left 24 others wounded, while a car bomb in the town of Tarmiyah, just north of Baghdad, hurt nine people, officials said. Checkpoint shootings and bomb blasts in restive ethnically - mixed Diyala province killed 11 people and left 40 others wounded, security officials and doctor Ahmed Ibrahim from the main hospital in provincial capital Baquba said.
+output:
+ people died at  <arg>  place from  <arg>  medical issue, killed by  <arg>  killer
+**********
+start scoring
+gen_file:checkpoints/comparing_40_0.4/epoch_5_test_step_3_predictions.jsonl
+test_file:data/wikievents/test_no_ontology.jsonl
+paired args: 49, inconsistent args: 24, raito: 0.4897959183673469
+Evaluation by matching head words only....
+Event-level identification: P: 63.19
+Event-level : P: 63.19
+gold arg num: 563
+Role identification: P: 74.39, R: 70.16, F: 72.21
+Role: P: 67.98, R: 64.12, F: 66.00
+Coref Role identification: P: 75.52, R: 71.23, F: 73.31
+Coref Role: P: 68.93, R: 65.01, F: 66.91
+len: 366 35 59
+mean: 0.9500118225612575 0.929961202612945 0.8530902949682737
+var: 0.010227176881714947 0.014152686133624356 0.028209385912147653
+min: 0.4235636591911316 0.5663822293281555 0.4400758445262909
+max: 1.0 0.9999996423721313 0.9999954700469971
+start getting new testset
+source:checkpoints/comparing_40_0.4/epoch_5_test_step_3_results_for_predict.json
+target:preprocessed/preprocessed_comparing_0.4/test_step_3_data.json
+total_event: 364
+has close events: 332
+longest context:455
+longest target 35
+**********
+INIT DATA FILE: preprocessed/preprocessed_comparing_0.4/test_step_3_data.json
+sample:140
+input:
+ <arg>  detonated or exploded  <arg>  explosive device using  <arg>  to attack  <arg>  target at  <arg>  place US law enforcement and intelligence officials across the country and overseas, scrambling to identify the source of the explosives, are now worried that the marathon sidewalk bombing could mark a new chapter in the struggle to secure the American homeland. Advertisement “ We ’ ve seen this around the world, but what is so concerning about this is that it hadn ’ t happened here, not like this. Until yesterday, ’’ said a senior homeland security official in Washington. The Boston bombs were packed into pressure cookers and hidden in backpacks or duffel bags, according to multiple press accounts citing unidentified sources, another similarity with some Mideast attacks using “ improvised explosive devices, ’’ or IEDs. One of the bombs used in a foiled attack in New York ’ s Times Square in 2010 was fashioned from a pressure cooker. A joint warning issued by the FBI and the Department of Homeland Security in 2010 said pressure cookers has been used for bombs in multiple  <tgr>  attacks  <tgr>  in Afghanistan, Pakistan, India, and Nepal. Reports from medical staff at Boston hospitals who treated victims in the marathon attack indicate the bombs in this case were packed with BB ’ s, nails, and other projectiles intended to maximize human carnage. That contrasts with the large truck bombs that were used in Oklahoma City in 1995 and in the garage of the World Trade Center North Tower in 1993, which were intended to inflict damage on buildings, as well as people. IED ’ s pack a much smaller punch, are cheaper, and easier to carry. They have been used in Iraq and Afghanistan with devastating effect on American troops in convoys of military vehicles. Advertisement No one has taken responsibility for the twin bombings on Boylston Street that killed three people and injured more than 150 near the Boston marathon finish line.
+output:
+ <arg>  detonated or exploded bombs explosive device using  <arg>  to attack Pakistan and Afghanistan and India target at  <arg>  place
+**********
+start scoring
+gen_file:checkpoints/comparing_40_0.4/epoch_5_test_step_4_predictions.jsonl
+test_file:data/wikievents/test_no_ontology.jsonl
+paired args: 49, inconsistent args: 24, raito: 0.4897959183673469
+Evaluation by matching head words only....
+Event-level identification: P: 62.91
+Event-level : P: 62.91
+gold arg num: 563
+Role identification: P: 74.20, R: 69.98, F: 72.03
+Role: P: 67.80, R: 63.94, F: 65.81
+Coref Role identification: P: 75.33, R: 71.05, F: 73.13
+Coref Role: P: 68.74, R: 64.83, F: 66.73
+len: 365 35 60
+mean: 0.950064901664973 0.929961202612945 0.8576210342099269
+var: 0.010249321553358325 0.014152686133624356 0.02592027726919617
+min: 0.4235636591911316 0.5663822293281555 0.4400758445262909
+max: 1.0 0.9999996423721313 0.9999954700469971
+start getting new testset
+source:checkpoints/comparing_40_0.4/epoch_5_test_step_4_results_for_predict.json
+target:preprocessed/preprocessed_comparing_0.4/test_step_4_data.json
+total_event: 364
+has close events: 332
+longest context:455
+longest target 35
+**********
+INIT DATA FILE: preprocessed/preprocessed_comparing_0.4/test_step_4_data.json
+sample:184
+input:
+ <arg>  bought, sold, or traded  <arg>  to  <arg>  in exchange for  <arg>  for the benefit of  <arg>  at  <arg>  place Prosecutors said these items were used to help remotely - detonate the bombs February, 2013 Dzhokhar Tsarnaev visits Silva and borrows the Ruger pistol — the gun that was later used to kill MIT police officer Sean Collier and during the shootout with police in Watertown. March 11, 2013 Dzhokhar Tsarnaev creates a secret Twitter account, @ Al - FirdausiA, with the user name Ghuraba and posted six Tweets in three days. The first post on March 11, 2013 reads : " I want the highest levels of Jannah, I want to be able to see Allah every single day for that is the best of pleasures. " He also maintains his original Twitter account that includes mostly typical teenage postings, but some that could be signs of growing radicalization. March Tamerlan Tsarnaev purchases some BBs at Walmart in New Hampshire. March 20, 2013  <tag>  Recipient  </tag>  Both brothers went to a firing range in Manchester, N. H. and rented two 9mm  <tag>  AcquiredEntity  </tag>  handguns, similar to the borrowed Ruger. March 30, 2013 Tamerlan Tsarnaev also  <tgr>  bought  <tgr>  a screwdriver and soldering gun from Home Depot in Somerville, April 8, 2013  <tag>  Recipient  </tag>  Tamerlan bought remote - control  <tag>  AcquiredEntity  </tag>  car devices from  <tag>  Giver  </tag>  RC Cars in Malden, which prosecutors say are related to the equipment needed by the Tsarnaevs to remotely trigger the bombs. April 13, 2013 Tamerlan Tsarnaev purchases ammunition from a store in New Hampshire and sends $ 900 in cash through Moneygram to his and Dzhokhar ’ s mother, Zubeidat, through a location in Somerville. April 14, 2013 Dzhokhar Tsarnaev opens a prepaid cellphone account under the name Jahar Tsarni. He would use this phone while at the Boston Marathon the next day. On the same day, Tamerlan Tsarnaev buys two backpacks at a Target in Watertown that were used to carry the bombs. Federal Public Defender Office April 15, 2013
+output:
+ Home Depot bought, sold, or traded gun to Tamerlan Tsarnaev in exchange for  <arg>  for the benefit of  <arg>  at  <arg>  place
+**********
+start scoring
+gen_file:checkpoints/comparing_40_0.4/epoch_5_test_step_5_predictions.jsonl
+test_file:data/wikievents/test_no_ontology.jsonl
+paired args: 49, inconsistent args: 24, raito: 0.4897959183673469
+Evaluation by matching head words only....
+Event-level identification: P: 62.91
+Event-level : P: 62.91
+gold arg num: 563
+Role identification: P: 74.20, R: 69.98, F: 72.03
+Role: P: 67.80, R: 63.94, F: 65.81
+Coref Role identification: P: 75.33, R: 71.05, F: 73.13
+Coref Role: P: 68.74, R: 64.83, F: 66.73
+len: 365 35 60
+mean: 0.9502107344278435 0.929961202612945 0.8533742662519217
+var: 0.010207118585092056 0.014152686133624356 0.027611288700960086
+min: 0.4235636591911316 0.5663822293281555 0.4400758445262909
+max: 1.0 0.9999996423721313 0.9999954700469971
+--------------------------------------------------------------------------------

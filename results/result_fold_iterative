@@ -1,0 +1,4360 @@
+load from checkpoints/fold_0/epoch_2.ckpt
+start scoring
+gen_file:checkpoints/fold_0/epoch_2_test_step_0_predictions.jsonl
+test_file:data/wikievents/10fold/fold_0/test.jsonl
+paired args: 49, inconsistent args: 23, raito: 0.46938775510204084
+Evaluation by matching head words only....
+Event-level identification: P: 59.89
+Event-level : P: 59.89
+gold arg num: 563
+Role identification: P: 76.51, R: 65.36, F: 70.50
+Role: P: 70.06, R: 59.86, F: 64.56
+Coref Role identification: P: 77.96, R: 66.61, F: 71.84
+Coref Role: P: 71.31, R: 60.92, F: 65.71
+start getting new testset
+source:checkpoints/fold_0/epoch_2_test_step_0_results_for_predict.json
+target:preprocessed_fold_0/test_step_0_data.json
+total_event: 364
+has close events: 341
+longest context:434
+longest target 32
+start scoring
+gen_file:checkpoints/fold_0/epoch_2_test_step_1_predictions.jsonl
+test_file:data/wikievents/10fold/fold_0/test.jsonl
+paired args: 49, inconsistent args: 24, raito: 0.4897959183673469
+Evaluation by matching head words only....
+Event-level identification: P: 59.62
+Event-level : P: 59.62
+gold arg num: 563
+Role identification: P: 76.51, R: 65.36, F: 70.50
+Role: P: 69.85, R: 59.68, F: 64.37
+Coref Role identification: P: 78.17, R: 66.79, F: 72.03
+Coref Role: P: 71.10, R: 60.75, F: 65.52
+start getting new testset
+source:checkpoints/fold_0/epoch_2_test_step_1_results_for_predict.json
+target:preprocessed_fold_0/test_step_1_data.json
+total_event: 364
+has close events: 341
+longest context:434
+longest target 32
+start scoring
+gen_file:checkpoints/fold_0/epoch_2_test_step_2_predictions.jsonl
+test_file:data/wikievents/10fold/fold_0/test.jsonl
+paired args: 49, inconsistent args: 23, raito: 0.46938775510204084
+Evaluation by matching head words only....
+Event-level identification: P: 59.34
+Event-level : P: 59.34
+gold arg num: 563
+Role identification: P: 76.24, R: 65.54, F: 70.49
+Role: P: 69.63, R: 59.86, F: 64.37
+Coref Role identification: P: 77.89, R: 66.96, F: 72.02
+Coref Role: P: 70.87, R: 60.92, F: 65.52
+start getting new testset
+source:checkpoints/fold_0/epoch_2_test_step_2_results_for_predict.json
+target:preprocessed_fold_0/test_step_2_data.json
+total_event: 364
+has close events: 341
+longest context:434
+longest target 32
+start scoring
+gen_file:checkpoints/fold_0/epoch_2_test_step_3_predictions.jsonl
+test_file:data/wikievents/10fold/fold_0/test.jsonl
+paired args: 49, inconsistent args: 23, raito: 0.46938775510204084
+Evaluation by matching head words only....
+Event-level identification: P: 59.34
+Event-level : P: 59.34
+gold arg num: 563
+Role identification: P: 76.62, R: 65.19, F: 70.44
+Role: P: 69.94, R: 59.50, F: 64.30
+Coref Role identification: P: 78.29, R: 66.61, F: 71.98
+Coref Role: P: 71.19, R: 60.57, F: 65.45
+start getting new testset
+source:checkpoints/fold_0/epoch_2_test_step_3_results_for_predict.json
+target:preprocessed_fold_0/test_step_3_data.json
+total_event: 364
+has close events: 341
+longest context:434
+longest target 32
+start scoring
+gen_file:checkpoints/fold_0/epoch_2_test_step_4_predictions.jsonl
+test_file:data/wikievents/10fold/fold_0/test.jsonl
+paired args: 49, inconsistent args: 23, raito: 0.46938775510204084
+Evaluation by matching head words only....
+Event-level identification: P: 59.62
+Event-level : P: 59.62
+gold arg num: 563
+Role identification: P: 76.76, R: 65.72, F: 70.81
+Role: P: 70.12, R: 60.04, F: 64.69
+Coref Role identification: P: 78.42, R: 67.14, F: 72.34
+Coref Role: P: 71.37, R: 61.10, F: 65.84
+start getting new testset
+source:checkpoints/fold_0/epoch_2_test_step_4_results_for_predict.json
+target:preprocessed_fold_0/test_step_4_data.json
+total_event: 364
+has close events: 341
+longest context:434
+longest target 32
+start scoring
+gen_file:checkpoints/fold_0/epoch_2_test_step_5_predictions.jsonl
+test_file:data/wikievents/10fold/fold_0/test.jsonl
+paired args: 49, inconsistent args: 23, raito: 0.46938775510204084
+Evaluation by matching head words only....
+Event-level identification: P: 59.62
+Event-level : P: 59.62
+gold arg num: 563
+Role identification: P: 76.51, R: 65.36, F: 70.50
+Role: P: 69.85, R: 59.68, F: 64.37
+Coref Role identification: P: 78.17, R: 66.79, F: 72.03
+Coref Role: P: 71.10, R: 60.75, F: 65.52
+--------------------------------------------------------------------------------
+load from checkpoints/fold_0/epoch_3.ckpt
+start scoring
+gen_file:checkpoints/fold_0/epoch_3_test_step_0_predictions.jsonl
+test_file:data/wikievents/10fold/fold_0/test.jsonl
+paired args: 49, inconsistent args: 20, raito: 0.40816326530612246
+Evaluation by matching head words only....
+Event-level identification: P: 62.91
+Event-level : P: 62.91
+gold arg num: 563
+Role identification: P: 74.66, R: 68.56, F: 71.48
+Role: P: 67.89, R: 62.34, F: 65.00
+Coref Role identification: P: 75.82, R: 69.63, F: 72.59
+Coref Role: P: 69.05, R: 63.41, F: 66.11
+start getting new testset
+source:checkpoints/fold_0/epoch_3_test_step_0_results_for_predict.json
+target:preprocessed_fold_0/test_step_0_data.json
+total_event: 364
+has close events: 341
+longest context:434
+longest target 32
+start scoring
+gen_file:checkpoints/fold_0/epoch_3_test_step_1_predictions.jsonl
+test_file:data/wikievents/10fold/fold_0/test.jsonl
+paired args: 49, inconsistent args: 25, raito: 0.5102040816326531
+Evaluation by matching head words only....
+Event-level identification: P: 62.09
+Event-level : P: 62.09
+gold arg num: 563
+Role identification: P: 75.34, R: 68.38, F: 71.69
+Role: P: 68.30, R: 61.99, F: 64.99
+Coref Role identification: P: 76.32, R: 69.27, F: 72.63
+Coref Role: P: 69.28, R: 62.88, F: 65.92
+start getting new testset
+source:checkpoints/fold_0/epoch_3_test_step_1_results_for_predict.json
+target:preprocessed_fold_0/test_step_1_data.json
+total_event: 364
+has close events: 341
+longest context:434
+longest target 32
+start scoring
+gen_file:checkpoints/fold_0/epoch_3_test_step_2_predictions.jsonl
+test_file:data/wikievents/10fold/fold_0/test.jsonl
+paired args: 49, inconsistent args: 26, raito: 0.5306122448979592
+Evaluation by matching head words only....
+Event-level identification: P: 62.36
+Event-level : P: 62.36
+gold arg num: 563
+Role identification: P: 75.69, R: 68.56, F: 71.95
+Role: P: 68.82, R: 62.34, F: 65.42
+Coref Role identification: P: 76.67, R: 69.45, F: 72.88
+Coref Role: P: 69.80, R: 63.23, F: 66.36
+start getting new testset
+source:checkpoints/fold_0/epoch_3_test_step_2_results_for_predict.json
+target:preprocessed_fold_0/test_step_2_data.json
+total_event: 364
+has close events: 341
+longest context:434
+longest target 32
+start scoring
+gen_file:checkpoints/fold_0/epoch_3_test_step_3_predictions.jsonl
+test_file:data/wikievents/10fold/fold_0/test.jsonl
+paired args: 49, inconsistent args: 25, raito: 0.5102040816326531
+Evaluation by matching head words only....
+Event-level identification: P: 61.81
+Event-level : P: 61.81
+gold arg num: 563
+Role identification: P: 74.90, R: 67.85, F: 71.20
+Role: P: 68.04, R: 61.63, F: 64.68
+Coref Role identification: P: 75.88, R: 68.74, F: 72.13
+Coref Role: P: 69.02, R: 62.52, F: 65.61
+start getting new testset
+source:checkpoints/fold_0/epoch_3_test_step_3_results_for_predict.json
+target:preprocessed_fold_0/test_step_3_data.json
+total_event: 364
+has close events: 341
+longest context:434
+longest target 32
+start scoring
+gen_file:checkpoints/fold_0/epoch_3_test_step_4_predictions.jsonl
+test_file:data/wikievents/10fold/fold_0/test.jsonl
+paired args: 49, inconsistent args: 27, raito: 0.5510204081632653
+Evaluation by matching head words only....
+Event-level identification: P: 62.36
+Event-level : P: 62.36
+gold arg num: 563
+Role identification: P: 75.49, R: 68.38, F: 71.76
+Role: P: 68.43, R: 61.99, F: 65.05
+Coref Role identification: P: 76.47, R: 69.27, F: 72.69
+Coref Role: P: 69.41, R: 62.88, F: 65.98
+start getting new testset
+source:checkpoints/fold_0/epoch_3_test_step_4_results_for_predict.json
+target:preprocessed_fold_0/test_step_4_data.json
+total_event: 364
+has close events: 341
+longest context:434
+longest target 32
+start scoring
+gen_file:checkpoints/fold_0/epoch_3_test_step_5_predictions.jsonl
+test_file:data/wikievents/10fold/fold_0/test.jsonl
+paired args: 49, inconsistent args: 26, raito: 0.5306122448979592
+Evaluation by matching head words only....
+Event-level identification: P: 62.09
+Event-level : P: 62.09
+gold arg num: 563
+Role identification: P: 75.10, R: 68.03, F: 71.39
+Role: P: 68.24, R: 61.81, F: 64.86
+Coref Role identification: P: 76.08, R: 68.92, F: 72.32
+Coref Role: P: 69.22, R: 62.70, F: 65.80
+--------------------------------------------------------------------------------
+load from checkpoints/fold_0/epoch_4.ckpt
+start scoring
+gen_file:checkpoints/fold_0/epoch_4_test_step_0_predictions.jsonl
+test_file:data/wikievents/10fold/fold_0/test.jsonl
+paired args: 49, inconsistent args: 23, raito: 0.46938775510204084
+Evaluation by matching head words only....
+Event-level identification: P: 61.54
+Event-level : P: 61.54
+gold arg num: 563
+Role identification: P: 76.34, R: 68.21, F: 72.05
+Role: P: 69.18, R: 61.81, F: 65.29
+Coref Role identification: P: 77.73, R: 69.45, F: 73.36
+Coref Role: P: 70.58, R: 63.06, F: 66.60
+start getting new testset
+source:checkpoints/fold_0/epoch_4_test_step_0_results_for_predict.json
+target:preprocessed_fold_0/test_step_0_data.json
+total_event: 364
+has close events: 341
+longest context:434
+longest target 32
+start scoring
+gen_file:checkpoints/fold_0/epoch_4_test_step_1_predictions.jsonl
+test_file:data/wikievents/10fold/fold_0/test.jsonl
+paired args: 49, inconsistent args: 25, raito: 0.5102040816326531
+Evaluation by matching head words only....
+Event-level identification: P: 61.26
+Event-level : P: 61.26
+gold arg num: 563
+Role identification: P: 76.07, R: 66.07, F: 70.72
+Role: P: 68.51, R: 59.50, F: 63.69
+Coref Role identification: P: 77.51, R: 67.32, F: 72.05
+Coref Role: P: 69.94, R: 60.75, F: 65.02
+start getting new testset
+source:checkpoints/fold_0/epoch_4_test_step_1_results_for_predict.json
+target:preprocessed_fold_0/test_step_1_data.json
+total_event: 364
+has close events: 341
+longest context:434
+longest target 32
+start scoring
+gen_file:checkpoints/fold_0/epoch_4_test_step_2_predictions.jsonl
+test_file:data/wikievents/10fold/fold_0/test.jsonl
+paired args: 49, inconsistent args: 25, raito: 0.5102040816326531
+Evaluation by matching head words only....
+Event-level identification: P: 61.54
+Event-level : P: 61.54
+gold arg num: 563
+Role identification: P: 76.80, R: 66.43, F: 71.24
+Role: P: 69.20, R: 59.86, F: 64.19
+Coref Role identification: P: 78.23, R: 67.67, F: 72.57
+Coref Role: P: 70.64, R: 61.10, F: 65.52
+start getting new testset
+source:checkpoints/fold_0/epoch_4_test_step_2_results_for_predict.json
+target:preprocessed_fold_0/test_step_2_data.json
+total_event: 364
+has close events: 341
+longest context:434
+longest target 32
+start scoring
+gen_file:checkpoints/fold_0/epoch_4_test_step_3_predictions.jsonl
+test_file:data/wikievents/10fold/fold_0/test.jsonl
+paired args: 49, inconsistent args: 26, raito: 0.5306122448979592
+Evaluation by matching head words only....
+Event-level identification: P: 61.26
+Event-level : P: 61.26
+gold arg num: 563
+Role identification: P: 76.59, R: 66.25, F: 71.05
+Role: P: 68.99, R: 59.68, F: 64.00
+Coref Role identification: P: 78.03, R: 67.50, F: 72.38
+Coref Role: P: 70.43, R: 60.92, F: 65.33
+start getting new testset
+source:checkpoints/fold_0/epoch_4_test_step_3_results_for_predict.json
+target:preprocessed_fold_0/test_step_3_data.json
+total_event: 364
+has close events: 341
+longest context:434
+longest target 32
+start scoring
+gen_file:checkpoints/fold_0/epoch_4_test_step_4_predictions.jsonl
+test_file:data/wikievents/10fold/fold_0/test.jsonl
+paired args: 49, inconsistent args: 26, raito: 0.5306122448979592
+Evaluation by matching head words only....
+Event-level identification: P: 61.26
+Event-level : P: 61.26
+gold arg num: 563
+Role identification: P: 76.59, R: 66.25, F: 71.05
+Role: P: 68.99, R: 59.68, F: 64.00
+Coref Role identification: P: 78.03, R: 67.50, F: 72.38
+Coref Role: P: 70.43, R: 60.92, F: 65.33
+start getting new testset
+source:checkpoints/fold_0/epoch_4_test_step_4_results_for_predict.json
+target:preprocessed_fold_0/test_step_4_data.json
+total_event: 364
+has close events: 341
+longest context:434
+longest target 32
+start scoring
+gen_file:checkpoints/fold_0/epoch_4_test_step_5_predictions.jsonl
+test_file:data/wikievents/10fold/fold_0/test.jsonl
+paired args: 49, inconsistent args: 26, raito: 0.5306122448979592
+Evaluation by matching head words only....
+Event-level identification: P: 61.26
+Event-level : P: 61.26
+gold arg num: 563
+Role identification: P: 76.59, R: 66.25, F: 71.05
+Role: P: 68.99, R: 59.68, F: 64.00
+Coref Role identification: P: 78.03, R: 67.50, F: 72.38
+Coref Role: P: 70.43, R: 60.92, F: 65.33
+--------------------------------------------------------------------------------
+load from checkpoints/fold_0/epoch_5.ckpt
+start scoring
+gen_file:checkpoints/fold_0/epoch_5_test_step_0_predictions.jsonl
+test_file:data/wikievents/10fold/fold_0/test.jsonl
+paired args: 49, inconsistent args: 25, raito: 0.5102040816326531
+Evaluation by matching head words only....
+Event-level identification: P: 61.81
+Event-level : P: 61.81
+gold arg num: 563
+Role identification: P: 76.42, R: 69.09, F: 72.57
+Role: P: 68.96, R: 62.34, F: 65.49
+Coref Role identification: P: 77.80, R: 70.34, F: 73.88
+Coref Role: P: 70.33, R: 63.59, F: 66.79
+start getting new testset
+source:checkpoints/fold_0/epoch_5_test_step_0_results_for_predict.json
+target:preprocessed_fold_0/test_step_0_data.json
+total_event: 364
+has close events: 341
+longest context:434
+longest target 32
+start scoring
+gen_file:checkpoints/fold_0/epoch_5_test_step_1_predictions.jsonl
+test_file:data/wikievents/10fold/fold_0/test.jsonl
+paired args: 49, inconsistent args: 26, raito: 0.5306122448979592
+Evaluation by matching head words only....
+Event-level identification: P: 60.44
+Event-level : P: 60.44
+gold arg num: 563
+Role identification: P: 76.10, R: 67.32, F: 71.44
+Role: P: 68.47, R: 60.57, F: 64.28
+Coref Role identification: P: 77.51, R: 68.56, F: 72.76
+Coref Role: P: 69.88, R: 61.81, F: 65.60
+start getting new testset
+source:checkpoints/fold_0/epoch_5_test_step_1_results_for_predict.json
+target:preprocessed_fold_0/test_step_1_data.json
+total_event: 364
+has close events: 341
+longest context:434
+longest target 32
+start scoring
+gen_file:checkpoints/fold_0/epoch_5_test_step_2_predictions.jsonl
+test_file:data/wikievents/10fold/fold_0/test.jsonl
+paired args: 49, inconsistent args: 25, raito: 0.5102040816326531
+Evaluation by matching head words only....
+Event-level identification: P: 60.44
+Event-level : P: 60.44
+gold arg num: 563
+Role identification: P: 75.90, R: 67.14, F: 71.25
+Role: P: 68.47, R: 60.57, F: 64.28
+Coref Role identification: P: 77.31, R: 68.38, F: 72.57
+Coref Role: P: 69.88, R: 61.81, F: 65.60
+start getting new testset
+source:checkpoints/fold_0/epoch_5_test_step_2_results_for_predict.json
+target:preprocessed_fold_0/test_step_2_data.json
+total_event: 364
+has close events: 341
+longest context:434
+longest target 32
+start scoring
+gen_file:checkpoints/fold_0/epoch_5_test_step_3_predictions.jsonl
+test_file:data/wikievents/10fold/fold_0/test.jsonl
+paired args: 49, inconsistent args: 25, raito: 0.5102040816326531
+Evaluation by matching head words only....
+Event-level identification: P: 60.44
+Event-level : P: 60.44
+gold arg num: 563
+Role identification: P: 75.90, R: 67.14, F: 71.25
+Role: P: 68.47, R: 60.57, F: 64.28
+Coref Role identification: P: 77.31, R: 68.38, F: 72.57
+Coref Role: P: 69.88, R: 61.81, F: 65.60
+start getting new testset
+source:checkpoints/fold_0/epoch_5_test_step_3_results_for_predict.json
+target:preprocessed_fold_0/test_step_3_data.json
+total_event: 364
+has close events: 341
+longest context:434
+longest target 32
+start scoring
+gen_file:checkpoints/fold_0/epoch_5_test_step_4_predictions.jsonl
+test_file:data/wikievents/10fold/fold_0/test.jsonl
+paired args: 49, inconsistent args: 25, raito: 0.5102040816326531
+Evaluation by matching head words only....
+Event-level identification: P: 60.44
+Event-level : P: 60.44
+gold arg num: 563
+Role identification: P: 75.90, R: 67.14, F: 71.25
+Role: P: 68.47, R: 60.57, F: 64.28
+Coref Role identification: P: 77.31, R: 68.38, F: 72.57
+Coref Role: P: 69.88, R: 61.81, F: 65.60
+start getting new testset
+source:checkpoints/fold_0/epoch_5_test_step_4_results_for_predict.json
+target:preprocessed_fold_0/test_step_4_data.json
+total_event: 364
+has close events: 341
+longest context:434
+longest target 32
+start scoring
+gen_file:checkpoints/fold_0/epoch_5_test_step_5_predictions.jsonl
+test_file:data/wikievents/10fold/fold_0/test.jsonl
+paired args: 49, inconsistent args: 25, raito: 0.5102040816326531
+Evaluation by matching head words only....
+Event-level identification: P: 60.44
+Event-level : P: 60.44
+gold arg num: 563
+Role identification: P: 75.90, R: 67.14, F: 71.25
+Role: P: 68.47, R: 60.57, F: 64.28
+Coref Role identification: P: 77.31, R: 68.38, F: 72.57
+Coref Role: P: 69.88, R: 61.81, F: 65.60
+--------------------------------------------------------------------------------
+load from checkpoints/fold_1/epoch_2.ckpt
+start scoring
+gen_file:checkpoints/fold_1/epoch_2_test_step_0_predictions.jsonl
+test_file:data/wikievents/10fold/fold_1/test.jsonl
+paired args: 39, inconsistent args: 10, raito: 0.2564102564102564
+Evaluation by matching head words only....
+Event-level identification: P: 66.76
+Event-level : P: 66.76
+gold arg num: 486
+Role identification: P: 71.57, R: 74.07, F: 72.80
+Role: P: 65.21, R: 67.49, F: 66.33
+Coref Role identification: P: 73.56, R: 76.13, F: 74.82
+Coref Role: P: 67.00, R: 69.34, F: 68.15
+start getting new testset
+source:checkpoints/fold_1/epoch_2_test_step_0_results_for_predict.json
+target:preprocessed_fold_1/test_step_0_data.json
+total_event: 358
+has close events: 344
+longest context:447
+longest target 32
+start scoring
+gen_file:checkpoints/fold_1/epoch_2_test_step_1_predictions.jsonl
+test_file:data/wikievents/10fold/fold_1/test.jsonl
+paired args: 39, inconsistent args: 13, raito: 0.3333333333333333
+Evaluation by matching head words only....
+Event-level identification: P: 66.76
+Event-level : P: 66.76
+gold arg num: 486
+Role identification: P: 73.62, R: 74.07, F: 73.85
+Role: P: 67.08, R: 67.49, F: 67.28
+Coref Role identification: P: 75.46, R: 75.93, F: 75.69
+Coref Role: P: 68.92, R: 69.34, F: 69.13
+start getting new testset
+source:checkpoints/fold_1/epoch_2_test_step_1_results_for_predict.json
+target:preprocessed_fold_1/test_step_1_data.json
+total_event: 358
+has close events: 344
+longest context:446
+longest target 32
+start scoring
+gen_file:checkpoints/fold_1/epoch_2_test_step_2_predictions.jsonl
+test_file:data/wikievents/10fold/fold_1/test.jsonl
+paired args: 39, inconsistent args: 15, raito: 0.38461538461538464
+Evaluation by matching head words only....
+Event-level identification: P: 67.60
+Event-level : P: 67.60
+gold arg num: 486
+Role identification: P: 73.44, R: 75.10, F: 74.26
+Role: P: 66.80, R: 68.31, F: 67.55
+Coref Role identification: P: 75.25, R: 76.95, F: 76.09
+Coref Role: P: 68.61, R: 70.16, F: 69.38
+start getting new testset
+source:checkpoints/fold_1/epoch_2_test_step_2_results_for_predict.json
+target:preprocessed_fold_1/test_step_2_data.json
+total_event: 358
+has close events: 344
+longest context:446
+longest target 32
+start scoring
+gen_file:checkpoints/fold_1/epoch_2_test_step_3_predictions.jsonl
+test_file:data/wikievents/10fold/fold_1/test.jsonl
+paired args: 39, inconsistent args: 13, raito: 0.3333333333333333
+Evaluation by matching head words only....
+Event-level identification: P: 67.04
+Event-level : P: 67.04
+gold arg num: 486
+Role identification: P: 73.62, R: 74.07, F: 73.85
+Role: P: 67.28, R: 67.70, F: 67.49
+Coref Role identification: P: 75.46, R: 75.93, F: 75.69
+Coref Role: P: 69.12, R: 69.55, F: 69.33
+start getting new testset
+source:checkpoints/fold_1/epoch_2_test_step_3_results_for_predict.json
+target:preprocessed_fold_1/test_step_3_data.json
+total_event: 358
+has close events: 344
+longest context:446
+longest target 32
+start scoring
+gen_file:checkpoints/fold_1/epoch_2_test_step_4_predictions.jsonl
+test_file:data/wikievents/10fold/fold_1/test.jsonl
+paired args: 39, inconsistent args: 15, raito: 0.38461538461538464
+Evaluation by matching head words only....
+Event-level identification: P: 67.60
+Event-level : P: 67.60
+gold arg num: 486
+Role identification: P: 73.39, R: 74.90, F: 74.13
+Role: P: 66.73, R: 68.11, F: 67.41
+Coref Role identification: P: 75.20, R: 76.75, F: 75.97
+Coref Role: P: 68.55, R: 69.96, F: 69.25
+start getting new testset
+source:checkpoints/fold_1/epoch_2_test_step_4_results_for_predict.json
+target:preprocessed_fold_1/test_step_4_data.json
+total_event: 358
+has close events: 344
+longest context:446
+longest target 32
+start scoring
+gen_file:checkpoints/fold_1/epoch_2_test_step_5_predictions.jsonl
+test_file:data/wikievents/10fold/fold_1/test.jsonl
+paired args: 39, inconsistent args: 13, raito: 0.3333333333333333
+Evaluation by matching head words only....
+Event-level identification: P: 67.04
+Event-level : P: 67.04
+gold arg num: 486
+Role identification: P: 73.62, R: 74.07, F: 73.85
+Role: P: 67.28, R: 67.70, F: 67.49
+Coref Role identification: P: 75.46, R: 75.93, F: 75.69
+Coref Role: P: 69.12, R: 69.55, F: 69.33
+--------------------------------------------------------------------------------
+load from checkpoints/fold_1/epoch_3.ckpt
+start scoring
+gen_file:checkpoints/fold_1/epoch_3_test_step_0_predictions.jsonl
+test_file:data/wikievents/10fold/fold_1/test.jsonl
+paired args: 39, inconsistent args: 13, raito: 0.3333333333333333
+Evaluation by matching head words only....
+Event-level identification: P: 65.64
+Event-level : P: 65.64
+gold arg num: 486
+Role identification: P: 72.99, R: 72.84, F: 72.91
+Role: P: 66.60, R: 66.46, F: 66.53
+Coref Role identification: P: 75.46, R: 75.31, F: 75.39
+Coref Role: P: 68.66, R: 68.52, F: 68.59
+start getting new testset
+source:checkpoints/fold_1/epoch_3_test_step_0_results_for_predict.json
+target:preprocessed_fold_1/test_step_0_data.json
+total_event: 358
+has close events: 344
+longest context:446
+longest target 32
+start scoring
+gen_file:checkpoints/fold_1/epoch_3_test_step_1_predictions.jsonl
+test_file:data/wikievents/10fold/fold_1/test.jsonl
+paired args: 39, inconsistent args: 15, raito: 0.38461538461538464
+Evaluation by matching head words only....
+Event-level identification: P: 65.36
+Event-level : P: 65.36
+gold arg num: 486
+Role identification: P: 74.63, R: 73.25, F: 73.94
+Role: P: 67.09, R: 65.84, F: 66.46
+Coref Role identification: P: 76.73, R: 75.31, F: 76.01
+Coref Role: P: 69.18, R: 67.90, F: 68.54
+start getting new testset
+source:checkpoints/fold_1/epoch_3_test_step_1_results_for_predict.json
+target:preprocessed_fold_1/test_step_1_data.json
+total_event: 358
+has close events: 344
+longest context:443
+longest target 32
+start scoring
+gen_file:checkpoints/fold_1/epoch_3_test_step_2_predictions.jsonl
+test_file:data/wikievents/10fold/fold_1/test.jsonl
+paired args: 39, inconsistent args: 15, raito: 0.38461538461538464
+Evaluation by matching head words only....
+Event-level identification: P: 65.36
+Event-level : P: 65.36
+gold arg num: 486
+Role identification: P: 74.74, R: 74.28, F: 74.51
+Role: P: 66.46, R: 66.05, F: 66.25
+Coref Role identification: P: 76.81, R: 76.34, F: 76.57
+Coref Role: P: 68.53, R: 68.11, F: 68.32
+start getting new testset
+source:checkpoints/fold_1/epoch_3_test_step_2_results_for_predict.json
+target:preprocessed_fold_1/test_step_2_data.json
+total_event: 358
+has close events: 344
+longest context:443
+longest target 32
+start scoring
+gen_file:checkpoints/fold_1/epoch_3_test_step_3_predictions.jsonl
+test_file:data/wikievents/10fold/fold_1/test.jsonl
+paired args: 39, inconsistent args: 15, raito: 0.38461538461538464
+Evaluation by matching head words only....
+Event-level identification: P: 65.08
+Event-level : P: 65.08
+gold arg num: 486
+Role identification: P: 74.69, R: 73.46, F: 74.07
+Role: P: 66.95, R: 65.84, F: 66.39
+Coref Role identification: P: 76.78, R: 75.51, F: 76.14
+Coref Role: P: 69.04, R: 67.90, F: 68.46
+start getting new testset
+source:checkpoints/fold_1/epoch_3_test_step_3_results_for_predict.json
+target:preprocessed_fold_1/test_step_3_data.json
+total_event: 358
+has close events: 344
+longest context:443
+longest target 32
+start scoring
+gen_file:checkpoints/fold_1/epoch_3_test_step_4_predictions.jsonl
+test_file:data/wikievents/10fold/fold_1/test.jsonl
+paired args: 39, inconsistent args: 16, raito: 0.41025641025641024
+Evaluation by matching head words only....
+Event-level identification: P: 65.08
+Event-level : P: 65.08
+gold arg num: 486
+Role identification: P: 74.27, R: 73.66, F: 73.97
+Role: P: 65.98, R: 65.43, F: 65.70
+Coref Role identification: P: 76.35, R: 75.72, F: 76.03
+Coref Role: P: 68.05, R: 67.49, F: 67.77
+start getting new testset
+source:checkpoints/fold_1/epoch_3_test_step_4_results_for_predict.json
+target:preprocessed_fold_1/test_step_4_data.json
+total_event: 358
+has close events: 344
+longest context:443
+longest target 32
+start scoring
+gen_file:checkpoints/fold_1/epoch_3_test_step_5_predictions.jsonl
+test_file:data/wikievents/10fold/fold_1/test.jsonl
+paired args: 39, inconsistent args: 16, raito: 0.41025641025641024
+Evaluation by matching head words only....
+Event-level identification: P: 65.08
+Event-level : P: 65.08
+gold arg num: 486
+Role identification: P: 74.32, R: 73.25, F: 73.78
+Role: P: 66.60, R: 65.64, F: 66.11
+Coref Role identification: P: 76.41, R: 75.31, F: 75.85
+Coref Role: P: 68.68, R: 67.70, F: 68.19
+--------------------------------------------------------------------------------
+load from checkpoints/fold_1/epoch_4.ckpt
+start scoring
+gen_file:checkpoints/fold_1/epoch_4_test_step_0_predictions.jsonl
+test_file:data/wikievents/10fold/fold_1/test.jsonl
+paired args: 39, inconsistent args: 16, raito: 0.41025641025641024
+Evaluation by matching head words only....
+Event-level identification: P: 65.36
+Event-level : P: 65.36
+gold arg num: 486
+Role identification: P: 72.12, R: 73.46, F: 72.78
+Role: P: 65.45, R: 66.67, F: 66.06
+Coref Role identification: P: 74.55, R: 75.93, F: 75.23
+Coref Role: P: 67.68, R: 68.93, F: 68.30
+start getting new testset
+source:checkpoints/fold_1/epoch_4_test_step_0_results_for_predict.json
+target:preprocessed_fold_1/test_step_0_data.json
+total_event: 358
+has close events: 344
+longest context:443
+longest target 32
+start scoring
+gen_file:checkpoints/fold_1/epoch_4_test_step_1_predictions.jsonl
+test_file:data/wikievents/10fold/fold_1/test.jsonl
+paired args: 39, inconsistent args: 18, raito: 0.46153846153846156
+Evaluation by matching head words only....
+Event-level identification: P: 65.92
+Event-level : P: 65.92
+gold arg num: 486
+Role identification: P: 73.49, R: 72.43, F: 72.95
+Role: P: 66.39, R: 65.43, F: 65.91
+Coref Role identification: P: 75.78, R: 74.69, F: 75.23
+Coref Role: P: 68.48, R: 67.49, F: 67.98
+start getting new testset
+source:checkpoints/fold_1/epoch_4_test_step_1_results_for_predict.json
+target:preprocessed_fold_1/test_step_1_data.json
+total_event: 358
+has close events: 344
+longest context:440
+longest target 32
+start scoring
+gen_file:checkpoints/fold_1/epoch_4_test_step_2_predictions.jsonl
+test_file:data/wikievents/10fold/fold_1/test.jsonl
+paired args: 39, inconsistent args: 19, raito: 0.48717948717948717
+Evaluation by matching head words only....
+Event-level identification: P: 65.36
+Event-level : P: 65.36
+gold arg num: 486
+Role identification: P: 73.21, R: 73.66, F: 73.44
+Role: P: 65.64, R: 66.05, F: 65.85
+Coref Role identification: P: 75.46, R: 75.93, F: 75.69
+Coref Role: P: 67.69, R: 68.11, F: 67.90
+start getting new testset
+source:checkpoints/fold_1/epoch_4_test_step_2_results_for_predict.json
+target:preprocessed_fold_1/test_step_2_data.json
+total_event: 358
+has close events: 344
+longest context:440
+longest target 32
+start scoring
+gen_file:checkpoints/fold_1/epoch_4_test_step_3_predictions.jsonl
+test_file:data/wikievents/10fold/fold_1/test.jsonl
+paired args: 39, inconsistent args: 19, raito: 0.48717948717948717
+Evaluation by matching head words only....
+Event-level identification: P: 65.92
+Event-level : P: 65.92
+gold arg num: 486
+Role identification: P: 73.25, R: 73.25, F: 73.25
+Role: P: 65.84, R: 65.84, F: 65.84
+Coref Role identification: P: 75.51, R: 75.51, F: 75.51
+Coref Role: P: 67.90, R: 67.90, F: 67.90
+start getting new testset
+source:checkpoints/fold_1/epoch_4_test_step_3_results_for_predict.json
+target:preprocessed_fold_1/test_step_3_data.json
+total_event: 358
+has close events: 344
+longest context:440
+longest target 32
+start scoring
+gen_file:checkpoints/fold_1/epoch_4_test_step_4_predictions.jsonl
+test_file:data/wikievents/10fold/fold_1/test.jsonl
+paired args: 39, inconsistent args: 15, raito: 0.38461538461538464
+Evaluation by matching head words only....
+Event-level identification: P: 66.76
+Event-level : P: 66.76
+gold arg num: 486
+Role identification: P: 73.64, R: 75.31, F: 74.47
+Role: P: 66.00, R: 67.49, F: 66.73
+Coref Role identification: P: 75.86, R: 77.57, F: 76.70
+Coref Role: P: 68.01, R: 69.55, F: 68.77
+start getting new testset
+source:checkpoints/fold_1/epoch_4_test_step_4_results_for_predict.json
+target:preprocessed_fold_1/test_step_4_data.json
+total_event: 358
+has close events: 344
+longest context:440
+longest target 32
+start scoring
+gen_file:checkpoints/fold_1/epoch_4_test_step_5_predictions.jsonl
+test_file:data/wikievents/10fold/fold_1/test.jsonl
+paired args: 39, inconsistent args: 16, raito: 0.41025641025641024
+Evaluation by matching head words only....
+Event-level identification: P: 65.92
+Event-level : P: 65.92
+gold arg num: 486
+Role identification: P: 73.36, R: 73.66, F: 73.51
+Role: P: 65.98, R: 66.26, F: 66.12
+Coref Role identification: P: 75.61, R: 75.93, F: 75.77
+Coref Role: P: 68.03, R: 68.31, F: 68.17
+--------------------------------------------------------------------------------
+load from checkpoints/fold_1/epoch_5.ckpt
+start scoring
+gen_file:checkpoints/fold_1/epoch_5_test_step_0_predictions.jsonl
+test_file:data/wikievents/10fold/fold_1/test.jsonl
+paired args: 39, inconsistent args: 11, raito: 0.28205128205128205
+Evaluation by matching head words only....
+Event-level identification: P: 65.64
+Event-level : P: 65.64
+gold arg num: 486
+Role identification: P: 74.95, R: 74.49, F: 74.72
+Role: P: 67.70, R: 67.28, F: 67.49
+Coref Role identification: P: 76.81, R: 76.34, F: 76.57
+Coref Role: P: 69.57, R: 69.14, F: 69.35
+start getting new testset
+source:checkpoints/fold_1/epoch_5_test_step_0_results_for_predict.json
+target:preprocessed_fold_1/test_step_0_data.json
+total_event: 358
+has close events: 344
+longest context:443
+longest target 32
+start scoring
+gen_file:checkpoints/fold_1/epoch_5_test_step_1_predictions.jsonl
+test_file:data/wikievents/10fold/fold_1/test.jsonl
+paired args: 39, inconsistent args: 13, raito: 0.3333333333333333
+Evaluation by matching head words only....
+Event-level identification: P: 66.48
+Event-level : P: 66.48
+gold arg num: 486
+Role identification: P: 76.60, R: 74.07, F: 75.31
+Role: P: 69.79, R: 67.49, F: 68.62
+Coref Role identification: P: 78.72, R: 76.13, F: 77.41
+Coref Role: P: 71.91, R: 69.55, F: 70.71
+start getting new testset
+source:checkpoints/fold_1/epoch_5_test_step_1_results_for_predict.json
+target:preprocessed_fold_1/test_step_1_data.json
+total_event: 358
+has close events: 344
+longest context:443
+longest target 32
+start scoring
+gen_file:checkpoints/fold_1/epoch_5_test_step_2_predictions.jsonl
+test_file:data/wikievents/10fold/fold_1/test.jsonl
+paired args: 39, inconsistent args: 14, raito: 0.358974358974359
+Evaluation by matching head words only....
+Event-level identification: P: 67.04
+Event-level : P: 67.04
+gold arg num: 486
+Role identification: P: 76.57, R: 75.31, F: 75.93
+Role: P: 69.87, R: 68.72, F: 69.29
+Coref Role identification: P: 78.66, R: 77.37, F: 78.01
+Coref Role: P: 71.97, R: 70.78, F: 71.37
+start getting new testset
+source:checkpoints/fold_1/epoch_5_test_step_2_results_for_predict.json
+target:preprocessed_fold_1/test_step_2_data.json
+total_event: 358
+has close events: 344
+longest context:443
+longest target 32
+start scoring
+gen_file:checkpoints/fold_1/epoch_5_test_step_3_predictions.jsonl
+test_file:data/wikievents/10fold/fold_1/test.jsonl
+paired args: 39, inconsistent args: 13, raito: 0.3333333333333333
+Evaluation by matching head words only....
+Event-level identification: P: 65.92
+Event-level : P: 65.92
+gold arg num: 486
+Role identification: P: 76.60, R: 74.07, F: 75.31
+Role: P: 69.57, R: 67.28, F: 68.41
+Coref Role identification: P: 78.72, R: 76.13, F: 77.41
+Coref Role: P: 71.70, R: 69.34, F: 70.50
+start getting new testset
+source:checkpoints/fold_1/epoch_5_test_step_3_results_for_predict.json
+target:preprocessed_fold_1/test_step_3_data.json
+total_event: 358
+has close events: 344
+longest context:443
+longest target 32
+start scoring
+gen_file:checkpoints/fold_1/epoch_5_test_step_4_predictions.jsonl
+test_file:data/wikievents/10fold/fold_1/test.jsonl
+paired args: 39, inconsistent args: 14, raito: 0.358974358974359
+Evaluation by matching head words only....
+Event-level identification: P: 67.04
+Event-level : P: 67.04
+gold arg num: 486
+Role identification: P: 76.36, R: 75.10, F: 75.73
+Role: P: 69.46, R: 68.31, F: 68.88
+Coref Role identification: P: 78.66, R: 77.37, F: 78.01
+Coref Role: P: 71.55, R: 70.37, F: 70.95
+start getting new testset
+source:checkpoints/fold_1/epoch_5_test_step_4_results_for_predict.json
+target:preprocessed_fold_1/test_step_4_data.json
+total_event: 358
+has close events: 344
+longest context:443
+longest target 32
+start scoring
+gen_file:checkpoints/fold_1/epoch_5_test_step_5_predictions.jsonl
+test_file:data/wikievents/10fold/fold_1/test.jsonl
+paired args: 39, inconsistent args: 13, raito: 0.3333333333333333
+Evaluation by matching head words only....
+Event-level identification: P: 66.20
+Event-level : P: 66.20
+gold arg num: 486
+Role identification: P: 76.43, R: 74.07, F: 75.24
+Role: P: 69.64, R: 67.49, F: 68.55
+Coref Role identification: P: 78.77, R: 76.34, F: 77.53
+Coref Role: P: 71.76, R: 69.55, F: 70.64
+--------------------------------------------------------------------------------
+load from checkpoints/fold_2/epoch_2.ckpt
+start scoring
+gen_file:checkpoints/fold_2/epoch_2_test_step_0_predictions.jsonl
+test_file:data/wikievents/10fold/fold_2/test.jsonl
+paired args: 26, inconsistent args: 11, raito: 0.4230769230769231
+Evaluation by matching head words only....
+Event-level identification: P: 64.21
+Event-level : P: 64.21
+gold arg num: 445
+Role identification: P: 76.56, R: 68.99, F: 72.58
+Role: P: 71.82, R: 64.72, F: 68.09
+Coref Role identification: P: 79.80, R: 71.91, F: 75.65
+Coref Role: P: 75.06, R: 67.64, F: 71.16
+start getting new testset
+source:checkpoints/fold_2/epoch_2_test_step_0_results_for_predict.json
+target:preprocessed_fold_2/test_step_0_data.json
+total_event: 299
+has close events: 244
+longest context:450
+longest target 30
+start scoring
+gen_file:checkpoints/fold_2/epoch_2_test_step_1_predictions.jsonl
+test_file:data/wikievents/10fold/fold_2/test.jsonl
+paired args: 26, inconsistent args: 9, raito: 0.34615384615384615
+Evaluation by matching head words only....
+Event-level identification: P: 63.88
+Event-level : P: 63.88
+gold arg num: 445
+Role identification: P: 75.68, R: 69.21, F: 72.30
+Role: P: 71.25, R: 65.17, F: 68.08
+Coref Role identification: P: 78.62, R: 71.91, F: 75.12
+Coref Role: P: 74.20, R: 67.87, F: 70.89
+start getting new testset
+source:checkpoints/fold_2/epoch_2_test_step_1_results_for_predict.json
+target:preprocessed_fold_2/test_step_1_data.json
+total_event: 299
+has close events: 244
+longest context:450
+longest target 30
+start scoring
+gen_file:checkpoints/fold_2/epoch_2_test_step_2_predictions.jsonl
+test_file:data/wikievents/10fold/fold_2/test.jsonl
+paired args: 26, inconsistent args: 9, raito: 0.34615384615384615
+Evaluation by matching head words only....
+Event-level identification: P: 64.21
+Event-level : P: 64.21
+gold arg num: 445
+Role identification: P: 75.37, R: 69.44, F: 72.28
+Role: P: 70.98, R: 65.39, F: 68.07
+Coref Role identification: P: 78.29, R: 72.13, F: 75.09
+Coref Role: P: 73.90, R: 68.09, F: 70.88
+start getting new testset
+source:checkpoints/fold_2/epoch_2_test_step_2_results_for_predict.json
+target:preprocessed_fold_2/test_step_2_data.json
+total_event: 299
+has close events: 244
+longest context:450
+longest target 30
+start scoring
+gen_file:checkpoints/fold_2/epoch_2_test_step_3_predictions.jsonl
+test_file:data/wikievents/10fold/fold_2/test.jsonl
+paired args: 26, inconsistent args: 9, raito: 0.34615384615384615
+Evaluation by matching head words only....
+Event-level identification: P: 64.21
+Event-level : P: 64.21
+gold arg num: 445
+Role identification: P: 75.55, R: 69.44, F: 72.37
+Role: P: 71.15, R: 65.39, F: 68.15
+Coref Role identification: P: 78.48, R: 72.13, F: 75.18
+Coref Role: P: 74.08, R: 68.09, F: 70.96
+start getting new testset
+source:checkpoints/fold_2/epoch_2_test_step_3_results_for_predict.json
+target:preprocessed_fold_2/test_step_3_data.json
+total_event: 299
+has close events: 244
+longest context:450
+longest target 30
+start scoring
+gen_file:checkpoints/fold_2/epoch_2_test_step_4_predictions.jsonl
+test_file:data/wikievents/10fold/fold_2/test.jsonl
+paired args: 26, inconsistent args: 9, raito: 0.34615384615384615
+Evaluation by matching head words only....
+Event-level identification: P: 64.21
+Event-level : P: 64.21
+gold arg num: 445
+Role identification: P: 75.74, R: 69.44, F: 72.45
+Role: P: 71.32, R: 65.39, F: 68.23
+Coref Role identification: P: 78.68, R: 72.13, F: 75.26
+Coref Role: P: 74.26, R: 68.09, F: 71.04
+start getting new testset
+source:checkpoints/fold_2/epoch_2_test_step_4_results_for_predict.json
+target:preprocessed_fold_2/test_step_4_data.json
+total_event: 299
+has close events: 244
+longest context:450
+longest target 30
+start scoring
+gen_file:checkpoints/fold_2/epoch_2_test_step_5_predictions.jsonl
+test_file:data/wikievents/10fold/fold_2/test.jsonl
+paired args: 26, inconsistent args: 9, raito: 0.34615384615384615
+Evaluation by matching head words only....
+Event-level identification: P: 64.21
+Event-level : P: 64.21
+gold arg num: 445
+Role identification: P: 75.55, R: 69.44, F: 72.37
+Role: P: 71.15, R: 65.39, F: 68.15
+Coref Role identification: P: 78.48, R: 72.13, F: 75.18
+Coref Role: P: 74.08, R: 68.09, F: 70.96
+--------------------------------------------------------------------------------
+load from checkpoints/fold_2/epoch_3.ckpt
+start scoring
+gen_file:checkpoints/fold_2/epoch_3_test_step_0_predictions.jsonl
+test_file:data/wikievents/10fold/fold_2/test.jsonl
+paired args: 26, inconsistent args: 8, raito: 0.3076923076923077
+Evaluation by matching head words only....
+Event-level identification: P: 63.88
+Event-level : P: 63.88
+gold arg num: 445
+Role identification: P: 74.04, R: 69.21, F: 71.54
+Role: P: 69.23, R: 64.72, F: 66.90
+Coref Role identification: P: 77.40, R: 72.36, F: 74.80
+Coref Role: P: 72.36, R: 67.64, F: 69.92
+start getting new testset
+source:checkpoints/fold_2/epoch_3_test_step_0_results_for_predict.json
+target:preprocessed_fold_2/test_step_0_data.json
+total_event: 299
+has close events: 244
+longest context:450
+longest target 30
+start scoring
+gen_file:checkpoints/fold_2/epoch_3_test_step_1_predictions.jsonl
+test_file:data/wikievents/10fold/fold_2/test.jsonl
+paired args: 26, inconsistent args: 8, raito: 0.3076923076923077
+Evaluation by matching head words only....
+Event-level identification: P: 65.22
+Event-level : P: 65.22
+gold arg num: 445
+Role identification: P: 75.00, R: 69.44, F: 72.11
+Role: P: 70.63, R: 65.39, F: 67.91
+Coref Role identification: P: 78.40, R: 72.58, F: 75.38
+Coref Role: P: 74.03, R: 68.54, F: 71.18
+start getting new testset
+source:checkpoints/fold_2/epoch_3_test_step_1_results_for_predict.json
+target:preprocessed_fold_2/test_step_1_data.json
+total_event: 299
+has close events: 244
+longest context:450
+longest target 30
+start scoring
+gen_file:checkpoints/fold_2/epoch_3_test_step_2_predictions.jsonl
+test_file:data/wikievents/10fold/fold_2/test.jsonl
+paired args: 26, inconsistent args: 7, raito: 0.2692307692307692
+Evaluation by matching head words only....
+Event-level identification: P: 66.22
+Event-level : P: 66.22
+gold arg num: 445
+Role identification: P: 75.60, R: 70.34, F: 72.88
+Role: P: 71.50, R: 66.52, F: 68.92
+Coref Role identification: P: 78.99, R: 73.48, F: 76.14
+Coref Role: P: 74.88, R: 69.66, F: 72.18
+start getting new testset
+source:checkpoints/fold_2/epoch_3_test_step_2_results_for_predict.json
+target:preprocessed_fold_2/test_step_2_data.json
+total_event: 299
+has close events: 244
+longest context:450
+longest target 30
+start scoring
+gen_file:checkpoints/fold_2/epoch_3_test_step_3_predictions.jsonl
+test_file:data/wikievents/10fold/fold_2/test.jsonl
+paired args: 26, inconsistent args: 7, raito: 0.2692307692307692
+Evaluation by matching head words only....
+Event-level identification: P: 65.22
+Event-level : P: 65.22
+gold arg num: 445
+Role identification: P: 74.58, R: 69.21, F: 71.79
+Role: P: 70.46, R: 65.39, F: 67.83
+Coref Role identification: P: 77.97, R: 72.36, F: 75.06
+Coref Role: P: 73.85, R: 68.54, F: 71.10
+start getting new testset
+source:checkpoints/fold_2/epoch_3_test_step_3_results_for_predict.json
+target:preprocessed_fold_2/test_step_3_data.json
+total_event: 299
+has close events: 244
+longest context:450
+longest target 30
+start scoring
+gen_file:checkpoints/fold_2/epoch_3_test_step_4_predictions.jsonl
+test_file:data/wikievents/10fold/fold_2/test.jsonl
+paired args: 26, inconsistent args: 8, raito: 0.3076923076923077
+Evaluation by matching head words only....
+Event-level identification: P: 65.89
+Event-level : P: 65.89
+gold arg num: 445
+Role identification: P: 75.18, R: 70.11, F: 72.56
+Role: P: 71.08, R: 66.29, F: 68.60
+Coref Role identification: P: 78.55, R: 73.26, F: 75.81
+Coref Role: P: 74.46, R: 69.44, F: 71.86
+start getting new testset
+source:checkpoints/fold_2/epoch_3_test_step_4_results_for_predict.json
+target:preprocessed_fold_2/test_step_4_data.json
+total_event: 299
+has close events: 244
+longest context:450
+longest target 30
+start scoring
+gen_file:checkpoints/fold_2/epoch_3_test_step_5_predictions.jsonl
+test_file:data/wikievents/10fold/fold_2/test.jsonl
+paired args: 26, inconsistent args: 8, raito: 0.3076923076923077
+Evaluation by matching head words only....
+Event-level identification: P: 64.88
+Event-level : P: 64.88
+gold arg num: 445
+Role identification: P: 74.51, R: 68.99, F: 71.65
+Role: P: 70.39, R: 65.17, F: 67.68
+Coref Role identification: P: 77.91, R: 72.13, F: 74.91
+Coref Role: P: 73.79, R: 68.31, F: 70.95
+--------------------------------------------------------------------------------
+load from checkpoints/fold_2/epoch_4.ckpt
+start scoring
+gen_file:checkpoints/fold_2/epoch_4_test_step_0_predictions.jsonl
+test_file:data/wikievents/10fold/fold_2/test.jsonl
+paired args: 26, inconsistent args: 8, raito: 0.3076923076923077
+Evaluation by matching head words only....
+Event-level identification: P: 66.56
+Event-level : P: 66.56
+gold arg num: 445
+Role identification: P: 71.56, R: 72.36, F: 71.96
+Role: P: 66.67, R: 67.42, F: 67.04
+Coref Role identification: P: 75.11, R: 75.96, F: 75.53
+Coref Role: P: 70.00, R: 70.79, F: 70.39
+start getting new testset
+source:checkpoints/fold_2/epoch_4_test_step_0_results_for_predict.json
+target:preprocessed_fold_2/test_step_0_data.json
+total_event: 299
+has close events: 244
+longest context:450
+longest target 30
+start scoring
+gen_file:checkpoints/fold_2/epoch_4_test_step_1_predictions.jsonl
+test_file:data/wikievents/10fold/fold_2/test.jsonl
+paired args: 26, inconsistent args: 8, raito: 0.3076923076923077
+Evaluation by matching head words only....
+Event-level identification: P: 64.55
+Event-level : P: 64.55
+gold arg num: 445
+Role identification: P: 70.25, R: 70.56, F: 70.40
+Role: P: 65.32, R: 65.62, F: 65.47
+Coref Role identification: P: 73.60, R: 73.93, F: 73.77
+Coref Role: P: 68.68, R: 68.99, F: 68.83
+start getting new testset
+source:checkpoints/fold_2/epoch_4_test_step_1_results_for_predict.json
+target:preprocessed_fold_2/test_step_1_data.json
+total_event: 299
+has close events: 244
+longest context:450
+longest target 30
+start scoring
+gen_file:checkpoints/fold_2/epoch_4_test_step_2_predictions.jsonl
+test_file:data/wikievents/10fold/fold_2/test.jsonl
+paired args: 26, inconsistent args: 9, raito: 0.34615384615384615
+Evaluation by matching head words only....
+Event-level identification: P: 64.88
+Event-level : P: 64.88
+gold arg num: 445
+Role identification: P: 70.22, R: 71.01, F: 70.61
+Role: P: 65.33, R: 66.07, F: 65.70
+Coref Role identification: P: 73.56, R: 74.38, F: 73.97
+Coref Role: P: 68.67, R: 69.44, F: 69.05
+start getting new testset
+source:checkpoints/fold_2/epoch_4_test_step_2_results_for_predict.json
+target:preprocessed_fold_2/test_step_2_data.json
+total_event: 299
+has close events: 244
+longest context:450
+longest target 30
+start scoring
+gen_file:checkpoints/fold_2/epoch_4_test_step_3_predictions.jsonl
+test_file:data/wikievents/10fold/fold_2/test.jsonl
+paired args: 26, inconsistent args: 9, raito: 0.34615384615384615
+Evaluation by matching head words only....
+Event-level identification: P: 64.88
+Event-level : P: 64.88
+gold arg num: 445
+Role identification: P: 70.31, R: 70.79, F: 70.55
+Role: P: 65.40, R: 65.84, F: 65.62
+Coref Role identification: P: 73.66, R: 74.16, F: 73.91
+Coref Role: P: 68.75, R: 69.21, F: 68.98
+start getting new testset
+source:checkpoints/fold_2/epoch_4_test_step_3_results_for_predict.json
+target:preprocessed_fold_2/test_step_3_data.json
+total_event: 299
+has close events: 244
+longest context:450
+longest target 30
+start scoring
+gen_file:checkpoints/fold_2/epoch_4_test_step_4_predictions.jsonl
+test_file:data/wikievents/10fold/fold_2/test.jsonl
+paired args: 26, inconsistent args: 9, raito: 0.34615384615384615
+Evaluation by matching head words only....
+Event-level identification: P: 64.88
+Event-level : P: 64.88
+gold arg num: 445
+Role identification: P: 70.22, R: 71.01, F: 70.61
+Role: P: 65.33, R: 66.07, F: 65.70
+Coref Role identification: P: 73.56, R: 74.38, F: 73.97
+Coref Role: P: 68.67, R: 69.44, F: 69.05
+start getting new testset
+source:checkpoints/fold_2/epoch_4_test_step_4_results_for_predict.json
+target:preprocessed_fold_2/test_step_4_data.json
+total_event: 299
+has close events: 244
+longest context:450
+longest target 30
+start scoring
+gen_file:checkpoints/fold_2/epoch_4_test_step_5_predictions.jsonl
+test_file:data/wikievents/10fold/fold_2/test.jsonl
+paired args: 26, inconsistent args: 9, raito: 0.34615384615384615
+Evaluation by matching head words only....
+Event-level identification: P: 64.88
+Event-level : P: 64.88
+gold arg num: 445
+Role identification: P: 70.31, R: 70.79, F: 70.55
+Role: P: 65.40, R: 65.84, F: 65.62
+Coref Role identification: P: 73.66, R: 74.16, F: 73.91
+Coref Role: P: 68.75, R: 69.21, F: 68.98
+--------------------------------------------------------------------------------
+load from checkpoints/fold_2/epoch_5.ckpt
+start scoring
+gen_file:checkpoints/fold_2/epoch_5_test_step_0_predictions.jsonl
+test_file:data/wikievents/10fold/fold_2/test.jsonl
+paired args: 26, inconsistent args: 7, raito: 0.2692307692307692
+Evaluation by matching head words only....
+Event-level identification: P: 65.89
+Event-level : P: 65.89
+gold arg num: 445
+Role identification: P: 74.18, R: 71.01, F: 72.56
+Role: P: 68.78, R: 65.84, F: 67.28
+Coref Role identification: P: 77.46, R: 74.16, F: 75.77
+Coref Role: P: 72.07, R: 68.99, F: 70.49
+start getting new testset
+source:checkpoints/fold_2/epoch_5_test_step_0_results_for_predict.json
+target:preprocessed_fold_2/test_step_0_data.json
+total_event: 299
+has close events: 244
+longest context:450
+longest target 30
+start scoring
+gen_file:checkpoints/fold_2/epoch_5_test_step_1_predictions.jsonl
+test_file:data/wikievents/10fold/fold_2/test.jsonl
+paired args: 26, inconsistent args: 10, raito: 0.38461538461538464
+Evaluation by matching head words only....
+Event-level identification: P: 64.55
+Event-level : P: 64.55
+gold arg num: 445
+Role identification: P: 73.75, R: 69.44, F: 71.53
+Role: P: 68.97, R: 64.94, F: 66.90
+Coref Role identification: P: 77.09, R: 72.58, F: 74.77
+Coref Role: P: 72.32, R: 68.09, F: 70.14
+start getting new testset
+source:checkpoints/fold_2/epoch_5_test_step_1_results_for_predict.json
+target:preprocessed_fold_2/test_step_1_data.json
+total_event: 299
+has close events: 244
+longest context:450
+longest target 30
+start scoring
+gen_file:checkpoints/fold_2/epoch_5_test_step_2_predictions.jsonl
+test_file:data/wikievents/10fold/fold_2/test.jsonl
+paired args: 26, inconsistent args: 10, raito: 0.38461538461538464
+Evaluation by matching head words only....
+Event-level identification: P: 65.22
+Event-level : P: 65.22
+gold arg num: 445
+Role identification: P: 74.46, R: 70.11, F: 72.22
+Role: P: 69.93, R: 65.84, F: 67.82
+Coref Role identification: P: 77.80, R: 73.26, F: 75.46
+Coref Role: P: 73.27, R: 68.99, F: 71.06
+start getting new testset
+source:checkpoints/fold_2/epoch_5_test_step_2_results_for_predict.json
+target:preprocessed_fold_2/test_step_2_data.json
+total_event: 299
+has close events: 244
+longest context:450
+longest target 30
+start scoring
+gen_file:checkpoints/fold_2/epoch_5_test_step_3_predictions.jsonl
+test_file:data/wikievents/10fold/fold_2/test.jsonl
+paired args: 26, inconsistent args: 10, raito: 0.38461538461538464
+Evaluation by matching head words only....
+Event-level identification: P: 64.88
+Event-level : P: 64.88
+gold arg num: 445
+Role identification: P: 73.92, R: 69.44, F: 71.61
+Role: P: 69.38, R: 65.17, F: 67.21
+Coref Role identification: P: 77.27, R: 72.58, F: 74.86
+Coref Role: P: 72.73, R: 68.31, F: 70.45
+start getting new testset
+source:checkpoints/fold_2/epoch_5_test_step_3_results_for_predict.json
+target:preprocessed_fold_2/test_step_3_data.json
+total_event: 299
+has close events: 244
+longest context:450
+longest target 30
+start scoring
+gen_file:checkpoints/fold_2/epoch_5_test_step_4_predictions.jsonl
+test_file:data/wikievents/10fold/fold_2/test.jsonl
+paired args: 26, inconsistent args: 10, raito: 0.38461538461538464
+Evaluation by matching head words only....
+Event-level identification: P: 65.22
+Event-level : P: 65.22
+gold arg num: 445
+Role identification: P: 74.46, R: 70.11, F: 72.22
+Role: P: 69.93, R: 65.84, F: 67.82
+Coref Role identification: P: 77.80, R: 73.26, F: 75.46
+Coref Role: P: 73.27, R: 68.99, F: 71.06
+start getting new testset
+source:checkpoints/fold_2/epoch_5_test_step_4_results_for_predict.json
+target:preprocessed_fold_2/test_step_4_data.json
+total_event: 299
+has close events: 244
+longest context:450
+longest target 30
+start scoring
+gen_file:checkpoints/fold_2/epoch_5_test_step_5_predictions.jsonl
+test_file:data/wikievents/10fold/fold_2/test.jsonl
+paired args: 26, inconsistent args: 10, raito: 0.38461538461538464
+Evaluation by matching head words only....
+Event-level identification: P: 64.88
+Event-level : P: 64.88
+gold arg num: 445
+Role identification: P: 74.28, R: 69.44, F: 71.78
+Role: P: 69.71, R: 65.17, F: 67.36
+Coref Role identification: P: 77.64, R: 72.58, F: 75.03
+Coref Role: P: 73.08, R: 68.31, F: 70.62
+--------------------------------------------------------------------------------
+load from checkpoints/fold_3/epoch_2.ckpt
+start scoring
+gen_file:checkpoints/fold_3/epoch_2_test_step_0_predictions.jsonl
+test_file:data/wikievents/10fold/fold_3/test.jsonl
+paired args: 41, inconsistent args: 16, raito: 0.3902439024390244
+Evaluation by matching head words only....
+Event-level identification: P: 66.21
+Event-level : P: 66.21
+gold arg num: 508
+Role identification: P: 71.68, R: 73.23, F: 72.44
+Role: P: 65.51, R: 66.93, F: 66.21
+Coref Role identification: P: 73.22, R: 74.80, F: 74.00
+Coref Role: P: 67.05, R: 68.50, F: 67.77
+start getting new testset
+source:checkpoints/fold_3/epoch_2_test_step_0_results_for_predict.json
+target:preprocessed_fold_3/test_step_0_data.json
+total_event: 367
+has close events: 335
+longest context:466
+longest target 30
+start scoring
+gen_file:checkpoints/fold_3/epoch_2_test_step_1_predictions.jsonl
+test_file:data/wikievents/10fold/fold_3/test.jsonl
+paired args: 41, inconsistent args: 11, raito: 0.2682926829268293
+Evaluation by matching head words only....
+Event-level identification: P: 66.21
+Event-level : P: 66.21
+gold arg num: 508
+Role identification: P: 71.48, R: 72.05, F: 71.76
+Role: P: 65.62, R: 66.14, F: 65.88
+Coref Role identification: P: 73.44, R: 74.02, F: 73.73
+Coref Role: P: 67.38, R: 67.91, F: 67.65
+start getting new testset
+source:checkpoints/fold_3/epoch_2_test_step_1_results_for_predict.json
+target:preprocessed_fold_3/test_step_1_data.json
+total_event: 367
+has close events: 335
+longest context:466
+longest target 30
+start scoring
+gen_file:checkpoints/fold_3/epoch_2_test_step_2_predictions.jsonl
+test_file:data/wikievents/10fold/fold_3/test.jsonl
+paired args: 41, inconsistent args: 12, raito: 0.2926829268292683
+Evaluation by matching head words only....
+Event-level identification: P: 67.03
+Event-level : P: 67.03
+gold arg num: 508
+Role identification: P: 70.72, R: 73.23, F: 71.95
+Role: P: 65.02, R: 67.32, F: 66.15
+Coref Role identification: P: 72.62, R: 75.20, F: 73.89
+Coref Role: P: 66.73, R: 69.09, F: 67.89
+start getting new testset
+source:checkpoints/fold_3/epoch_2_test_step_2_results_for_predict.json
+target:preprocessed_fold_3/test_step_2_data.json
+total_event: 367
+has close events: 335
+longest context:466
+longest target 30
+start scoring
+gen_file:checkpoints/fold_3/epoch_2_test_step_3_predictions.jsonl
+test_file:data/wikievents/10fold/fold_3/test.jsonl
+paired args: 41, inconsistent args: 12, raito: 0.2926829268292683
+Evaluation by matching head words only....
+Event-level identification: P: 65.94
+Event-level : P: 65.94
+gold arg num: 508
+Role identification: P: 71.01, R: 71.85, F: 71.43
+Role: P: 64.98, R: 65.75, F: 65.36
+Coref Role identification: P: 72.96, R: 73.82, F: 73.39
+Coref Role: P: 66.73, R: 67.52, F: 67.12
+start getting new testset
+source:checkpoints/fold_3/epoch_2_test_step_3_results_for_predict.json
+target:preprocessed_fold_3/test_step_3_data.json
+total_event: 367
+has close events: 335
+longest context:466
+longest target 30
+start scoring
+gen_file:checkpoints/fold_3/epoch_2_test_step_4_predictions.jsonl
+test_file:data/wikievents/10fold/fold_3/test.jsonl
+paired args: 41, inconsistent args: 13, raito: 0.3170731707317073
+Evaluation by matching head words only....
+Event-level identification: P: 67.03
+Event-level : P: 67.03
+gold arg num: 508
+Role identification: P: 70.72, R: 73.23, F: 71.95
+Role: P: 64.64, R: 66.93, F: 65.76
+Coref Role identification: P: 72.62, R: 75.20, F: 73.89
+Coref Role: P: 66.35, R: 68.70, F: 67.50
+start getting new testset
+source:checkpoints/fold_3/epoch_2_test_step_4_results_for_predict.json
+target:preprocessed_fold_3/test_step_4_data.json
+total_event: 367
+has close events: 335
+longest context:466
+longest target 30
+start scoring
+gen_file:checkpoints/fold_3/epoch_2_test_step_5_predictions.jsonl
+test_file:data/wikievents/10fold/fold_3/test.jsonl
+paired args: 41, inconsistent args: 11, raito: 0.2682926829268293
+Evaluation by matching head words only....
+Event-level identification: P: 66.49
+Event-level : P: 66.49
+gold arg num: 508
+Role identification: P: 70.99, R: 72.24, F: 71.61
+Role: P: 65.18, R: 66.34, F: 65.76
+Coref Role identification: P: 72.92, R: 74.21, F: 73.56
+Coref Role: P: 66.92, R: 68.11, F: 67.51
+--------------------------------------------------------------------------------
+load from checkpoints/fold_3/epoch_3.ckpt
+start scoring
+gen_file:checkpoints/fold_3/epoch_3_test_step_0_predictions.jsonl
+test_file:data/wikievents/10fold/fold_3/test.jsonl
+paired args: 41, inconsistent args: 15, raito: 0.36585365853658536
+Evaluation by matching head words only....
+Event-level identification: P: 68.12
+Event-level : P: 68.12
+gold arg num: 508
+Role identification: P: 74.19, R: 71.85, F: 73.00
+Role: P: 69.72, R: 67.52, F: 68.60
+Coref Role identification: P: 76.02, R: 73.62, F: 74.80
+Coref Role: P: 71.54, R: 69.29, F: 70.40
+start getting new testset
+source:checkpoints/fold_3/epoch_3_test_step_0_results_for_predict.json
+target:preprocessed_fold_3/test_step_0_data.json
+total_event: 367
+has close events: 335
+longest context:466
+longest target 30
+start scoring
+gen_file:checkpoints/fold_3/epoch_3_test_step_1_predictions.jsonl
+test_file:data/wikievents/10fold/fold_3/test.jsonl
+paired args: 41, inconsistent args: 16, raito: 0.3902439024390244
+Evaluation by matching head words only....
+Event-level identification: P: 67.03
+Event-level : P: 67.03
+gold arg num: 508
+Role identification: P: 73.88, R: 71.26, F: 72.55
+Role: P: 68.78, R: 66.34, F: 67.54
+Coref Role identification: P: 76.73, R: 74.02, F: 75.35
+Coref Role: P: 71.63, R: 69.09, F: 70.34
+start getting new testset
+source:checkpoints/fold_3/epoch_3_test_step_1_results_for_predict.json
+target:preprocessed_fold_3/test_step_1_data.json
+total_event: 367
+has close events: 335
+longest context:466
+longest target 30
+start scoring
+gen_file:checkpoints/fold_3/epoch_3_test_step_2_predictions.jsonl
+test_file:data/wikievents/10fold/fold_3/test.jsonl
+paired args: 41, inconsistent args: 17, raito: 0.4146341463414634
+Evaluation by matching head words only....
+Event-level identification: P: 68.12
+Event-level : P: 68.12
+gold arg num: 508
+Role identification: P: 73.94, R: 72.05, F: 72.98
+Role: P: 69.09, R: 67.32, F: 68.20
+Coref Role identification: P: 76.57, R: 74.61, F: 75.57
+Coref Role: P: 71.72, R: 69.88, F: 70.79
+start getting new testset
+source:checkpoints/fold_3/epoch_3_test_step_2_results_for_predict.json
+target:preprocessed_fold_3/test_step_2_data.json
+total_event: 367
+has close events: 335
+longest context:466
+longest target 30
+start scoring
+gen_file:checkpoints/fold_3/epoch_3_test_step_3_predictions.jsonl
+test_file:data/wikievents/10fold/fold_3/test.jsonl
+paired args: 41, inconsistent args: 15, raito: 0.36585365853658536
+Evaluation by matching head words only....
+Event-level identification: P: 66.49
+Event-level : P: 66.49
+gold arg num: 508
+Role identification: P: 73.72, R: 70.67, F: 72.16
+Role: P: 68.79, R: 65.94, F: 67.34
+Coref Role identification: P: 76.39, R: 73.23, F: 74.77
+Coref Role: P: 71.46, R: 68.50, F: 69.95
+start getting new testset
+source:checkpoints/fold_3/epoch_3_test_step_3_results_for_predict.json
+target:preprocessed_fold_3/test_step_3_data.json
+total_event: 367
+has close events: 335
+longest context:466
+longest target 30
+start scoring
+gen_file:checkpoints/fold_3/epoch_3_test_step_4_predictions.jsonl
+test_file:data/wikievents/10fold/fold_3/test.jsonl
+paired args: 41, inconsistent args: 16, raito: 0.3902439024390244
+Evaluation by matching head words only....
+Event-level identification: P: 67.85
+Event-level : P: 67.85
+gold arg num: 508
+Role identification: P: 73.74, R: 71.85, F: 72.78
+Role: P: 68.89, R: 67.13, F: 68.00
+Coref Role identification: P: 76.36, R: 74.41, F: 75.37
+Coref Role: P: 71.52, R: 69.69, F: 70.59
+start getting new testset
+source:checkpoints/fold_3/epoch_3_test_step_4_results_for_predict.json
+target:preprocessed_fold_3/test_step_4_data.json
+total_event: 367
+has close events: 335
+longest context:466
+longest target 30
+start scoring
+gen_file:checkpoints/fold_3/epoch_3_test_step_5_predictions.jsonl
+test_file:data/wikievents/10fold/fold_3/test.jsonl
+paired args: 41, inconsistent args: 16, raito: 0.3902439024390244
+Evaluation by matching head words only....
+Event-level identification: P: 66.76
+Event-level : P: 66.76
+gold arg num: 508
+Role identification: P: 73.72, R: 70.67, F: 72.16
+Role: P: 68.99, R: 66.14, F: 67.54
+Coref Role identification: P: 76.39, R: 73.23, F: 74.77
+Coref Role: P: 71.66, R: 68.70, F: 70.15
+--------------------------------------------------------------------------------
+load from checkpoints/fold_3/epoch_4.ckpt
+start scoring
+gen_file:checkpoints/fold_3/epoch_4_test_step_0_predictions.jsonl
+test_file:data/wikievents/10fold/fold_3/test.jsonl
+paired args: 41, inconsistent args: 16, raito: 0.3902439024390244
+Evaluation by matching head words only....
+Event-level identification: P: 69.21
+Event-level : P: 69.21
+gold arg num: 508
+Role identification: P: 73.03, R: 74.61, F: 73.81
+Role: P: 68.02, R: 69.49, F: 68.74
+Coref Role identification: P: 74.37, R: 75.98, F: 75.17
+Coref Role: P: 69.36, R: 70.87, F: 70.11
+start getting new testset
+source:checkpoints/fold_3/epoch_4_test_step_0_results_for_predict.json
+target:preprocessed_fold_3/test_step_0_data.json
+total_event: 367
+has close events: 335
+longest context:466
+longest target 30
+start scoring
+gen_file:checkpoints/fold_3/epoch_4_test_step_1_predictions.jsonl
+test_file:data/wikievents/10fold/fold_3/test.jsonl
+paired args: 41, inconsistent args: 14, raito: 0.34146341463414637
+Evaluation by matching head words only....
+Event-level identification: P: 67.30
+Event-level : P: 67.30
+gold arg num: 508
+Role identification: P: 71.82, R: 72.24, F: 72.03
+Role: P: 66.73, R: 67.13, F: 66.93
+Coref Role identification: P: 74.17, R: 74.61, F: 74.39
+Coref Role: P: 68.88, R: 69.29, F: 69.09
+start getting new testset
+source:checkpoints/fold_3/epoch_4_test_step_1_results_for_predict.json
+target:preprocessed_fold_3/test_step_1_data.json
+total_event: 367
+has close events: 335
+longest context:466
+longest target 30
+start scoring
+gen_file:checkpoints/fold_3/epoch_4_test_step_2_predictions.jsonl
+test_file:data/wikievents/10fold/fold_3/test.jsonl
+paired args: 41, inconsistent args: 18, raito: 0.43902439024390244
+Evaluation by matching head words only....
+Event-level identification: P: 68.94
+Event-level : P: 68.94
+gold arg num: 508
+Role identification: P: 72.01, R: 73.43, F: 72.71
+Role: P: 66.80, R: 68.11, F: 67.45
+Coref Role identification: P: 74.32, R: 75.79, F: 75.05
+Coref Role: P: 68.92, R: 70.28, F: 69.59
+start getting new testset
+source:checkpoints/fold_3/epoch_4_test_step_2_results_for_predict.json
+target:preprocessed_fold_3/test_step_2_data.json
+total_event: 367
+has close events: 335
+longest context:466
+longest target 30
+start scoring
+gen_file:checkpoints/fold_3/epoch_4_test_step_3_predictions.jsonl
+test_file:data/wikievents/10fold/fold_3/test.jsonl
+paired args: 41, inconsistent args: 16, raito: 0.3902439024390244
+Evaluation by matching head words only....
+Event-level identification: P: 67.30
+Event-level : P: 67.30
+gold arg num: 508
+Role identification: P: 71.91, R: 72.05, F: 71.98
+Role: P: 66.60, R: 66.73, F: 66.67
+Coref Role identification: P: 74.07, R: 74.21, F: 74.14
+Coref Role: P: 68.76, R: 68.90, F: 68.83
+start getting new testset
+source:checkpoints/fold_3/epoch_4_test_step_3_results_for_predict.json
+target:preprocessed_fold_3/test_step_3_data.json
+total_event: 367
+has close events: 335
+longest context:466
+longest target 30
+start scoring
+gen_file:checkpoints/fold_3/epoch_4_test_step_4_predictions.jsonl
+test_file:data/wikievents/10fold/fold_3/test.jsonl
+paired args: 41, inconsistent args: 16, raito: 0.3902439024390244
+Evaluation by matching head words only....
+Event-level identification: P: 68.94
+Event-level : P: 68.94
+gold arg num: 508
+Role identification: P: 71.95, R: 73.23, F: 72.59
+Role: P: 66.54, R: 67.72, F: 67.12
+Coref Role identification: P: 74.27, R: 75.59, F: 74.93
+Coref Role: P: 68.86, R: 70.08, F: 69.46
+start getting new testset
+source:checkpoints/fold_3/epoch_4_test_step_4_results_for_predict.json
+target:preprocessed_fold_3/test_step_4_data.json
+total_event: 367
+has close events: 335
+longest context:466
+longest target 30
+start scoring
+gen_file:checkpoints/fold_3/epoch_4_test_step_5_predictions.jsonl
+test_file:data/wikievents/10fold/fold_3/test.jsonl
+paired args: 41, inconsistent args: 14, raito: 0.34146341463414637
+Evaluation by matching head words only....
+Event-level identification: P: 67.85
+Event-level : P: 67.85
+gold arg num: 508
+Role identification: P: 71.68, R: 72.24, F: 71.96
+Role: P: 66.60, R: 67.13, F: 66.86
+Coref Role identification: P: 74.02, R: 74.61, F: 74.31
+Coref Role: P: 68.95, R: 69.49, F: 69.22
+--------------------------------------------------------------------------------
+load from checkpoints/fold_3/epoch_5.ckpt
+start scoring
+gen_file:checkpoints/fold_3/epoch_5_test_step_0_predictions.jsonl
+test_file:data/wikievents/10fold/fold_3/test.jsonl
+paired args: 41, inconsistent args: 16, raito: 0.3902439024390244
+Evaluation by matching head words only....
+Event-level identification: P: 67.30
+Event-level : P: 67.30
+gold arg num: 508
+Role identification: P: 74.44, R: 72.24, F: 73.33
+Role: P: 68.97, R: 66.93, F: 67.93
+Coref Role identification: P: 76.06, R: 73.82, F: 74.93
+Coref Role: P: 70.39, R: 68.31, F: 69.33
+start getting new testset
+source:checkpoints/fold_3/epoch_5_test_step_0_results_for_predict.json
+target:preprocessed_fold_3/test_step_0_data.json
+total_event: 367
+has close events: 335
+longest context:466
+longest target 30
+start scoring
+gen_file:checkpoints/fold_3/epoch_5_test_step_1_predictions.jsonl
+test_file:data/wikievents/10fold/fold_3/test.jsonl
+paired args: 41, inconsistent args: 17, raito: 0.4146341463414634
+Evaluation by matching head words only....
+Event-level identification: P: 67.85
+Event-level : P: 67.85
+gold arg num: 508
+Role identification: P: 73.95, R: 72.64, F: 73.29
+Role: P: 68.34, R: 67.13, F: 67.73
+Coref Role identification: P: 75.55, R: 74.21, F: 74.88
+Coref Role: P: 69.74, R: 68.50, F: 69.12
+start getting new testset
+source:checkpoints/fold_3/epoch_5_test_step_1_results_for_predict.json
+target:preprocessed_fold_3/test_step_1_data.json
+total_event: 367
+has close events: 335
+longest context:466
+longest target 30
+start scoring
+gen_file:checkpoints/fold_3/epoch_5_test_step_2_predictions.jsonl
+test_file:data/wikievents/10fold/fold_3/test.jsonl
+paired args: 41, inconsistent args: 16, raito: 0.3902439024390244
+Evaluation by matching head words only....
+Event-level identification: P: 67.85
+Event-level : P: 67.85
+gold arg num: 508
+Role identification: P: 73.40, R: 72.24, F: 72.82
+Role: P: 68.20, R: 67.13, F: 67.66
+Coref Role identification: P: 75.00, R: 73.82, F: 74.40
+Coref Role: P: 69.80, R: 68.70, F: 69.25
+start getting new testset
+source:checkpoints/fold_3/epoch_5_test_step_2_results_for_predict.json
+target:preprocessed_fold_3/test_step_2_data.json
+total_event: 367
+has close events: 335
+longest context:466
+longest target 30
+start scoring
+gen_file:checkpoints/fold_3/epoch_5_test_step_3_predictions.jsonl
+test_file:data/wikievents/10fold/fold_3/test.jsonl
+paired args: 41, inconsistent args: 14, raito: 0.34146341463414637
+Evaluation by matching head words only....
+Event-level identification: P: 67.57
+Event-level : P: 67.57
+gold arg num: 508
+Role identification: P: 73.79, R: 72.05, F: 72.91
+Role: P: 68.55, R: 66.93, F: 67.73
+Coref Role identification: P: 75.40, R: 73.62, F: 74.50
+Coref Role: P: 70.16, R: 68.50, F: 69.32
+start getting new testset
+source:checkpoints/fold_3/epoch_5_test_step_3_results_for_predict.json
+target:preprocessed_fold_3/test_step_3_data.json
+total_event: 367
+has close events: 335
+longest context:466
+longest target 30
+start scoring
+gen_file:checkpoints/fold_3/epoch_5_test_step_4_predictions.jsonl
+test_file:data/wikievents/10fold/fold_3/test.jsonl
+paired args: 41, inconsistent args: 14, raito: 0.34146341463414637
+Evaluation by matching head words only....
+Event-level identification: P: 67.85
+Event-level : P: 67.85
+gold arg num: 508
+Role identification: P: 73.75, R: 72.44, F: 73.09
+Role: P: 68.54, R: 67.32, F: 67.92
+Coref Role identification: P: 75.55, R: 74.21, F: 74.88
+Coref Role: P: 70.14, R: 68.90, F: 69.51
+start getting new testset
+source:checkpoints/fold_3/epoch_5_test_step_4_results_for_predict.json
+target:preprocessed_fold_3/test_step_4_data.json
+total_event: 367
+has close events: 335
+longest context:466
+longest target 30
+start scoring
+gen_file:checkpoints/fold_3/epoch_5_test_step_5_predictions.jsonl
+test_file:data/wikievents/10fold/fold_3/test.jsonl
+paired args: 41, inconsistent args: 16, raito: 0.3902439024390244
+Evaluation by matching head words only....
+Event-level identification: P: 67.57
+Event-level : P: 67.57
+gold arg num: 508
+Role identification: P: 73.79, R: 72.05, F: 72.91
+Role: P: 68.55, R: 66.93, F: 67.73
+Coref Role identification: P: 75.60, R: 73.82, F: 74.70
+Coref Role: P: 70.16, R: 68.50, F: 69.32
+--------------------------------------------------------------------------------
+load from checkpoints/fold_4/epoch_2.ckpt
+start scoring
+gen_file:checkpoints/fold_4/epoch_2_test_step_0_predictions.jsonl
+test_file:data/wikievents/10fold/fold_4/test.jsonl
+paired args: 40, inconsistent args: 10, raito: 0.25
+Evaluation by matching head words only....
+Event-level identification: P: 56.61
+Event-level : P: 56.61
+gold arg num: 486
+Role identification: P: 68.56, R: 61.93, F: 65.08
+Role: P: 63.33, R: 57.20, F: 60.11
+Coref Role identification: P: 71.30, R: 64.40, F: 67.68
+Coref Role: P: 66.06, R: 59.67, F: 62.70
+start getting new testset
+source:checkpoints/fold_4/epoch_2_test_step_0_results_for_predict.json
+target:preprocessed_fold_4/test_step_0_data.json
+total_event: 348
+has close events: 325
+longest context:437
+longest target 29
+start scoring
+gen_file:checkpoints/fold_4/epoch_2_test_step_1_predictions.jsonl
+test_file:data/wikievents/10fold/fold_4/test.jsonl
+paired args: 40, inconsistent args: 11, raito: 0.275
+Evaluation by matching head words only....
+Event-level identification: P: 57.18
+Event-level : P: 57.18
+gold arg num: 486
+Role identification: P: 69.13, R: 63.58, F: 66.24
+Role: P: 63.53, R: 58.44, F: 60.88
+Coref Role identification: P: 71.59, R: 65.84, F: 68.60
+Coref Role: P: 66.00, R: 60.70, F: 63.24
+start getting new testset
+source:checkpoints/fold_4/epoch_2_test_step_1_results_for_predict.json
+target:preprocessed_fold_4/test_step_1_data.json
+total_event: 348
+has close events: 325
+longest context:437
+longest target 29
+start scoring
+gen_file:checkpoints/fold_4/epoch_2_test_step_2_predictions.jsonl
+test_file:data/wikievents/10fold/fold_4/test.jsonl
+paired args: 40, inconsistent args: 11, raito: 0.275
+Evaluation by matching head words only....
+Event-level identification: P: 57.18
+Event-level : P: 57.18
+gold arg num: 486
+Role identification: P: 68.75, R: 63.37, F: 65.95
+Role: P: 62.95, R: 58.02, F: 60.39
+Coref Role identification: P: 71.43, R: 65.84, F: 68.52
+Coref Role: P: 65.62, R: 60.49, F: 62.96
+start getting new testset
+source:checkpoints/fold_4/epoch_2_test_step_2_results_for_predict.json
+target:preprocessed_fold_4/test_step_2_data.json
+total_event: 348
+has close events: 325
+longest context:437
+longest target 29
+start scoring
+gen_file:checkpoints/fold_4/epoch_2_test_step_3_predictions.jsonl
+test_file:data/wikievents/10fold/fold_4/test.jsonl
+paired args: 40, inconsistent args: 11, raito: 0.275
+Evaluation by matching head words only....
+Event-level identification: P: 57.47
+Event-level : P: 57.47
+gold arg num: 486
+Role identification: P: 69.28, R: 63.58, F: 66.31
+Role: P: 63.45, R: 58.23, F: 60.73
+Coref Role identification: P: 71.97, R: 66.05, F: 68.88
+Coref Role: P: 66.14, R: 60.70, F: 63.30
+start getting new testset
+source:checkpoints/fold_4/epoch_2_test_step_3_results_for_predict.json
+target:preprocessed_fold_4/test_step_3_data.json
+total_event: 348
+has close events: 325
+longest context:437
+longest target 29
+start scoring
+gen_file:checkpoints/fold_4/epoch_2_test_step_4_predictions.jsonl
+test_file:data/wikievents/10fold/fold_4/test.jsonl
+paired args: 40, inconsistent args: 11, raito: 0.275
+Evaluation by matching head words only....
+Event-level identification: P: 57.47
+Event-level : P: 57.47
+gold arg num: 486
+Role identification: P: 68.82, R: 63.58, F: 66.10
+Role: P: 63.03, R: 58.23, F: 60.53
+Coref Role identification: P: 71.49, R: 66.05, F: 68.66
+Coref Role: P: 65.70, R: 60.70, F: 63.10
+start getting new testset
+source:checkpoints/fold_4/epoch_2_test_step_4_results_for_predict.json
+target:preprocessed_fold_4/test_step_4_data.json
+total_event: 348
+has close events: 325
+longest context:437
+longest target 29
+start scoring
+gen_file:checkpoints/fold_4/epoch_2_test_step_5_predictions.jsonl
+test_file:data/wikievents/10fold/fold_4/test.jsonl
+paired args: 40, inconsistent args: 11, raito: 0.275
+Evaluation by matching head words only....
+Event-level identification: P: 57.47
+Event-level : P: 57.47
+gold arg num: 486
+Role identification: P: 69.28, R: 63.58, F: 66.31
+Role: P: 63.45, R: 58.23, F: 60.73
+Coref Role identification: P: 71.97, R: 66.05, F: 68.88
+Coref Role: P: 66.14, R: 60.70, F: 63.30
+--------------------------------------------------------------------------------
+load from checkpoints/fold_4/epoch_3.ckpt
+start scoring
+gen_file:checkpoints/fold_4/epoch_3_test_step_0_predictions.jsonl
+test_file:data/wikievents/10fold/fold_4/test.jsonl
+paired args: 40, inconsistent args: 14, raito: 0.35
+Evaluation by matching head words only....
+Event-level identification: P: 59.77
+Event-level : P: 59.77
+gold arg num: 486
+Role identification: P: 67.42, R: 67.28, F: 67.35
+Role: P: 61.24, R: 61.11, F: 61.17
+Coref Role identification: P: 69.90, R: 69.75, F: 69.82
+Coref Role: P: 63.51, R: 63.37, F: 63.44
+start getting new testset
+source:checkpoints/fold_4/epoch_3_test_step_0_results_for_predict.json
+target:preprocessed_fold_4/test_step_0_data.json
+total_event: 348
+has close events: 325
+longest context:437
+longest target 30
+start scoring
+gen_file:checkpoints/fold_4/epoch_3_test_step_1_predictions.jsonl
+test_file:data/wikievents/10fold/fold_4/test.jsonl
+paired args: 40, inconsistent args: 12, raito: 0.3
+Evaluation by matching head words only....
+Event-level identification: P: 62.64
+Event-level : P: 62.64
+gold arg num: 486
+Role identification: P: 70.49, R: 68.31, F: 69.38
+Role: P: 65.61, R: 63.58, F: 64.58
+Coref Role identification: P: 72.82, R: 70.58, F: 71.68
+Coref Role: P: 67.94, R: 65.84, F: 66.88
+start getting new testset
+source:checkpoints/fold_4/epoch_3_test_step_1_results_for_predict.json
+target:preprocessed_fold_4/test_step_1_data.json
+total_event: 348
+has close events: 325
+longest context:437
+longest target 30
+start scoring
+gen_file:checkpoints/fold_4/epoch_3_test_step_2_predictions.jsonl
+test_file:data/wikievents/10fold/fold_4/test.jsonl
+paired args: 40, inconsistent args: 13, raito: 0.325
+Evaluation by matching head words only....
+Event-level identification: P: 62.64
+Event-level : P: 62.64
+gold arg num: 486
+Role identification: P: 69.77, R: 69.34, F: 69.56
+Role: P: 64.60, R: 64.20, F: 64.40
+Coref Role identification: P: 72.05, R: 71.60, F: 71.83
+Coref Role: P: 66.87, R: 66.46, F: 66.67
+start getting new testset
+source:checkpoints/fold_4/epoch_3_test_step_2_results_for_predict.json
+target:preprocessed_fold_4/test_step_2_data.json
+total_event: 348
+has close events: 325
+longest context:437
+longest target 30
+start scoring
+gen_file:checkpoints/fold_4/epoch_3_test_step_3_predictions.jsonl
+test_file:data/wikievents/10fold/fold_4/test.jsonl
+paired args: 40, inconsistent args: 13, raito: 0.325
+Evaluation by matching head words only....
+Event-level identification: P: 62.36
+Event-level : P: 62.36
+gold arg num: 486
+Role identification: P: 70.53, R: 68.93, F: 69.72
+Role: P: 65.47, R: 63.99, F: 64.72
+Coref Role identification: P: 72.63, R: 70.99, F: 71.80
+Coref Role: P: 67.58, R: 66.05, F: 66.81
+start getting new testset
+source:checkpoints/fold_4/epoch_3_test_step_3_results_for_predict.json
+target:preprocessed_fold_4/test_step_3_data.json
+total_event: 348
+has close events: 325
+longest context:437
+longest target 30
+start scoring
+gen_file:checkpoints/fold_4/epoch_3_test_step_4_predictions.jsonl
+test_file:data/wikievents/10fold/fold_4/test.jsonl
+paired args: 40, inconsistent args: 13, raito: 0.325
+Evaluation by matching head words only....
+Event-level identification: P: 62.07
+Event-level : P: 62.07
+gold arg num: 486
+Role identification: P: 69.71, R: 69.14, F: 69.42
+Role: P: 64.52, R: 63.99, F: 64.26
+Coref Role identification: P: 71.78, R: 71.19, F: 71.49
+Coref Role: P: 66.60, R: 66.05, F: 66.32
+start getting new testset
+source:checkpoints/fold_4/epoch_3_test_step_4_results_for_predict.json
+target:preprocessed_fold_4/test_step_4_data.json
+total_event: 348
+has close events: 325
+longest context:437
+longest target 30
+start scoring
+gen_file:checkpoints/fold_4/epoch_3_test_step_5_predictions.jsonl
+test_file:data/wikievents/10fold/fold_4/test.jsonl
+paired args: 40, inconsistent args: 13, raito: 0.325
+Evaluation by matching head words only....
+Event-level identification: P: 62.64
+Event-level : P: 62.64
+gold arg num: 486
+Role identification: P: 70.44, R: 69.14, F: 69.78
+Role: P: 65.41, R: 64.20, F: 64.80
+Coref Role identification: P: 72.54, R: 71.19, F: 71.86
+Coref Role: P: 67.51, R: 66.26, F: 66.87
+--------------------------------------------------------------------------------
+load from checkpoints/fold_4/epoch_4.ckpt
+start scoring
+gen_file:checkpoints/fold_4/epoch_4_test_step_0_predictions.jsonl
+test_file:data/wikievents/10fold/fold_4/test.jsonl
+paired args: 40, inconsistent args: 14, raito: 0.35
+Evaluation by matching head words only....
+Event-level identification: P: 61.78
+Event-level : P: 61.78
+gold arg num: 486
+Role identification: P: 69.64, R: 67.49, F: 68.55
+Role: P: 63.27, R: 61.32, F: 62.28
+Coref Role identification: P: 71.55, R: 69.34, F: 70.43
+Coref Role: P: 65.18, R: 63.17, F: 64.16
+start getting new testset
+source:checkpoints/fold_4/epoch_4_test_step_0_results_for_predict.json
+target:preprocessed_fold_4/test_step_0_data.json
+total_event: 348
+has close events: 325
+longest context:437
+longest target 30
+start scoring
+gen_file:checkpoints/fold_4/epoch_4_test_step_1_predictions.jsonl
+test_file:data/wikievents/10fold/fold_4/test.jsonl
+paired args: 40, inconsistent args: 11, raito: 0.275
+Evaluation by matching head words only....
+Event-level identification: P: 62.64
+Event-level : P: 62.64
+gold arg num: 486
+Role identification: P: 70.30, R: 67.70, F: 68.97
+Role: P: 64.96, R: 62.55, F: 63.73
+Coref Role identification: P: 72.65, R: 69.96, F: 71.28
+Coref Role: P: 67.31, R: 64.81, F: 66.04
+start getting new testset
+source:checkpoints/fold_4/epoch_4_test_step_1_results_for_predict.json
+target:preprocessed_fold_4/test_step_1_data.json
+total_event: 348
+has close events: 325
+longest context:437
+longest target 30
+start scoring
+gen_file:checkpoints/fold_4/epoch_4_test_step_2_predictions.jsonl
+test_file:data/wikievents/10fold/fold_4/test.jsonl
+paired args: 40, inconsistent args: 11, raito: 0.275
+Evaluation by matching head words only....
+Event-level identification: P: 63.51
+Event-level : P: 63.51
+gold arg num: 486
+Role identification: P: 70.70, R: 68.52, F: 69.59
+Role: P: 65.18, R: 63.17, F: 64.16
+Coref Role identification: P: 73.04, R: 70.78, F: 71.89
+Coref Role: P: 67.52, R: 65.43, F: 66.46
+start getting new testset
+source:checkpoints/fold_4/epoch_4_test_step_2_results_for_predict.json
+target:preprocessed_fold_4/test_step_2_data.json
+total_event: 348
+has close events: 325
+longest context:437
+longest target 30
+start scoring
+gen_file:checkpoints/fold_4/epoch_4_test_step_3_predictions.jsonl
+test_file:data/wikievents/10fold/fold_4/test.jsonl
+paired args: 40, inconsistent args: 11, raito: 0.275
+Evaluation by matching head words only....
+Event-level identification: P: 62.64
+Event-level : P: 62.64
+gold arg num: 486
+Role identification: P: 70.45, R: 67.70, F: 69.05
+Role: P: 65.10, R: 62.55, F: 63.80
+Coref Role identification: P: 72.81, R: 69.96, F: 71.35
+Coref Role: P: 67.45, R: 64.81, F: 66.11
+start getting new testset
+source:checkpoints/fold_4/epoch_4_test_step_3_results_for_predict.json
+target:preprocessed_fold_4/test_step_3_data.json
+total_event: 348
+has close events: 325
+longest context:437
+longest target 30
+start scoring
+gen_file:checkpoints/fold_4/epoch_4_test_step_4_predictions.jsonl
+test_file:data/wikievents/10fold/fold_4/test.jsonl
+paired args: 40, inconsistent args: 11, raito: 0.275
+Evaluation by matching head words only....
+Event-level identification: P: 63.51
+Event-level : P: 63.51
+gold arg num: 486
+Role identification: P: 70.85, R: 68.52, F: 69.67
+Role: P: 65.32, R: 63.17, F: 64.23
+Coref Role identification: P: 73.19, R: 70.78, F: 71.97
+Coref Role: P: 67.66, R: 65.43, F: 66.53
+start getting new testset
+source:checkpoints/fold_4/epoch_4_test_step_4_results_for_predict.json
+target:preprocessed_fold_4/test_step_4_data.json
+total_event: 348
+has close events: 325
+longest context:437
+longest target 30
+start scoring
+gen_file:checkpoints/fold_4/epoch_4_test_step_5_predictions.jsonl
+test_file:data/wikievents/10fold/fold_4/test.jsonl
+paired args: 40, inconsistent args: 11, raito: 0.275
+Evaluation by matching head words only....
+Event-level identification: P: 62.64
+Event-level : P: 62.64
+gold arg num: 486
+Role identification: P: 70.45, R: 67.70, F: 69.05
+Role: P: 65.10, R: 62.55, F: 63.80
+Coref Role identification: P: 72.81, R: 69.96, F: 71.35
+Coref Role: P: 67.45, R: 64.81, F: 66.11
+--------------------------------------------------------------------------------
+load from checkpoints/fold_4/epoch_5.ckpt
+start scoring
+gen_file:checkpoints/fold_4/epoch_5_test_step_0_predictions.jsonl
+test_file:data/wikievents/10fold/fold_4/test.jsonl
+paired args: 40, inconsistent args: 15, raito: 0.375
+Evaluation by matching head words only....
+Event-level identification: P: 59.20
+Event-level : P: 59.20
+gold arg num: 486
+Role identification: P: 69.37, R: 65.23, F: 67.23
+Role: P: 62.80, R: 59.05, F: 60.87
+Coref Role identification: P: 71.77, R: 67.49, F: 69.57
+Coref Role: P: 65.21, R: 61.32, F: 63.20
+start getting new testset
+source:checkpoints/fold_4/epoch_5_test_step_0_results_for_predict.json
+target:preprocessed_fold_4/test_step_0_data.json
+total_event: 348
+has close events: 325
+longest context:437
+longest target 30
+start scoring
+gen_file:checkpoints/fold_4/epoch_5_test_step_1_predictions.jsonl
+test_file:data/wikievents/10fold/fold_4/test.jsonl
+paired args: 40, inconsistent args: 15, raito: 0.375
+Evaluation by matching head words only....
+Event-level identification: P: 60.63
+Event-level : P: 60.63
+gold arg num: 486
+Role identification: P: 71.02, R: 66.05, F: 68.44
+Role: P: 64.60, R: 60.08, F: 62.26
+Coref Role identification: P: 73.89, R: 68.72, F: 71.22
+Coref Role: P: 67.48, R: 62.76, F: 65.03
+start getting new testset
+source:checkpoints/fold_4/epoch_5_test_step_1_results_for_predict.json
+target:preprocessed_fold_4/test_step_1_data.json
+total_event: 348
+has close events: 325
+longest context:437
+longest target 30
+start scoring
+gen_file:checkpoints/fold_4/epoch_5_test_step_2_predictions.jsonl
+test_file:data/wikievents/10fold/fold_4/test.jsonl
+paired args: 40, inconsistent args: 15, raito: 0.375
+Evaluation by matching head words only....
+Event-level identification: P: 61.49
+Event-level : P: 61.49
+gold arg num: 486
+Role identification: P: 71.52, R: 66.67, F: 69.01
+Role: P: 65.12, R: 60.70, F: 62.83
+Coref Role identification: P: 74.39, R: 69.34, F: 71.78
+Coref Role: P: 67.99, R: 63.37, F: 65.60
+start getting new testset
+source:checkpoints/fold_4/epoch_5_test_step_2_results_for_predict.json
+target:preprocessed_fold_4/test_step_2_data.json
+total_event: 348
+has close events: 325
+longest context:437
+longest target 30
+start scoring
+gen_file:checkpoints/fold_4/epoch_5_test_step_3_predictions.jsonl
+test_file:data/wikievents/10fold/fold_4/test.jsonl
+paired args: 40, inconsistent args: 15, raito: 0.375
+Evaluation by matching head words only....
+Event-level identification: P: 60.92
+Event-level : P: 60.92
+gold arg num: 486
+Role identification: P: 70.93, R: 66.26, F: 68.51
+Role: P: 64.54, R: 60.29, F: 62.34
+Coref Role identification: P: 73.79, R: 68.93, F: 71.28
+Coref Role: P: 67.40, R: 62.96, F: 65.11
+start getting new testset
+source:checkpoints/fold_4/epoch_5_test_step_3_results_for_predict.json
+target:preprocessed_fold_4/test_step_3_data.json
+total_event: 348
+has close events: 325
+longest context:437
+longest target 30
+start scoring
+gen_file:checkpoints/fold_4/epoch_5_test_step_4_predictions.jsonl
+test_file:data/wikievents/10fold/fold_4/test.jsonl
+paired args: 40, inconsistent args: 15, raito: 0.375
+Evaluation by matching head words only....
+Event-level identification: P: 61.49
+Event-level : P: 61.49
+gold arg num: 486
+Role identification: P: 71.37, R: 66.67, F: 68.94
+Role: P: 64.98, R: 60.70, F: 62.77
+Coref Role identification: P: 74.23, R: 69.34, F: 71.70
+Coref Role: P: 67.84, R: 63.37, F: 65.53
+start getting new testset
+source:checkpoints/fold_4/epoch_5_test_step_4_results_for_predict.json
+target:preprocessed_fold_4/test_step_4_data.json
+total_event: 348
+has close events: 325
+longest context:437
+longest target 30
+start scoring
+gen_file:checkpoints/fold_4/epoch_5_test_step_5_predictions.jsonl
+test_file:data/wikievents/10fold/fold_4/test.jsonl
+paired args: 40, inconsistent args: 15, raito: 0.375
+Evaluation by matching head words only....
+Event-level identification: P: 60.92
+Event-level : P: 60.92
+gold arg num: 486
+Role identification: P: 70.93, R: 66.26, F: 68.51
+Role: P: 64.54, R: 60.29, F: 62.34
+Coref Role identification: P: 73.79, R: 68.93, F: 71.28
+Coref Role: P: 67.40, R: 62.96, F: 65.11
+--------------------------------------------------------------------------------
+load from checkpoints/fold_5/epoch_2.ckpt
+start scoring
+gen_file:checkpoints/fold_5/epoch_2_test_step_0_predictions.jsonl
+test_file:data/wikievents/10fold/fold_5/test.jsonl
+paired args: 28, inconsistent args: 0, raito: 0.0
+Evaluation by matching head words only....
+Event-level identification: P: 11.29
+Event-level : P: 11.29
+gold arg num: 385
+Role identification: P: 5.19, R: 2.08, F: 2.97
+Role: P: 2.60, R: 1.04, F: 1.48
+Coref Role identification: P: 5.19, R: 2.08, F: 2.97
+Coref Role: P: 2.60, R: 1.04, F: 1.48
+start getting new testset
+source:checkpoints/fold_5/epoch_2_test_step_0_results_for_predict.json
+target:preprocessed_fold_5/test_step_0_data.json
+total_event: 248
+has close events: 222
+longest context:448
+longest target 28
+start scoring
+gen_file:checkpoints/fold_5/epoch_2_test_step_1_predictions.jsonl
+test_file:data/wikievents/10fold/fold_5/test.jsonl
+paired args: 28, inconsistent args: 0, raito: 0.0
+Evaluation by matching head words only....
+Event-level identification: P: 11.29
+Event-level : P: 11.29
+gold arg num: 385
+Role identification: P: 5.19, R: 2.08, F: 2.97
+Role: P: 1.95, R: 0.78, F: 1.11
+Coref Role identification: P: 5.19, R: 2.08, F: 2.97
+Coref Role: P: 1.95, R: 0.78, F: 1.11
+start getting new testset
+source:checkpoints/fold_5/epoch_2_test_step_1_results_for_predict.json
+target:preprocessed_fold_5/test_step_1_data.json
+total_event: 248
+has close events: 222
+longest context:448
+longest target 28
+start scoring
+gen_file:checkpoints/fold_5/epoch_2_test_step_2_predictions.jsonl
+test_file:data/wikievents/10fold/fold_5/test.jsonl
+paired args: 28, inconsistent args: 0, raito: 0.0
+Evaluation by matching head words only....
+Event-level identification: P: 11.29
+Event-level : P: 11.29
+gold arg num: 385
+Role identification: P: 6.41, R: 2.60, F: 3.70
+Role: P: 3.21, R: 1.30, F: 1.85
+Coref Role identification: P: 6.41, R: 2.60, F: 3.70
+Coref Role: P: 3.21, R: 1.30, F: 1.85
+start getting new testset
+source:checkpoints/fold_5/epoch_2_test_step_2_results_for_predict.json
+target:preprocessed_fold_5/test_step_2_data.json
+total_event: 248
+has close events: 222
+longest context:448
+longest target 28
+start scoring
+gen_file:checkpoints/fold_5/epoch_2_test_step_3_predictions.jsonl
+test_file:data/wikievents/10fold/fold_5/test.jsonl
+paired args: 28, inconsistent args: 0, raito: 0.0
+Evaluation by matching head words only....
+Event-level identification: P: 11.29
+Event-level : P: 11.29
+gold arg num: 385
+Role identification: P: 5.19, R: 2.08, F: 2.97
+Role: P: 1.95, R: 0.78, F: 1.11
+Coref Role identification: P: 5.19, R: 2.08, F: 2.97
+Coref Role: P: 1.95, R: 0.78, F: 1.11
+start getting new testset
+source:checkpoints/fold_5/epoch_2_test_step_3_results_for_predict.json
+target:preprocessed_fold_5/test_step_3_data.json
+total_event: 248
+has close events: 222
+longest context:448
+longest target 28
+start scoring
+gen_file:checkpoints/fold_5/epoch_2_test_step_4_predictions.jsonl
+test_file:data/wikievents/10fold/fold_5/test.jsonl
+paired args: 28, inconsistent args: 0, raito: 0.0
+Evaluation by matching head words only....
+Event-level identification: P: 11.29
+Event-level : P: 11.29
+gold arg num: 385
+Role identification: P: 6.41, R: 2.60, F: 3.70
+Role: P: 3.21, R: 1.30, F: 1.85
+Coref Role identification: P: 6.41, R: 2.60, F: 3.70
+Coref Role: P: 3.21, R: 1.30, F: 1.85
+start getting new testset
+source:checkpoints/fold_5/epoch_2_test_step_4_results_for_predict.json
+target:preprocessed_fold_5/test_step_4_data.json
+total_event: 248
+has close events: 222
+longest context:448
+longest target 28
+start scoring
+gen_file:checkpoints/fold_5/epoch_2_test_step_5_predictions.jsonl
+test_file:data/wikievents/10fold/fold_5/test.jsonl
+paired args: 28, inconsistent args: 0, raito: 0.0
+Evaluation by matching head words only....
+Event-level identification: P: 11.29
+Event-level : P: 11.29
+gold arg num: 385
+Role identification: P: 5.19, R: 2.08, F: 2.97
+Role: P: 1.95, R: 0.78, F: 1.11
+Coref Role identification: P: 5.19, R: 2.08, F: 2.97
+Coref Role: P: 1.95, R: 0.78, F: 1.11
+--------------------------------------------------------------------------------
+load from checkpoints/fold_5/epoch_3.ckpt
+start scoring
+gen_file:checkpoints/fold_5/epoch_3_test_step_0_predictions.jsonl
+test_file:data/wikievents/10fold/fold_5/test.jsonl
+paired args: 28, inconsistent args: 0, raito: 0.0
+Evaluation by matching head words only....
+Event-level identification: P: 11.29
+Event-level : P: 11.29
+gold arg num: 385
+Role identification: P: 3.08, R: 0.52, F: 0.89
+Role: P: 1.54, R: 0.26, F: 0.44
+Coref Role identification: P: 3.08, R: 0.52, F: 0.89
+Coref Role: P: 1.54, R: 0.26, F: 0.44
+start getting new testset
+source:checkpoints/fold_5/epoch_3_test_step_0_results_for_predict.json
+target:preprocessed_fold_5/test_step_0_data.json
+total_event: 248
+has close events: 222
+longest context:448
+longest target 28
+start scoring
+gen_file:checkpoints/fold_5/epoch_3_test_step_1_predictions.jsonl
+test_file:data/wikievents/10fold/fold_5/test.jsonl
+paired args: 28, inconsistent args: 0, raito: 0.0
+Evaluation by matching head words only....
+Event-level identification: P: 11.29
+Event-level : P: 11.29
+gold arg num: 385
+Role identification: P: 3.23, R: 0.52, F: 0.89
+Role: P: 1.61, R: 0.26, F: 0.45
+Coref Role identification: P: 3.23, R: 0.52, F: 0.89
+Coref Role: P: 1.61, R: 0.26, F: 0.45
+start getting new testset
+source:checkpoints/fold_5/epoch_3_test_step_1_results_for_predict.json
+target:preprocessed_fold_5/test_step_1_data.json
+total_event: 248
+has close events: 222
+longest context:448
+longest target 28
+start scoring
+gen_file:checkpoints/fold_5/epoch_3_test_step_2_predictions.jsonl
+test_file:data/wikievents/10fold/fold_5/test.jsonl
+paired args: 28, inconsistent args: 0, raito: 0.0
+Evaluation by matching head words only....
+Event-level identification: P: 11.29
+Event-level : P: 11.29
+gold arg num: 385
+Role identification: P: 4.84, R: 0.78, F: 1.34
+Role: P: 3.23, R: 0.52, F: 0.89
+Coref Role identification: P: 4.84, R: 0.78, F: 1.34
+Coref Role: P: 3.23, R: 0.52, F: 0.89
+start getting new testset
+source:checkpoints/fold_5/epoch_3_test_step_2_results_for_predict.json
+target:preprocessed_fold_5/test_step_2_data.json
+total_event: 248
+has close events: 222
+longest context:448
+longest target 28
+start scoring
+gen_file:checkpoints/fold_5/epoch_3_test_step_3_predictions.jsonl
+test_file:data/wikievents/10fold/fold_5/test.jsonl
+paired args: 28, inconsistent args: 0, raito: 0.0
+Evaluation by matching head words only....
+Event-level identification: P: 11.29
+Event-level : P: 11.29
+gold arg num: 385
+Role identification: P: 4.92, R: 0.78, F: 1.35
+Role: P: 3.28, R: 0.52, F: 0.90
+Coref Role identification: P: 4.92, R: 0.78, F: 1.35
+Coref Role: P: 3.28, R: 0.52, F: 0.90
+start getting new testset
+source:checkpoints/fold_5/epoch_3_test_step_3_results_for_predict.json
+target:preprocessed_fold_5/test_step_3_data.json
+total_event: 248
+has close events: 222
+longest context:448
+longest target 28
+start scoring
+gen_file:checkpoints/fold_5/epoch_3_test_step_4_predictions.jsonl
+test_file:data/wikievents/10fold/fold_5/test.jsonl
+paired args: 28, inconsistent args: 0, raito: 0.0
+Evaluation by matching head words only....
+Event-level identification: P: 11.29
+Event-level : P: 11.29
+gold arg num: 385
+Role identification: P: 4.84, R: 0.78, F: 1.34
+Role: P: 3.23, R: 0.52, F: 0.89
+Coref Role identification: P: 4.84, R: 0.78, F: 1.34
+Coref Role: P: 3.23, R: 0.52, F: 0.89
+start getting new testset
+source:checkpoints/fold_5/epoch_3_test_step_4_results_for_predict.json
+target:preprocessed_fold_5/test_step_4_data.json
+total_event: 248
+has close events: 222
+longest context:448
+longest target 28
+start scoring
+gen_file:checkpoints/fold_5/epoch_3_test_step_5_predictions.jsonl
+test_file:data/wikievents/10fold/fold_5/test.jsonl
+paired args: 28, inconsistent args: 0, raito: 0.0
+Evaluation by matching head words only....
+Event-level identification: P: 11.29
+Event-level : P: 11.29
+gold arg num: 385
+Role identification: P: 4.76, R: 0.78, F: 1.34
+Role: P: 3.17, R: 0.52, F: 0.89
+Coref Role identification: P: 4.76, R: 0.78, F: 1.34
+Coref Role: P: 3.17, R: 0.52, F: 0.89
+--------------------------------------------------------------------------------
+load from checkpoints/fold_5/epoch_4.ckpt
+start scoring
+gen_file:checkpoints/fold_5/epoch_4_test_step_0_predictions.jsonl
+test_file:data/wikievents/10fold/fold_5/test.jsonl
+paired args: 28, inconsistent args: 0, raito: 0.0
+Evaluation by matching head words only....
+Event-level identification: P: 11.29
+Event-level : P: 11.29
+gold arg num: 385
+Role identification: P: 0.00, R: 0.00, F: 0.00
+Role: P: 0.00, R: 0.00, F: 0.00
+Coref Role identification: P: 0.00, R: 0.00, F: 0.00
+Coref Role: P: 0.00, R: 0.00, F: 0.00
+start getting new testset
+source:checkpoints/fold_5/epoch_4_test_step_0_results_for_predict.json
+target:preprocessed_fold_5/test_step_0_data.json
+total_event: 248
+has close events: 222
+longest context:448
+longest target 28
+start scoring
+gen_file:checkpoints/fold_5/epoch_4_test_step_1_predictions.jsonl
+test_file:data/wikievents/10fold/fold_5/test.jsonl
+paired args: 28, inconsistent args: 0, raito: 0.0
+Evaluation by matching head words only....
+Event-level identification: P: 11.29
+Event-level : P: 11.29
+gold arg num: 385
+Role identification: P: 0.00, R: 0.00, F: 0.00
+Role: P: 0.00, R: 0.00, F: 0.00
+Coref Role identification: P: 0.00, R: 0.00, F: 0.00
+Coref Role: P: 0.00, R: 0.00, F: 0.00
+start getting new testset
+source:checkpoints/fold_5/epoch_4_test_step_1_results_for_predict.json
+target:preprocessed_fold_5/test_step_1_data.json
+total_event: 248
+has close events: 222
+longest context:448
+longest target 28
+start scoring
+gen_file:checkpoints/fold_5/epoch_4_test_step_2_predictions.jsonl
+test_file:data/wikievents/10fold/fold_5/test.jsonl
+paired args: 28, inconsistent args: 0, raito: 0.0
+Evaluation by matching head words only....
+Event-level identification: P: 11.29
+Event-level : P: 11.29
+gold arg num: 385
+Role identification: P: 0.00, R: 0.00, F: 0.00
+Role: P: 0.00, R: 0.00, F: 0.00
+Coref Role identification: P: 0.00, R: 0.00, F: 0.00
+Coref Role: P: 0.00, R: 0.00, F: 0.00
+start getting new testset
+source:checkpoints/fold_5/epoch_4_test_step_2_results_for_predict.json
+target:preprocessed_fold_5/test_step_2_data.json
+total_event: 248
+has close events: 222
+longest context:448
+longest target 28
+start scoring
+gen_file:checkpoints/fold_5/epoch_4_test_step_3_predictions.jsonl
+test_file:data/wikievents/10fold/fold_5/test.jsonl
+paired args: 28, inconsistent args: 0, raito: 0.0
+Evaluation by matching head words only....
+Event-level identification: P: 11.29
+Event-level : P: 11.29
+gold arg num: 385
+Role identification: P: 0.00, R: 0.00, F: 0.00
+Role: P: 0.00, R: 0.00, F: 0.00
+Coref Role identification: P: 0.00, R: 0.00, F: 0.00
+Coref Role: P: 0.00, R: 0.00, F: 0.00
+start getting new testset
+source:checkpoints/fold_5/epoch_4_test_step_3_results_for_predict.json
+target:preprocessed_fold_5/test_step_3_data.json
+total_event: 248
+has close events: 222
+longest context:448
+longest target 28
+start scoring
+gen_file:checkpoints/fold_5/epoch_4_test_step_4_predictions.jsonl
+test_file:data/wikievents/10fold/fold_5/test.jsonl
+paired args: 28, inconsistent args: 0, raito: 0.0
+Evaluation by matching head words only....
+Event-level identification: P: 11.29
+Event-level : P: 11.29
+gold arg num: 385
+Role identification: P: 0.00, R: 0.00, F: 0.00
+Role: P: 0.00, R: 0.00, F: 0.00
+Coref Role identification: P: 0.00, R: 0.00, F: 0.00
+Coref Role: P: 0.00, R: 0.00, F: 0.00
+start getting new testset
+source:checkpoints/fold_5/epoch_4_test_step_4_results_for_predict.json
+target:preprocessed_fold_5/test_step_4_data.json
+total_event: 248
+has close events: 222
+longest context:448
+longest target 28
+start scoring
+gen_file:checkpoints/fold_5/epoch_4_test_step_5_predictions.jsonl
+test_file:data/wikievents/10fold/fold_5/test.jsonl
+paired args: 28, inconsistent args: 0, raito: 0.0
+Evaluation by matching head words only....
+Event-level identification: P: 11.29
+Event-level : P: 11.29
+gold arg num: 385
+Role identification: P: 0.00, R: 0.00, F: 0.00
+Role: P: 0.00, R: 0.00, F: 0.00
+Coref Role identification: P: 0.00, R: 0.00, F: 0.00
+Coref Role: P: 0.00, R: 0.00, F: 0.00
+--------------------------------------------------------------------------------
+load from checkpoints/fold_5/epoch_5.ckpt
+start scoring
+gen_file:checkpoints/fold_5/epoch_5_test_step_0_predictions.jsonl
+test_file:data/wikievents/10fold/fold_5/test.jsonl
+paired args: 28, inconsistent args: 0, raito: 0.0
+Evaluation by matching head words only....
+Event-level identification: P: 11.29
+Event-level : P: 11.29
+gold arg num: 385
+Role identification: P: 4.17, R: 0.26, F: 0.49
+Role: P: 0.00, R: 0.00, F: 0.00
+Coref Role identification: P: 4.17, R: 0.26, F: 0.49
+Coref Role: P: 0.00, R: 0.00, F: 0.00
+start getting new testset
+source:checkpoints/fold_5/epoch_5_test_step_0_results_for_predict.json
+target:preprocessed_fold_5/test_step_0_data.json
+total_event: 248
+has close events: 222
+longest context:448
+longest target 28
+start scoring
+gen_file:checkpoints/fold_5/epoch_5_test_step_1_predictions.jsonl
+test_file:data/wikievents/10fold/fold_5/test.jsonl
+paired args: 28, inconsistent args: 0, raito: 0.0
+Evaluation by matching head words only....
+Event-level identification: P: 11.29
+Event-level : P: 11.29
+gold arg num: 385
+Role identification: P: 0.00, R: 0.00, F: 0.00
+Role: P: 0.00, R: 0.00, F: 0.00
+Coref Role identification: P: 0.00, R: 0.00, F: 0.00
+Coref Role: P: 0.00, R: 0.00, F: 0.00
+start getting new testset
+source:checkpoints/fold_5/epoch_5_test_step_1_results_for_predict.json
+target:preprocessed_fold_5/test_step_1_data.json
+total_event: 248
+has close events: 222
+longest context:448
+longest target 28
+start scoring
+gen_file:checkpoints/fold_5/epoch_5_test_step_2_predictions.jsonl
+test_file:data/wikievents/10fold/fold_5/test.jsonl
+paired args: 28, inconsistent args: 0, raito: 0.0
+Evaluation by matching head words only....
+Event-level identification: P: 11.29
+Event-level : P: 11.29
+gold arg num: 385
+Role identification: P: 0.00, R: 0.00, F: 0.00
+Role: P: 0.00, R: 0.00, F: 0.00
+Coref Role identification: P: 0.00, R: 0.00, F: 0.00
+Coref Role: P: 0.00, R: 0.00, F: 0.00
+start getting new testset
+source:checkpoints/fold_5/epoch_5_test_step_2_results_for_predict.json
+target:preprocessed_fold_5/test_step_2_data.json
+total_event: 248
+has close events: 222
+longest context:448
+longest target 28
+start scoring
+gen_file:checkpoints/fold_5/epoch_5_test_step_3_predictions.jsonl
+test_file:data/wikievents/10fold/fold_5/test.jsonl
+paired args: 28, inconsistent args: 0, raito: 0.0
+Evaluation by matching head words only....
+Event-level identification: P: 11.29
+Event-level : P: 11.29
+gold arg num: 385
+Role identification: P: 0.00, R: 0.00, F: 0.00
+Role: P: 0.00, R: 0.00, F: 0.00
+Coref Role identification: P: 0.00, R: 0.00, F: 0.00
+Coref Role: P: 0.00, R: 0.00, F: 0.00
+start getting new testset
+source:checkpoints/fold_5/epoch_5_test_step_3_results_for_predict.json
+target:preprocessed_fold_5/test_step_3_data.json
+total_event: 248
+has close events: 222
+longest context:448
+longest target 28
+start scoring
+gen_file:checkpoints/fold_5/epoch_5_test_step_4_predictions.jsonl
+test_file:data/wikievents/10fold/fold_5/test.jsonl
+paired args: 28, inconsistent args: 0, raito: 0.0
+Evaluation by matching head words only....
+Event-level identification: P: 11.29
+Event-level : P: 11.29
+gold arg num: 385
+Role identification: P: 0.00, R: 0.00, F: 0.00
+Role: P: 0.00, R: 0.00, F: 0.00
+Coref Role identification: P: 0.00, R: 0.00, F: 0.00
+Coref Role: P: 0.00, R: 0.00, F: 0.00
+start getting new testset
+source:checkpoints/fold_5/epoch_5_test_step_4_results_for_predict.json
+target:preprocessed_fold_5/test_step_4_data.json
+total_event: 248
+has close events: 222
+longest context:448
+longest target 28
+start scoring
+gen_file:checkpoints/fold_5/epoch_5_test_step_5_predictions.jsonl
+test_file:data/wikievents/10fold/fold_5/test.jsonl
+paired args: 28, inconsistent args: 0, raito: 0.0
+Evaluation by matching head words only....
+Event-level identification: P: 11.29
+Event-level : P: 11.29
+gold arg num: 385
+Role identification: P: 0.00, R: 0.00, F: 0.00
+Role: P: 0.00, R: 0.00, F: 0.00
+Coref Role identification: P: 0.00, R: 0.00, F: 0.00
+Coref Role: P: 0.00, R: 0.00, F: 0.00
+--------------------------------------------------------------------------------
+load from checkpoints/fold_6/epoch_2.ckpt
+start scoring
+gen_file:checkpoints/fold_6/epoch_2_test_step_0_predictions.jsonl
+test_file:data/wikievents/10fold/fold_6/test.jsonl
+paired args: 24, inconsistent args: 0, raito: 0.0
+Evaluation by matching head words only....
+Event-level identification: P: 17.68
+Event-level : P: 17.68
+gold arg num: 482
+Role identification: P: 21.43, R: 0.62, F: 1.21
+Role: P: 0.00, R: 0.00, F: 0.00
+Coref Role identification: P: 21.43, R: 0.62, F: 1.21
+Coref Role: P: 0.00, R: 0.00, F: 0.00
+start getting new testset
+source:checkpoints/fold_6/epoch_2_test_step_0_results_for_predict.json
+target:preprocessed_fold_6/test_step_0_data.json
+total_event: 362
+has close events: 329
+longest context:413
+longest target 28
+start scoring
+gen_file:checkpoints/fold_6/epoch_2_test_step_1_predictions.jsonl
+test_file:data/wikievents/10fold/fold_6/test.jsonl
+paired args: 24, inconsistent args: 0, raito: 0.0
+Evaluation by matching head words only....
+Event-level identification: P: 17.68
+Event-level : P: 17.68
+gold arg num: 482
+Role identification: P: 21.43, R: 0.62, F: 1.21
+Role: P: 0.00, R: 0.00, F: 0.00
+Coref Role identification: P: 21.43, R: 0.62, F: 1.21
+Coref Role: P: 0.00, R: 0.00, F: 0.00
+start getting new testset
+source:checkpoints/fold_6/epoch_2_test_step_1_results_for_predict.json
+target:preprocessed_fold_6/test_step_1_data.json
+total_event: 362
+has close events: 329
+longest context:413
+longest target 28
+start scoring
+gen_file:checkpoints/fold_6/epoch_2_test_step_2_predictions.jsonl
+test_file:data/wikievents/10fold/fold_6/test.jsonl
+paired args: 24, inconsistent args: 0, raito: 0.0
+Evaluation by matching head words only....
+Event-level identification: P: 17.68
+Event-level : P: 17.68
+gold arg num: 482
+Role identification: P: 21.43, R: 0.62, F: 1.21
+Role: P: 0.00, R: 0.00, F: 0.00
+Coref Role identification: P: 21.43, R: 0.62, F: 1.21
+Coref Role: P: 0.00, R: 0.00, F: 0.00
+start getting new testset
+source:checkpoints/fold_6/epoch_2_test_step_2_results_for_predict.json
+target:preprocessed_fold_6/test_step_2_data.json
+total_event: 362
+has close events: 329
+longest context:413
+longest target 28
+start scoring
+gen_file:checkpoints/fold_6/epoch_2_test_step_3_predictions.jsonl
+test_file:data/wikievents/10fold/fold_6/test.jsonl
+paired args: 24, inconsistent args: 0, raito: 0.0
+Evaluation by matching head words only....
+Event-level identification: P: 17.68
+Event-level : P: 17.68
+gold arg num: 482
+Role identification: P: 21.43, R: 0.62, F: 1.21
+Role: P: 0.00, R: 0.00, F: 0.00
+Coref Role identification: P: 21.43, R: 0.62, F: 1.21
+Coref Role: P: 0.00, R: 0.00, F: 0.00
+start getting new testset
+source:checkpoints/fold_6/epoch_2_test_step_3_results_for_predict.json
+target:preprocessed_fold_6/test_step_3_data.json
+total_event: 362
+has close events: 329
+longest context:413
+longest target 28
+start scoring
+gen_file:checkpoints/fold_6/epoch_2_test_step_4_predictions.jsonl
+test_file:data/wikievents/10fold/fold_6/test.jsonl
+paired args: 24, inconsistent args: 0, raito: 0.0
+Evaluation by matching head words only....
+Event-level identification: P: 17.68
+Event-level : P: 17.68
+gold arg num: 482
+Role identification: P: 21.43, R: 0.62, F: 1.21
+Role: P: 0.00, R: 0.00, F: 0.00
+Coref Role identification: P: 21.43, R: 0.62, F: 1.21
+Coref Role: P: 0.00, R: 0.00, F: 0.00
+start getting new testset
+source:checkpoints/fold_6/epoch_2_test_step_4_results_for_predict.json
+target:preprocessed_fold_6/test_step_4_data.json
+total_event: 362
+has close events: 329
+longest context:413
+longest target 28
+start scoring
+gen_file:checkpoints/fold_6/epoch_2_test_step_5_predictions.jsonl
+test_file:data/wikievents/10fold/fold_6/test.jsonl
+paired args: 24, inconsistent args: 0, raito: 0.0
+Evaluation by matching head words only....
+Event-level identification: P: 17.68
+Event-level : P: 17.68
+gold arg num: 482
+Role identification: P: 21.43, R: 0.62, F: 1.21
+Role: P: 0.00, R: 0.00, F: 0.00
+Coref Role identification: P: 21.43, R: 0.62, F: 1.21
+Coref Role: P: 0.00, R: 0.00, F: 0.00
+--------------------------------------------------------------------------------
+load from checkpoints/fold_6/epoch_3.ckpt
+start scoring
+gen_file:checkpoints/fold_6/epoch_3_test_step_0_predictions.jsonl
+test_file:data/wikievents/10fold/fold_6/test.jsonl
+paired args: 24, inconsistent args: 0, raito: 0.0
+Evaluation by matching head words only....
+Event-level identification: P: 17.96
+Event-level : P: 17.96
+gold arg num: 482
+Role identification: P: 26.32, R: 1.04, F: 2.00
+Role: P: 10.53, R: 0.41, F: 0.80
+Coref Role identification: P: 26.32, R: 1.04, F: 2.00
+Coref Role: P: 10.53, R: 0.41, F: 0.80
+start getting new testset
+source:checkpoints/fold_6/epoch_3_test_step_0_results_for_predict.json
+target:preprocessed_fold_6/test_step_0_data.json
+total_event: 362
+has close events: 329
+longest context:413
+longest target 30
+start scoring
+gen_file:checkpoints/fold_6/epoch_3_test_step_1_predictions.jsonl
+test_file:data/wikievents/10fold/fold_6/test.jsonl
+paired args: 24, inconsistent args: 0, raito: 0.0
+Evaluation by matching head words only....
+Event-level identification: P: 17.96
+Event-level : P: 17.96
+gold arg num: 482
+Role identification: P: 26.32, R: 1.04, F: 2.00
+Role: P: 10.53, R: 0.41, F: 0.80
+Coref Role identification: P: 26.32, R: 1.04, F: 2.00
+Coref Role: P: 10.53, R: 0.41, F: 0.80
+start getting new testset
+source:checkpoints/fold_6/epoch_3_test_step_1_results_for_predict.json
+target:preprocessed_fold_6/test_step_1_data.json
+total_event: 362
+has close events: 329
+longest context:413
+longest target 30
+start scoring
+gen_file:checkpoints/fold_6/epoch_3_test_step_2_predictions.jsonl
+test_file:data/wikievents/10fold/fold_6/test.jsonl
+paired args: 24, inconsistent args: 0, raito: 0.0
+Evaluation by matching head words only....
+Event-level identification: P: 17.96
+Event-level : P: 17.96
+gold arg num: 482
+Role identification: P: 26.32, R: 1.04, F: 2.00
+Role: P: 10.53, R: 0.41, F: 0.80
+Coref Role identification: P: 26.32, R: 1.04, F: 2.00
+Coref Role: P: 10.53, R: 0.41, F: 0.80
+start getting new testset
+source:checkpoints/fold_6/epoch_3_test_step_2_results_for_predict.json
+target:preprocessed_fold_6/test_step_2_data.json
+total_event: 362
+has close events: 329
+longest context:413
+longest target 30
+start scoring
+gen_file:checkpoints/fold_6/epoch_3_test_step_3_predictions.jsonl
+test_file:data/wikievents/10fold/fold_6/test.jsonl
+paired args: 24, inconsistent args: 0, raito: 0.0
+Evaluation by matching head words only....
+Event-level identification: P: 17.96
+Event-level : P: 17.96
+gold arg num: 482
+Role identification: P: 26.32, R: 1.04, F: 2.00
+Role: P: 10.53, R: 0.41, F: 0.80
+Coref Role identification: P: 26.32, R: 1.04, F: 2.00
+Coref Role: P: 10.53, R: 0.41, F: 0.80
+start getting new testset
+source:checkpoints/fold_6/epoch_3_test_step_3_results_for_predict.json
+target:preprocessed_fold_6/test_step_3_data.json
+total_event: 362
+has close events: 329
+longest context:413
+longest target 30
+start scoring
+gen_file:checkpoints/fold_6/epoch_3_test_step_4_predictions.jsonl
+test_file:data/wikievents/10fold/fold_6/test.jsonl
+paired args: 24, inconsistent args: 0, raito: 0.0
+Evaluation by matching head words only....
+Event-level identification: P: 17.96
+Event-level : P: 17.96
+gold arg num: 482
+Role identification: P: 26.32, R: 1.04, F: 2.00
+Role: P: 10.53, R: 0.41, F: 0.80
+Coref Role identification: P: 26.32, R: 1.04, F: 2.00
+Coref Role: P: 10.53, R: 0.41, F: 0.80
+start getting new testset
+source:checkpoints/fold_6/epoch_3_test_step_4_results_for_predict.json
+target:preprocessed_fold_6/test_step_4_data.json
+total_event: 362
+has close events: 329
+longest context:413
+longest target 30
+start scoring
+gen_file:checkpoints/fold_6/epoch_3_test_step_5_predictions.jsonl
+test_file:data/wikievents/10fold/fold_6/test.jsonl
+paired args: 24, inconsistent args: 0, raito: 0.0
+Evaluation by matching head words only....
+Event-level identification: P: 17.96
+Event-level : P: 17.96
+gold arg num: 482
+Role identification: P: 26.32, R: 1.04, F: 2.00
+Role: P: 10.53, R: 0.41, F: 0.80
+Coref Role identification: P: 26.32, R: 1.04, F: 2.00
+Coref Role: P: 10.53, R: 0.41, F: 0.80
+--------------------------------------------------------------------------------
+load from checkpoints/fold_6/epoch_4.ckpt
+start scoring
+gen_file:checkpoints/fold_6/epoch_4_test_step_0_predictions.jsonl
+test_file:data/wikievents/10fold/fold_6/test.jsonl
+paired args: 24, inconsistent args: 0, raito: 0.0
+Evaluation by matching head words only....
+Event-level identification: P: 17.96
+Event-level : P: 17.96
+gold arg num: 482
+Role identification: P: 10.67, R: 1.66, F: 2.87
+Role: P: 2.67, R: 0.41, F: 0.72
+Coref Role identification: P: 12.00, R: 1.87, F: 3.23
+Coref Role: P: 2.67, R: 0.41, F: 0.72
+start getting new testset
+source:checkpoints/fold_6/epoch_4_test_step_0_results_for_predict.json
+target:preprocessed_fold_6/test_step_0_data.json
+total_event: 362
+has close events: 329
+longest context:413
+longest target 30
+start scoring
+gen_file:checkpoints/fold_6/epoch_4_test_step_1_predictions.jsonl
+test_file:data/wikievents/10fold/fold_6/test.jsonl
+paired args: 24, inconsistent args: 0, raito: 0.0
+Evaluation by matching head words only....
+Event-level identification: P: 17.96
+Event-level : P: 17.96
+gold arg num: 482
+Role identification: P: 10.67, R: 1.66, F: 2.87
+Role: P: 2.67, R: 0.41, F: 0.72
+Coref Role identification: P: 12.00, R: 1.87, F: 3.23
+Coref Role: P: 2.67, R: 0.41, F: 0.72
+start getting new testset
+source:checkpoints/fold_6/epoch_4_test_step_1_results_for_predict.json
+target:preprocessed_fold_6/test_step_1_data.json
+total_event: 362
+has close events: 329
+longest context:413
+longest target 30
+start scoring
+gen_file:checkpoints/fold_6/epoch_4_test_step_2_predictions.jsonl
+test_file:data/wikievents/10fold/fold_6/test.jsonl
+paired args: 24, inconsistent args: 0, raito: 0.0
+Evaluation by matching head words only....
+Event-level identification: P: 17.96
+Event-level : P: 17.96
+gold arg num: 482
+Role identification: P: 10.67, R: 1.66, F: 2.87
+Role: P: 2.67, R: 0.41, F: 0.72
+Coref Role identification: P: 12.00, R: 1.87, F: 3.23
+Coref Role: P: 2.67, R: 0.41, F: 0.72
+start getting new testset
+source:checkpoints/fold_6/epoch_4_test_step_2_results_for_predict.json
+target:preprocessed_fold_6/test_step_2_data.json
+total_event: 362
+has close events: 329
+longest context:413
+longest target 30
+start scoring
+gen_file:checkpoints/fold_6/epoch_4_test_step_3_predictions.jsonl
+test_file:data/wikievents/10fold/fold_6/test.jsonl
+paired args: 24, inconsistent args: 0, raito: 0.0
+Evaluation by matching head words only....
+Event-level identification: P: 17.96
+Event-level : P: 17.96
+gold arg num: 482
+Role identification: P: 10.67, R: 1.66, F: 2.87
+Role: P: 2.67, R: 0.41, F: 0.72
+Coref Role identification: P: 12.00, R: 1.87, F: 3.23
+Coref Role: P: 2.67, R: 0.41, F: 0.72
+start getting new testset
+source:checkpoints/fold_6/epoch_4_test_step_3_results_for_predict.json
+target:preprocessed_fold_6/test_step_3_data.json
+total_event: 362
+has close events: 329
+longest context:413
+longest target 30
+start scoring
+gen_file:checkpoints/fold_6/epoch_4_test_step_4_predictions.jsonl
+test_file:data/wikievents/10fold/fold_6/test.jsonl
+paired args: 24, inconsistent args: 0, raito: 0.0
+Evaluation by matching head words only....
+Event-level identification: P: 17.96
+Event-level : P: 17.96
+gold arg num: 482
+Role identification: P: 10.67, R: 1.66, F: 2.87
+Role: P: 2.67, R: 0.41, F: 0.72
+Coref Role identification: P: 12.00, R: 1.87, F: 3.23
+Coref Role: P: 2.67, R: 0.41, F: 0.72
+start getting new testset
+source:checkpoints/fold_6/epoch_4_test_step_4_results_for_predict.json
+target:preprocessed_fold_6/test_step_4_data.json
+total_event: 362
+has close events: 329
+longest context:413
+longest target 30
+start scoring
+gen_file:checkpoints/fold_6/epoch_4_test_step_5_predictions.jsonl
+test_file:data/wikievents/10fold/fold_6/test.jsonl
+paired args: 24, inconsistent args: 0, raito: 0.0
+Evaluation by matching head words only....
+Event-level identification: P: 17.96
+Event-level : P: 17.96
+gold arg num: 482
+Role identification: P: 10.67, R: 1.66, F: 2.87
+Role: P: 2.67, R: 0.41, F: 0.72
+Coref Role identification: P: 12.00, R: 1.87, F: 3.23
+Coref Role: P: 2.67, R: 0.41, F: 0.72
+--------------------------------------------------------------------------------
+load from checkpoints/fold_6/epoch_5.ckpt
+start scoring
+gen_file:checkpoints/fold_6/epoch_5_test_step_0_predictions.jsonl
+test_file:data/wikievents/10fold/fold_6/test.jsonl
+paired args: 24, inconsistent args: 0, raito: 0.0
+Evaluation by matching head words only....
+Event-level identification: P: 17.96
+Event-level : P: 17.96
+gold arg num: 482
+Role identification: P: 8.96, R: 1.24, F: 2.19
+Role: P: 2.99, R: 0.41, F: 0.73
+Coref Role identification: P: 10.45, R: 1.45, F: 2.55
+Coref Role: P: 2.99, R: 0.41, F: 0.73
+start getting new testset
+source:checkpoints/fold_6/epoch_5_test_step_0_results_for_predict.json
+target:preprocessed_fold_6/test_step_0_data.json
+total_event: 362
+has close events: 329
+longest context:413
+longest target 30
+start scoring
+gen_file:checkpoints/fold_6/epoch_5_test_step_1_predictions.jsonl
+test_file:data/wikievents/10fold/fold_6/test.jsonl
+paired args: 24, inconsistent args: 0, raito: 0.0
+Evaluation by matching head words only....
+Event-level identification: P: 17.96
+Event-level : P: 17.96
+gold arg num: 482
+Role identification: P: 8.45, R: 1.24, F: 2.17
+Role: P: 2.82, R: 0.41, F: 0.72
+Coref Role identification: P: 9.86, R: 1.45, F: 2.53
+Coref Role: P: 2.82, R: 0.41, F: 0.72
+start getting new testset
+source:checkpoints/fold_6/epoch_5_test_step_1_results_for_predict.json
+target:preprocessed_fold_6/test_step_1_data.json
+total_event: 362
+has close events: 329
+longest context:413
+longest target 30
+start scoring
+gen_file:checkpoints/fold_6/epoch_5_test_step_2_predictions.jsonl
+test_file:data/wikievents/10fold/fold_6/test.jsonl
+paired args: 24, inconsistent args: 0, raito: 0.0
+Evaluation by matching head words only....
+Event-level identification: P: 17.96
+Event-level : P: 17.96
+gold arg num: 482
+Role identification: P: 8.33, R: 1.24, F: 2.17
+Role: P: 2.78, R: 0.41, F: 0.72
+Coref Role identification: P: 9.72, R: 1.45, F: 2.53
+Coref Role: P: 2.78, R: 0.41, F: 0.72
+start getting new testset
+source:checkpoints/fold_6/epoch_5_test_step_2_results_for_predict.json
+target:preprocessed_fold_6/test_step_2_data.json
+total_event: 362
+has close events: 329
+longest context:413
+longest target 30
+start scoring
+gen_file:checkpoints/fold_6/epoch_5_test_step_3_predictions.jsonl
+test_file:data/wikievents/10fold/fold_6/test.jsonl
+paired args: 24, inconsistent args: 0, raito: 0.0
+Evaluation by matching head words only....
+Event-level identification: P: 17.96
+Event-level : P: 17.96
+gold arg num: 482
+Role identification: P: 8.33, R: 1.24, F: 2.17
+Role: P: 2.78, R: 0.41, F: 0.72
+Coref Role identification: P: 9.72, R: 1.45, F: 2.53
+Coref Role: P: 2.78, R: 0.41, F: 0.72
+start getting new testset
+source:checkpoints/fold_6/epoch_5_test_step_3_results_for_predict.json
+target:preprocessed_fold_6/test_step_3_data.json
+total_event: 362
+has close events: 329
+longest context:413
+longest target 30
+start scoring
+gen_file:checkpoints/fold_6/epoch_5_test_step_4_predictions.jsonl
+test_file:data/wikievents/10fold/fold_6/test.jsonl
+paired args: 24, inconsistent args: 0, raito: 0.0
+Evaluation by matching head words only....
+Event-level identification: P: 17.96
+Event-level : P: 17.96
+gold arg num: 482
+Role identification: P: 8.33, R: 1.24, F: 2.17
+Role: P: 2.78, R: 0.41, F: 0.72
+Coref Role identification: P: 9.72, R: 1.45, F: 2.53
+Coref Role: P: 2.78, R: 0.41, F: 0.72
+start getting new testset
+source:checkpoints/fold_6/epoch_5_test_step_4_results_for_predict.json
+target:preprocessed_fold_6/test_step_4_data.json
+total_event: 362
+has close events: 329
+longest context:413
+longest target 30
+start scoring
+gen_file:checkpoints/fold_6/epoch_5_test_step_5_predictions.jsonl
+test_file:data/wikievents/10fold/fold_6/test.jsonl
+paired args: 24, inconsistent args: 0, raito: 0.0
+Evaluation by matching head words only....
+Event-level identification: P: 17.96
+Event-level : P: 17.96
+gold arg num: 482
+Role identification: P: 8.33, R: 1.24, F: 2.17
+Role: P: 2.78, R: 0.41, F: 0.72
+Coref Role identification: P: 9.72, R: 1.45, F: 2.53
+Coref Role: P: 2.78, R: 0.41, F: 0.72
+--------------------------------------------------------------------------------
+load from checkpoints/fold_7/epoch_2.ckpt
+start scoring
+gen_file:checkpoints/fold_7/epoch_2_test_step_0_predictions.jsonl
+test_file:data/wikievents/10fold/fold_7/test.jsonl
+paired args: 25, inconsistent args: 10, raito: 0.4
+Evaluation by matching head words only....
+Event-level identification: P: 69.00
+Event-level : P: 69.00
+gold arg num: 375
+Role identification: P: 74.79, R: 72.80, F: 73.78
+Role: P: 70.41, R: 68.53, F: 69.46
+Coref Role identification: P: 77.81, R: 75.73, F: 76.76
+Coref Role: P: 73.15, R: 71.20, F: 72.16
+start getting new testset
+source:checkpoints/fold_7/epoch_2_test_step_0_results_for_predict.json
+target:preprocessed_fold_7/test_step_0_data.json
+total_event: 271
+has close events: 253
+longest context:439
+longest target 29
+start scoring
+gen_file:checkpoints/fold_7/epoch_2_test_step_1_predictions.jsonl
+test_file:data/wikievents/10fold/fold_7/test.jsonl
+paired args: 25, inconsistent args: 15, raito: 0.6
+Evaluation by matching head words only....
+Event-level identification: P: 68.27
+Event-level : P: 68.27
+gold arg num: 375
+Role identification: P: 75.69, R: 73.07, F: 74.36
+Role: P: 71.55, R: 69.07, F: 70.28
+Coref Role identification: P: 78.18, R: 75.47, F: 76.80
+Coref Role: P: 73.76, R: 71.20, F: 72.46
+start getting new testset
+source:checkpoints/fold_7/epoch_2_test_step_1_results_for_predict.json
+target:preprocessed_fold_7/test_step_1_data.json
+total_event: 271
+has close events: 253
+longest context:439
+longest target 30
+start scoring
+gen_file:checkpoints/fold_7/epoch_2_test_step_2_predictions.jsonl
+test_file:data/wikievents/10fold/fold_7/test.jsonl
+paired args: 25, inconsistent args: 15, raito: 0.6
+Evaluation by matching head words only....
+Event-level identification: P: 68.27
+Event-level : P: 68.27
+gold arg num: 375
+Role identification: P: 75.69, R: 73.07, F: 74.36
+Role: P: 70.99, R: 68.53, F: 69.74
+Coref Role identification: P: 78.45, R: 75.73, F: 77.07
+Coref Role: P: 73.48, R: 70.93, F: 72.18
+start getting new testset
+source:checkpoints/fold_7/epoch_2_test_step_2_results_for_predict.json
+target:preprocessed_fold_7/test_step_2_data.json
+total_event: 271
+has close events: 253
+longest context:439
+longest target 30
+start scoring
+gen_file:checkpoints/fold_7/epoch_2_test_step_3_predictions.jsonl
+test_file:data/wikievents/10fold/fold_7/test.jsonl
+paired args: 25, inconsistent args: 14, raito: 0.56
+Evaluation by matching head words only....
+Event-level identification: P: 67.90
+Event-level : P: 67.90
+gold arg num: 375
+Role identification: P: 75.41, R: 72.80, F: 74.08
+Role: P: 70.72, R: 68.27, F: 69.47
+Coref Role identification: P: 78.18, R: 75.47, F: 76.80
+Coref Role: P: 73.20, R: 70.67, F: 71.91
+start getting new testset
+source:checkpoints/fold_7/epoch_2_test_step_3_results_for_predict.json
+target:preprocessed_fold_7/test_step_3_data.json
+total_event: 271
+has close events: 253
+longest context:439
+longest target 30
+start scoring
+gen_file:checkpoints/fold_7/epoch_2_test_step_4_predictions.jsonl
+test_file:data/wikievents/10fold/fold_7/test.jsonl
+paired args: 25, inconsistent args: 13, raito: 0.52
+Evaluation by matching head words only....
+Event-level identification: P: 68.27
+Event-level : P: 68.27
+gold arg num: 375
+Role identification: P: 75.27, R: 73.07, F: 74.15
+Role: P: 70.60, R: 68.53, F: 69.55
+Coref Role identification: P: 78.02, R: 75.73, F: 76.86
+Coref Role: P: 73.08, R: 70.93, F: 71.99
+start getting new testset
+source:checkpoints/fold_7/epoch_2_test_step_4_results_for_predict.json
+target:preprocessed_fold_7/test_step_4_data.json
+total_event: 271
+has close events: 253
+longest context:439
+longest target 30
+start scoring
+gen_file:checkpoints/fold_7/epoch_2_test_step_5_predictions.jsonl
+test_file:data/wikievents/10fold/fold_7/test.jsonl
+paired args: 25, inconsistent args: 13, raito: 0.52
+Evaluation by matching head words only....
+Event-level identification: P: 68.27
+Event-level : P: 68.27
+gold arg num: 375
+Role identification: P: 75.27, R: 73.07, F: 74.15
+Role: P: 70.60, R: 68.53, F: 69.55
+Coref Role identification: P: 78.02, R: 75.73, F: 76.86
+Coref Role: P: 73.08, R: 70.93, F: 71.99
+--------------------------------------------------------------------------------
+load from checkpoints/fold_7/epoch_3.ckpt
+start scoring
+gen_file:checkpoints/fold_7/epoch_3_test_step_0_predictions.jsonl
+test_file:data/wikievents/10fold/fold_7/test.jsonl
+paired args: 25, inconsistent args: 10, raito: 0.4
+Evaluation by matching head words only....
+Event-level identification: P: 70.48
+Event-level : P: 70.48
+gold arg num: 375
+Role identification: P: 74.87, R: 75.47, F: 75.17
+Role: P: 70.37, R: 70.93, F: 70.65
+Coref Role identification: P: 77.51, R: 78.13, F: 77.82
+Coref Role: P: 73.02, R: 73.60, F: 73.31
+start getting new testset
+source:checkpoints/fold_7/epoch_3_test_step_0_results_for_predict.json
+target:preprocessed_fold_7/test_step_0_data.json
+total_event: 271
+has close events: 253
+longest context:439
+longest target 30
+start scoring
+gen_file:checkpoints/fold_7/epoch_3_test_step_1_predictions.jsonl
+test_file:data/wikievents/10fold/fold_7/test.jsonl
+paired args: 25, inconsistent args: 9, raito: 0.36
+Evaluation by matching head words only....
+Event-level identification: P: 69.00
+Event-level : P: 69.00
+gold arg num: 375
+Role identification: P: 74.20, R: 74.40, F: 74.30
+Role: P: 69.68, R: 69.87, F: 69.77
+Coref Role identification: P: 77.13, R: 77.33, F: 77.23
+Coref Role: P: 72.61, R: 72.80, F: 72.70
+start getting new testset
+source:checkpoints/fold_7/epoch_3_test_step_1_results_for_predict.json
+target:preprocessed_fold_7/test_step_1_data.json
+total_event: 271
+has close events: 253
+longest context:439
+longest target 30
+start scoring
+gen_file:checkpoints/fold_7/epoch_3_test_step_2_predictions.jsonl
+test_file:data/wikievents/10fold/fold_7/test.jsonl
+paired args: 25, inconsistent args: 13, raito: 0.52
+Evaluation by matching head words only....
+Event-level identification: P: 70.11
+Event-level : P: 70.11
+gold arg num: 375
+Role identification: P: 74.67, R: 74.67, F: 74.67
+Role: P: 69.87, R: 69.87, F: 69.87
+Coref Role identification: P: 77.33, R: 77.33, F: 77.33
+Coref Role: P: 72.53, R: 72.53, F: 72.53
+start getting new testset
+source:checkpoints/fold_7/epoch_3_test_step_2_results_for_predict.json
+target:preprocessed_fold_7/test_step_2_data.json
+total_event: 271
+has close events: 253
+longest context:439
+longest target 30
+start scoring
+gen_file:checkpoints/fold_7/epoch_3_test_step_3_predictions.jsonl
+test_file:data/wikievents/10fold/fold_7/test.jsonl
+paired args: 25, inconsistent args: 10, raito: 0.4
+Evaluation by matching head words only....
+Event-level identification: P: 69.00
+Event-level : P: 69.00
+gold arg num: 375
+Role identification: P: 74.39, R: 73.60, F: 73.99
+Role: P: 69.54, R: 68.80, F: 69.17
+Coref Role identification: P: 77.09, R: 76.27, F: 76.68
+Coref Role: P: 72.24, R: 71.47, F: 71.85
+start getting new testset
+source:checkpoints/fold_7/epoch_3_test_step_3_results_for_predict.json
+target:preprocessed_fold_7/test_step_3_data.json
+total_event: 271
+has close events: 253
+longest context:439
+longest target 30
+start scoring
+gen_file:checkpoints/fold_7/epoch_3_test_step_4_predictions.jsonl
+test_file:data/wikievents/10fold/fold_7/test.jsonl
+paired args: 25, inconsistent args: 13, raito: 0.52
+Evaluation by matching head words only....
+Event-level identification: P: 70.11
+Event-level : P: 70.11
+gold arg num: 375
+Role identification: P: 75.34, R: 74.93, F: 75.13
+Role: P: 70.51, R: 70.13, F: 70.32
+Coref Role identification: P: 78.02, R: 77.60, F: 77.81
+Coref Role: P: 73.19, R: 72.80, F: 72.99
+start getting new testset
+source:checkpoints/fold_7/epoch_3_test_step_4_results_for_predict.json
+target:preprocessed_fold_7/test_step_4_data.json
+total_event: 271
+has close events: 253
+longest context:439
+longest target 30
+start scoring
+gen_file:checkpoints/fold_7/epoch_3_test_step_5_predictions.jsonl
+test_file:data/wikievents/10fold/fold_7/test.jsonl
+paired args: 25, inconsistent args: 10, raito: 0.4
+Evaluation by matching head words only....
+Event-level identification: P: 69.00
+Event-level : P: 69.00
+gold arg num: 375
+Role identification: P: 74.26, R: 73.87, F: 74.06
+Role: P: 69.44, R: 69.07, F: 69.25
+Coref Role identification: P: 76.94, R: 76.53, F: 76.74
+Coref Role: P: 72.12, R: 71.73, F: 71.93
+--------------------------------------------------------------------------------
+load from checkpoints/fold_7/epoch_4.ckpt
+start scoring
+gen_file:checkpoints/fold_7/epoch_4_test_step_0_predictions.jsonl
+test_file:data/wikievents/10fold/fold_7/test.jsonl
+paired args: 25, inconsistent args: 10, raito: 0.4
+Evaluation by matching head words only....
+Event-level identification: P: 69.74
+Event-level : P: 69.74
+gold arg num: 375
+Role identification: P: 73.63, R: 75.20, F: 74.41
+Role: P: 67.89, R: 69.33, F: 68.60
+Coref Role identification: P: 76.76, R: 78.40, F: 77.57
+Coref Role: P: 71.02, R: 72.53, F: 71.77
+start getting new testset
+source:checkpoints/fold_7/epoch_4_test_step_0_results_for_predict.json
+target:preprocessed_fold_7/test_step_0_data.json
+total_event: 271
+has close events: 253
+longest context:439
+longest target 30
+start scoring
+gen_file:checkpoints/fold_7/epoch_4_test_step_1_predictions.jsonl
+test_file:data/wikievents/10fold/fold_7/test.jsonl
+paired args: 25, inconsistent args: 14, raito: 0.56
+Evaluation by matching head words only....
+Event-level identification: P: 67.90
+Event-level : P: 67.90
+gold arg num: 375
+Role identification: P: 73.99, R: 73.60, F: 73.80
+Role: P: 68.63, R: 68.27, F: 68.45
+Coref Role identification: P: 76.94, R: 76.53, F: 76.74
+Coref Role: P: 71.58, R: 71.20, F: 71.39
+start getting new testset
+source:checkpoints/fold_7/epoch_4_test_step_1_results_for_predict.json
+target:preprocessed_fold_7/test_step_1_data.json
+total_event: 271
+has close events: 253
+longest context:439
+longest target 30
+start scoring
+gen_file:checkpoints/fold_7/epoch_4_test_step_2_predictions.jsonl
+test_file:data/wikievents/10fold/fold_7/test.jsonl
+paired args: 25, inconsistent args: 14, raito: 0.56
+Evaluation by matching head words only....
+Event-level identification: P: 67.90
+Event-level : P: 67.90
+gold arg num: 375
+Role identification: P: 73.46, R: 73.07, F: 73.26
+Role: P: 68.36, R: 68.00, F: 68.18
+Coref Role identification: P: 76.41, R: 76.00, F: 76.20
+Coref Role: P: 71.31, R: 70.93, F: 71.12
+start getting new testset
+source:checkpoints/fold_7/epoch_4_test_step_2_results_for_predict.json
+target:preprocessed_fold_7/test_step_2_data.json
+total_event: 271
+has close events: 253
+longest context:439
+longest target 30
+start scoring
+gen_file:checkpoints/fold_7/epoch_4_test_step_3_predictions.jsonl
+test_file:data/wikievents/10fold/fold_7/test.jsonl
+paired args: 25, inconsistent args: 14, raito: 0.56
+Evaluation by matching head words only....
+Event-level identification: P: 67.90
+Event-level : P: 67.90
+gold arg num: 375
+Role identification: P: 73.66, R: 73.07, F: 73.36
+Role: P: 68.55, R: 68.00, F: 68.27
+Coref Role identification: P: 76.61, R: 76.00, F: 76.31
+Coref Role: P: 71.51, R: 70.93, F: 71.22
+start getting new testset
+source:checkpoints/fold_7/epoch_4_test_step_3_results_for_predict.json
+target:preprocessed_fold_7/test_step_3_data.json
+total_event: 271
+has close events: 253
+longest context:439
+longest target 30
+start scoring
+gen_file:checkpoints/fold_7/epoch_4_test_step_4_predictions.jsonl
+test_file:data/wikievents/10fold/fold_7/test.jsonl
+paired args: 25, inconsistent args: 14, raito: 0.56
+Evaluation by matching head words only....
+Event-level identification: P: 67.90
+Event-level : P: 67.90
+gold arg num: 375
+Role identification: P: 73.66, R: 73.07, F: 73.36
+Role: P: 68.55, R: 68.00, F: 68.27
+Coref Role identification: P: 76.61, R: 76.00, F: 76.31
+Coref Role: P: 71.51, R: 70.93, F: 71.22
+start getting new testset
+source:checkpoints/fold_7/epoch_4_test_step_4_results_for_predict.json
+target:preprocessed_fold_7/test_step_4_data.json
+total_event: 271
+has close events: 253
+longest context:439
+longest target 30
+start scoring
+gen_file:checkpoints/fold_7/epoch_4_test_step_5_predictions.jsonl
+test_file:data/wikievents/10fold/fold_7/test.jsonl
+paired args: 25, inconsistent args: 14, raito: 0.56
+Evaluation by matching head words only....
+Event-level identification: P: 67.90
+Event-level : P: 67.90
+gold arg num: 375
+Role identification: P: 73.66, R: 73.07, F: 73.36
+Role: P: 68.55, R: 68.00, F: 68.27
+Coref Role identification: P: 76.61, R: 76.00, F: 76.31
+Coref Role: P: 71.51, R: 70.93, F: 71.22
+--------------------------------------------------------------------------------
+load from checkpoints/fold_7/epoch_5.ckpt
+start scoring
+gen_file:checkpoints/fold_7/epoch_5_test_step_0_predictions.jsonl
+test_file:data/wikievents/10fold/fold_7/test.jsonl
+paired args: 25, inconsistent args: 10, raito: 0.4
+Evaluation by matching head words only....
+Event-level identification: P: 69.37
+Event-level : P: 69.37
+gold arg num: 375
+Role identification: P: 72.97, R: 74.13, F: 73.54
+Role: P: 68.24, R: 69.33, F: 68.78
+Coref Role identification: P: 75.85, R: 77.07, F: 76.46
+Coref Role: P: 71.13, R: 72.27, F: 71.69
+start getting new testset
+source:checkpoints/fold_7/epoch_5_test_step_0_results_for_predict.json
+target:preprocessed_fold_7/test_step_0_data.json
+total_event: 271
+has close events: 253
+longest context:439
+longest target 30
+start scoring
+gen_file:checkpoints/fold_7/epoch_5_test_step_1_predictions.jsonl
+test_file:data/wikievents/10fold/fold_7/test.jsonl
+paired args: 25, inconsistent args: 13, raito: 0.52
+Evaluation by matching head words only....
+Event-level identification: P: 69.00
+Event-level : P: 69.00
+gold arg num: 375
+Role identification: P: 73.40, R: 73.60, F: 73.50
+Role: P: 68.62, R: 68.80, F: 68.71
+Coref Role identification: P: 76.60, R: 76.80, F: 76.70
+Coref Role: P: 71.81, R: 72.00, F: 71.90
+start getting new testset
+source:checkpoints/fold_7/epoch_5_test_step_1_results_for_predict.json
+target:preprocessed_fold_7/test_step_1_data.json
+total_event: 271
+has close events: 253
+longest context:439
+longest target 30
+start scoring
+gen_file:checkpoints/fold_7/epoch_5_test_step_2_predictions.jsonl
+test_file:data/wikievents/10fold/fold_7/test.jsonl
+paired args: 25, inconsistent args: 13, raito: 0.52
+Evaluation by matching head words only....
+Event-level identification: P: 69.74
+Event-level : P: 69.74
+gold arg num: 375
+Role identification: P: 74.13, R: 74.13, F: 74.13
+Role: P: 69.33, R: 69.33, F: 69.33
+Coref Role identification: P: 77.33, R: 77.33, F: 77.33
+Coref Role: P: 72.53, R: 72.53, F: 72.53
+start getting new testset
+source:checkpoints/fold_7/epoch_5_test_step_2_results_for_predict.json
+target:preprocessed_fold_7/test_step_2_data.json
+total_event: 271
+has close events: 253
+longest context:439
+longest target 30
+start scoring
+gen_file:checkpoints/fold_7/epoch_5_test_step_3_predictions.jsonl
+test_file:data/wikievents/10fold/fold_7/test.jsonl
+paired args: 25, inconsistent args: 13, raito: 0.52
+Evaluation by matching head words only....
+Event-level identification: P: 68.63
+Event-level : P: 68.63
+gold arg num: 375
+Role identification: P: 73.53, R: 73.33, F: 73.43
+Role: P: 68.72, R: 68.53, F: 68.62
+Coref Role identification: P: 76.74, R: 76.53, F: 76.64
+Coref Role: P: 71.93, R: 71.73, F: 71.83
+start getting new testset
+source:checkpoints/fold_7/epoch_5_test_step_3_results_for_predict.json
+target:preprocessed_fold_7/test_step_3_data.json
+total_event: 271
+has close events: 253
+longest context:439
+longest target 30
+start scoring
+gen_file:checkpoints/fold_7/epoch_5_test_step_4_predictions.jsonl
+test_file:data/wikievents/10fold/fold_7/test.jsonl
+paired args: 25, inconsistent args: 13, raito: 0.52
+Evaluation by matching head words only....
+Event-level identification: P: 69.37
+Event-level : P: 69.37
+gold arg num: 375
+Role identification: P: 73.87, R: 73.87, F: 73.87
+Role: P: 69.07, R: 69.07, F: 69.07
+Coref Role identification: P: 77.07, R: 77.07, F: 77.07
+Coref Role: P: 72.27, R: 72.27, F: 72.27
+start getting new testset
+source:checkpoints/fold_7/epoch_5_test_step_4_results_for_predict.json
+target:preprocessed_fold_7/test_step_4_data.json
+total_event: 271
+has close events: 253
+longest context:439
+longest target 30
+start scoring
+gen_file:checkpoints/fold_7/epoch_5_test_step_5_predictions.jsonl
+test_file:data/wikievents/10fold/fold_7/test.jsonl
+paired args: 25, inconsistent args: 13, raito: 0.52
+Evaluation by matching head words only....
+Event-level identification: P: 68.63
+Event-level : P: 68.63
+gold arg num: 375
+Role identification: P: 73.53, R: 73.33, F: 73.43
+Role: P: 68.72, R: 68.53, F: 68.62
+Coref Role identification: P: 76.74, R: 76.53, F: 76.64
+Coref Role: P: 71.93, R: 71.73, F: 71.83
+--------------------------------------------------------------------------------
+load from checkpoints/fold_8/epoch_2.ckpt
+start scoring
+gen_file:checkpoints/fold_8/epoch_2_test_step_0_predictions.jsonl
+test_file:data/wikievents/10fold/fold_8/test.jsonl
+paired args: 15, inconsistent args: 7, raito: 0.4666666666666667
+Evaluation by matching head words only....
+Event-level identification: P: 61.79
+Event-level : P: 61.79
+gold arg num: 314
+Role identification: P: 79.76, R: 62.74, F: 70.23
+Role: P: 78.14, R: 61.46, F: 68.81
+Coref Role identification: P: 81.38, R: 64.01, F: 71.66
+Coref Role: P: 79.35, R: 62.42, F: 69.88
+start getting new testset
+source:checkpoints/fold_8/epoch_2_test_step_0_results_for_predict.json
+target:preprocessed_fold_8/test_step_0_data.json
+total_event: 212
+has close events: 192
+longest context:415
+longest target 31
+start scoring
+gen_file:checkpoints/fold_8/epoch_2_test_step_1_predictions.jsonl
+test_file:data/wikievents/10fold/fold_8/test.jsonl
+paired args: 15, inconsistent args: 7, raito: 0.4666666666666667
+Evaluation by matching head words only....
+Event-level identification: P: 62.74
+Event-level : P: 62.74
+gold arg num: 314
+Role identification: P: 80.16, R: 64.33, F: 71.38
+Role: P: 78.97, R: 63.38, F: 70.32
+Coref Role identification: P: 82.14, R: 65.92, F: 73.14
+Coref Role: P: 80.56, R: 64.65, F: 71.73
+start getting new testset
+source:checkpoints/fold_8/epoch_2_test_step_1_results_for_predict.json
+target:preprocessed_fold_8/test_step_1_data.json
+total_event: 212
+has close events: 192
+longest context:412
+longest target 31
+start scoring
+gen_file:checkpoints/fold_8/epoch_2_test_step_2_predictions.jsonl
+test_file:data/wikievents/10fold/fold_8/test.jsonl
+paired args: 15, inconsistent args: 7, raito: 0.4666666666666667
+Evaluation by matching head words only....
+Event-level identification: P: 62.26
+Event-level : P: 62.26
+gold arg num: 314
+Role identification: P: 79.05, R: 63.69, F: 70.55
+Role: P: 77.87, R: 62.74, F: 69.49
+Coref Role identification: P: 81.03, R: 65.29, F: 72.31
+Coref Role: P: 79.45, R: 64.01, F: 70.90
+start getting new testset
+source:checkpoints/fold_8/epoch_2_test_step_2_results_for_predict.json
+target:preprocessed_fold_8/test_step_2_data.json
+total_event: 212
+has close events: 192
+longest context:412
+longest target 31
+start scoring
+gen_file:checkpoints/fold_8/epoch_2_test_step_3_predictions.jsonl
+test_file:data/wikievents/10fold/fold_8/test.jsonl
+paired args: 15, inconsistent args: 7, raito: 0.4666666666666667
+Evaluation by matching head words only....
+Event-level identification: P: 62.26
+Event-level : P: 62.26
+gold arg num: 314
+Role identification: P: 79.60, R: 63.38, F: 70.57
+Role: P: 78.40, R: 62.42, F: 69.50
+Coref Role identification: P: 81.60, R: 64.97, F: 72.34
+Coref Role: P: 80.00, R: 63.69, F: 70.92
+start getting new testset
+source:checkpoints/fold_8/epoch_2_test_step_3_results_for_predict.json
+target:preprocessed_fold_8/test_step_3_data.json
+total_event: 212
+has close events: 192
+longest context:412
+longest target 31
+start scoring
+gen_file:checkpoints/fold_8/epoch_2_test_step_4_predictions.jsonl
+test_file:data/wikievents/10fold/fold_8/test.jsonl
+paired args: 15, inconsistent args: 7, raito: 0.4666666666666667
+Evaluation by matching head words only....
+Event-level identification: P: 62.26
+Event-level : P: 62.26
+gold arg num: 314
+Role identification: P: 78.74, R: 63.69, F: 70.42
+Role: P: 77.56, R: 62.74, F: 69.37
+Coref Role identification: P: 80.71, R: 65.29, F: 72.18
+Coref Role: P: 79.13, R: 64.01, F: 70.77
+start getting new testset
+source:checkpoints/fold_8/epoch_2_test_step_4_results_for_predict.json
+target:preprocessed_fold_8/test_step_4_data.json
+total_event: 212
+has close events: 192
+longest context:412
+longest target 31
+start scoring
+gen_file:checkpoints/fold_8/epoch_2_test_step_5_predictions.jsonl
+test_file:data/wikievents/10fold/fold_8/test.jsonl
+paired args: 15, inconsistent args: 7, raito: 0.4666666666666667
+Evaluation by matching head words only....
+Event-level identification: P: 62.26
+Event-level : P: 62.26
+gold arg num: 314
+Role identification: P: 79.05, R: 63.69, F: 70.55
+Role: P: 77.87, R: 62.74, F: 69.49
+Coref Role identification: P: 81.03, R: 65.29, F: 72.31
+Coref Role: P: 79.45, R: 64.01, F: 70.90
+--------------------------------------------------------------------------------
+load from checkpoints/fold_8/epoch_3.ckpt
+start scoring
+gen_file:checkpoints/fold_8/epoch_3_test_step_0_predictions.jsonl
+test_file:data/wikievents/10fold/fold_8/test.jsonl
+paired args: 15, inconsistent args: 6, raito: 0.4
+Evaluation by matching head words only....
+Event-level identification: P: 71.70
+Event-level : P: 71.70
+gold arg num: 314
+Role identification: P: 74.23, R: 77.07, F: 75.63
+Role: P: 71.78, R: 74.52, F: 73.12
+Coref Role identification: P: 75.77, R: 78.66, F: 77.19
+Coref Role: P: 72.70, R: 75.48, F: 74.06
+start getting new testset
+source:checkpoints/fold_8/epoch_3_test_step_0_results_for_predict.json
+target:preprocessed_fold_8/test_step_0_data.json
+total_event: 212
+has close events: 192
+longest context:419
+longest target 31
+start scoring
+gen_file:checkpoints/fold_8/epoch_3_test_step_1_predictions.jsonl
+test_file:data/wikievents/10fold/fold_8/test.jsonl
+paired args: 15, inconsistent args: 7, raito: 0.4666666666666667
+Evaluation by matching head words only....
+Event-level identification: P: 69.81
+Event-level : P: 69.81
+gold arg num: 314
+Role identification: P: 72.92, R: 75.48, F: 74.18
+Role: P: 70.46, R: 72.93, F: 71.67
+Coref Role identification: P: 74.46, R: 77.07, F: 75.74
+Coref Role: P: 71.38, R: 73.89, F: 72.61
+start getting new testset
+source:checkpoints/fold_8/epoch_3_test_step_1_results_for_predict.json
+target:preprocessed_fold_8/test_step_1_data.json
+total_event: 212
+has close events: 192
+longest context:414
+longest target 31
+start scoring
+gen_file:checkpoints/fold_8/epoch_3_test_step_2_predictions.jsonl
+test_file:data/wikievents/10fold/fold_8/test.jsonl
+paired args: 15, inconsistent args: 7, raito: 0.4666666666666667
+Evaluation by matching head words only....
+Event-level identification: P: 69.81
+Event-level : P: 69.81
+gold arg num: 314
+Role identification: P: 74.14, R: 75.80, F: 74.96
+Role: P: 71.65, R: 73.25, F: 72.44
+Coref Role identification: P: 75.70, R: 77.39, F: 76.54
+Coref Role: P: 72.59, R: 74.20, F: 73.39
+start getting new testset
+source:checkpoints/fold_8/epoch_3_test_step_2_results_for_predict.json
+target:preprocessed_fold_8/test_step_2_data.json
+total_event: 212
+has close events: 192
+longest context:414
+longest target 31
+start scoring
+gen_file:checkpoints/fold_8/epoch_3_test_step_3_predictions.jsonl
+test_file:data/wikievents/10fold/fold_8/test.jsonl
+paired args: 15, inconsistent args: 7, raito: 0.4666666666666667
+Evaluation by matching head words only....
+Event-level identification: P: 70.28
+Event-level : P: 70.28
+gold arg num: 314
+Role identification: P: 73.68, R: 75.80, F: 74.73
+Role: P: 71.21, R: 73.25, F: 72.21
+Coref Role identification: P: 75.23, R: 77.39, F: 76.30
+Coref Role: P: 72.14, R: 74.20, F: 73.16
+start getting new testset
+source:checkpoints/fold_8/epoch_3_test_step_3_results_for_predict.json
+target:preprocessed_fold_8/test_step_3_data.json
+total_event: 212
+has close events: 192
+longest context:414
+longest target 31
+start scoring
+gen_file:checkpoints/fold_8/epoch_3_test_step_4_predictions.jsonl
+test_file:data/wikievents/10fold/fold_8/test.jsonl
+paired args: 15, inconsistent args: 7, raito: 0.4666666666666667
+Evaluation by matching head words only....
+Event-level identification: P: 70.28
+Event-level : P: 70.28
+gold arg num: 314
+Role identification: P: 73.99, R: 76.11, F: 75.04
+Role: P: 71.52, R: 73.57, F: 72.53
+Coref Role identification: P: 75.54, R: 77.71, F: 76.61
+Coref Role: P: 72.45, R: 74.52, F: 73.47
+start getting new testset
+source:checkpoints/fold_8/epoch_3_test_step_4_results_for_predict.json
+target:preprocessed_fold_8/test_step_4_data.json
+total_event: 212
+has close events: 192
+longest context:414
+longest target 31
+start scoring
+gen_file:checkpoints/fold_8/epoch_3_test_step_5_predictions.jsonl
+test_file:data/wikievents/10fold/fold_8/test.jsonl
+paired args: 15, inconsistent args: 7, raito: 0.4666666666666667
+Evaluation by matching head words only....
+Event-level identification: P: 69.81
+Event-level : P: 69.81
+gold arg num: 314
+Role identification: P: 73.37, R: 75.48, F: 74.41
+Role: P: 70.90, R: 72.93, F: 71.90
+Coref Role identification: P: 74.92, R: 77.07, F: 75.98
+Coref Role: P: 71.83, R: 73.89, F: 72.84
+--------------------------------------------------------------------------------
+load from checkpoints/fold_8/epoch_4.ckpt
+start scoring
+gen_file:checkpoints/fold_8/epoch_4_test_step_0_predictions.jsonl
+test_file:data/wikievents/10fold/fold_8/test.jsonl
+paired args: 15, inconsistent args: 7, raito: 0.4666666666666667
+Evaluation by matching head words only....
+Event-level identification: P: 68.40
+Event-level : P: 68.40
+gold arg num: 314
+Role identification: P: 74.92, R: 75.16, F: 75.04
+Role: P: 72.06, R: 72.29, F: 72.18
+Coref Role identification: P: 76.83, R: 77.07, F: 76.95
+Coref Role: P: 73.02, R: 73.25, F: 73.13
+start getting new testset
+source:checkpoints/fold_8/epoch_4_test_step_0_results_for_predict.json
+target:preprocessed_fold_8/test_step_0_data.json
+total_event: 212
+has close events: 192
+longest context:412
+longest target 31
+start scoring
+gen_file:checkpoints/fold_8/epoch_4_test_step_1_predictions.jsonl
+test_file:data/wikievents/10fold/fold_8/test.jsonl
+paired args: 15, inconsistent args: 7, raito: 0.4666666666666667
+Evaluation by matching head words only....
+Event-level identification: P: 70.28
+Event-level : P: 70.28
+gold arg num: 314
+Role identification: P: 74.76, R: 75.48, F: 75.12
+Role: P: 72.24, R: 72.93, F: 72.58
+Coref Role identification: P: 76.97, R: 77.71, F: 77.34
+Coref Role: P: 73.50, R: 74.20, F: 73.85
+start getting new testset
+source:checkpoints/fold_8/epoch_4_test_step_1_results_for_predict.json
+target:preprocessed_fold_8/test_step_1_data.json
+total_event: 212
+has close events: 192
+longest context:414
+longest target 31
+start scoring
+gen_file:checkpoints/fold_8/epoch_4_test_step_2_predictions.jsonl
+test_file:data/wikievents/10fold/fold_8/test.jsonl
+paired args: 15, inconsistent args: 7, raito: 0.4666666666666667
+Evaluation by matching head words only....
+Event-level identification: P: 70.28
+Event-level : P: 70.28
+gold arg num: 314
+Role identification: P: 75.39, R: 76.11, F: 75.75
+Role: P: 72.87, R: 73.57, F: 73.22
+Coref Role identification: P: 77.60, R: 78.34, F: 77.97
+Coref Role: P: 74.13, R: 74.84, F: 74.48
+start getting new testset
+source:checkpoints/fold_8/epoch_4_test_step_2_results_for_predict.json
+target:preprocessed_fold_8/test_step_2_data.json
+total_event: 212
+has close events: 192
+longest context:414
+longest target 31
+start scoring
+gen_file:checkpoints/fold_8/epoch_4_test_step_3_predictions.jsonl
+test_file:data/wikievents/10fold/fold_8/test.jsonl
+paired args: 15, inconsistent args: 7, raito: 0.4666666666666667
+Evaluation by matching head words only....
+Event-level identification: P: 70.28
+Event-level : P: 70.28
+gold arg num: 314
+Role identification: P: 74.84, R: 75.80, F: 75.32
+Role: P: 72.33, R: 73.25, F: 72.78
+Coref Role identification: P: 77.04, R: 78.03, F: 77.53
+Coref Role: P: 73.58, R: 74.52, F: 74.05
+start getting new testset
+source:checkpoints/fold_8/epoch_4_test_step_3_results_for_predict.json
+target:preprocessed_fold_8/test_step_3_data.json
+total_event: 212
+has close events: 192
+longest context:414
+longest target 31
+start scoring
+gen_file:checkpoints/fold_8/epoch_4_test_step_4_predictions.jsonl
+test_file:data/wikievents/10fold/fold_8/test.jsonl
+paired args: 15, inconsistent args: 7, raito: 0.4666666666666667
+Evaluation by matching head words only....
+Event-level identification: P: 70.28
+Event-level : P: 70.28
+gold arg num: 314
+Role identification: P: 75.16, R: 76.11, F: 75.63
+Role: P: 72.64, R: 73.57, F: 73.10
+Coref Role identification: P: 77.36, R: 78.34, F: 77.85
+Coref Role: P: 73.90, R: 74.84, F: 74.37
+start getting new testset
+source:checkpoints/fold_8/epoch_4_test_step_4_results_for_predict.json
+target:preprocessed_fold_8/test_step_4_data.json
+total_event: 212
+has close events: 192
+longest context:414
+longest target 31
+start scoring
+gen_file:checkpoints/fold_8/epoch_4_test_step_5_predictions.jsonl
+test_file:data/wikievents/10fold/fold_8/test.jsonl
+paired args: 15, inconsistent args: 7, raito: 0.4666666666666667
+Evaluation by matching head words only....
+Event-level identification: P: 70.28
+Event-level : P: 70.28
+gold arg num: 314
+Role identification: P: 75.08, R: 75.80, F: 75.44
+Role: P: 72.56, R: 73.25, F: 72.90
+Coref Role identification: P: 77.29, R: 78.03, F: 77.65
+Coref Role: P: 73.82, R: 74.52, F: 74.17
+--------------------------------------------------------------------------------
+load from checkpoints/fold_8/epoch_5.ckpt
+start scoring
+gen_file:checkpoints/fold_8/epoch_5_test_step_0_predictions.jsonl
+test_file:data/wikievents/10fold/fold_8/test.jsonl
+paired args: 15, inconsistent args: 7, raito: 0.4666666666666667
+Evaluation by matching head words only....
+Event-level identification: P: 67.92
+Event-level : P: 67.92
+gold arg num: 314
+Role identification: P: 76.72, R: 74.52, F: 75.61
+Role: P: 73.77, R: 71.66, F: 72.70
+Coref Role identification: P: 77.70, R: 75.48, F: 76.58
+Coref Role: P: 74.43, R: 72.29, F: 73.34
+start getting new testset
+source:checkpoints/fold_8/epoch_5_test_step_0_results_for_predict.json
+target:preprocessed_fold_8/test_step_0_data.json
+total_event: 212
+has close events: 192
+longest context:412
+longest target 31
+start scoring
+gen_file:checkpoints/fold_8/epoch_5_test_step_1_predictions.jsonl
+test_file:data/wikievents/10fold/fold_8/test.jsonl
+paired args: 15, inconsistent args: 7, raito: 0.4666666666666667
+Evaluation by matching head words only....
+Event-level identification: P: 70.75
+Event-level : P: 70.75
+gold arg num: 314
+Role identification: P: 75.88, R: 75.16, F: 75.52
+Role: P: 73.63, R: 72.93, F: 73.28
+Coref Role identification: P: 77.49, R: 76.75, F: 77.12
+Coref Role: P: 74.92, R: 74.20, F: 74.56
+start getting new testset
+source:checkpoints/fold_8/epoch_5_test_step_1_results_for_predict.json
+target:preprocessed_fold_8/test_step_1_data.json
+total_event: 212
+has close events: 192
+longest context:414
+longest target 31
+start scoring
+gen_file:checkpoints/fold_8/epoch_5_test_step_2_predictions.jsonl
+test_file:data/wikievents/10fold/fold_8/test.jsonl
+paired args: 15, inconsistent args: 7, raito: 0.4666666666666667
+Evaluation by matching head words only....
+Event-level identification: P: 70.28
+Event-level : P: 70.28
+gold arg num: 314
+Role identification: P: 75.56, R: 74.84, F: 75.20
+Role: P: 73.31, R: 72.61, F: 72.96
+Coref Role identification: P: 77.17, R: 76.43, F: 76.80
+Coref Role: P: 74.60, R: 73.89, F: 74.24
+start getting new testset
+source:checkpoints/fold_8/epoch_5_test_step_2_results_for_predict.json
+target:preprocessed_fold_8/test_step_2_data.json
+total_event: 212
+has close events: 192
+longest context:414
+longest target 31
+start scoring
+gen_file:checkpoints/fold_8/epoch_5_test_step_3_predictions.jsonl
+test_file:data/wikievents/10fold/fold_8/test.jsonl
+paired args: 15, inconsistent args: 7, raito: 0.4666666666666667
+Evaluation by matching head words only....
+Event-level identification: P: 70.28
+Event-level : P: 70.28
+gold arg num: 314
+Role identification: P: 75.56, R: 74.84, F: 75.20
+Role: P: 73.31, R: 72.61, F: 72.96
+Coref Role identification: P: 77.17, R: 76.43, F: 76.80
+Coref Role: P: 74.60, R: 73.89, F: 74.24
+start getting new testset
+source:checkpoints/fold_8/epoch_5_test_step_3_results_for_predict.json
+target:preprocessed_fold_8/test_step_3_data.json
+total_event: 212
+has close events: 192
+longest context:414
+longest target 31
+start scoring
+gen_file:checkpoints/fold_8/epoch_5_test_step_4_predictions.jsonl
+test_file:data/wikievents/10fold/fold_8/test.jsonl
+paired args: 15, inconsistent args: 7, raito: 0.4666666666666667
+Evaluation by matching head words only....
+Event-level identification: P: 70.28
+Event-level : P: 70.28
+gold arg num: 314
+Role identification: P: 75.81, R: 74.84, F: 75.32
+Role: P: 73.55, R: 72.61, F: 73.08
+Coref Role identification: P: 77.42, R: 76.43, F: 76.92
+Coref Role: P: 74.84, R: 73.89, F: 74.36
+start getting new testset
+source:checkpoints/fold_8/epoch_5_test_step_4_results_for_predict.json
+target:preprocessed_fold_8/test_step_4_data.json
+total_event: 212
+has close events: 192
+longest context:414
+longest target 31
+start scoring
+gen_file:checkpoints/fold_8/epoch_5_test_step_5_predictions.jsonl
+test_file:data/wikievents/10fold/fold_8/test.jsonl
+paired args: 15, inconsistent args: 7, raito: 0.4666666666666667
+Evaluation by matching head words only....
+Event-level identification: P: 70.28
+Event-level : P: 70.28
+gold arg num: 314
+Role identification: P: 75.56, R: 74.84, F: 75.20
+Role: P: 73.31, R: 72.61, F: 72.96
+Coref Role identification: P: 77.17, R: 76.43, F: 76.80
+Coref Role: P: 74.60, R: 73.89, F: 74.24
+--------------------------------------------------------------------------------
+load from checkpoints/fold_9/epoch_2.ckpt
+start scoring
+gen_file:checkpoints/fold_9/epoch_2_test_step_0_predictions.jsonl
+test_file:data/wikievents/10fold/fold_9/test.jsonl
+paired args: 32, inconsistent args: 10, raito: 0.3125
+Evaluation by matching head words only....
+Event-level identification: P: 62.76
+Event-level : P: 62.76
+gold arg num: 436
+Role identification: P: 71.40, R: 70.41, F: 70.90
+Role: P: 67.44, R: 66.51, F: 66.97
+Coref Role identification: P: 73.26, R: 72.25, F: 72.75
+Coref Role: P: 69.07, R: 68.12, F: 68.59
+start getting new testset
+source:checkpoints/fold_9/epoch_2_test_step_0_results_for_predict.json
+target:preprocessed_fold_9/test_step_0_data.json
+total_event: 290
+has close events: 254
+longest context:412
+longest target 32
+start scoring
+gen_file:checkpoints/fold_9/epoch_2_test_step_1_predictions.jsonl
+test_file:data/wikievents/10fold/fold_9/test.jsonl
+paired args: 32, inconsistent args: 17, raito: 0.53125
+Evaluation by matching head words only....
+Event-level identification: P: 63.45
+Event-level : P: 63.45
+gold arg num: 436
+Role identification: P: 73.26, R: 72.25, F: 72.75
+Role: P: 68.84, R: 67.89, F: 68.36
+Coref Role identification: P: 74.88, R: 73.85, F: 74.36
+Coref Role: P: 70.23, R: 69.27, F: 69.75
+start getting new testset
+source:checkpoints/fold_9/epoch_2_test_step_1_results_for_predict.json
+target:preprocessed_fold_9/test_step_1_data.json
+total_event: 290
+has close events: 254
+longest context:412
+longest target 32
+start scoring
+gen_file:checkpoints/fold_9/epoch_2_test_step_2_predictions.jsonl
+test_file:data/wikievents/10fold/fold_9/test.jsonl
+paired args: 32, inconsistent args: 17, raito: 0.53125
+Evaluation by matching head words only....
+Event-level identification: P: 63.79
+Event-level : P: 63.79
+gold arg num: 436
+Role identification: P: 73.49, R: 72.48, F: 72.98
+Role: P: 69.07, R: 68.12, F: 68.59
+Coref Role identification: P: 75.12, R: 74.08, F: 74.60
+Coref Role: P: 70.47, R: 69.50, F: 69.98
+start getting new testset
+source:checkpoints/fold_9/epoch_2_test_step_2_results_for_predict.json
+target:preprocessed_fold_9/test_step_2_data.json
+total_event: 290
+has close events: 254
+longest context:412
+longest target 32
+start scoring
+gen_file:checkpoints/fold_9/epoch_2_test_step_3_predictions.jsonl
+test_file:data/wikievents/10fold/fold_9/test.jsonl
+paired args: 32, inconsistent args: 17, raito: 0.53125
+Evaluation by matching head words only....
+Event-level identification: P: 63.10
+Event-level : P: 63.10
+gold arg num: 436
+Role identification: P: 72.79, R: 71.79, F: 72.29
+Role: P: 68.37, R: 67.43, F: 67.90
+Coref Role identification: P: 74.42, R: 73.39, F: 73.90
+Coref Role: P: 69.77, R: 68.81, F: 69.28
+start getting new testset
+source:checkpoints/fold_9/epoch_2_test_step_3_results_for_predict.json
+target:preprocessed_fold_9/test_step_3_data.json
+total_event: 290
+has close events: 254
+longest context:412
+longest target 32
+start scoring
+gen_file:checkpoints/fold_9/epoch_2_test_step_4_predictions.jsonl
+test_file:data/wikievents/10fold/fold_9/test.jsonl
+paired args: 32, inconsistent args: 17, raito: 0.53125
+Evaluation by matching head words only....
+Event-level identification: P: 63.45
+Event-level : P: 63.45
+gold arg num: 436
+Role identification: P: 73.26, R: 72.25, F: 72.75
+Role: P: 68.84, R: 67.89, F: 68.36
+Coref Role identification: P: 74.88, R: 73.85, F: 74.36
+Coref Role: P: 70.23, R: 69.27, F: 69.75
+start getting new testset
+source:checkpoints/fold_9/epoch_2_test_step_4_results_for_predict.json
+target:preprocessed_fold_9/test_step_4_data.json
+total_event: 290
+has close events: 254
+longest context:412
+longest target 32
+start scoring
+gen_file:checkpoints/fold_9/epoch_2_test_step_5_predictions.jsonl
+test_file:data/wikievents/10fold/fold_9/test.jsonl
+paired args: 32, inconsistent args: 17, raito: 0.53125
+Evaluation by matching head words only....
+Event-level identification: P: 63.10
+Event-level : P: 63.10
+gold arg num: 436
+Role identification: P: 72.79, R: 71.79, F: 72.29
+Role: P: 68.37, R: 67.43, F: 67.90
+Coref Role identification: P: 74.42, R: 73.39, F: 73.90
+Coref Role: P: 69.77, R: 68.81, F: 69.28
+--------------------------------------------------------------------------------
+load from checkpoints/fold_9/epoch_3.ckpt
+start scoring
+gen_file:checkpoints/fold_9/epoch_3_test_step_0_predictions.jsonl
+test_file:data/wikievents/10fold/fold_9/test.jsonl
+paired args: 32, inconsistent args: 13, raito: 0.40625
+Evaluation by matching head words only....
+Event-level identification: P: 65.52
+Event-level : P: 65.52
+gold arg num: 436
+Role identification: P: 75.49, R: 71.33, F: 73.35
+Role: P: 71.60, R: 67.66, F: 69.58
+Coref Role identification: P: 77.43, R: 73.17, F: 75.24
+Coref Role: P: 73.30, R: 69.27, F: 71.23
+start getting new testset
+source:checkpoints/fold_9/epoch_3_test_step_0_results_for_predict.json
+target:preprocessed_fold_9/test_step_0_data.json
+total_event: 290
+has close events: 254
+longest context:412
+longest target 30
+start scoring
+gen_file:checkpoints/fold_9/epoch_3_test_step_1_predictions.jsonl
+test_file:data/wikievents/10fold/fold_9/test.jsonl
+paired args: 32, inconsistent args: 12, raito: 0.375
+Evaluation by matching head words only....
+Event-level identification: P: 63.10
+Event-level : P: 63.10
+gold arg num: 436
+Role identification: P: 75.06, R: 69.72, F: 72.29
+Role: P: 70.62, R: 65.60, F: 68.01
+Coref Role identification: P: 76.79, R: 71.33, F: 73.96
+Coref Role: P: 72.35, R: 67.20, F: 69.68
+start getting new testset
+source:checkpoints/fold_9/epoch_3_test_step_1_results_for_predict.json
+target:preprocessed_fold_9/test_step_1_data.json
+total_event: 290
+has close events: 254
+longest context:412
+longest target 30
+start scoring
+gen_file:checkpoints/fold_9/epoch_3_test_step_2_predictions.jsonl
+test_file:data/wikievents/10fold/fold_9/test.jsonl
+paired args: 32, inconsistent args: 13, raito: 0.40625
+Evaluation by matching head words only....
+Event-level identification: P: 63.79
+Event-level : P: 63.79
+gold arg num: 436
+Role identification: P: 75.50, R: 69.95, F: 72.62
+Role: P: 71.29, R: 66.06, F: 68.57
+Coref Role identification: P: 77.23, R: 71.56, F: 74.29
+Coref Role: P: 73.02, R: 67.66, F: 70.24
+start getting new testset
+source:checkpoints/fold_9/epoch_3_test_step_2_results_for_predict.json
+target:preprocessed_fold_9/test_step_2_data.json
+total_event: 290
+has close events: 254
+longest context:412
+longest target 30
+start scoring
+gen_file:checkpoints/fold_9/epoch_3_test_step_3_predictions.jsonl
+test_file:data/wikievents/10fold/fold_9/test.jsonl
+paired args: 32, inconsistent args: 13, raito: 0.40625
+Evaluation by matching head words only....
+Event-level identification: P: 63.10
+Event-level : P: 63.10
+gold arg num: 436
+Role identification: P: 75.25, R: 69.72, F: 72.38
+Role: P: 70.79, R: 65.60, F: 68.10
+Coref Role identification: P: 76.98, R: 71.33, F: 74.05
+Coref Role: P: 72.52, R: 67.20, F: 69.76
+start getting new testset
+source:checkpoints/fold_9/epoch_3_test_step_3_results_for_predict.json
+target:preprocessed_fold_9/test_step_3_data.json
+total_event: 290
+has close events: 254
+longest context:412
+longest target 30
+start scoring
+gen_file:checkpoints/fold_9/epoch_3_test_step_4_predictions.jsonl
+test_file:data/wikievents/10fold/fold_9/test.jsonl
+paired args: 32, inconsistent args: 13, raito: 0.40625
+Evaluation by matching head words only....
+Event-level identification: P: 63.79
+Event-level : P: 63.79
+gold arg num: 436
+Role identification: P: 75.50, R: 69.95, F: 72.62
+Role: P: 71.29, R: 66.06, F: 68.57
+Coref Role identification: P: 77.23, R: 71.56, F: 74.29
+Coref Role: P: 73.02, R: 67.66, F: 70.24
+start getting new testset
+source:checkpoints/fold_9/epoch_3_test_step_4_results_for_predict.json
+target:preprocessed_fold_9/test_step_4_data.json
+total_event: 290
+has close events: 254
+longest context:412
+longest target 30
+start scoring
+gen_file:checkpoints/fold_9/epoch_3_test_step_5_predictions.jsonl
+test_file:data/wikievents/10fold/fold_9/test.jsonl
+paired args: 32, inconsistent args: 13, raito: 0.40625
+Evaluation by matching head words only....
+Event-level identification: P: 63.10
+Event-level : P: 63.10
+gold arg num: 436
+Role identification: P: 75.25, R: 69.72, F: 72.38
+Role: P: 70.79, R: 65.60, F: 68.10
+Coref Role identification: P: 76.98, R: 71.33, F: 74.05
+Coref Role: P: 72.52, R: 67.20, F: 69.76
+--------------------------------------------------------------------------------
+load from checkpoints/fold_9/epoch_4.ckpt
+start scoring
+gen_file:checkpoints/fold_9/epoch_4_test_step_0_predictions.jsonl
+test_file:data/wikievents/10fold/fold_9/test.jsonl
+paired args: 32, inconsistent args: 11, raito: 0.34375
+Evaluation by matching head words only....
+Event-level identification: P: 67.59
+Event-level : P: 67.59
+gold arg num: 436
+Role identification: P: 74.14, R: 74.31, F: 74.23
+Role: P: 69.79, R: 69.95, F: 69.87
+Coref Role identification: P: 75.97, R: 76.15, F: 76.06
+Coref Role: P: 71.40, R: 71.56, F: 71.48
+start getting new testset
+source:checkpoints/fold_9/epoch_4_test_step_0_results_for_predict.json
+target:preprocessed_fold_9/test_step_0_data.json
+total_event: 290
+has close events: 254
+longest context:412
+longest target 30
+start scoring
+gen_file:checkpoints/fold_9/epoch_4_test_step_1_predictions.jsonl
+test_file:data/wikievents/10fold/fold_9/test.jsonl
+paired args: 32, inconsistent args: 12, raito: 0.375
+Evaluation by matching head words only....
+Event-level identification: P: 66.21
+Event-level : P: 66.21
+gold arg num: 436
+Role identification: P: 73.33, R: 73.17, F: 73.25
+Role: P: 69.43, R: 69.27, F: 69.35
+Coref Role identification: P: 75.86, R: 75.69, F: 75.77
+Coref Role: P: 71.72, R: 71.56, F: 71.64
+start getting new testset
+source:checkpoints/fold_9/epoch_4_test_step_1_results_for_predict.json
+target:preprocessed_fold_9/test_step_1_data.json
+total_event: 290
+has close events: 254
+longest context:412
+longest target 30
+start scoring
+gen_file:checkpoints/fold_9/epoch_4_test_step_2_predictions.jsonl
+test_file:data/wikievents/10fold/fold_9/test.jsonl
+paired args: 32, inconsistent args: 13, raito: 0.40625
+Evaluation by matching head words only....
+Event-level identification: P: 66.90
+Event-level : P: 66.90
+gold arg num: 436
+Role identification: P: 74.25, R: 74.08, F: 74.17
+Role: P: 70.34, R: 70.18, F: 70.26
+Coref Role identification: P: 76.55, R: 76.38, F: 76.46
+Coref Role: P: 72.41, R: 72.25, F: 72.33
+start getting new testset
+source:checkpoints/fold_9/epoch_4_test_step_2_results_for_predict.json
+target:preprocessed_fold_9/test_step_2_data.json
+total_event: 290
+has close events: 254
+longest context:412
+longest target 30
+start scoring
+gen_file:checkpoints/fold_9/epoch_4_test_step_3_predictions.jsonl
+test_file:data/wikievents/10fold/fold_9/test.jsonl
+paired args: 32, inconsistent args: 13, raito: 0.40625
+Evaluation by matching head words only....
+Event-level identification: P: 65.86
+Event-level : P: 65.86
+gold arg num: 436
+Role identification: P: 73.50, R: 73.17, F: 73.33
+Role: P: 69.59, R: 69.27, F: 69.43
+Coref Role identification: P: 75.81, R: 75.46, F: 75.63
+Coref Role: P: 71.66, R: 71.33, F: 71.49
+start getting new testset
+source:checkpoints/fold_9/epoch_4_test_step_3_results_for_predict.json
+target:preprocessed_fold_9/test_step_3_data.json
+total_event: 290
+has close events: 254
+longest context:412
+longest target 30
+start scoring
+gen_file:checkpoints/fold_9/epoch_4_test_step_4_predictions.jsonl
+test_file:data/wikievents/10fold/fold_9/test.jsonl
+paired args: 32, inconsistent args: 13, raito: 0.40625
+Evaluation by matching head words only....
+Event-level identification: P: 66.90
+Event-level : P: 66.90
+gold arg num: 436
+Role identification: P: 74.02, R: 73.85, F: 73.94
+Role: P: 70.11, R: 69.95, F: 70.03
+Coref Role identification: P: 76.32, R: 76.15, F: 76.23
+Coref Role: P: 72.18, R: 72.02, F: 72.10
+start getting new testset
+source:checkpoints/fold_9/epoch_4_test_step_4_results_for_predict.json
+target:preprocessed_fold_9/test_step_4_data.json
+total_event: 290
+has close events: 254
+longest context:412
+longest target 30
+start scoring
+gen_file:checkpoints/fold_9/epoch_4_test_step_5_predictions.jsonl
+test_file:data/wikievents/10fold/fold_9/test.jsonl
+paired args: 32, inconsistent args: 13, raito: 0.40625
+Evaluation by matching head words only....
+Event-level identification: P: 65.86
+Event-level : P: 65.86
+gold arg num: 436
+Role identification: P: 73.50, R: 73.17, F: 73.33
+Role: P: 69.59, R: 69.27, F: 69.43
+Coref Role identification: P: 75.81, R: 75.46, F: 75.63
+Coref Role: P: 71.66, R: 71.33, F: 71.49
+--------------------------------------------------------------------------------
+load from checkpoints/fold_9/epoch_5.ckpt
+start scoring
+gen_file:checkpoints/fold_9/epoch_5_test_step_0_predictions.jsonl
+test_file:data/wikievents/10fold/fold_9/test.jsonl
+paired args: 32, inconsistent args: 9, raito: 0.28125
+Evaluation by matching head words only....
+Event-level identification: P: 66.90
+Event-level : P: 66.90
+gold arg num: 436
+Role identification: P: 76.43, R: 73.62, F: 75.00
+Role: P: 72.86, R: 70.18, F: 71.50
+Coref Role identification: P: 78.57, R: 75.69, F: 77.10
+Coref Role: P: 74.76, R: 72.02, F: 73.36
+start getting new testset
+source:checkpoints/fold_9/epoch_5_test_step_0_results_for_predict.json
+target:preprocessed_fold_9/test_step_0_data.json
+total_event: 290
+has close events: 254
+longest context:412
+longest target 32
+start scoring
+gen_file:checkpoints/fold_9/epoch_5_test_step_1_predictions.jsonl
+test_file:data/wikievents/10fold/fold_9/test.jsonl
+paired args: 32, inconsistent args: 11, raito: 0.34375
+Evaluation by matching head words only....
+Event-level identification: P: 65.17
+Event-level : P: 65.17
+gold arg num: 436
+Role identification: P: 75.96, R: 72.48, F: 74.18
+Role: P: 72.12, R: 68.81, F: 70.42
+Coref Role identification: P: 78.37, R: 74.77, F: 76.53
+Coref Role: P: 74.28, R: 70.87, F: 72.54
+start getting new testset
+source:checkpoints/fold_9/epoch_5_test_step_1_results_for_predict.json
+target:preprocessed_fold_9/test_step_1_data.json
+total_event: 290
+has close events: 254
+longest context:412
+longest target 32
+start scoring
+gen_file:checkpoints/fold_9/epoch_5_test_step_2_predictions.jsonl
+test_file:data/wikievents/10fold/fold_9/test.jsonl
+paired args: 32, inconsistent args: 11, raito: 0.34375
+Evaluation by matching head words only....
+Event-level identification: P: 66.55
+Event-level : P: 66.55
+gold arg num: 436
+Role identification: P: 75.95, R: 73.17, F: 74.53
+Role: P: 72.38, R: 69.72, F: 71.03
+Coref Role identification: P: 78.33, R: 75.46, F: 76.87
+Coref Role: P: 74.52, R: 71.79, F: 73.13
+start getting new testset
+source:checkpoints/fold_9/epoch_5_test_step_2_results_for_predict.json
+target:preprocessed_fold_9/test_step_2_data.json
+total_event: 290
+has close events: 254
+longest context:412
+longest target 32
+start scoring
+gen_file:checkpoints/fold_9/epoch_5_test_step_3_predictions.jsonl
+test_file:data/wikievents/10fold/fold_9/test.jsonl
+paired args: 32, inconsistent args: 11, raito: 0.34375
+Evaluation by matching head words only....
+Event-level identification: P: 65.52
+Event-level : P: 65.52
+gold arg num: 436
+Role identification: P: 75.60, R: 72.48, F: 74.00
+Role: P: 72.01, R: 69.04, F: 70.49
+Coref Role identification: P: 77.99, R: 74.77, F: 76.35
+Coref Role: P: 74.16, R: 71.10, F: 72.60
+start getting new testset
+source:checkpoints/fold_9/epoch_5_test_step_3_results_for_predict.json
+target:preprocessed_fold_9/test_step_3_data.json
+total_event: 290
+has close events: 254
+longest context:412
+longest target 32
+start scoring
+gen_file:checkpoints/fold_9/epoch_5_test_step_4_predictions.jsonl
+test_file:data/wikievents/10fold/fold_9/test.jsonl
+paired args: 32, inconsistent args: 11, raito: 0.34375
+Evaluation by matching head words only....
+Event-level identification: P: 66.55
+Event-level : P: 66.55
+gold arg num: 436
+Role identification: P: 75.95, R: 73.17, F: 74.53
+Role: P: 72.38, R: 69.72, F: 71.03
+Coref Role identification: P: 78.33, R: 75.46, F: 76.87
+Coref Role: P: 74.52, R: 71.79, F: 73.13
+start getting new testset
+source:checkpoints/fold_9/epoch_5_test_step_4_results_for_predict.json
+target:preprocessed_fold_9/test_step_4_data.json
+total_event: 290
+has close events: 254
+longest context:412
+longest target 32
+start scoring
+gen_file:checkpoints/fold_9/epoch_5_test_step_5_predictions.jsonl
+test_file:data/wikievents/10fold/fold_9/test.jsonl
+paired args: 32, inconsistent args: 11, raito: 0.34375
+Evaluation by matching head words only....
+Event-level identification: P: 65.52
+Event-level : P: 65.52
+gold arg num: 436
+Role identification: P: 75.60, R: 72.48, F: 74.00
+Role: P: 72.01, R: 69.04, F: 70.49
+Coref Role identification: P: 77.99, R: 74.77, F: 76.35
+Coref Role: P: 74.16, R: 71.10, F: 72.60
+--------------------------------------------------------------------------------

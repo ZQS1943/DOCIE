@@ -1,0 +1,81 @@
+load from checkpoints/baseline_12/epoch_3.ckpt
+**********
+INIT DATA FILE: preprocessed/preprocessed_KAIROS/test.jsonl
+sample:242
+input:
+ <arg>  charged or indicted  <arg>  before  <arg>  court or judge for  <arg>  crime in  <arg>  place Thai Authorities Indict 2 Over August Shrine Attack A Bangkok military court has indicted two men accused of carrying out the August 17 bombing at a popular shrine that killed 20 people. The court on Tuesday  <tgr>  indicted  <tgr>  Bilal Mohammed and Mieraili Yusufu on 10 counts connected to the blast, including conspiracy to explode bombs and commit premeditated murder. Thailand authorities have not officially named the bombing of Erawan Shrine an act of terror, and accordingly neither suspect was charged specifically with terrorism. Police issued 17 arrest warrants following the bombing but only Bilal and Mieraili have been detained. They are described as ethnic Uighurs, a minority group based in China's Xinjiang region. They have been held in custody since their arrests in late August and early September. Thai officials have said the blast was carried out by a people - smuggling gang seeking revenge on Thai authorities for cracking down on their operation. The August 17 blast at the Erawan Shrine - a popular tourist destination - was one of the most deadly acts of violence in Bangkok in decades, and left 20 people dead and more than 120 injured. Of the dead, 14 were tourists. The attack shocked the residents of the capital because of the apparent randomness, which drove home the point that no place is immune to acts of terror. Authorities, however, have declined to call it an act of terrorism out of apparent fear that it would hurt the country's huge tourism industry. Police initially appeared at first to be at a loss, but soon claimed success with a series of raids and two arrests. Arrest warrants have been issued for 15 others. The two suspects were brought to the court in handcuffs wearing brown prison garb. Members of the media were not allowed to enter the court and the indictments took place before the two suspects arrived, said defense lawyer Chuchart Kanpai. Doubts about motive
+output:
+ court charged or indicted Bilal Mohammed and Mieraili Yusufu before  <arg>  court or judge for  <arg>  crime in  <arg>  place
+**********
+start scoring
+gen_file:checkpoints/baseline_12/epoch_3_test_step_0_predictions.jsonl
+test_file:data/wikievents/test_no_ontology.jsonl
+paired args: 49, inconsistent args: 24, raito: 0.4897959183673469
+Evaluation by matching head words only....
+Event-level identification: P: 60.99
+Event-level : P: 60.99
+gold arg num: 563
+Role identification: P: 69.01, R: 69.63, F: 69.32
+Role: P: 62.32, R: 62.88, F: 62.60
+Coref Role identification: P: 70.07, R: 70.69, F: 70.38
+Coref Role: P: 63.20, R: 63.77, F: 63.48
+len: 359 39 79
+mean: 0.8912899333001633 0.8222180142252727 0.7812883973373139
+var: 0.021626027139703095 0.03889172263683449 0.03142696350830551
+min: 0.25990939140319824 0.31391510367393494 0.24542175233364105
+max: 0.9999801715215048 0.9997491836547852 0.9995233118534088
+--------------------------------------------------------------------------------
+load from checkpoints/baseline_12/epoch_4.ckpt
+**********
+INIT DATA FILE: preprocessed/preprocessed_KAIROS/test.jsonl
+sample:242
+input:
+ <arg>  charged or indicted  <arg>  before  <arg>  court or judge for  <arg>  crime in  <arg>  place Thai Authorities Indict 2 Over August Shrine Attack A Bangkok military court has indicted two men accused of carrying out the August 17 bombing at a popular shrine that killed 20 people. The court on Tuesday  <tgr>  indicted  <tgr>  Bilal Mohammed and Mieraili Yusufu on 10 counts connected to the blast, including conspiracy to explode bombs and commit premeditated murder. Thailand authorities have not officially named the bombing of Erawan Shrine an act of terror, and accordingly neither suspect was charged specifically with terrorism. Police issued 17 arrest warrants following the bombing but only Bilal and Mieraili have been detained. They are described as ethnic Uighurs, a minority group based in China's Xinjiang region. They have been held in custody since their arrests in late August and early September. Thai officials have said the blast was carried out by a people - smuggling gang seeking revenge on Thai authorities for cracking down on their operation. The August 17 blast at the Erawan Shrine - a popular tourist destination - was one of the most deadly acts of violence in Bangkok in decades, and left 20 people dead and more than 120 injured. Of the dead, 14 were tourists. The attack shocked the residents of the capital because of the apparent randomness, which drove home the point that no place is immune to acts of terror. Authorities, however, have declined to call it an act of terrorism out of apparent fear that it would hurt the country's huge tourism industry. Police initially appeared at first to be at a loss, but soon claimed success with a series of raids and two arrests. Arrest warrants have been issued for 15 others. The two suspects were brought to the court in handcuffs wearing brown prison garb. Members of the media were not allowed to enter the court and the indictments took place before the two suspects arrived, said defense lawyer Chuchart Kanpai. Doubts about motive
+output:
+ court charged or indicted Bilal Mohammed and Mieraili Yusufu before  <arg>  court or judge for  <arg>  crime in  <arg>  place
+**********
+start scoring
+gen_file:checkpoints/baseline_12/epoch_4_test_step_0_predictions.jsonl
+test_file:data/wikievents/test_no_ontology.jsonl
+paired args: 49, inconsistent args: 25, raito: 0.5102040816326531
+Evaluation by matching head words only....
+Event-level identification: P: 64.01
+Event-level : P: 64.01
+gold arg num: 563
+Role identification: P: 67.97, R: 71.23, F: 69.56
+Role: P: 62.54, R: 65.54, F: 64.01
+Coref Role identification: P: 69.32, R: 72.65, F: 70.95
+Coref Role: P: 63.90, R: 66.96, F: 65.39
+len: 377 32 83
+mean: 0.9049123426931204 0.8270078071703514 0.7611045933053037
+var: 0.017235034575994203 0.025546861380188045 0.037405755226980975
+min: 0.2786549925804138 0.444436639547348 0.3255225121974945
+max: 0.9999800523122152 0.9999082485834757 0.9979674220085144
+--------------------------------------------------------------------------------
+load from checkpoints/baseline_12/epoch_5.ckpt
+**********
+INIT DATA FILE: preprocessed/preprocessed_KAIROS/test.jsonl
+sample:242
+input:
+ <arg>  charged or indicted  <arg>  before  <arg>  court or judge for  <arg>  crime in  <arg>  place Thai Authorities Indict 2 Over August Shrine Attack A Bangkok military court has indicted two men accused of carrying out the August 17 bombing at a popular shrine that killed 20 people. The court on Tuesday  <tgr>  indicted  <tgr>  Bilal Mohammed and Mieraili Yusufu on 10 counts connected to the blast, including conspiracy to explode bombs and commit premeditated murder. Thailand authorities have not officially named the bombing of Erawan Shrine an act of terror, and accordingly neither suspect was charged specifically with terrorism. Police issued 17 arrest warrants following the bombing but only Bilal and Mieraili have been detained. They are described as ethnic Uighurs, a minority group based in China's Xinjiang region. They have been held in custody since their arrests in late August and early September. Thai officials have said the blast was carried out by a people - smuggling gang seeking revenge on Thai authorities for cracking down on their operation. The August 17 blast at the Erawan Shrine - a popular tourist destination - was one of the most deadly acts of violence in Bangkok in decades, and left 20 people dead and more than 120 injured. Of the dead, 14 were tourists. The attack shocked the residents of the capital because of the apparent randomness, which drove home the point that no place is immune to acts of terror. Authorities, however, have declined to call it an act of terrorism out of apparent fear that it would hurt the country's huge tourism industry. Police initially appeared at first to be at a loss, but soon claimed success with a series of raids and two arrests. Arrest warrants have been issued for 15 others. The two suspects were brought to the court in handcuffs wearing brown prison garb. Members of the media were not allowed to enter the court and the indictments took place before the two suspects arrived, said defense lawyer Chuchart Kanpai. Doubts about motive
+output:
+ court charged or indicted Bilal Mohammed and Mieraili Yusufu before  <arg>  court or judge for  <arg>  crime in  <arg>  place
+**********
+start scoring
+gen_file:checkpoints/baseline_12/epoch_5_test_step_0_predictions.jsonl
+test_file:data/wikievents/test_no_ontology.jsonl
+paired args: 49, inconsistent args: 24, raito: 0.4897959183673469
+Evaluation by matching head words only....
+Event-level identification: P: 64.56
+Event-level : P: 64.56
+gold arg num: 563
+Role identification: P: 70.60, R: 71.23, F: 70.91
+Role: P: 65.49, R: 66.07, F: 65.78
+Coref Role identification: P: 72.01, R: 72.65, F: 72.33
+Coref Role: P: 66.90, R: 67.50, F: 67.20
+len: 380 29 78
+mean: 0.9156916027112164 0.8506578806487993 0.8043047336601463
+var: 0.015186452696458415 0.017669122115770416 0.028826386353731904
+min: 0.3595241606235504 0.5792617797851562 0.3370167016983032
+max: 0.9999971389770508 0.9999635219573975 0.999579131603241
+--------------------------------------------------------------------------------

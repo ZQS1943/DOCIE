@@ -1,0 +1,61 @@
+load from checkpoints/iterative_tag_other_finetune/epoch_1.ckpt
+start scoring
+({'role': 'Place', 'predict': False}, {'role': 'Place', 'predict': False})
+({'role': 'Victim', 'predict': True}, {'role': 'Target', 'predict': False})
+({'role': 'Killer', 'predict': False}, {'role': 'Injurer', 'predict': False})
+({'role': 'Victim', 'predict': True}, {'role': 'Victim', 'predict': True})
+({'role': 'Defendant', 'predict': True}, {'role': 'Victim', 'predict': False})
+({'role': 'Damager', 'predict': False}, {'role': 'Damager', 'predict': False})
+({'role': 'Killer', 'predict': True}, {'role': 'Injurer', 'predict': True})
+({'role': 'Target', 'predict': False}, {'role': 'Victim', 'predict': False})
+({'role': 'Victim', 'predict': True}, {'role': 'Target', 'predict': False})
+({'role': 'Killer', 'predict': False}, {'role': 'Attacker', 'predict': False})
+({'role': 'Target', 'predict': False}, {'role': 'Victim', 'predict': False})
+({'role': 'Victim', 'predict': False}, {'role': 'Target', 'predict': False})
+({'role': 'Killer', 'predict': False}, {'role': 'Attacker', 'predict': False})
+({'role': 'Killer', 'predict': False}, {'role': 'Injurer', 'predict': False})
+({'role': 'Killer', 'predict': False}, {'role': 'Damager', 'predict': False})
+({'role': 'Injurer', 'predict': False}, {'role': 'Damager', 'predict': False})
+({'role': 'Victim', 'predict': True}, {'role': 'PassengerArtifact', 'predict': False})
+({'role': 'Defendant', 'predict': False}, {'role': 'Attacker', 'predict': True})
+({'role': 'Defendant', 'predict': False}, {'role': 'Injurer', 'predict': True})
+({'role': 'Attacker', 'predict': True}, {'role': 'Injurer', 'predict': True})
+({'role': 'Killer', 'predict': False}, {'role': 'Jailer', 'predict': False})
+({'role': 'Victim', 'predict': True}, {'role': 'Attacker', 'predict': False})
+({'role': 'Detainee', 'predict': False}, {'role': 'Attacker', 'predict': False})
+({'role': 'Attacker', 'predict': False}, {'role': 'Killer', 'predict': False})
+({'role': 'Attacker', 'predict': False}, {'role': 'Injurer', 'predict': False})
+({'role': 'Killer', 'predict': False}, {'role': 'Injurer', 'predict': False})
+({'role': 'Recipient', 'predict': False}, {'role': 'Giver', 'predict': False})
+({'role': 'ObservedEntity', 'predict': False}, {'role': 'Instrument', 'predict': False})
+({'role': 'Recipient', 'predict': False}, {'role': 'Participant', 'predict': False})
+({'role': 'Giver', 'predict': False}, {'role': 'Participant', 'predict': False})
+({'role': 'Attacker', 'predict': True}, {'role': 'Attacker', 'predict': False})
+({'role': 'Victim', 'predict': True}, {'role': 'Target', 'predict': False})
+({'role': 'Victim', 'predict': True}, {'role': 'Target', 'predict': False})
+({'role': 'Victim', 'predict': True}, {'role': 'Target', 'predict': False})
+({'role': 'PassengerArtifact', 'predict': True}, {'role': 'ExplosiveDevice', 'predict': True})
+({'role': 'Victim', 'predict': True}, {'role': 'Target', 'predict': False})
+({'role': 'Target', 'predict': False}, {'role': 'Victim', 'predict': True})
+({'role': 'Communicator', 'predict': True}, {'role': 'Communicator', 'predict': True})
+({'role': 'Communicator', 'predict': False}, {'role': 'Communicator', 'predict': False})
+({'role': 'Defendant', 'predict': False}, {'role': 'PassengerArtifact', 'predict': False})
+({'role': 'Attacker', 'predict': False}, {'role': 'Place', 'predict': True})
+({'role': 'Attacker', 'predict': False}, {'role': 'Killer', 'predict': False})
+({'role': 'Place', 'predict': False}, {'role': 'Place', 'predict': False})
+({'role': 'Attacker', 'predict': False}, {'role': 'Killer', 'predict': False})
+({'role': 'Attacker', 'predict': False}, {'role': 'Victim', 'predict': False})
+({'role': 'Killer', 'predict': False}, {'role': 'Victim', 'predict': False})
+({'role': 'Place', 'predict': False}, {'role': 'Place', 'predict': False})
+({'role': 'Recipient', 'predict': False}, {'role': 'Impeder', 'predict': True})
+({'role': 'Killer', 'predict': False}, {'role': 'Attacker', 'predict': False})
+paired args: 49, inconsistent args: 15, raito: 0.30612244897959184
+Evaluation by matching head words only....
+no ontology: 1
+Event-level identification: P: 43.96
+Event-level : P: 43.96
+gold arg num: 561
+Role identification: P: 79.29, R: 43.67, F: 56.32
+Role: P: 73.79, R: 40.64, F: 52.41
+Coref Role identification: P: 80.91, R: 44.56, F: 57.47
+Coref Role: P: 75.40, R: 41.53, F: 53.56

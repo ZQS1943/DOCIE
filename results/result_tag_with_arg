@@ -1,0 +1,652 @@
+load from checkpoints/tag_with_arg/epoch_2.ckpt
+**********
+INIT DATA FILE: preprocessed/preprocessed_KAIROS/test.jsonl
+sample:327
+input:
+ <arg>  arrested or jailed  <arg>  for  <arg>  crime at  <arg>  place But he was later told that the IRA unit involved had tried to use “ a succession of phone boxes ” which were out of order, significantly delaying the bomb - warning call. Video Loading Video Unavailable Click to play Tap to play The video will start in 8 Cancel Play now Listen to our recreation of the Birmingham pub bombings warning call - made to the Birmingham Post & Mail newsroom Conway, who makes the admissions in his new memoir, also revealed that soon after the bombings the IRA ’ s England Operational Commander and his adjutant “ made it back home ” to Dublin for an urgent de - brief and to assess the impact of the disaster as far as the terrorists were concerned. Birmingham pub bombings : Minute by minute - 24 hours that changed our city forever Funding for the terrorists dried up almost overnight and the bombings, which left 21 dead and almost 200 injured, including many maimed for life, cost them hugely in the propaganda war. And in an interview he confirmed that the IRA hierarchy in Dublin knew all along that the six Irishmen  <tgr>  arrested  <tgr>  for the explosions were innocent “ from the get go, from the very start. ” Now, Julie and Brian Hambleton, who lost their sister Maxine in the bombings and lead the city ’ s Justice4the21 campaign, called on West Midlands Police and David Cameron to take immediate action. Julie said : “ I am expecting West Midlands Police Chief Constable Chris Sims and West Midlands Police Force to interview with Mr Conway with immediate effect. “ And I hope that Mr Cameron, who a week ago told The House of Commons that the pub bombers must be found, takes note of this development and ensures that the police follow this through. ” Brian added : “ The police keep saying they won ’ t do anything because there is no fresh evidence. Well, here it is in black and white. It ’ s an admission. They have got to do something with this information. ” The Birmingham pub bombings - The 28 numbers that add up to a cover - up, say campaigners
+output:
+ <arg>  arrested or jailed Irishmen for  <arg>  crime at  <arg>  place
+**********
+checkpoints/tag_with_arg/epoch_2_test_step_0_predictions.jsonl
+start scoring
+gen_file:checkpoints/tag_with_arg/epoch_2_test_step_0_predictions.jsonl
+test_file:data/wikievents/test_no_ontology.jsonl
+paired args: 49, inconsistent args: 20, raito: 0.40816326530612246
+Evaluation by matching head words only....
+Event-level identification: P: 51.10
+Event-level : P: 51.10
+gold arg num: 563
+Role identification: P: 52.47, R: 60.39, F: 56.15
+Role: P: 46.76, R: 53.82, F: 50.04
+Coref Role identification: P: 53.55, R: 61.63, F: 57.31
+Coref Role: P: 47.84, R: 55.06, F: 51.20
+start getting new testset
+source:checkpoints/tag_with_arg/epoch_2_test_step_0_results_for_predict.json
+target:preprocessed/preprocessed_tag_with_arg/test_step_0_data.json
+total_event: 364
+has close events: 341
+longest context:445
+longest target 35
+**********
+INIT DATA FILE: preprocessed/preprocessed_tag_with_arg/test_step_0_data.json
+sample:335
+input:
+ <arg>  died at  <arg>  place from  <arg>  medical issue, killed by  <arg>  killer Get all the latest politics news Subscribe Thank you for subscribing We have more newsletters Show me See our privacy notice Invalid Email One of the IRA ’ s most senior former officers has admitted for the first time that the terror group is responsible for the Birmingham pub bombings. Kieran Conway, who was head of the IRA ’ s intelligence - gathering department in the 1970s, broke a 40 - year silence by the organisation to make the admission. He admitted he was “ appalled and ashamed ” because he claimed the bombing of civilians went against everything it stood for. He said the attacks  <tag>  Attacker:  </tag>  on The  <tag>  Target: Mulberry Bush and The Tavern  </tag>  in The Town had been in revenge for the  <tgr>  death  <tgr>  of IRA bomber James McDade. At first he feared that the timing of the attacks - with very little warning - had been deliberate because “ tempers were high ”. But  <tag>  Participant: he  </tag>  was later told  <tag>  Participant:  </tag>  that the  <tag>  Topic: IRA  </tag>  unit involved had tried to use “ a succession of phone boxes ” which were out of order, significantly delaying the bomb - warning call. Video Loading Video Unavailable Click to play Tap to play The video will start in 8 Cancel Play now Listen to our recreation of the Birmingham pub bombings warning call - made to the Birmingham Post & Mail newsroom Conway, who makes the admissions in his new memoir, also revealed that soon after the bombings the IRA ’ s England Operational Commander and his adjutant “ made it back home ” to Dublin for an urgent de - brief and to assess the impact of the disaster as far as the terrorists were concerned. Birmingham pub bombings : Minute by minute - 24 hours that changed our city forever
+output:
+ James McDade died at  <arg>  place from  <arg>  medical issue, killed by  <arg>  killer
+**********
+checkpoints/tag_with_arg/epoch_2_test_step_1_predictions.jsonl
+start scoring
+gen_file:checkpoints/tag_with_arg/epoch_2_test_step_1_predictions.jsonl
+test_file:data/wikievents/test_no_ontology.jsonl
+paired args: 49, inconsistent args: 25, raito: 0.5102040816326531
+Evaluation by matching head words only....
+Event-level identification: P: 50.00
+Event-level : P: 50.00
+gold arg num: 563
+Role identification: P: 53.80, R: 60.39, F: 56.90
+Role: P: 47.47, R: 53.29, F: 50.21
+Coref Role identification: P: 54.91, R: 61.63, F: 58.08
+Coref Role: P: 48.58, R: 54.53, F: 51.38
+start getting new testset
+source:checkpoints/tag_with_arg/epoch_2_test_step_1_results_for_predict.json
+target:preprocessed/preprocessed_tag_with_arg/test_step_1_data.json
+total_event: 364
+has close events: 341
+longest context:445
+longest target 35
+**********
+INIT DATA FILE: preprocessed/preprocessed_tag_with_arg/test_step_1_data.json
+sample:93
+input:
+ <arg>  manufactured or assembled or produced  <arg>  from  <arg>  components using  <arg>  at  <arg>  place == Background == In February 1975 the Provisional Irish Republican Army agreed to a truce and ceasefire with the British government and the Northern Ireland Office. Seven " incident centres " were established in Irish nationalist areas in Northern Ireland to monitor the ceasefire and the activity of the security forces. Before the truce, the IRA active service unit ( ASU ) later dubbed the Balcombe Street Gang ( due to the December 1975 Balcombe Street siege ) had been carrying out bomb and gun attacks in Southern England since autumn 1974, mostly in and around London. Their last previous attack was an assassination attempt on former Prime Minister Edward Heath but he was not home when the  <tag>  Attacker: attackers  </tag>  threw a  <tag>  ExplosiveDevice: bomb  </tag>  into  <tag>  Target: his  </tag>  bedroom window on 22 December 1974. == The bombing == The  <tag>  ManufacturerAssembler: Balcombe Street Gang  </tag>  planted a time  <tag>  Artifact: bomb  </tag>  in the  <tag>  Place: Caterham Arms  </tag>  public house in Caterham, Surrey. The IRA unit  <tgr>  placed  <tgr>  the 7lb bomb in a duffel bag under a seat. There was no warning and the  <tag>  ExplosiveDevice ExplosiveDevice: bomb  </tag>  exploded at 9 : 20, injuring 23  <tag>  Victim: civilians  </tag>  and 10 off - duty  <tag>  Victim: soldiers  </tag> . The pub was used by members of the Welsh Guards who were based at the barracks nearby. Some of the injuries were very serious, with at least three soldiers losing limbs. The blast blew the roof off the pub in the process. This attack marked the start of a renewed bombing campaign ( Phase Two ) in England and the end of the truce with the British Government. The next day, the same IRA unit exploded a bomb in Oxford Street, injuring several people. == Aftermath ==
+output:
+ manufactured or assembled or produced bomb from  <arg>  components using  <arg>  at  <arg>  place
+**********
+checkpoints/tag_with_arg/epoch_2_test_step_2_predictions.jsonl
+start scoring
+gen_file:checkpoints/tag_with_arg/epoch_2_test_step_2_predictions.jsonl
+test_file:data/wikievents/test_no_ontology.jsonl
+paired args: 49, inconsistent args: 26, raito: 0.5306122448979592
+Evaluation by matching head words only....
+Event-level identification: P: 50.00
+Event-level : P: 50.00
+gold arg num: 563
+Role identification: P: 53.36, R: 60.57, F: 56.74
+Role: P: 47.10, R: 53.46, F: 50.08
+Coref Role identification: P: 54.46, R: 61.81, F: 57.90
+Coref Role: P: 48.20, R: 54.71, F: 51.25
+start getting new testset
+source:checkpoints/tag_with_arg/epoch_2_test_step_2_results_for_predict.json
+target:preprocessed/preprocessed_tag_with_arg/test_step_2_data.json
+total_event: 364
+has close events: 341
+longest context:445
+longest target 35
+**********
+INIT DATA FILE: preprocessed/preprocessed_tag_with_arg/test_step_2_data.json
+sample:101
+input:
+ <arg>  met face-to-face with  <arg>  about  <arg>  topic at  <arg>  place His comments were made before authorities confirmed the nature of the explosion. Late Saturday, Democratic presidential nominee Hillary Clinton said it was important to “ know the facts ” before drawing conclusions about such incidents. Early Sunday, posts on social media from people in New York showed the area of the explosion to be relatively calm and quiet. Authorities had closed large swaths of roads in the area Saturday night. On Sunday, several roads had reopened but there remained a large police presence in the area. The explosion in New York comes as foreign leaders, including many heads of state, are heading to Manhattan for the United Nations General Assembly. Secretary of State John F. Kerry arrived Saturday, while Obama is scheduled to head to the city on Monday. This annual  <tgr>  meeting  <tgr>  — held more than two miles from the site of the explosion in Chelsea — is traditionally a challenging time for New York, as many roads are shut down and the heavy security leads to traffic jams. The FBI still has no determination as to motive, said a law enforcement official who spoke on condition of anonymity because the investigation is ongoing. Agents are examining the detonated material from the first device as well as studying the second, which appeared to resemble a pressure cooker. They are also looking at video from security cameras, social media — “ all the logical leads, ” the official said. The explosion in Chelsea coincided with a separate attack that took place in Minnesota Saturday night, in which a man stabbed eight people in a St. Cloud mall before he was killed by an off - duty police officer. On Sunday, an ISIS - linked news agency claimed the mall attacker was “ a soldier of the Islamic State. ”
+output:
+ met face-to-face with  <arg>  about  <arg>  topic at  <arg>  place
+**********
+checkpoints/tag_with_arg/epoch_2_test_step_3_predictions.jsonl
+start scoring
+gen_file:checkpoints/tag_with_arg/epoch_2_test_step_3_predictions.jsonl
+test_file:data/wikievents/test_no_ontology.jsonl
+paired args: 49, inconsistent args: 26, raito: 0.5306122448979592
+Evaluation by matching head words only....
+Event-level identification: P: 50.00
+Event-level : P: 50.00
+gold arg num: 563
+Role identification: P: 53.76, R: 60.92, F: 57.12
+Role: P: 47.34, R: 53.64, F: 50.29
+Coref Role identification: P: 54.86, R: 62.17, F: 58.28
+Coref Role: P: 48.43, R: 54.88, F: 51.46
+start getting new testset
+source:checkpoints/tag_with_arg/epoch_2_test_step_3_results_for_predict.json
+target:preprocessed/preprocessed_tag_with_arg/test_step_3_data.json
+total_event: 364
+has close events: 341
+longest context:445
+longest target 35
+**********
+INIT DATA FILE: preprocessed/preprocessed_tag_with_arg/test_step_3_data.json
+sample:68
+input:
+ <arg>  detonated or exploded  <arg>  explosive device using  <arg>  to attack  <arg>  target at  <arg>  place The use of drones aligned with Obama ’ s ambition to keep up the war against al Qaeda while extricating the US military from intractable, costly ground wars in the Middle East and Asia. But the targeted killing programme has drawn much criticism. The Obama administration has insisted that drone strikes are so “ exceptionally surgical and precise ” that they pluck off terror suspects while not putting “ innocent men, women and children in danger ”. This claim has been contested by numerous human rights groups, however, and the Bureau ’ s figures on civilian casualties also demonstrate that this is often not the case. The White House released long - awaited figures last July on the number of people killed in drone strikes between January 2009 and the end of 2015, an announcement which insiders said was a direct response to pressure from the Bureau and other organisations that collect data. However the US ’ s estimate of the number of civilians killed – between 64 and 116 – contrasted strongly with the number recorded by the Bureau, which at 380 to 801 was six times higher. That figure does not include deaths  <tag>  Victim:  </tag>  in active  <tag>  Place: battlefields  </tag>  including  <tag>  Place: Afghanistan  </tag>  – where  <tag>  Killer: US  </tag>  <tag>  Instrument: air  </tag>  attacks  <tag>  Attacker:  </tag>  have shot up since Obama withdrew the majority of his troops at the end of 2014. The country has since come under frequent US  <tgr>  bombardment  <tgr> , in an unreported war that saw 1, 337 weapons dropped last year alone – a 40 % rise on 2015. Afghan civilian casualties have been high, with the United Nations ( UN ) reporting at least 85 deaths  <tag>  Victim:  </tag>  in 2016. The Bureau recorded 65 to 105 civilian deaths during this period. We did not start collecting data on Afghanistan until 2015.
+output:
+ detonated or exploded weapons explosive device using  <arg>  to attack  <arg>  target at country place
+**********
+checkpoints/tag_with_arg/epoch_2_test_step_4_predictions.jsonl
+start scoring
+gen_file:checkpoints/tag_with_arg/epoch_2_test_step_4_predictions.jsonl
+test_file:data/wikievents/test_no_ontology.jsonl
+paired args: 49, inconsistent args: 26, raito: 0.5306122448979592
+Evaluation by matching head words only....
+Event-level identification: P: 50.27
+Event-level : P: 50.27
+gold arg num: 563
+Role identification: P: 53.69, R: 60.75, F: 57.00
+Role: P: 47.57, R: 53.82, F: 50.50
+Coref Role identification: P: 54.79, R: 61.99, F: 58.17
+Coref Role: P: 48.67, R: 55.06, F: 51.67
+start getting new testset
+source:checkpoints/tag_with_arg/epoch_2_test_step_4_results_for_predict.json
+target:preprocessed/preprocessed_tag_with_arg/test_step_4_data.json
+total_event: 364
+has close events: 341
+longest context:445
+longest target 35
+**********
+INIT DATA FILE: preprocessed/preprocessed_tag_with_arg/test_step_4_data.json
+sample:5
+input:
+ <arg>  detonated or exploded  <arg>  explosive device using  <arg>  to attack  <arg>  target at  <arg>  place The Taliban killed more than 100 members of the Afghan security forces inside a military compound in central Maidan Wardak province on Monday, a senior defense official said. " We have information that 126 people have been killed in the explosion inside the military training center, eight special commandoes are among the dead, " said a senior official in the defense ministry in Kabul, speaking on condition of anonymity. The official said the assault began on Monday morning when the  <tag>  Attacker: attackers  </tag>  rammed a car full  <tag>  ExplosiveDevice: explosives  </tag>  through a military checkpoint and detonated the vehicle inside the  <tag>  Place: campus  </tag>  of the National Directorate of Security ( NDS ) forces training center in Maidan Shahr, the capital of Maidan Wardak province. Two gunmen entered the campus right after the explosion and  <tgr>  shot  <tgr>  at many Afghan soldiers before being gunned down during the clashes. Defense ministry officials said the Taliban had used U. S. - made armored Humvee vehicles captured from Afghan forces as a car bomb in order to breach the military fortifications. A second source residing in Maidan Wardak province said more than 100 members of National Directorate of Security ( NDS ) were killed in the complex attack. " I have been in touch with the NDS official in the province and they told me that over 100 members of the NDS were killed in the big explosion, " the former provincial official said. Sharif Hotak, a member of the provincial council in Maidan Wardak said he saw bodies of 35 Afghan forces in the hospital. " Many more were killed. Several bodies were transported to Kabul city and many injured were transferred to hospitals in Kabul, " said Hotak, adding that " the government was hiding the accurate casualty figures to prevent a further dip in the morale of the Afghan forces. "
+output:
+ gunmen detonated or exploded  <arg>  explosive device using  <arg>  to attack soldiers target at campus place
+**********
+checkpoints/tag_with_arg/epoch_2_test_step_5_predictions.jsonl
+start scoring
+gen_file:checkpoints/tag_with_arg/epoch_2_test_step_5_predictions.jsonl
+test_file:data/wikievents/test_no_ontology.jsonl
+paired args: 49, inconsistent args: 26, raito: 0.5306122448979592
+Evaluation by matching head words only....
+Event-level identification: P: 50.00
+Event-level : P: 50.00
+gold arg num: 563
+Role identification: P: 53.62, R: 60.57, F: 56.88
+Role: P: 47.33, R: 53.46, F: 50.21
+Coref Role identification: P: 54.72, R: 61.81, F: 58.05
+Coref Role: P: 48.43, R: 54.71, F: 51.38
+--------------------------------------------------------------------------------
+load from checkpoints/tag_with_arg/epoch_3.ckpt
+**********
+INIT DATA FILE: preprocessed/preprocessed_KAIROS/test.jsonl
+sample:327
+input:
+ <arg>  arrested or jailed  <arg>  for  <arg>  crime at  <arg>  place But he was later told that the IRA unit involved had tried to use “ a succession of phone boxes ” which were out of order, significantly delaying the bomb - warning call. Video Loading Video Unavailable Click to play Tap to play The video will start in 8 Cancel Play now Listen to our recreation of the Birmingham pub bombings warning call - made to the Birmingham Post & Mail newsroom Conway, who makes the admissions in his new memoir, also revealed that soon after the bombings the IRA ’ s England Operational Commander and his adjutant “ made it back home ” to Dublin for an urgent de - brief and to assess the impact of the disaster as far as the terrorists were concerned. Birmingham pub bombings : Minute by minute - 24 hours that changed our city forever Funding for the terrorists dried up almost overnight and the bombings, which left 21 dead and almost 200 injured, including many maimed for life, cost them hugely in the propaganda war. And in an interview he confirmed that the IRA hierarchy in Dublin knew all along that the six Irishmen  <tgr>  arrested  <tgr>  for the explosions were innocent “ from the get go, from the very start. ” Now, Julie and Brian Hambleton, who lost their sister Maxine in the bombings and lead the city ’ s Justice4the21 campaign, called on West Midlands Police and David Cameron to take immediate action. Julie said : “ I am expecting West Midlands Police Chief Constable Chris Sims and West Midlands Police Force to interview with Mr Conway with immediate effect. “ And I hope that Mr Cameron, who a week ago told The House of Commons that the pub bombers must be found, takes note of this development and ensures that the police follow this through. ” Brian added : “ The police keep saying they won ’ t do anything because there is no fresh evidence. Well, here it is in black and white. It ’ s an admission. They have got to do something with this information. ” The Birmingham pub bombings - The 28 numbers that add up to a cover - up, say campaigners
+output:
+ <arg>  arrested or jailed Irishmen for  <arg>  crime at  <arg>  place
+**********
+checkpoints/tag_with_arg/epoch_3_test_step_0_predictions.jsonl
+start scoring
+gen_file:checkpoints/tag_with_arg/epoch_3_test_step_0_predictions.jsonl
+test_file:data/wikievents/test_no_ontology.jsonl
+paired args: 49, inconsistent args: 27, raito: 0.5510204081632653
+Evaluation by matching head words only....
+Event-level identification: P: 62.64
+Event-level : P: 62.64
+gold arg num: 563
+Role identification: P: 70.58, R: 69.45, F: 70.01
+Role: P: 64.08, R: 63.06, F: 63.56
+Coref Role identification: P: 71.66, R: 70.52, F: 71.08
+Coref Role: P: 65.16, R: 64.12, F: 64.64
+start getting new testset
+source:checkpoints/tag_with_arg/epoch_3_test_step_0_results_for_predict.json
+target:preprocessed/preprocessed_tag_with_arg/test_step_0_data.json
+total_event: 364
+has close events: 341
+longest context:440
+longest target 35
+**********
+INIT DATA FILE: preprocessed/preprocessed_tag_with_arg/test_step_0_data.json
+sample:205
+input:
+ <arg>  died at  <arg>  place from  <arg>  medical issue, killed by  <arg>  killer On 17 September 2019, two  <tag>  Attacker: suicide  </tag>  bombings  <tgr>  killed  <tgr>  over 48  <tag>  Target: people  </tag>  in  <tag>  Place: Charikar and Kabul  </tag> , Afghanistan. The first attack occurred at a rally for president Ashraf Ghani which killed over  <tag>  Victim: 26  </tag>  and wounded over  <tag>  Victim Victim: 42  </tag> . Ghani was unharmed in the incident. The second bombing occurred in  <tag>  Place: Kabul  </tag>  near the US  <tag>  Target: embassy  </tag> . In this incident 22 were killed and another 38 were injured in the explosion. Children and women are among the dead and wounded in both attacks, also multiple soldiers were killed. The Taliban claimed responsibility for the attacks, and said they will commit more attacks to discourage people from voting in the upcoming presidential elections. == Attacks == === Charikar === The attack took place in Charikar, at a police training ground. At the time, Afghan president Ashraf Ghani was holding a political rally at the site, attended by thousands of people. A suicide bomber riding a motorcycle drove into a crowd near a security checkpoint and detonated his explosives. 26 people and the bomber were killed, and 42 others injured. Women and children were among the victims of the attack. President Ghani was unharmed in the attack, remaining protected by a secure compound about half a mile from the site of the blast. === Kabul === A few hours after the first attack, a second suicide bombing took place in Massoud Square near the Kabul Green Zone, in an area where several government buildings, the US embassy and NATO headquarters, are located. 22 people were killed in this attack and 38 injured. == Responsibility ==
+output:
+ people died at Charikar and Kabul place from  <arg>  medical issue, killed by  <arg>  killer
+**********
+checkpoints/tag_with_arg/epoch_3_test_step_1_predictions.jsonl
+start scoring
+gen_file:checkpoints/tag_with_arg/epoch_3_test_step_1_predictions.jsonl
+test_file:data/wikievents/test_no_ontology.jsonl
+paired args: 49, inconsistent args: 30, raito: 0.6122448979591837
+Evaluation by matching head words only....
+Event-level identification: P: 60.16
+Event-level : P: 60.16
+gold arg num: 563
+Role identification: P: 72.32, R: 68.21, F: 70.20
+Role: P: 64.78, R: 61.10, F: 62.89
+Coref Role identification: P: 73.45, R: 69.27, F: 71.30
+Coref Role: P: 65.91, R: 62.17, F: 63.99
+start getting new testset
+source:checkpoints/tag_with_arg/epoch_3_test_step_1_results_for_predict.json
+target:preprocessed/preprocessed_tag_with_arg/test_step_1_data.json
+total_event: 364
+has close events: 341
+longest context:439
+longest target 35
+**********
+INIT DATA FILE: preprocessed/preprocessed_tag_with_arg/test_step_1_data.json
+sample:221
+input:
+ <arg>  died at  <arg>  place from  <arg>  medical issue, killed by  <arg>  killer Ghani was unharmed in the incident. The second bombing occurred in Kabul near the US embassy. In this incident 22 were killed and another 38 were injured in the explosion. Children and women are among the dead and wounded in both attacks, also multiple soldiers were killed. The Taliban claimed responsibility for the attacks, and said they will commit more attacks to discourage people from voting in the upcoming presidential elections. == Attacks == === Charikar === The attack took place in Charikar, at a police training ground. At the time, Afghan president Ashraf Ghani was holding a political rally at the site, attended by thousands of people. A suicide  <tag>  Transporter: bomber  </tag>  riding a motorcycle drove into a crowd near a security  <tag>  Destination: checkpoint  </tag>  and detonated his  <tag>  PassengerArtifact PassengerArtifact: explosives  </tag> . 26 people and the  <tag>  Attacker: bomber  </tag>  were  <tgr>  killed  <tgr> , and 42  <tag>  Victim: others  </tag>  injured. Women and children were among the victims of the attack. President  <tag>  Target: Ghani  </tag>  was unharmed in the attack, remaining protected by a secure compound about half a mile from the site of the blast. === Kabul === A few hours after the first attack, a second suicide bombing took place in Massoud Square near the Kabul Green Zone, in an area where several government buildings, the US embassy and NATO headquarters, are located. 22 people were killed in this attack and 38 injured. == Responsibility == The Taliban claimed responsibility for both attacks, and stated that the attacks were aimed at disrupting the Afghan presidential election, scheduled to take place on September 28. == References ==
+output:
+ people and bomber died at  <arg>  place from  <arg>  medical issue, killed by  <arg>  killer
+**********
+checkpoints/tag_with_arg/epoch_3_test_step_2_predictions.jsonl
+start scoring
+gen_file:checkpoints/tag_with_arg/epoch_3_test_step_2_predictions.jsonl
+test_file:data/wikievents/test_no_ontology.jsonl
+paired args: 49, inconsistent args: 29, raito: 0.5918367346938775
+Evaluation by matching head words only....
+Event-level identification: P: 60.99
+Event-level : P: 60.99
+gold arg num: 563
+Role identification: P: 73.30, R: 68.74, F: 70.94
+Role: P: 65.91, R: 61.81, F: 63.79
+Coref Role identification: P: 74.43, R: 69.80, F: 72.04
+Coref Role: P: 67.05, R: 62.88, F: 64.89
+start getting new testset
+source:checkpoints/tag_with_arg/epoch_3_test_step_2_results_for_predict.json
+target:preprocessed/preprocessed_tag_with_arg/test_step_2_data.json
+total_event: 364
+has close events: 341
+longest context:439
+longest target 35
+**********
+INIT DATA FILE: preprocessed/preprocessed_tag_with_arg/test_step_2_data.json
+sample:320
+input:
+ <arg>  was in a demonstration for  <arg>  topic with  <arg>  visual display against  <arg>  at  <arg>  place, with potential involvement of  <arg>  police or military Cuba ’ s foreign minister said in a tweet late on Friday that the country would respect the protocols of the negotiations it had been hosting and was consulting with both parties and the guarantors of the talks. On Friday, Colombia blamed the leftist ELN for the bombing of a police academy in Bogota that killed 20 people as well as the attacker, dealing a big blow to the peace process. 190102132047518 Duque then announced that he was reinstating arrest warrants for 10 ELN members, who are part of the group ’ s delegation to the Cuba talks. The talks were aimed at ending more than five decades of fighting by the Marxist - inspired group. Duque said that Cuba must not protect the rebels. The police academy car bombing “ was a crime that violated human rights and no such act deserves [ Cuba acting ] to avoid justice being done ”, Duque said while giving a speech in Tolima. Colombians, including Duque, planned to join in a march on Sunday to  <tgr>  protest  <tgr>  against the car bombing, the worst such attack in the country in 16 years. Last rebel group In November, Colombia asked  <tag>  Communicator Communicator: Cuba  </tag>  to capture ELN rebel commander  <tag>  Detainee: Nicolas Rodriguez  </tag>  and provide information about the presence of other commanders in the Cuban territory. The government in Bogota also asked Havana to act on an Interpol Red Notice against Rodriguez. The Cuban government did not respond publicly to that request or made a statement about the issue. Colombia has experienced several years of relative calm since the 2016 peace accord signed by then - President Juan Manuel Santos and the Revolutionary Armed Forces of Colombia ( FARC ) fighters. 190118182118648 With the landmark agreement turning the former rebels into a political party, the smaller ELN is considered the last active rebel group in the country.
+output:
+ <arg>  was in a demonstration for  <arg>  topic with  <arg>  visual display against  <arg>  at  <arg>  place, with potential involvement of  <arg>  police or military
+**********
+checkpoints/tag_with_arg/epoch_3_test_step_3_predictions.jsonl
+start scoring
+gen_file:checkpoints/tag_with_arg/epoch_3_test_step_3_predictions.jsonl
+test_file:data/wikievents/test_no_ontology.jsonl
+paired args: 49, inconsistent args: 29, raito: 0.5918367346938775
+Evaluation by matching head words only....
+Event-level identification: P: 61.26
+Event-level : P: 61.26
+gold arg num: 563
+Role identification: P: 73.24, R: 68.56, F: 70.83
+Role: P: 65.84, R: 61.63, F: 63.67
+Coref Role identification: P: 74.38, R: 69.63, F: 71.93
+Coref Role: P: 66.98, R: 62.70, F: 64.77
+start getting new testset
+source:checkpoints/tag_with_arg/epoch_3_test_step_3_results_for_predict.json
+target:preprocessed/preprocessed_tag_with_arg/test_step_3_data.json
+total_event: 364
+has close events: 341
+longest context:439
+longest target 35
+**********
+INIT DATA FILE: preprocessed/preprocessed_tag_with_arg/test_step_3_data.json
+sample:290
+input:
+ <arg>  communicated to  <arg>  about  <arg>  topic using  <arg>  at  <arg>  place (one-way communication) Analysis backs claim drones were used to attack Venezuela ’ s president Analysis of open source information carried out by the investigative website Bellingcat suggests  <tag>  ExplosiveDevice: drones  </tag>  that had been repurposed as flying bombs were indeed used in an attack on the  <tag>  Target: president  </tag>  of Venezuela this weekend. The Venezuelan government claimed three days ago that an attempt had been made to assassinate President  <tag>  Target: Nicolás Maduro  </tag>  using two  <tag>  Instrument: drones  </tag>  loaded with explosives. The president had been giving a  <tgr>  speech  <tgr>  which was being broadcast live on television when the incident occurred. Initial video from a state - owned television network showed the reaction of Maduro, those around him and a parade of soldiers at the event to what appeared to be two blasts somewhere off camera. But the footage did not include shots of any drones or explosions. AP also reported that firefighters at scene had shed doubt on the drone attack claim — suggesting there had instead been a gas explosion in a nearby flat. Since then more footage has emerged, including videos purporting to show a drone exploding and a drone tumbling alongside a building. Bellingcat has carried out an analysis of publicly available information related to the attack, including syncing timings of the state broadcast of Maduro ’ s speech, and using frame - by - frame analysis combined with photos and satellite imagery of Caracas to try to pinpoint locations of additional footage that has emerged to determine whether the drone attack claim stands up. The Venezuelan government has claimed the drones used were DJI Matrice 600s, each carrying approximately 1kg of C4 plastic explosive and, when detonated, capable of causing damage at a radius of around 50 meters.
+output:
+ president communicated to  <arg>  about  <arg>  topic using  <arg>  at  <arg>  place (one-way communication)
+**********
+checkpoints/tag_with_arg/epoch_3_test_step_4_predictions.jsonl
+start scoring
+gen_file:checkpoints/tag_with_arg/epoch_3_test_step_4_predictions.jsonl
+test_file:data/wikievents/test_no_ontology.jsonl
+paired args: 49, inconsistent args: 29, raito: 0.5918367346938775
+Evaluation by matching head words only....
+Event-level identification: P: 61.26
+Event-level : P: 61.26
+gold arg num: 563
+Role identification: P: 73.30, R: 68.74, F: 70.94
+Role: P: 65.91, R: 61.81, F: 63.79
+Coref Role identification: P: 74.24, R: 69.63, F: 71.86
+Coref Role: P: 66.86, R: 62.70, F: 64.71
+start getting new testset
+source:checkpoints/tag_with_arg/epoch_3_test_step_4_results_for_predict.json
+target:preprocessed/preprocessed_tag_with_arg/test_step_4_data.json
+total_event: 364
+has close events: 341
+longest context:439
+longest target 35
+**********
+INIT DATA FILE: preprocessed/preprocessed_tag_with_arg/test_step_4_data.json
+sample:172
+input:
+ <arg>  detonated or exploded  <arg>  explosive device using  <arg>  to attack  <arg>  target at  <arg>  place U. S. lawmakers discussed the same trip Tuesday as they raised concerns about the sharing of intelligence among federal law enforcement agencies. Senator Lindsey Graham said the FBI told him it was not aware at the time of Tamerlan Tsarnaev's trip to Russia. Tamerlan Tsarnaev died after a shootout with police last Thursday, while his younger brother Dzhokhar was captured a day later. Meanwhile, in Boston, authorities on Wednesday reopened Boylston Street, the city thoroughfare where the explosions occurred near the finish line of the race. Later, several thousand people gathered at the Massachusetts Institute of Technology for a memorial service for campus policeman Sean Collier, who authorities say the Tsarnaev brothers shot to death three days after the bombings. Homeland Security chief Janet Napolitano told the Senate Intelligence Committee that her agency did know about Tamerlan's trip, but that an FBI alert on him had expired by the time he returned. The FBI had interviewed Tsarnaev in 2011 at Russia's request, but found nothing to connect him to terrorism at that time. The 19 - year - old Dzhokhar has been charged with using a weapon of mass destruction. He is in federal custody in a Boston hospital. U. S. officials say Dzhokhar told them in preliminary interviews that he and his brother were partly motivated by the U. S. wars in Iraq and Afghanistan, but that they were self - radicalized and not connected to any terrorist network. The two suspects are Chechens who came to the United States as boys. The  <tag>  Killer Killer: brothers  </tag>  allegedly  <tgr>  set off  <tgr>  two bombs alongside the Boston Marathon course, killing three  <tag>  Victim: people  </tag>  and injuring  <tag>  Victim: 264  </tag> . At least 14 of the wounded lost legs in the blasts.
+output:
+ brothers detonated or exploded bombs explosive device using  <arg>  to attack Boston Marathon target at  <arg>  place
+**********
+checkpoints/tag_with_arg/epoch_3_test_step_5_predictions.jsonl
+start scoring
+gen_file:checkpoints/tag_with_arg/epoch_3_test_step_5_predictions.jsonl
+test_file:data/wikievents/test_no_ontology.jsonl
+paired args: 49, inconsistent args: 28, raito: 0.5714285714285714
+Evaluation by matching head words only....
+Event-level identification: P: 61.26
+Event-level : P: 61.26
+gold arg num: 563
+Role identification: P: 72.98, R: 69.09, F: 70.99
+Role: P: 65.67, R: 62.17, F: 63.87
+Coref Role identification: P: 73.92, R: 69.98, F: 71.90
+Coref Role: P: 66.60, R: 63.06, F: 64.78
+--------------------------------------------------------------------------------
+load from checkpoints/tag_with_arg/epoch_4.ckpt
+**********
+INIT DATA FILE: preprocessed/preprocessed_KAIROS/test.jsonl
+sample:327
+input:
+ <arg>  arrested or jailed  <arg>  for  <arg>  crime at  <arg>  place But he was later told that the IRA unit involved had tried to use “ a succession of phone boxes ” which were out of order, significantly delaying the bomb - warning call. Video Loading Video Unavailable Click to play Tap to play The video will start in 8 Cancel Play now Listen to our recreation of the Birmingham pub bombings warning call - made to the Birmingham Post & Mail newsroom Conway, who makes the admissions in his new memoir, also revealed that soon after the bombings the IRA ’ s England Operational Commander and his adjutant “ made it back home ” to Dublin for an urgent de - brief and to assess the impact of the disaster as far as the terrorists were concerned. Birmingham pub bombings : Minute by minute - 24 hours that changed our city forever Funding for the terrorists dried up almost overnight and the bombings, which left 21 dead and almost 200 injured, including many maimed for life, cost them hugely in the propaganda war. And in an interview he confirmed that the IRA hierarchy in Dublin knew all along that the six Irishmen  <tgr>  arrested  <tgr>  for the explosions were innocent “ from the get go, from the very start. ” Now, Julie and Brian Hambleton, who lost their sister Maxine in the bombings and lead the city ’ s Justice4the21 campaign, called on West Midlands Police and David Cameron to take immediate action. Julie said : “ I am expecting West Midlands Police Chief Constable Chris Sims and West Midlands Police Force to interview with Mr Conway with immediate effect. “ And I hope that Mr Cameron, who a week ago told The House of Commons that the pub bombers must be found, takes note of this development and ensures that the police follow this through. ” Brian added : “ The police keep saying they won ’ t do anything because there is no fresh evidence. Well, here it is in black and white. It ’ s an admission. They have got to do something with this information. ” The Birmingham pub bombings - The 28 numbers that add up to a cover - up, say campaigners
+output:
+ <arg>  arrested or jailed Irishmen for  <arg>  crime at  <arg>  place
+**********
+checkpoints/tag_with_arg/epoch_4_test_step_0_predictions.jsonl
+start scoring
+gen_file:checkpoints/tag_with_arg/epoch_4_test_step_0_predictions.jsonl
+test_file:data/wikievents/test_no_ontology.jsonl
+paired args: 49, inconsistent args: 26, raito: 0.5306122448979592
+Evaluation by matching head words only....
+Event-level identification: P: 64.84
+Event-level : P: 64.84
+gold arg num: 563
+Role identification: P: 70.85, R: 71.23, F: 71.04
+Role: P: 64.84, R: 65.19, F: 65.01
+Coref Role identification: P: 71.91, R: 72.29, F: 72.10
+Coref Role: P: 65.90, R: 66.25, F: 66.08
+start getting new testset
+source:checkpoints/tag_with_arg/epoch_4_test_step_0_results_for_predict.json
+target:preprocessed/preprocessed_tag_with_arg/test_step_0_data.json
+total_event: 364
+has close events: 341
+longest context:440
+longest target 38
+**********
+INIT DATA FILE: preprocessed/preprocessed_tag_with_arg/test_step_0_data.json
+sample:96
+input:
+ <arg>  arrested or jailed  <arg>  for  <arg>  crime at  <arg>  place == The bombing == The Balcombe Street Gang planted a time bomb in the Caterham Arms public house in Caterham, Surrey. The IRA unit placed the 7lb bomb in a duffel bag under a seat. There was no warning and the bomb exploded at 9 : 20, injuring 23 civilians and 10 off - duty soldiers. The pub was used by members of the Welsh Guards who were based at the barracks nearby. Some of the injuries were very serious, with at least three soldiers losing limbs. The blast blew the roof off the pub in the process. This attack marked the start of a renewed bombing campaign ( Phase Two ) in England and the end of the truce with the British Government. The next day, the same IRA unit exploded a bomb in Oxford Street, injuring several people. == Aftermath == One of the police  <tag>  Researcher: officers  </tag>  in charge of the investigation into the bombing described it as a " carbon copy " of the Guildford pub bombings in October 1974 for which four  <tag>  Defendant: people  </tag>  were already serving their sentences. The cell's campaign would continue until December 1975 when they were  <tgr>  caught  <tgr>  at the siege of Balcombe Street. The unit would eventually end up planting close to 50 bombs in London and elsewhere in southern England and carrying out several shootings which, along with the bombings, caused the deaths of nearly 20  <tag>  Victim: people  </tag> , injured  <tag>  Victim: hundreds  </tag>  and caused millions of pounds worth of damage to property. == See also == * Chronology of Provisional Irish Republican Army actions ( 1970 – 79 ) == References ==
+output:
+ <arg>  arrested or jailed they for  <arg>  crime at  <arg>  place
+**********
+checkpoints/tag_with_arg/epoch_4_test_step_1_predictions.jsonl
+start scoring
+gen_file:checkpoints/tag_with_arg/epoch_4_test_step_1_predictions.jsonl
+test_file:data/wikievents/test_no_ontology.jsonl
+paired args: 49, inconsistent args: 29, raito: 0.5918367346938775
+Evaluation by matching head words only....
+Event-level identification: P: 63.46
+Event-level : P: 63.46
+gold arg num: 563
+Role identification: P: 72.50, R: 70.69, F: 71.58
+Role: P: 65.57, R: 63.94, F: 64.75
+Coref Role identification: P: 73.77, R: 71.94, F: 72.84
+Coref Role: P: 66.85, R: 65.19, F: 66.01
+start getting new testset
+source:checkpoints/tag_with_arg/epoch_4_test_step_1_results_for_predict.json
+target:preprocessed/preprocessed_tag_with_arg/test_step_1_data.json
+total_event: 364
+has close events: 341
+longest context:440
+longest target 35
+**********
+INIT DATA FILE: preprocessed/preprocessed_tag_with_arg/test_step_1_data.json
+sample:223
+input:
+ <arg>  detonated or exploded  <arg>  explosive device using  <arg>  to attack  <arg>  target at  <arg>  place In this incident 22 were killed and another 38 were injured in the explosion. Children and women are among the dead and wounded in both attacks, also multiple soldiers were killed. The Taliban claimed responsibility for the attacks, and said they will commit more attacks to discourage people from voting in the upcoming presidential elections. == Attacks == === Charikar === The attack took place in Charikar, at a police training ground. At the time, Afghan president Ashraf Ghani was holding a political rally at the site, attended by thousands of people. A suicide  <tag>  Transporter: bomber  </tag>  riding a  <tag>  Vehicle: motorcycle  </tag>  drove into a crowd near a security checkpoint and detonated his  <tag>  PassengerArtifact PassengerArtifact: explosives  </tag> . 26  <tag>  Victim: people  </tag>  and the  <tag>  Attacker Attacker: bomber  </tag>  were killed, and 42  <tag>  Victim: others  </tag>  injured. Women and children were among the victims of the  <tgr>  attack  <tgr> .  <tag>  Target: President Ghani  </tag>  was unharmed in the attack, remaining protected by a secure compound about half a mile from the  <tag>  Place: site  </tag>  of the blast. === Kabul === A few hours after the first attack, a second suicide bombing took place in  <tag>  Place Place: Massoud Square  </tag>  near the Kabul Green Zone, in an area where several government buildings, the US embassy and NATO headquarters, are located. 22 people were killed in this attack and 38 injured. == Responsibility == The Taliban claimed responsibility for both attacks, and stated that the attacks were aimed at disrupting the Afghan presidential election, scheduled to take place on September 28. == References ==
+output:
+ <arg>  detonated or exploded  <arg>  explosive device using  <arg>  to attack  <arg>  target at  <arg>  place
+**********
+checkpoints/tag_with_arg/epoch_4_test_step_2_predictions.jsonl
+start scoring
+gen_file:checkpoints/tag_with_arg/epoch_4_test_step_2_predictions.jsonl
+test_file:data/wikievents/test_no_ontology.jsonl
+paired args: 49, inconsistent args: 28, raito: 0.5714285714285714
+Evaluation by matching head words only....
+Event-level identification: P: 62.91
+Event-level : P: 62.91
+gold arg num: 563
+Role identification: P: 71.97, R: 70.69, F: 71.33
+Role: P: 64.92, R: 63.77, F: 64.34
+Coref Role identification: P: 73.24, R: 71.94, F: 72.58
+Coref Role: P: 66.18, R: 65.01, F: 65.59
+start getting new testset
+source:checkpoints/tag_with_arg/epoch_4_test_step_2_results_for_predict.json
+target:preprocessed/preprocessed_tag_with_arg/test_step_2_data.json
+total_event: 364
+has close events: 341
+longest context:440
+longest target 35
+**********
+INIT DATA FILE: preprocessed/preprocessed_tag_with_arg/test_step_2_data.json
+sample:58
+input:
+ <arg>  attacked  <arg>  using  <arg>  at  <arg>  place There were ten times more  <tag>  Instrument: air strikes  </tag>  in the covert war on terror during President Barack Obama ’ s presidency than under his predecessor, George W. Bush. Obama embraced the US drone programme, overseeing more  <tgr>  strikes  <tgr>  in his first year than Bush carried out during his entire presidency. A total of 563 strikes, largely by  <tag>  Instrument: drones  </tag> , targeted  <tag>  Target: Pakistan  </tag> ,  <tag>  Target: Somalia  </tag>  and  <tag>  Target: Yemen  </tag>  during Obama ’ s two terms, compared to 57 strikes under  <tag>  Attacker: Bush  </tag> . Between 384 and 807  <tag>  Victim: civilians  </tag>  were killed in those  <tag>  Place: countries  </tag> , according to reports logged by the Bureau. The use of drones aligned with Obama ’ s ambition to keep up the war against al Qaeda while extricating the US military from intractable, costly ground wars in the Middle East and Asia. But the targeted killing programme has drawn much criticism. The Obama administration has insisted that drone strikes are so “ exceptionally surgical and precise ” that they pluck off terror suspects while not putting “ innocent men, women and children in danger ”. This claim has been contested by numerous human rights groups, however, and the Bureau ’ s figures on civilian casualties also demonstrate that this is often not the case. The White House released long - awaited figures last July on the number of people killed in drone strikes between January 2009 and the end of 2015, an announcement which insiders said was a direct response to pressure from the Bureau and other organisations that collect data. However the US ’ s estimate of the number of civilians killed – between 64 and 116 – contrasted strongly with the number recorded by the Bureau, which at 380 to 801 was six times higher.
+output:
+ Obama attacked  <arg>  using drone at  <arg>  place
+**********
+checkpoints/tag_with_arg/epoch_4_test_step_3_predictions.jsonl
+start scoring
+gen_file:checkpoints/tag_with_arg/epoch_4_test_step_3_predictions.jsonl
+test_file:data/wikievents/test_no_ontology.jsonl
+paired args: 49, inconsistent args: 28, raito: 0.5714285714285714
+Evaluation by matching head words only....
+Event-level identification: P: 62.91
+Event-level : P: 62.91
+gold arg num: 563
+Role identification: P: 71.95, R: 70.16, F: 71.04
+Role: P: 65.03, R: 63.41, F: 64.21
+Coref Role identification: P: 73.22, R: 71.40, F: 72.30
+Coref Role: P: 66.30, R: 64.65, F: 65.47
+start getting new testset
+source:checkpoints/tag_with_arg/epoch_4_test_step_3_results_for_predict.json
+target:preprocessed/preprocessed_tag_with_arg/test_step_3_data.json
+total_event: 364
+has close events: 341
+longest context:440
+longest target 35
+**********
+INIT DATA FILE: preprocessed/preprocessed_tag_with_arg/test_step_3_data.json
+sample:187
+input:
+ <arg>  bought, sold, or traded  <arg>  to  <arg>  in exchange for  <arg>  for the benefit of  <arg>  at  <arg>  place January 2013 Tsarnaev, then 19, talks to his close friend, Stephen Silva, about borrowing Silva ’ s 9mm P95 Ruger semi - automatic pistol. Tsarnaev and Silva both graduated from Cambridge Rindge and Latin School in 2001, and worked as lifeguards together at the Harvard pool. Starting in college, both became very involved in selling marijuana, and Silva had obtained a gun, in part, to help him protect his drug business. A Ruger semi - automatic handgun presented in the trial. Jan. 30, 2013  <tag>  Recipient: Tamerlan  </tag> , 26, allegedly buys two Fager pressure - cookers at Macy ’ s at the Square One Mall in Saugus. The remains of a pressure cooker bomb. Feb. 8, 2013 Tamerlan Tsarnaev used his credit card to  <tgr>  make an online purchase  <tgr>  of a remote - controlled car set, batteries, and a transmitter and receiver from NitroRCX. com. Prosecutors said these items were used to help remotely - detonate the bombs February, 2013  <tag>  Recipient Recipient: Dzhokhar Tsarnaev  </tag>  visits  <tag>  Participant: Silva  </tag>  and borrows the  <tag>  AcquiredEntity: Ruger pistol  </tag>  — the gun that was later used to kill MIT police officer Sean Collier and during the shootout with police in Watertown. March 11, 2013 Dzhokhar Tsarnaev creates a secret Twitter account, @ Al - FirdausiA, with the user name Ghuraba and posted six Tweets in three days. The first post on March 11, 2013 reads : " I want the highest levels of Jannah, I want to be able to see Allah every single day for that is the best of pleasures. " He also maintains his original Twitter account that includes mostly typical teenage postings, but some that could be signs of growing radicalization. March Tamerlan Tsarnaev purchases some BBs at Walmart in New Hampshire.
+output:
+ <arg>  bought, sold, or traded car to Tamerlan Tsarnaev in exchange for batteries and transmitter for the benefit of  <arg>  at  <arg>  place
+**********
+checkpoints/tag_with_arg/epoch_4_test_step_4_predictions.jsonl
+start scoring
+gen_file:checkpoints/tag_with_arg/epoch_4_test_step_4_predictions.jsonl
+test_file:data/wikievents/test_no_ontology.jsonl
+paired args: 49, inconsistent args: 28, raito: 0.5714285714285714
+Evaluation by matching head words only....
+Event-level identification: P: 62.91
+Event-level : P: 62.91
+gold arg num: 563
+Role identification: P: 72.21, R: 70.16, F: 71.17
+Role: P: 65.27, R: 63.41, F: 64.32
+Coref Role identification: P: 73.49, R: 71.40, F: 72.43
+Coref Role: P: 66.54, R: 64.65, F: 65.59
+start getting new testset
+source:checkpoints/tag_with_arg/epoch_4_test_step_4_results_for_predict.json
+target:preprocessed/preprocessed_tag_with_arg/test_step_4_data.json
+total_event: 364
+has close events: 341
+longest context:440
+longest target 35
+**********
+INIT DATA FILE: preprocessed/preprocessed_tag_with_arg/test_step_4_data.json
+sample:136
+input:
+ <arg>  communicated to  <arg>  about  <arg>  topic using  <arg>  at  <arg>  place (one-way communication) This annual meeting — held more than two miles from the site of the explosion in Chelsea — is traditionally a challenging time for New York, as many roads are shut down and the heavy security leads to traffic jams. The FBI still has no determination as to motive, said a law enforcement official who spoke on condition of anonymity because the investigation is ongoing. Agents are examining the detonated material from the first device as well as studying the second, which appeared to resemble a pressure cooker. They are also looking at video from security cameras, social media — “ all the logical leads, ” the official said. The explosion in Chelsea coincided with a separate attack that took place in Minnesota Saturday night, in which a man stabbed eight people in a St. Cloud mall before  <tag>  Victim: he  </tag>  was killed by an off - duty police  <tag>  Killer: officer  </tag> . On Sunday, an ISIS - linked news  <tag>  Communicator: agency  </tag>  claimed the mall  <tag>  Topic: attacker  </tag>  was “ a soldier of the Islamic State. ” An FBI spokesman  <tgr>  said  <tgr>  in an emailed statement that the agency had not determined whether the stabbings were related to the bombing in Manhattan the same night. Speaking to CNN ’ s Jake Tapper on Sunday morning, New Jersey Gov. Chris Christie ( R ) said there were no known links so far between the incident in New Jersey and those in New York and Minnesota. Authorities urged any witnesses with tips, video or other credible information about the explosion to call 1 - 800 - 577 - TIPS. Berman and Wang reported from Washington. Renae Merle in New York and Karen DeYoung, Ellen Nakashima, Steven Overly and Sari Horwitz in Washington contributed to this report. [ This is a developing story.
+output:
+ spokesman communicated to  <arg>  about  <arg>  topic using  <arg>  at  <arg>  place (one-way communication)
+**********
+checkpoints/tag_with_arg/epoch_4_test_step_5_predictions.jsonl
+start scoring
+gen_file:checkpoints/tag_with_arg/epoch_4_test_step_5_predictions.jsonl
+test_file:data/wikievents/test_no_ontology.jsonl
+paired args: 49, inconsistent args: 28, raito: 0.5714285714285714
+Evaluation by matching head words only....
+Event-level identification: P: 62.91
+Event-level : P: 62.91
+gold arg num: 563
+Role identification: P: 72.71, R: 70.52, F: 71.60
+Role: P: 65.75, R: 63.77, F: 64.74
+Coref Role identification: P: 73.99, R: 71.76, F: 72.86
+Coref Role: P: 67.03, R: 65.01, F: 66.01
+--------------------------------------------------------------------------------
+load from checkpoints/tag_with_arg/epoch_5.ckpt
+**********
+INIT DATA FILE: preprocessed/preprocessed_KAIROS/test.jsonl
+sample:327
+input:
+ <arg>  arrested or jailed  <arg>  for  <arg>  crime at  <arg>  place But he was later told that the IRA unit involved had tried to use “ a succession of phone boxes ” which were out of order, significantly delaying the bomb - warning call. Video Loading Video Unavailable Click to play Tap to play The video will start in 8 Cancel Play now Listen to our recreation of the Birmingham pub bombings warning call - made to the Birmingham Post & Mail newsroom Conway, who makes the admissions in his new memoir, also revealed that soon after the bombings the IRA ’ s England Operational Commander and his adjutant “ made it back home ” to Dublin for an urgent de - brief and to assess the impact of the disaster as far as the terrorists were concerned. Birmingham pub bombings : Minute by minute - 24 hours that changed our city forever Funding for the terrorists dried up almost overnight and the bombings, which left 21 dead and almost 200 injured, including many maimed for life, cost them hugely in the propaganda war. And in an interview he confirmed that the IRA hierarchy in Dublin knew all along that the six Irishmen  <tgr>  arrested  <tgr>  for the explosions were innocent “ from the get go, from the very start. ” Now, Julie and Brian Hambleton, who lost their sister Maxine in the bombings and lead the city ’ s Justice4the21 campaign, called on West Midlands Police and David Cameron to take immediate action. Julie said : “ I am expecting West Midlands Police Chief Constable Chris Sims and West Midlands Police Force to interview with Mr Conway with immediate effect. “ And I hope that Mr Cameron, who a week ago told The House of Commons that the pub bombers must be found, takes note of this development and ensures that the police follow this through. ” Brian added : “ The police keep saying they won ’ t do anything because there is no fresh evidence. Well, here it is in black and white. It ’ s an admission. They have got to do something with this information. ” The Birmingham pub bombings - The 28 numbers that add up to a cover - up, say campaigners
+output:
+ <arg>  arrested or jailed Irishmen for  <arg>  crime at  <arg>  place
+**********
+checkpoints/tag_with_arg/epoch_5_test_step_0_predictions.jsonl
+start scoring
+gen_file:checkpoints/tag_with_arg/epoch_5_test_step_0_predictions.jsonl
+test_file:data/wikievents/test_no_ontology.jsonl
+paired args: 49, inconsistent args: 25, raito: 0.5102040816326531
+Evaluation by matching head words only....
+Event-level identification: P: 61.54
+Event-level : P: 61.54
+gold arg num: 563
+Role identification: P: 73.77, R: 69.45, F: 71.55
+Role: P: 67.55, R: 63.59, F: 65.51
+Coref Role identification: P: 74.91, R: 70.52, F: 72.64
+Coref Role: P: 68.68, R: 64.65, F: 66.61
+start getting new testset
+source:checkpoints/tag_with_arg/epoch_5_test_step_0_results_for_predict.json
+target:preprocessed/preprocessed_tag_with_arg/test_step_0_data.json
+total_event: 364
+has close events: 341
+longest context:440
+longest target 35
+**********
+INIT DATA FILE: preprocessed/preprocessed_tag_with_arg/test_step_0_data.json
+sample:302
+input:
+ <arg>  detonated or exploded  <arg>  explosive device using  <arg>  to attack  <arg>  target at  <arg>  place In Baghdad, meanwhile, a car bomb outside a government office responsible for producing identity papers in the Shiite bastion of Sadr City killed at least 12 people and wounded 22 others, security and medical officials said. " This attack is a terrible crime against humanity, because they did it during Ramadan, while people are fasting, " said one elderly witness who declined to be identified. An AFP journalist said eight nearby cars were badly burned and many of the victims of the 9 : 30 am ( 0630 GMT ) attack could not be identified because their papers were inside the offices that were targeted. Two other explosions in the Baghdad  <tag>  Place: neighborhoods  </tag>  of Husseiniyah and Yarmouk killed at least four people and left 24 others wounded, while a car bomb in the town of Tarmiyah, just north of Baghdad, hurt nine people, officials said. Checkpoint shootings and bomb  <tgr>  blasts  <tgr>  in restive ethnically - mixed Diyala province killed 11 people and left 40 others wounded, security officials and doctor Ahmed Ibrahim from the main hospital in provincial capital Baquba said.  <tag>  Attacker: Insurgents  </tag>  also launched attacks on a military  <tag>  Target: base  </tag>  near the town of  <tag>  Place Place: Dhuluiyah  </tag> , killing at least 15 Iraqi  <tag>  Victim: soldiers  </tag>  and leaving two others wounded, according to two security officials. Two other attacks in the same province -- a shooting at a checkpoint and a car bomb near a Shiite mosque -- left three people dead and six wounded, officials said. Nine bomb blasts, some of them minutes apart, meanwhile killed seven people and wounded 29 in Kirkuk city and the eponymous province's towns of Dibis and Tuz Khurmatu.
+output:
+ <arg>  detonated or exploded bomb explosive device using  <arg>  to attack  <arg>  target at Diyala province place
+**********
+checkpoints/tag_with_arg/epoch_5_test_step_1_predictions.jsonl
+start scoring
+gen_file:checkpoints/tag_with_arg/epoch_5_test_step_1_predictions.jsonl
+test_file:data/wikievents/test_no_ontology.jsonl
+paired args: 49, inconsistent args: 28, raito: 0.5714285714285714
+Evaluation by matching head words only....
+Event-level identification: P: 62.36
+Event-level : P: 62.36
+gold arg num: 563
+Role identification: P: 74.48, R: 69.45, F: 71.88
+Role: P: 68.00, R: 63.41, F: 65.63
+Coref Role identification: P: 75.62, R: 70.52, F: 72.98
+Coref Role: P: 69.14, R: 64.48, F: 66.73
+start getting new testset
+source:checkpoints/tag_with_arg/epoch_5_test_step_1_results_for_predict.json
+target:preprocessed/preprocessed_tag_with_arg/test_step_1_data.json
+total_event: 364
+has close events: 341
+longest context:440
+longest target 37
+**********
+INIT DATA FILE: preprocessed/preprocessed_tag_with_arg/test_step_1_data.json
+sample:18
+input:
+ <arg>  was injured by  <arg>  using  <arg>  in  <arg>  body part with  <arg>  medical issue at  <arg>  place Taliban representatives have met several times with U. S. officials in recent months, but last week threatened to suspend the fledgling process, lambasting Washington for changing the agenda of the talks and " unilaterally " adding new subjects. The insurgents have long refused to hold direct talks with the Kabul government -- despite U. S. pleas -- which the Taliban dismisses as a puppet of Washington. In recent years the Afghan government has stopped releasing detailed casualty figures. Last year Ghani has said 28, 000 Afghan police officers and soldiers have been killed since 2015, breaking the longstanding suppression on casualty data. Taliban insurgents claimed responsibility for the attack. Zabiullah Mujahid, a spokesman for the hardline terrorist group said they have killed 190 people in the complex attack. Last week, Taliban  <tag>  Killer Killer: fighters  </tag>  set off a car  <tag>  ExplosiveDevice: bomb  </tag>  outside a  <tag>  Place: highly fortified compound  </tag>  killing at least five  <tag>  Victim: people  </tag>  and  <tgr>  wounding  <tgr>  more than 110 Afghans and expatriates in the capital, Kabul. On Sunday, a suicide bombing in the southeastern province of  <tag>  Place: Logar  </tag>  left eight  <tag>  Victim: policemen  </tag>  dead and another  <tag>  Victim: 10  </tag>  wounded. The  <tag>  Attacker: Taliban  </tag>  bombing targeted the provincial governor's  <tag>  Target: convoy  </tag>  in  <tag>  Place: Mohammad Agha district  </tag> . The provincial governor and spy chief traveling in the convoy were unharmed. The Taliban have ramped up their attacks on security forces and government facilities in recent months, while Afghan and U. S. troops have increased operations against the militants'field commanders. Military sources say around 35 members of the country's security forces are killed every day in attacks and clashes.
+output:
+ Afghans and expatriates was injured by fighters using  <arg>  in  <arg>  body part with  <arg>  medical issue at  <arg>  place
+**********
+checkpoints/tag_with_arg/epoch_5_test_step_2_predictions.jsonl
+start scoring
+gen_file:checkpoints/tag_with_arg/epoch_5_test_step_2_predictions.jsonl
+test_file:data/wikievents/test_no_ontology.jsonl
+paired args: 49, inconsistent args: 27, raito: 0.5510204081632653
+Evaluation by matching head words only....
+Event-level identification: P: 62.91
+Event-level : P: 62.91
+gold arg num: 563
+Role identification: P: 74.48, R: 69.98, F: 72.16
+Role: P: 68.05, R: 63.94, F: 65.93
+Coref Role identification: P: 75.80, R: 71.23, F: 73.44
+Coref Role: P: 69.38, R: 65.19, F: 67.22
+start getting new testset
+source:checkpoints/tag_with_arg/epoch_5_test_step_2_results_for_predict.json
+target:preprocessed/preprocessed_tag_with_arg/test_step_2_data.json
+total_event: 364
+has close events: 341
+longest context:440
+longest target 37
+**********
+INIT DATA FILE: preprocessed/preprocessed_tag_with_arg/test_step_2_data.json
+sample:61
+input:
+ <arg>  died at  <arg>  place from  <arg>  medical issue, killed by  <arg>  killer There were ten times more air strikes in the covert war on terror during President Barack Obama ’ s presidency than under his predecessor, George W. Bush.  <tag>  Attacker: Obama  </tag>  embraced the US  <tag>  Instrument: drone  </tag>  programme, overseeing more strikes in his first year than Bush carried out during his entire presidency. A total of 563 strikes, largely by  <tag>  Instrument: drones  </tag> , targeted  <tag>  Target: Pakistan  </tag> ,  <tag>  Target: Somalia  </tag>  and  <tag>  Target: Yemen  </tag>  during Obama ’ s two terms, compared to 57 strikes under  <tag>  Attacker: Bush  </tag> . Between 384 and 807 civilians were  <tgr>  killed  <tgr>  in those countries, according to reports logged by the Bureau. The use of drones aligned with Obama ’ s ambition to keep up the war against al Qaeda while extricating the US military from intractable, costly ground wars in the Middle East and Asia. But the targeted killing programme has drawn much criticism. The Obama administration has insisted that drone strikes are so “ exceptionally surgical and precise ” that they pluck off terror suspects while not putting “ innocent men, women and children in danger ”. This claim has been contested by numerous human rights groups, however, and the Bureau ’ s figures on civilian casualties also demonstrate that this is often not the case. The White House released long - awaited figures last July on the number of people killed in drone strikes between January 2009 and the end of 2015, an announcement which insiders said was a direct response to pressure from the Bureau and other organisations that collect data. However the US ’ s estimate of the number of civilians killed – between 64 and 116 – contrasted strongly with the number recorded by the Bureau, which at 380 to 801 was six times higher.
+output:
+ civilians died at countries place from  <arg>  medical issue, killed by  <arg>  killer
+**********
+checkpoints/tag_with_arg/epoch_5_test_step_3_predictions.jsonl
+start scoring
+gen_file:checkpoints/tag_with_arg/epoch_5_test_step_3_predictions.jsonl
+test_file:data/wikievents/test_no_ontology.jsonl
+paired args: 49, inconsistent args: 27, raito: 0.5510204081632653
+Evaluation by matching head words only....
+Event-level identification: P: 62.09
+Event-level : P: 62.09
+gold arg num: 563
+Role identification: P: 74.19, R: 69.45, F: 71.74
+Role: P: 67.55, R: 63.23, F: 65.32
+Coref Role identification: P: 75.52, R: 70.69, F: 73.03
+Coref Role: P: 68.88, R: 64.48, F: 66.61
+start getting new testset
+source:checkpoints/tag_with_arg/epoch_5_test_step_3_results_for_predict.json
+target:preprocessed/preprocessed_tag_with_arg/test_step_3_data.json
+total_event: 364
+has close events: 341
+longest context:440
+longest target 37
+**********
+INIT DATA FILE: preprocessed/preprocessed_tag_with_arg/test_step_3_data.json
+sample:170
+input:
+ <arg>  died at  <arg>  place from  <arg>  medical issue, killed by  <arg>  killer The investigators are particularly interested in any contacts the elder brother, Tamerlan Tsarnaev, might have had with Islamic extremists during a six - month visit to Dagestan and Chechnya last year. U. S. lawmakers discussed the same trip Tuesday as they raised concerns about the sharing of intelligence among federal law enforcement agencies. Senator Lindsey Graham said the FBI told him it was not aware at the time of Tamerlan Tsarnaev's trip to Russia. Tamerlan Tsarnaev died after a shootout with police last Thursday, while his younger brother Dzhokhar was captured a day later. Meanwhile, in  <tag>  Place: Boston  </tag> , authorities on Wednesday reopened Boylston Street, the city thoroughfare where the explosions occurred near the finish line of the race. Later, several thousand people gathered at the Massachusetts Institute of Technology for a memorial service for campus policeman Sean Collier, who authorities say the Tsarnaev brothers  <tgr>  shot  <tgr>  to death three days after the bombings. Homeland Security chief Janet Napolitano told the Senate Intelligence Committee that her agency did know about Tamerlan's trip, but that an FBI alert on him had expired by the time he returned. The FBI had interviewed Tsarnaev in 2011 at Russia's request, but found nothing to connect him to terrorism at that time. The 19 - year - old Dzhokhar has been charged with using a weapon of mass destruction. He is in federal custody in a Boston hospital. U. S. officials say Dzhokhar told them in preliminary interviews that he and his brother were partly motivated by the U. S. wars in Iraq and Afghanistan, but that they were self - radicalized and not connected to any terrorist network. The two suspects are Chechens who came to the United States as boys.
+output:
+ Sean Collier died at  <arg>  place from  <arg>  medical issue, killed by brothers killer
+**********
+checkpoints/tag_with_arg/epoch_5_test_step_4_predictions.jsonl
+start scoring
+gen_file:checkpoints/tag_with_arg/epoch_5_test_step_4_predictions.jsonl
+test_file:data/wikievents/test_no_ontology.jsonl
+paired args: 49, inconsistent args: 27, raito: 0.5510204081632653
+Evaluation by matching head words only....
+Event-level identification: P: 62.09
+Event-level : P: 62.09
+gold arg num: 563
+Role identification: P: 74.14, R: 69.27, F: 71.63
+Role: P: 67.68, R: 63.23, F: 65.38
+Coref Role identification: P: 75.48, R: 70.52, F: 72.91
+Coref Role: P: 69.01, R: 64.48, F: 66.67
+start getting new testset
+source:checkpoints/tag_with_arg/epoch_5_test_step_4_results_for_predict.json
+target:preprocessed/preprocessed_tag_with_arg/test_step_4_data.json
+total_event: 364
+has close events: 341
+longest context:440
+longest target 37
+**********
+INIT DATA FILE: preprocessed/preprocessed_tag_with_arg/test_step_4_data.json
+sample:81
+input:
+ <arg>  was injured by  <arg>  using  <arg>  in  <arg>  body part with  <arg>  medical issue at  <arg>  place == Background == In February 1975 the Provisional Irish Republican Army agreed to a truce and ceasefire with the British government and the Northern Ireland Office. Seven " incident centres " were established in Irish nationalist areas in Northern Ireland to monitor the ceasefire and the activity of the security forces. Before the truce, the IRA active service unit ( ASU ) later dubbed the Balcombe Street Gang ( due to the December 1975 Balcombe Street siege ) had been carrying out bomb and gun attacks in Southern England since autumn 1974, mostly in and around London. Their last previous attack was an assassination attempt on former Prime Minister Edward Heath but he was not home when the attackers threw a bomb into his bedroom window on 22 December 1974. == The bombing == The Balcombe Street Gang planted a time bomb in the Caterham Arms public house in Caterham, Surrey. The IRA unit placed the 7lb bomb in a duffel bag under a seat. There was no warning and the bomb exploded at 9 : 20, injuring 23 civilians and 10 off - duty soldiers. The pub was used by members of the Welsh Guards who were based at the barracks nearby. Some of the injuries were very serious, with at least three soldiers losing limbs. The blast blew the roof off the pub in the process. This attack marked the start of a renewed bombing campaign ( Phase Two ) in England and the end of the truce with the British Government. The next day, the same  <tag>  Attacker: IRA  </tag>  unit exploded a  <tag>  ExplosiveDevice: bomb  </tag>  in  <tag>  Place: Oxford Street  </tag> ,  <tgr>  injuring  <tgr>  several people. == Aftermath ==
+output:
+ people was injured by  <arg>  using bomb in  <arg>  body part with  <arg>  medical issue at  <arg>  place
+**********
+checkpoints/tag_with_arg/epoch_5_test_step_5_predictions.jsonl
+start scoring
+gen_file:checkpoints/tag_with_arg/epoch_5_test_step_5_predictions.jsonl
+test_file:data/wikievents/test_no_ontology.jsonl
+paired args: 49, inconsistent args: 27, raito: 0.5510204081632653
+Evaluation by matching head words only....
+Event-level identification: P: 62.36
+Event-level : P: 62.36
+gold arg num: 563
+Role identification: P: 74.33, R: 69.45, F: 71.81
+Role: P: 67.87, R: 63.41, F: 65.56
+Coref Role identification: P: 75.67, R: 70.69, F: 73.09
+Coref Role: P: 69.20, R: 64.65, F: 66.85
+--------------------------------------------------------------------------------

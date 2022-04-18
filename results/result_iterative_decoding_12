@@ -1,0 +1,748 @@
+load from checkpoints/iterative_decoding_12/epoch_5.ckpt
+**********
+INIT DATA FILE: preprocessed/preprocessed_KAIROS/test.jsonl
+sample:242
+input:
+ <arg>  charged or indicted  <arg>  before  <arg>  court or judge for  <arg>  crime in  <arg>  place Thai Authorities Indict 2 Over August Shrine Attack A Bangkok military court has indicted two men accused of carrying out the August 17 bombing at a popular shrine that killed 20 people. The court on Tuesday  <tgr>  indicted  <tgr>  Bilal Mohammed and Mieraili Yusufu on 10 counts connected to the blast, including conspiracy to explode bombs and commit premeditated murder. Thailand authorities have not officially named the bombing of Erawan Shrine an act of terror, and accordingly neither suspect was charged specifically with terrorism. Police issued 17 arrest warrants following the bombing but only Bilal and Mieraili have been detained. They are described as ethnic Uighurs, a minority group based in China's Xinjiang region. They have been held in custody since their arrests in late August and early September. Thai officials have said the blast was carried out by a people - smuggling gang seeking revenge on Thai authorities for cracking down on their operation. The August 17 blast at the Erawan Shrine - a popular tourist destination - was one of the most deadly acts of violence in Bangkok in decades, and left 20 people dead and more than 120 injured. Of the dead, 14 were tourists. The attack shocked the residents of the capital because of the apparent randomness, which drove home the point that no place is immune to acts of terror. Authorities, however, have declined to call it an act of terrorism out of apparent fear that it would hurt the country's huge tourism industry. Police initially appeared at first to be at a loss, but soon claimed success with a series of raids and two arrests. Arrest warrants have been issued for 15 others. The two suspects were brought to the court in handcuffs wearing brown prison garb. Members of the media were not allowed to enter the court and the indictments took place before the two suspects arrived, said defense lawyer Chuchart Kanpai. Doubts about motive
+output:
+ court charged or indicted Bilal Mohammed and Mieraili Yusufu before  <arg>  court or judge for  <arg>  crime in  <arg>  place
+**********
+start scoring
+gen_file:checkpoints/iterative_decoding_12/epoch_5_test_step_0_predictions.jsonl
+test_file:data/wikievents/test_no_ontology.jsonl
+paired args: 49, inconsistent args: 27, raito: 0.5510204081632653
+Evaluation by matching head words only....
+Event-level identification: P: 62.91
+Event-level : P: 62.91
+gold arg num: 563
+Role identification: P: 74.30, R: 70.87, F: 72.55
+Role: P: 67.97, R: 64.83, F: 66.36
+Coref Role identification: P: 75.98, R: 72.47, F: 74.18
+Coref Role: P: 69.65, R: 66.43, F: 68.00
+len: 374 34 61
+mean: 0.9559399247564128 0.9079728970403264 0.897430006027873
+var: 0.007110465016731042 0.020196708749197934 0.018420931495339573
+min: 0.46274882555007935 0.41706278920173645 0.40059417486190796
+max: 1.0 0.9999992847442627 0.9999999403953552
+start getting new testset
+source:checkpoints/iterative_decoding_12/epoch_5_test_step_0_results_for_predict.json
+target:preprocessed/preprocessed_iterative_decoding_12/test_step_0_data.json
+total_event: 364
+has close events: 341
+longest context:434
+longest target 35
+**********
+INIT DATA FILE: preprocessed/preprocessed_iterative_decoding_12/test_step_0_data.json
+sample:65
+input:
+ <arg>  died at  <arg>  place from  <arg>  medical issue, killed by  <arg>  killer The use of drones aligned with Obama ’ s ambition to keep up the war against al Qaeda while extricating the US military from intractable, costly ground wars in the Middle East and Asia. But the targeted killing programme has drawn much criticism. The Obama administration has insisted that drone strikes are so “ exceptionally surgical and precise ” that they pluck off terror suspects while not putting “ innocent men, women and children in danger ”. This claim has been contested by numerous human rights groups, however, and the Bureau ’ s figures on civilian casualties also demonstrate that this is often not the case. The White House released long - awaited figures last July on the number of  <tag>  Victim Victim  </tag>  people killed in  <tag>  Instrument  </tag>  drone strikes between January 2009 and the end of 2015, an announcement which insiders said was a direct response to pressure from the Bureau and other organisations that collect data. However the US ’ s estimate of the number of civilians  <tgr>  killed  <tgr>  – between 64 and 116 – contrasted strongly with the number recorded by the Bureau, which at 380 to 801 was six times higher. That figure does not include deaths in active battlefields including  <tag>  Place Place  </tag>  Afghanistan – where  <tag>  Attacker  </tag>  US air attacks have shot up since Obama withdrew the majority of his troops at the end of 2014. The country has since come under frequent US bombardment, in an unreported war that saw 1, 337 weapons dropped last year alone – a 40 % rise on 2015.
+output:
+ civilians died at  <arg>  place from  <arg>  medical issue, killed by US killer
+**********
+start scoring
+gen_file:checkpoints/iterative_decoding_12/epoch_5_test_step_1_predictions.jsonl
+test_file:data/wikievents/test_no_ontology.jsonl
+paired args: 49, inconsistent args: 25, raito: 0.5102040816326531
+Evaluation by matching head words only....
+Event-level identification: P: 62.36
+Event-level : P: 62.36
+gold arg num: 563
+Role identification: P: 76.85, R: 70.16, F: 73.35
+Role: P: 70.23, R: 64.12, F: 67.04
+Coref Role identification: P: 78.60, R: 71.76, F: 75.02
+Coref Role: P: 71.98, R: 65.72, F: 68.71
+len: 370 34 54
+mean: 0.953062411799279 0.9162338527248186 0.8853232232018263
+var: 0.008263598287079128 0.01767624956745963 0.023465497403265992
+min: 0.5147566199302673 0.4973694384098053 0.4347868859767914
+max: 1.0 0.9999998410542806 0.9999999403953552
+start getting new testset
+source:checkpoints/iterative_decoding_12/epoch_5_test_step_1_results_for_predict.json
+target:preprocessed/preprocessed_iterative_decoding_12/test_step_1_data.json
+total_event: 364
+has close events: 341
+longest context:434
+longest target 35
+**********
+INIT DATA FILE: preprocessed/preprocessed_iterative_decoding_12/test_step_1_data.json
+sample:28
+input:
+ <arg>  damaged  <arg>  using  <arg>  instrument in  <arg>  place Boston Marathon Bomber Apologizes to Survivors BOSTON — Moments before a federal judge sentenced him to death, Boston Marathon bomber Dzhokhar Tsarnaev rose to his feet Wednesday and apologized to the victims and their loved ones for the first time. " I pray for your relief, for your healing,'' he said. Amid deep silence in the courtroom, the 21 - year - old ethnic Chechen said, " I am sorry for the lives that I've taken, for the suffering that I've caused you, for the  <tgr>  damage  <tgr>  that I've done — irreparable damage.'' It was the first time Tsarnaev, who did not speak in his own defense at trial, had addressed the court. After Tsarnaev finished, U. S. District Judge George O'Toole Jr. began to speak, with his voice breaking several times. He officially imposed the death sentence on Tsarnaev that jurors had recommended unanimously. In May, after a 12 - week trial, Tsarnaev was found guilty of killing three people and injuring 264 in the April 15, 2013, bombing at the world - renowned race, where he and his brother, Tamerlan, 26, set off two pressure - cooker bombs near the finish line. Tsarnaev was also found guilty in the fatal shooting of a Massachusetts Institute of Technology police officer three days later as he and his brother fled. Tamerlan was killed during the getaway. Tsarnaev was found guilty of all 30 terrorism and other charges against him. Of those, 17 carried the possibility of a death sentence. During the penalty phase of the judicial proceedings, prosecutors brushed off defense arguments that Tsarnaev was under the strong influence of his older, radicalized brother. Victims speak out
+output:
+ <arg>  damaged  <arg>  using  <arg>  instrument in  <arg>  place
+**********
+start scoring
+gen_file:checkpoints/iterative_decoding_12/epoch_5_test_step_2_predictions.jsonl
+test_file:data/wikievents/test_no_ontology.jsonl
+paired args: 49, inconsistent args: 26, raito: 0.5306122448979592
+Evaluation by matching head words only....
+Event-level identification: P: 62.64
+Event-level : P: 62.64
+gold arg num: 563
+Role identification: P: 76.98, R: 70.69, F: 73.70
+Role: P: 70.02, R: 64.30, F: 67.04
+Coref Role identification: P: 78.53, R: 72.11, F: 75.19
+Coref Role: P: 71.57, R: 65.72, F: 68.52
+len: 370 36 55
+mean: 0.9543312461734303 0.8998908568173647 0.8861755317509776
+var: 0.007885938157548898 0.021996365912672452 0.021266596278120612
+min: 0.5147566199302673 0.4973694384098053 0.44752201437950134
+max: 1.0 0.9999998410542806 0.9999999403953552
+start getting new testset
+source:checkpoints/iterative_decoding_12/epoch_5_test_step_2_results_for_predict.json
+target:preprocessed/preprocessed_iterative_decoding_12/test_step_2_data.json
+total_event: 364
+has close events: 341
+longest context:434
+longest target 35
+**********
+INIT DATA FILE: preprocessed/preprocessed_iterative_decoding_12/test_step_2_data.json
+sample:320
+input:
+ <arg>  was in a demonstration for  <arg>  topic with  <arg>  visual display against  <arg>  at  <arg>  place, with potential involvement of  <arg>  police or military Cuba ’ s foreign minister said in a tweet late on Friday that the country would respect the protocols of the negotiations it had been hosting and was consulting with both parties and the guarantors of the talks. On Friday, Colombia blamed the leftist ELN for the bombing of a police academy in Bogota that killed 20 people as well as the attacker, dealing a big blow to the peace process. 190102132047518 Duque then announced that he was reinstating arrest warrants for 10 ELN members, who are part of the group ’ s delegation to the Cuba talks. The talks were aimed at ending more than five decades of fighting by the Marxist - inspired group. Duque said that Cuba must not protect the rebels. The police academy car bombing “ was a crime that violated human rights and no such act deserves [ Cuba acting ] to avoid justice being done ”, Duque said while giving a speech in Tolima. Colombians, including Duque, planned to join in a march on Sunday to  <tgr>  protest  <tgr>  against the car bombing, the worst such attack in the country in 16 years. Last rebel group In November,  <tag>  Recipient  </tag>  Colombia asked  <tag>  Communicator Communicator  </tag>  Cuba to capture ELN rebel commander  <tag>  Detainee  </tag>  Nicolas Rodriguez and provide information about the presence of other commanders in the Cuban territory. The government in Bogota also asked Havana to act on an Interpol Red Notice against Rodriguez. The Cuban government did not respond publicly to that request or made a statement about the issue. Colombia has experienced several years of relative calm since the 2016 peace accord signed by then - President Juan Manuel Santos and the Revolutionary Armed Forces of Colombia ( FARC ) fighters. 190118182118648 With the landmark agreement turning the former rebels into a political party, the smaller ELN is considered the last active rebel group in the country.
+output:
+ <arg>  was in a demonstration for  <arg>  topic with  <arg>  visual display against  <arg>  at  <arg>  place, with potential involvement of  <arg>  police or military
+**********
+start scoring
+gen_file:checkpoints/iterative_decoding_12/epoch_5_test_step_3_predictions.jsonl
+test_file:data/wikievents/test_no_ontology.jsonl
+paired args: 49, inconsistent args: 26, raito: 0.5306122448979592
+Evaluation by matching head words only....
+Event-level identification: P: 62.64
+Event-level : P: 62.64
+gold arg num: 563
+Role identification: P: 77.09, R: 70.52, F: 73.65
+Role: P: 70.29, R: 64.30, F: 67.16
+Coref Role identification: P: 78.64, R: 71.94, F: 75.14
+Coref Role: P: 71.84, R: 65.72, F: 68.65
+len: 370 35 54
+mean: 0.9542484401951451 0.9040314846805164 0.887924590657768
+var: 0.007939236517871649 0.02200190288266312 0.022346207245120656
+min: 0.5147566199302673 0.4973694384098053 0.44752201437950134
+max: 1.0 0.9999998410542806 0.9999999403953552
+start getting new testset
+source:checkpoints/iterative_decoding_12/epoch_5_test_step_3_results_for_predict.json
+target:preprocessed/preprocessed_iterative_decoding_12/test_step_3_data.json
+total_event: 364
+has close events: 341
+longest context:434
+longest target 35
+**********
+INIT DATA FILE: preprocessed/preprocessed_iterative_decoding_12/test_step_3_data.json
+sample:156
+input:
+ <arg>  was injured by  <arg>  using  <arg>  in  <arg>  body part with  <arg>  medical issue at  <arg>  place Wearing a dark blue jump suit, Rahimi, 28, shuffled slowly into federal court in Manhattan and had several coughing fits during the brief hearing. He suffered serious injuries in a shootout with police two days after the bombing. He spoke only once, when U. S. District Judge Richard Berman asked him to confirm that he intended to plead not guilty to an eight - count indictment filed on Wednesday. " Yes, sir, " Rahimi said. Prosecutors have accused the Afghan - born U. S. citizen of setting off an explosion in Manhattan's Chelsea neighborhood on Sept. 17. It did not kill  <tag>  Victim  </tag>  anyone but hurt 30  <tag>  Victim  </tag>  people. The attack came hours after authorities say another pipe  <tag>  ExplosiveDevice  </tag>  bomb planted by  <tag>  Attacker  </tag>  Rahimi went off along the course of a charity road race in  <tag>  Place  </tag>  New Jersey, although that detonation did not  <tgr>  injure  <tgr>  anyone. Federal prosecutors also say  <tag>  Attacker  </tag>  Rahimi left another  <tag>  ExplosiveDevice  </tag>  bomb in Chelsea that did not go off and several explosive devices in a bag at a train station in Elizabeth, New Jersey. In addition to the New York indictment,  <tag>  Defendant  </tag>  Rahimi faces charges from federal and state  <tag>  Prosecutor  </tag>  prosecutors in  <tag>  Place  </tag>  New Jersey. He was captured after a manhunt that ended when police officers discovered him sleeping in the doorway of a bar in Linden, New Jersey. The confrontation left him with several gunshot wounds, delaying the filing of federal charges and forcing him to make his first court appearance in New Jersey from a hospital bed.
+output:
+ anyone was injured by  <arg>  using  <arg>  in  <arg>  body part with  <arg>  medical issue at  <arg>  place
+**********
+start scoring
+gen_file:checkpoints/iterative_decoding_12/epoch_5_test_step_4_predictions.jsonl
+test_file:data/wikievents/test_no_ontology.jsonl
+paired args: 49, inconsistent args: 26, raito: 0.5306122448979592
+Evaluation by matching head words only....
+Event-level identification: P: 62.64
+Event-level : P: 62.64
+gold arg num: 563
+Role identification: P: 76.98, R: 70.69, F: 73.70
+Role: P: 70.02, R: 64.30, F: 67.04
+Coref Role identification: P: 78.53, R: 72.11, F: 75.19
+Coref Role: P: 71.57, R: 65.72, F: 68.52
+len: 370 36 55
+mean: 0.954261888533396 0.8998933320658075 0.8844800776303416
+var: 0.007940305735954877 0.021996859989302526 0.02258060474772655
+min: 0.5147566199302673 0.4973694384098053 0.44752201437950134
+max: 1.0 0.9999998410542806 0.9999999403953552
+start getting new testset
+source:checkpoints/iterative_decoding_12/epoch_5_test_step_4_results_for_predict.json
+target:preprocessed/preprocessed_iterative_decoding_12/test_step_4_data.json
+total_event: 364
+has close events: 341
+longest context:434
+longest target 35
+**********
+INIT DATA FILE: preprocessed/preprocessed_iterative_decoding_12/test_step_4_data.json
+sample:200
+input:
+ <arg>  detonated or exploded  <arg>  explosive device using  <arg>  to attack  <arg>  target at  <arg>  place photo © 2001 corbis images all rights reserved web site copyright 1995 - 2014 WGBH educational foundation Hunting Bin Laden Osama bin Laden is charged with masterminding the 1998  <tgr>  bombings  <tgr>  of two U. S. embassies in East Africa, believed to have had a role in the October 2000 attack on the  <tag>  Target  </tag>  USS Cole in the  <tag>  Place  </tag>  Yemeni port of Aden, and now is a prime suspect in the Sept. 11, 2001 destruction of the  <tag>  Artifact  </tag>  World Trade Center and the bombing of the Pentagon. This report features reporting by a Pulitzer - Prize nominated team of New York Times reporters and FRONTLINE correspondent Lowell Bergman. Tracing the trail of evidence linking bin Laden to terrorist attacks, this updated report includes interviews with Times reporters Judith Miller and James Risen and former CIA official Larry Johnson. They discuss the terrorist attacks which are linked, or are likely linked, to bin Laden's complex network of terrorists, outline the elements of his international organization and details of its alliances and tactics, and address the challenges confronting U. S. intelligence in trying to crack it.
+output:
+ Osama bin Laden detonated or exploded  <arg>  explosive device using  <arg>  to attack embassies target at East Africa place
+**********
+start scoring
+gen_file:checkpoints/iterative_decoding_12/epoch_5_test_step_5_predictions.jsonl
+test_file:data/wikievents/test_no_ontology.jsonl
+paired args: 49, inconsistent args: 26, raito: 0.5306122448979592
+Evaluation by matching head words only....
+Event-level identification: P: 62.64
+Event-level : P: 62.64
+gold arg num: 563
+Role identification: P: 77.09, R: 70.52, F: 73.65
+Role: P: 70.29, R: 64.30, F: 67.16
+Coref Role identification: P: 78.64, R: 71.94, F: 75.14
+Coref Role: P: 71.84, R: 65.72, F: 68.65
+len: 370 35 54
+mean: 0.9542484401951451 0.9040314846805164 0.887924590657768
+var: 0.007939236517871649 0.02200190288266312 0.022346207245120656
+min: 0.5147566199302673 0.4973694384098053 0.44752201437950134
+max: 1.0 0.9999998410542806 0.9999999403953552
+--------------------------------------------------------------------------------
+load from checkpoints/iterative_decoding_12/epoch_4.ckpt
+**********
+INIT DATA FILE: preprocessed/preprocessed_KAIROS/test.jsonl
+sample:242
+input:
+ <arg>  charged or indicted  <arg>  before  <arg>  court or judge for  <arg>  crime in  <arg>  place Thai Authorities Indict 2 Over August Shrine Attack A Bangkok military court has indicted two men accused of carrying out the August 17 bombing at a popular shrine that killed 20 people. The court on Tuesday  <tgr>  indicted  <tgr>  Bilal Mohammed and Mieraili Yusufu on 10 counts connected to the blast, including conspiracy to explode bombs and commit premeditated murder. Thailand authorities have not officially named the bombing of Erawan Shrine an act of terror, and accordingly neither suspect was charged specifically with terrorism. Police issued 17 arrest warrants following the bombing but only Bilal and Mieraili have been detained. They are described as ethnic Uighurs, a minority group based in China's Xinjiang region. They have been held in custody since their arrests in late August and early September. Thai officials have said the blast was carried out by a people - smuggling gang seeking revenge on Thai authorities for cracking down on their operation. The August 17 blast at the Erawan Shrine - a popular tourist destination - was one of the most deadly acts of violence in Bangkok in decades, and left 20 people dead and more than 120 injured. Of the dead, 14 were tourists. The attack shocked the residents of the capital because of the apparent randomness, which drove home the point that no place is immune to acts of terror. Authorities, however, have declined to call it an act of terrorism out of apparent fear that it would hurt the country's huge tourism industry. Police initially appeared at first to be at a loss, but soon claimed success with a series of raids and two arrests. Arrest warrants have been issued for 15 others. The two suspects were brought to the court in handcuffs wearing brown prison garb. Members of the media were not allowed to enter the court and the indictments took place before the two suspects arrived, said defense lawyer Chuchart Kanpai. Doubts about motive
+output:
+ court charged or indicted Bilal Mohammed and Mieraili Yusufu before  <arg>  court or judge for  <arg>  crime in  <arg>  place
+**********
+start scoring
+gen_file:checkpoints/iterative_decoding_12/epoch_4_test_step_0_predictions.jsonl
+test_file:data/wikievents/test_no_ontology.jsonl
+paired args: 49, inconsistent args: 26, raito: 0.5306122448979592
+Evaluation by matching head words only....
+Event-level identification: P: 63.74
+Event-level : P: 63.74
+gold arg num: 563
+Role identification: P: 71.80, R: 72.82, F: 72.31
+Role: P: 65.67, R: 66.61, F: 66.14
+Coref Role identification: P: 72.85, R: 73.89, F: 73.37
+Coref Role: P: 66.73, R: 67.67, F: 67.20
+len: 381 35 72
+mean: 0.937780159580429 0.9007857661060736 0.8684052683573997
+var: 0.013902506247983669 0.01970446855593303 0.020986053833548297
+min: 0.3661302328109741 0.5227866768836975 0.47990918159484863
+max: 1.0 0.9999940792719523 0.9999988675117493
+start getting new testset
+source:checkpoints/iterative_decoding_12/epoch_4_test_step_0_results_for_predict.json
+target:preprocessed/preprocessed_iterative_decoding_12/test_step_0_data.json
+total_event: 364
+has close events: 341
+longest context:434
+longest target 35
+**********
+INIT DATA FILE: preprocessed/preprocessed_iterative_decoding_12/test_step_0_data.json
+sample:44
+input:
+ <arg>  attacked  <arg>  using  <arg>  at  <arg>  place Tsarnaev, his chair turned toward the lectern from which the victims spoke, picked at his beard and gazed downward most of the time, only occasionally looking at the speakers. Patricia Campbell, the mother of Krystle Campbell, 29, who was killed in the attack, was the first person to address the court. She looked across the room at Tsarnaev, seated about 20 feet away, and spoke directly to him. “ What you did to my daughter is disgusting, ” she said. “ I don't know what to say to you. I think the jury did the right thing. ” Krystle Campbell's best friend,  <tag>  Victim  </tag>  Karen Rand McWatters, who lost a leg in the  <tgr>  attack  <tgr> , said Tsarnaev " can't possibly have had a soul to do such a horrible thing. ” In a message he scrawled in the boat he was found hiding in,  <tag>  Attacker  </tag>  Tsarnaev said the attack was retaliation against the U. S. for its wars in Muslim countries. McWatters urged Tsarnaev to show remorse to discourage other jihadis from killing people in similar attacks. “ You can save them from these cowardly acts if you really have an ounce of regret, ” she said. Rebekah Gregory, a Texas woman who lost a leg in the bombing, defiantly told Tsarnaev she was not his victim. “ While your intention was to destroy America, what you have really accomplished is actually quite the opposite — you've unified us, ” she said. " We are Boston strong, we are America strong, and choosing to mess with us was a terrible idea. So how's that for your VICTIM impact statement? ”'He is a leech '
+output:
+ <arg>  attacked  <arg>  using  <arg>  at  <arg>  place
+**********
+start scoring
+gen_file:checkpoints/iterative_decoding_12/epoch_4_test_step_1_predictions.jsonl
+test_file:data/wikievents/test_no_ontology.jsonl
+paired args: 49, inconsistent args: 26, raito: 0.5306122448979592
+Evaluation by matching head words only....
+Event-level identification: P: 62.64
+Event-level : P: 62.64
+gold arg num: 563
+Role identification: P: 75.28, R: 70.87, F: 73.01
+Role: P: 69.43, R: 65.36, F: 67.34
+Coref Role identification: P: 76.60, R: 72.11, F: 74.29
+Coref Role: P: 70.75, R: 66.61, F: 68.62
+len: 375 31 61
+mean: 0.946073272897516 0.8966679128236913 0.8641792334928321
+var: 0.01052493550326623 0.017673646777612254 0.02524929051384909
+min: 0.3365549147129059 0.571284294128418 0.47689399123191833
+max: 1.0 0.9999992847442627 0.9999991059303284
+start getting new testset
+source:checkpoints/iterative_decoding_12/epoch_4_test_step_1_results_for_predict.json
+target:preprocessed/preprocessed_iterative_decoding_12/test_step_1_data.json
+total_event: 364
+has close events: 341
+longest context:434
+longest target 35
+**********
+INIT DATA FILE: preprocessed/preprocessed_iterative_decoding_12/test_step_1_data.json
+sample:291
+input:
+ <arg>  communicated with  <arg>  about  <arg>  topic at  <arg>  place (document does not specify in person or not, or one-way or not) The Venezuelan government has claimed the drones used were DJI Matrice 600s, each carrying approximately 1kg of C4 plastic explosive and, when detonated, capable of causing damage at a radius of around 50 meters. DJI Matrice 600 drones are a commercial model, normally used for industrial work — with a U. S. price tag of around $ 5, 000 apiece, suggesting the attack could have cost little over $ 10k to carry out — with 1kg of plastic explosive available commercially ( for demolition purposes ) at a cost of around $ 30. Bellingcat says its analysis supports the government ’ s claim that the drone model used was a DJI Matrice 600, noting that the drones involved in the event each had six rotors. It also points to a photo of drone wreckage which appears to show the distinctive silver rotor tip of the model, although it also notes the drones appear to have had their legs removed. Venezuela ’ s interior minister, Nestor Reverol, also  <tgr>  claimed  <tgr>  the government thwarted the attack using " special techniques and [ radio ] signal inhibitors ", which " disoriented " the  <tag>  Instrument Instrument  </tag>  drone that detonated closest to the  <tag>  Target  </tag>  presidential stand — a capability Bellingcat notes the Venezuelan security services are reported to have. The second drone was said by Reverol to have " lost control " and crashed into a nearby building. Bellingcat says it is possible to geolocate the video of the falling drone to the same location as the fire in the apartment that firefighters had claimed was caused by a gas canister explosion. It adds that images taken of this location during the fire show a hole in the wall of the apartment in the vicinity of where the drone would have crashed.
+output:
+ minister communicated with  <arg>  about  <arg>  topic at  <arg>  place (document does not specify in person or not, or one-way or not)
+**********
+start scoring
+gen_file:checkpoints/iterative_decoding_12/epoch_4_test_step_2_predictions.jsonl
+test_file:data/wikievents/test_no_ontology.jsonl
+paired args: 49, inconsistent args: 26, raito: 0.5306122448979592
+Evaluation by matching head words only....
+Event-level identification: P: 62.36
+Event-level : P: 62.36
+gold arg num: 563
+Role identification: P: 75.09, R: 71.23, F: 73.11
+Role: P: 68.91, R: 65.36, F: 67.09
+Coref Role identification: P: 76.40, R: 72.47, F: 74.38
+Coref Role: P: 70.22, R: 66.61, F: 68.37
+len: 375 33 63
+mean: 0.9469508966558824 0.8984437711992018 0.859267377348804
+var: 0.010741253718855617 0.016250037037585804 0.02630014358333876
+min: 0.3365549147129059 0.5833649039268494 0.32245567440986633
+max: 1.0 0.9999992847442627 0.9999991059303284
+start getting new testset
+source:checkpoints/iterative_decoding_12/epoch_4_test_step_2_results_for_predict.json
+target:preprocessed/preprocessed_iterative_decoding_12/test_step_2_data.json
+total_event: 364
+has close events: 341
+longest context:434
+longest target 35
+**********
+INIT DATA FILE: preprocessed/preprocessed_iterative_decoding_12/test_step_2_data.json
+sample:63
+input:
+ <arg>  died at  <arg>  place from  <arg>  medical issue, killed by  <arg>  killer The use of drones aligned with Obama ’ s ambition to keep up the war against al Qaeda while extricating the US military from intractable, costly ground wars in the Middle East and Asia. But the targeted killing programme has drawn much criticism. The Obama administration has insisted that drone strikes are so “ exceptionally surgical and precise ” that they pluck off terror suspects while not putting “ innocent men, women and children in danger ”. This claim has been contested by numerous human rights groups, however, and the Bureau ’ s figures on civilian casualties also demonstrate that this is often not the case. The White House released long - awaited figures last July on the number of people  <tgr>  killed  <tgr>  in  <tag>  Instrument  </tag>  drone strikes between January 2009 and the end of 2015, an announcement which insiders said was a direct response to pressure from the Bureau and other organisations that collect data. However the  <tag>  Killer  </tag>  US ’ s estimate of the number of  <tag>  Victim  </tag>  civilians killed – between 64 and 116 – contrasted strongly with the number recorded by the Bureau, which at 380 to 801 was six times higher. That figure does not include deaths in active battlefields including Afghanistan – where US air attacks have shot up since Obama withdrew the majority of his troops at the end of 2014. The country has since come under frequent US bombardment, in an unreported war that saw 1, 337 weapons dropped last year alone – a 40 % rise on 2015. Afghan civilian casualties have been high, with the United Nations ( UN ) reporting at least 85 deaths in 2016. The Bureau recorded 65 to 105 civilian deaths during this period. We did not start collecting data on Afghanistan until 2015.
+output:
+ people died at  <arg>  place from  <arg>  medical issue, killed by  <arg>  killer
+**********
+start scoring
+gen_file:checkpoints/iterative_decoding_12/epoch_4_test_step_3_predictions.jsonl
+test_file:data/wikievents/test_no_ontology.jsonl
+paired args: 49, inconsistent args: 26, raito: 0.5306122448979592
+Evaluation by matching head words only....
+Event-level identification: P: 62.36
+Event-level : P: 62.36
+gold arg num: 563
+Role identification: P: 75.09, R: 71.23, F: 73.11
+Role: P: 68.91, R: 65.36, F: 67.09
+Coref Role identification: P: 76.40, R: 72.47, F: 74.38
+Coref Role: P: 70.22, R: 66.61, F: 68.37
+len: 375 33 63
+mean: 0.9463403846456261 0.9000920166349743 0.8568345937463973
+var: 0.010806417624815464 0.01549683247015033 0.02647827068855741
+min: 0.3365549147129059 0.5833649039268494 0.32245567440986633
+max: 1.0 0.9999992847442627 0.9999991059303284
+start getting new testset
+source:checkpoints/iterative_decoding_12/epoch_4_test_step_3_results_for_predict.json
+target:preprocessed/preprocessed_iterative_decoding_12/test_step_3_data.json
+total_event: 364
+has close events: 341
+longest context:434
+longest target 35
+**********
+INIT DATA FILE: preprocessed/preprocessed_iterative_decoding_12/test_step_3_data.json
+sample:319
+input:
+ <arg>  arrested or jailed  <arg>  for  <arg>  crime at  <arg>  place 190102132047518 Duque then announced that he was reinstating arrest warrants for 10 ELN members, who are part of the group ’ s delegation to the Cuba talks. The talks were aimed at ending more than five decades of fighting by the Marxist - inspired group. Duque said that Cuba must not protect the rebels. The police academy car bombing “ was a crime that violated human rights and no such act deserves [ Cuba acting ] to avoid justice being done ”, Duque said while giving a speech in Tolima. Colombians, including Duque, planned to join in a march on Sunday to protest against the car bombing, the worst such attack in the country in 16 years. Last rebel group In November,  <tag>  Recipient  </tag>  Colombia asked  <tag>  Communicator  </tag>  Cuba to  <tgr>  capture  <tgr>  ELN rebel commander Nicolas Rodriguez and provide information about the presence of other commanders in the Cuban territory. The government in Bogota also asked Havana to act on an Interpol Red Notice against Rodriguez. The Cuban government did not respond publicly to that request or made a statement about the issue. Colombia has experienced several years of relative calm since the 2016 peace accord signed by then - President Juan Manuel Santos and the Revolutionary Armed Forces of Colombia ( FARC ) fighters. 190118182118648 With the landmark agreement turning the former rebels into a political party, the smaller ELN is considered the last active rebel group in the country. True to his election promises, Duque has taken a hard line against the ELN. Peace talks with the ELN began in February 2017 under Santos, but Duque has put them on hold until the rebels free all their hostages and stop attacks on military and civilian targets. The group is believed to be currently holding 17 hostages, some of them for several years.
+output:
+ <arg>  arrested or jailed Nicolas Rodriguez for  <arg>  crime at  <arg>  place
+**********
+start scoring
+gen_file:checkpoints/iterative_decoding_12/epoch_4_test_step_4_predictions.jsonl
+test_file:data/wikievents/test_no_ontology.jsonl
+paired args: 49, inconsistent args: 26, raito: 0.5306122448979592
+Evaluation by matching head words only....
+Event-level identification: P: 62.36
+Event-level : P: 62.36
+gold arg num: 563
+Role identification: P: 75.09, R: 71.23, F: 73.11
+Role: P: 68.91, R: 65.36, F: 67.09
+Coref Role identification: P: 76.40, R: 72.47, F: 74.38
+Coref Role: P: 70.22, R: 66.61, F: 68.37
+len: 375 33 63
+mean: 0.9463403846456261 0.9000920166349743 0.8568345937463973
+var: 0.010806417624815464 0.01549683247015033 0.02647827068855741
+min: 0.3365549147129059 0.5833649039268494 0.32245567440986633
+max: 1.0 0.9999992847442627 0.9999991059303284
+start getting new testset
+source:checkpoints/iterative_decoding_12/epoch_4_test_step_4_results_for_predict.json
+target:preprocessed/preprocessed_iterative_decoding_12/test_step_4_data.json
+total_event: 364
+has close events: 341
+longest context:434
+longest target 35
+**********
+INIT DATA FILE: preprocessed/preprocessed_iterative_decoding_12/test_step_4_data.json
+sample:339
+input:
+ <arg>  communicated with  <arg>  about  <arg>  topic at  <arg>  place (document does not specify in person or not, or one-way or not) Now, Julie and Brian Hambleton, who lost their sister Maxine in the bombings and lead the city ’ s Justice4the21 campaign, called on West Midlands Police and David Cameron to take immediate action. Julie said : “ I am expecting West Midlands Police Chief Constable Chris Sims and West Midlands Police Force to interview with Mr Conway with immediate effect. “ And I hope that Mr Cameron, who a week ago told The House of Commons that the pub bombers must be found, takes note of this development and ensures that the police follow this through. ” Brian added : “ The police keep saying they won ’ t do anything because there is no fresh evidence. Well, here it is in black and white. It ’ s an admission. They have got to do something with this information. ” The  <tag>  Place  </tag>  Birmingham  <tag>  Target  </tag>  pub bombings - The 28 numbers that add up to a cover - up, say campaigners Mr Conway, now a criminal lawyer in Dublin,  <tgr>  says  <tgr>  in the book that where off - duty  <tag>  Target  </tag>  soldiers were the targets of bombings “ I had little sympathy for either the soldiers or the unfortunate civilians who had been sharing their drinking space. ”  <tag>  Participant  </tag>  He continued : “ The Birmingham bombs were another matter. " The bombings came after British police disrupted funeral arrangements for James McDade, a volunteer who had himself died in a premature explosion in England. “ Tempers were high and I, for one, certainly at first feared that the local IRA had knowingly caused these dreadful casualties – 21 people were killed and a great many others injured. ” “ I was appalled and personally ashamed of the bombing, which went against everything we claimed to stand for. ”
+output:
+ Conway communicated with  <arg>  about  <arg>  topic at  <arg>  place (document does not specify in person or not, or one-way or not)
+**********
+start scoring
+gen_file:checkpoints/iterative_decoding_12/epoch_4_test_step_5_predictions.jsonl
+test_file:data/wikievents/test_no_ontology.jsonl
+paired args: 49, inconsistent args: 26, raito: 0.5306122448979592
+Evaluation by matching head words only....
+Event-level identification: P: 62.36
+Event-level : P: 62.36
+gold arg num: 563
+Role identification: P: 75.09, R: 71.23, F: 73.11
+Role: P: 68.91, R: 65.36, F: 67.09
+Coref Role identification: P: 76.40, R: 72.47, F: 74.38
+Coref Role: P: 70.22, R: 66.61, F: 68.37
+len: 375 33 63
+mean: 0.9463403846456261 0.9000920166349743 0.8568345937463973
+var: 0.010806417624815464 0.01549683247015033 0.02647827068855741
+min: 0.3365549147129059 0.5833649039268494 0.32245567440986633
+max: 1.0 0.9999992847442627 0.9999991059303284
+--------------------------------------------------------------------------------
+load from checkpoints/iterative_decoding_12/epoch_3.ckpt
+**********
+INIT DATA FILE: preprocessed/preprocessed_KAIROS/test.jsonl
+sample:242
+input:
+ <arg>  charged or indicted  <arg>  before  <arg>  court or judge for  <arg>  crime in  <arg>  place Thai Authorities Indict 2 Over August Shrine Attack A Bangkok military court has indicted two men accused of carrying out the August 17 bombing at a popular shrine that killed 20 people. The court on Tuesday  <tgr>  indicted  <tgr>  Bilal Mohammed and Mieraili Yusufu on 10 counts connected to the blast, including conspiracy to explode bombs and commit premeditated murder. Thailand authorities have not officially named the bombing of Erawan Shrine an act of terror, and accordingly neither suspect was charged specifically with terrorism. Police issued 17 arrest warrants following the bombing but only Bilal and Mieraili have been detained. They are described as ethnic Uighurs, a minority group based in China's Xinjiang region. They have been held in custody since their arrests in late August and early September. Thai officials have said the blast was carried out by a people - smuggling gang seeking revenge on Thai authorities for cracking down on their operation. The August 17 blast at the Erawan Shrine - a popular tourist destination - was one of the most deadly acts of violence in Bangkok in decades, and left 20 people dead and more than 120 injured. Of the dead, 14 were tourists. The attack shocked the residents of the capital because of the apparent randomness, which drove home the point that no place is immune to acts of terror. Authorities, however, have declined to call it an act of terrorism out of apparent fear that it would hurt the country's huge tourism industry. Police initially appeared at first to be at a loss, but soon claimed success with a series of raids and two arrests. Arrest warrants have been issued for 15 others. The two suspects were brought to the court in handcuffs wearing brown prison garb. Members of the media were not allowed to enter the court and the indictments took place before the two suspects arrived, said defense lawyer Chuchart Kanpai. Doubts about motive
+output:
+ court charged or indicted Bilal Mohammed and Mieraili Yusufu before  <arg>  court or judge for  <arg>  crime in  <arg>  place
+**********
+start scoring
+gen_file:checkpoints/iterative_decoding_12/epoch_3_test_step_0_predictions.jsonl
+test_file:data/wikievents/test_no_ontology.jsonl
+paired args: 49, inconsistent args: 22, raito: 0.4489795918367347
+Evaluation by matching head words only....
+Event-level identification: P: 64.84
+Event-level : P: 64.84
+gold arg num: 563
+Role identification: P: 71.06, R: 72.82, F: 71.93
+Role: P: 65.34, R: 66.96, F: 66.14
+Coref Role identification: P: 71.92, R: 73.71, F: 72.81
+Coref Role: P: 66.20, R: 67.85, F: 67.02
+len: 382 33 79
+mean: 0.9472295997567558 0.9292088373742923 0.8881568326896421
+var: 0.00925004600469836 0.01853216234674605 0.01815847504037574
+min: 0.4443093240261078 0.45496538281440735 0.4832625687122345
+max: 1.0 0.9999999205271404 0.9999972581863403
+start getting new testset
+source:checkpoints/iterative_decoding_12/epoch_3_test_step_0_results_for_predict.json
+target:preprocessed/preprocessed_iterative_decoding_12/test_step_0_data.json
+total_event: 364
+has close events: 341
+longest context:437
+longest target 35
+**********
+INIT DATA FILE: preprocessed/preprocessed_iterative_decoding_12/test_step_0_data.json
+sample:251
+input:
+ <arg>  died at  <arg>  place from  <arg>  medical issue, killed by  <arg>  killer Thailand authorities have not officially named the bombing of Erawan Shrine an act of terror, and accordingly neither suspect was charged specifically with terrorism. Police issued 17 arrest warrants following the bombing but only Bilal and Mieraili have been detained. They are described as ethnic Uighurs, a minority group based in China's Xinjiang region. They have been held in custody since their arrests in late August and early September. Thai officials have said the blast was carried out by a people - smuggling gang seeking revenge on Thai authorities for cracking down on their operation. The August 17 blast at the  <tag>  Target  </tag>  Erawan Shrine - a popular tourist destination - was one of the most deadly acts of violence in  <tag>  Place  </tag>  Bangkok in decades, and left 20  <tag>  Victim  </tag>  people dead and more than  <tag>  Victim  </tag>  120 injured. Of the  <tgr>  dead  <tgr> , 14 were tourists. The attack shocked the residents of the  <tag>  Place  </tag>  capital because of the apparent randomness, which drove home the point that no place is immune to acts of terror.  <tag>  Participant  </tag>  Authorities, however, have declined to call it an act of terrorism out of apparent fear that it would hurt the country's huge tourism industry. Police initially appeared at first to be at a loss, but soon claimed success with a series of raids and two arrests. Arrest warrants have been issued for 15 others. The two suspects were brought to the court in handcuffs wearing brown prison garb. Members of the media were not allowed to enter the court and the indictments took place before the two suspects arrived, said defense lawyer Chuchart Kanpai. Doubts about motive
+output:
+ tourists died at  <arg>  place from  <arg>  medical issue, killed by  <arg>  killer
+**********
+start scoring
+gen_file:checkpoints/iterative_decoding_12/epoch_3_test_step_1_predictions.jsonl
+test_file:data/wikievents/test_no_ontology.jsonl
+paired args: 49, inconsistent args: 23, raito: 0.46938775510204084
+Evaluation by matching head words only....
+Event-level identification: P: 63.74
+Event-level : P: 63.74
+gold arg num: 563
+Role identification: P: 72.58, R: 73.36, F: 72.97
+Role: P: 66.08, R: 66.79, F: 66.43
+Coref Role identification: P: 73.64, R: 74.42, F: 74.03
+Coref Role: P: 67.14, R: 67.85, F: 67.49
+len: 382 37 75
+mean: 0.9450095163755626 0.9155078560516641 0.8502186421222157
+var: 0.010289051657411785 0.014274831185986353 0.02709121853512479
+min: 0.38231050968170166 0.44452208280563354 0.40440890192985535
+max: 1.0 1.0 0.9999973773956299
+start getting new testset
+source:checkpoints/iterative_decoding_12/epoch_3_test_step_1_results_for_predict.json
+target:preprocessed/preprocessed_iterative_decoding_12/test_step_1_data.json
+total_event: 364
+has close events: 341
+longest context:437
+longest target 35
+**********
+INIT DATA FILE: preprocessed/preprocessed_iterative_decoding_12/test_step_1_data.json
+sample:39
+input:
+ <arg>  court or judge sentenced  <arg>  for  <arg>  crime to  <arg>  sentence in  <arg>  place It was the first time Tsarnaev, who did not speak in his own defense at trial, had addressed the court. After Tsarnaev finished, U. S. District Judge George O'Toole Jr. began to speak, with his voice breaking several times. He officially imposed the death sentence on Tsarnaev that jurors had recommended unanimously. In May, after a 12 - week trial, Tsarnaev was found guilty of killing three people and injuring 264 in the April 15, 2013, bombing at the world - renowned race, where he and his brother, Tamerlan, 26, set off two pressure - cooker bombs near the finish line.  <tag>  Attacker  </tag>  Tsarnaev was also found guilty in the fatal shooting of a Massachusetts Institute of Technology police  <tag>  Target  </tag>  officer three days later as he and his brother fled.  <tag>  Victim  </tag>  Tamerlan was killed during the getaway.  <tag>  Defendant  </tag>  Tsarnaev was found guilty of all 30 terrorism and other charges against him. Of those,  <tag>  Victim  </tag>  17 carried the possibility of a death  <tgr>  sentence  <tgr> . During the penalty phase of the judicial proceedings, prosecutors brushed off defense arguments that Tsarnaev was under the strong influence of his older, radicalized brother. Victims speak out Before the sentencing, a somber - looking  <tag>  Defendant  </tag>  Tsarnaev, wearing a dark sport jacket with a collared shirt and no tie, sat between his lawyers and listened as 24 people — some victims, some survivors — gave impact statements. They lashed out at him for his “ cowardly ” and “ disgusting ” acts, and several called upon him to apologize, trying to convince him that this would be his last chance to ask for forgiveness.
+output:
+ <arg>  court or judge sentenced 17 for  <arg>  crime to  <arg>  sentence in  <arg>  place
+**********
+start scoring
+gen_file:checkpoints/iterative_decoding_12/epoch_3_test_step_2_predictions.jsonl
+test_file:data/wikievents/test_no_ontology.jsonl
+paired args: 49, inconsistent args: 23, raito: 0.46938775510204084
+Evaluation by matching head words only....
+Event-level identification: P: 64.01
+Event-level : P: 64.01
+gold arg num: 563
+Role identification: P: 72.81, R: 73.71, F: 73.26
+Role: P: 66.14, R: 66.96, F: 66.55
+Coref Role identification: P: 73.86, R: 74.78, F: 74.32
+Coref Role: P: 67.19, R: 68.03, F: 67.61
+len: 383 38 73
+mean: 0.9441590425650831 0.9162451452984098 0.8691490120176492
+var: 0.010713620982956345 0.013536594684961819 0.023367443806068918
+min: 0.3277140259742737 0.4568774104118347 0.40440890192985535
+max: 1.0 1.0 0.9999973773956299
+start getting new testset
+source:checkpoints/iterative_decoding_12/epoch_3_test_step_2_results_for_predict.json
+target:preprocessed/preprocessed_iterative_decoding_12/test_step_2_data.json
+total_event: 364
+has close events: 341
+longest context:437
+longest target 35
+**********
+INIT DATA FILE: preprocessed/preprocessed_iterative_decoding_12/test_step_2_data.json
+sample:124
+input:
+ <arg>  communicated to  <arg>  about  <arg>  topic using  <arg>  at  <arg>  place (one-way communication) He said the devices in New Jersey were “ pipe bombs, ” and those in Chelsea were not. Cuomo said agents in New York were in touch with those in New Jersey. AD Cuomo said officials “ have no reason to believe at this time that there is any further immediate threat, ” though the National Guard and the New York State Police were deploying an additional 1, 000 personnel to bus terminals, airports and subways “ just to err on the side of caution. ” AD Cuomo said the blast in Chelsea “ caused significant property damage, ” though he a nearby subway station was structurally safe.  <tag>  Communicator  </tag>  He said law enforcement would work diligently to identify and locate those responsible. “ Whoever placed these bombs, we will find, and they will be brought to justice, ” Cuomo  <tgr>  said  <tgr> . The explosion in the  <tag>  Place  </tag>  area of  <tag>  Target  </tag>  23rd Street between Sixth and Seventh avenues occurred about 8 : 30 p. m. police said. Several of  <tag>  Victim Victim  </tag>  those injured were brought to area  <tag>  Destination  </tag>  hospitals, Donald, the police  <tag>  Communicator  </tag>  spokesman, posted on Twitter. AD All victims were treated and released by Sunday morning, Cuomo said. A spokeswoman for Lenox Health Greenwich Village, which treated nine of the victims, said patients were treated for minor injuries that included lacerations to the head and body. Other hospitals declined to provide specifics about the extent of patients ’ injuries from the explosion. AD Photos and accounts posted on social media Saturday night showed large crowds — as well as a large law enforcement presence — in the area near where the explosion occurred.
+output:
+ Cuomo communicated to  <arg>  about  <arg>  topic using  <arg>  at  <arg>  place (one-way communication)
+**********
+start scoring
+gen_file:checkpoints/iterative_decoding_12/epoch_3_test_step_3_predictions.jsonl
+test_file:data/wikievents/test_no_ontology.jsonl
+paired args: 49, inconsistent args: 24, raito: 0.4897959183673469
+Evaluation by matching head words only....
+Event-level identification: P: 64.29
+Event-level : P: 64.29
+gold arg num: 563
+Role identification: P: 72.76, R: 73.53, F: 73.14
+Role: P: 66.26, R: 66.96, F: 66.61
+Coref Role identification: P: 73.81, R: 74.60, F: 74.20
+Coref Role: P: 67.31, R: 68.03, F: 67.67
+len: 383 37 72
+mean: 0.9454200652537705 0.9153934010380024 0.8558727860174797
+var: 0.010281957588985716 0.013866432515017032 0.02700548401331292
+min: 0.3277140259742737 0.4568774104118347 0.40440890192985535
+max: 1.0 1.0 0.9999973773956299
+start getting new testset
+source:checkpoints/iterative_decoding_12/epoch_3_test_step_3_results_for_predict.json
+target:preprocessed/preprocessed_iterative_decoding_12/test_step_3_data.json
+total_event: 364
+has close events: 341
+longest context:437
+longest target 35
+**********
+INIT DATA FILE: preprocessed/preprocessed_iterative_decoding_12/test_step_3_data.json
+sample:142
+input:
+ <arg>  died at  <arg>  place from  <arg>  medical issue, killed by  <arg>  killer Reports from medical staff at Boston hospitals who treated victims in the marathon attack indicate the bombs in this case were packed with BB ’ s, nails, and other projectiles intended to maximize human carnage. That contrasts with the large truck bombs that were used in Oklahoma City in 1995 and in the garage of the World Trade Center North Tower in 1993, which were intended to inflict damage on buildings, as well as people. IED ’ s pack a much smaller punch, are cheaper, and easier to carry. They have been used in Iraq and Afghanistan with devastating effect on American troops in convoys of military vehicles. Advertisement No one has taken responsibility for the twin bombings on Boylston Street that  <tgr>  killed  <tgr>  three people and injured more than  <tag>  Victim  </tag>  150 near the Boston marathon finish line. A senior US law enforcement official in Washington added that the fact that no group has taken responsibility has officials speculating that it might not be the work of a well - known international terrorist group like Al Qaeda, Hezbollah or one of its affiliates but a domestic group or individual inspired by the hallmark tactics of terrorist groups in recent years, The Pakistani Taliban also said in a statement it was not responsible for the attack, unlike the attempted car bombing in New York ’ s Times Square in 2010 that it claimed responsibility for. But officials in Washington have been warning about the possibility of so - called improvised explosive devises in recent weeks. In late february the White House established a new task force housed in the Department of Justice to apply the lessons learned from years of dealing with so - called improvised explosive devices — some large and powerful and others more limited in scope like the ones apparently set off on Boylston Street yesterday.
+output:
+ people died at Boylston Street place from  <arg>  medical issue, killed by  <arg>  killer
+**********
+start scoring
+gen_file:checkpoints/iterative_decoding_12/epoch_3_test_step_4_predictions.jsonl
+test_file:data/wikievents/test_no_ontology.jsonl
+paired args: 49, inconsistent args: 24, raito: 0.4897959183673469
+Evaluation by matching head words only....
+Event-level identification: P: 64.01
+Event-level : P: 64.01
+gold arg num: 563
+Role identification: P: 73.02, R: 73.53, F: 73.27
+Role: P: 66.31, R: 66.79, F: 66.55
+Coref Role identification: P: 74.07, R: 74.60, F: 74.34
+Coref Role: P: 67.37, R: 67.85, F: 67.61
+len: 382 38 71
+mean: 0.9459003924617312 0.9164950948927487 0.8675019804021002
+var: 0.010109427969027363 0.013546434382135469 0.023582650724682127
+min: 0.3277140259742737 0.4568774104118347 0.40440890192985535
+max: 1.0 1.0 0.9999973773956299
+start getting new testset
+source:checkpoints/iterative_decoding_12/epoch_3_test_step_4_results_for_predict.json
+target:preprocessed/preprocessed_iterative_decoding_12/test_step_4_data.json
+total_event: 364
+has close events: 341
+longest context:437
+longest target 35
+**********
+INIT DATA FILE: preprocessed/preprocessed_iterative_decoding_12/test_step_4_data.json
+sample:343
+input:
+ <arg>  detonated or exploded  <arg>  explosive device using  <arg>  to attack  <arg>  target at  <arg>  place He continued : “ The Birmingham bombs were another matter. " The bombings came after British police disrupted funeral arrangements for James McDade, a volunteer who had himself died in a premature explosion in England. “ Tempers were high and I, for one, certainly at first feared that the local IRA had knowingly caused these dreadful casualties – 21 people were killed and a great many others injured. ” “ I was appalled and personally ashamed of the bombing, which went against everything we claimed to stand for. ” He said he told two other senior IRA figures, Dave O ’ Connell and  <tag>  Participant  </tag>  Kevin Mallon “ exactly what I thought ” when  <tag>  Participant  </tag>  they met up. “ In fact, both men were themselves furious, fully recognising not just the damage the bombing had caused to the IRA but its immorality as well. ” McDade, a lieutenant in the Birmingham Brigade of the IRA,  <tgr>  blew  <tgr>  himself up while trying to plant a bomb at Coventry Telephone exchange a week before the  <tag>  Target  </tag>  pub bombings. Neither The Mulberry Bush nor The Tavern in The Town had any military connection. Normal IRA procedure at the time for any attack on non - military targets was to give a 30 - minute warning in order for full evacuations to take place. Read our docudrama minute - by - minute recreation of the events of November 21 1974 The Birmingham Mail received an ambiguous call at 8. 11pm on November 21. The caller did not identify either pub, referring instead to The Rotunda, above The Mulberry Bush and the New Street Tax Office, which was above the underground Tavern in The Town. The first bomb destroyed The Mulberry Bush just six minutes later. The Tavern was destroyed at 8. 27pm.
+output:
+ McDade detonated or exploded bomb explosive device using  <arg>  to attack Coventry Telephone exchange target at  <arg>  place
+**********
+start scoring
+gen_file:checkpoints/iterative_decoding_12/epoch_3_test_step_5_predictions.jsonl
+test_file:data/wikievents/test_no_ontology.jsonl
+paired args: 49, inconsistent args: 23, raito: 0.46938775510204084
+Evaluation by matching head words only....
+Event-level identification: P: 64.01
+Event-level : P: 64.01
+gold arg num: 563
+Role identification: P: 72.81, R: 73.71, F: 73.26
+Role: P: 66.14, R: 66.96, F: 66.55
+Coref Role identification: P: 73.86, R: 74.78, F: 74.32
+Coref Role: P: 67.19, R: 68.03, F: 67.61
+len: 383 38 73
+mean: 0.9446096385968603 0.9163833957884396 0.8537055130600022
+var: 0.010588935437564935 0.013537789711618845 0.026766270863629125
+min: 0.3277140259742737 0.4568774104118347 0.40440890192985535
+max: 1.0 1.0 0.9999973773956299
+--------------------------------------------------------------------------------
+load from checkpoints/iterative_decoding_12/epoch_2.ckpt
+**********
+INIT DATA FILE: preprocessed/preprocessed_KAIROS/test.jsonl
+sample:242
+input:
+ <arg>  charged or indicted  <arg>  before  <arg>  court or judge for  <arg>  crime in  <arg>  place Thai Authorities Indict 2 Over August Shrine Attack A Bangkok military court has indicted two men accused of carrying out the August 17 bombing at a popular shrine that killed 20 people. The court on Tuesday  <tgr>  indicted  <tgr>  Bilal Mohammed and Mieraili Yusufu on 10 counts connected to the blast, including conspiracy to explode bombs and commit premeditated murder. Thailand authorities have not officially named the bombing of Erawan Shrine an act of terror, and accordingly neither suspect was charged specifically with terrorism. Police issued 17 arrest warrants following the bombing but only Bilal and Mieraili have been detained. They are described as ethnic Uighurs, a minority group based in China's Xinjiang region. They have been held in custody since their arrests in late August and early September. Thai officials have said the blast was carried out by a people - smuggling gang seeking revenge on Thai authorities for cracking down on their operation. The August 17 blast at the Erawan Shrine - a popular tourist destination - was one of the most deadly acts of violence in Bangkok in decades, and left 20 people dead and more than 120 injured. Of the dead, 14 were tourists. The attack shocked the residents of the capital because of the apparent randomness, which drove home the point that no place is immune to acts of terror. Authorities, however, have declined to call it an act of terrorism out of apparent fear that it would hurt the country's huge tourism industry. Police initially appeared at first to be at a loss, but soon claimed success with a series of raids and two arrests. Arrest warrants have been issued for 15 others. The two suspects were brought to the court in handcuffs wearing brown prison garb. Members of the media were not allowed to enter the court and the indictments took place before the two suspects arrived, said defense lawyer Chuchart Kanpai. Doubts about motive
+output:
+ court charged or indicted Bilal Mohammed and Mieraili Yusufu before  <arg>  court or judge for  <arg>  crime in  <arg>  place
+**********
+start scoring
+gen_file:checkpoints/iterative_decoding_12/epoch_2_test_step_0_predictions.jsonl
+test_file:data/wikievents/test_no_ontology.jsonl
+paired args: 49, inconsistent args: 21, raito: 0.42857142857142855
+Evaluation by matching head words only....
+Event-level identification: P: 64.29
+Event-level : P: 64.29
+gold arg num: 563
+Role identification: P: 72.99, R: 71.05, F: 72.01
+Role: P: 67.15, R: 65.36, F: 66.25
+Coref Role identification: P: 74.82, R: 72.82, F: 73.81
+Coref Role: P: 68.98, R: 67.14, F: 68.05
+len: 378 32 67
+mean: 0.9247330390742237 0.9007170596056514 0.8634748987445784
+var: 0.015187536458058764 0.019611855298926614 0.020425074708969506
+min: 0.3685535788536072 0.4868558943271637 0.520887553691864
+max: 0.9999971389770508 0.9998641411463419 0.9999303817749023
+start getting new testset
+source:checkpoints/iterative_decoding_12/epoch_2_test_step_0_results_for_predict.json
+target:preprocessed/preprocessed_iterative_decoding_12/test_step_0_data.json
+total_event: 364
+has close events: 341
+longest context:437
+longest target 35
+**********
+INIT DATA FILE: preprocessed/preprocessed_iterative_decoding_12/test_step_0_data.json
+sample:61
+input:
+ <arg>  died at  <arg>  place from  <arg>  medical issue, killed by  <arg>  killer There were ten times more air strikes in the covert war on terror during President Barack Obama ’ s presidency than under his predecessor, George W. Bush. Obama embraced the US  <tag>  Instrument Instrument  </tag>  drone programme, overseeing more strikes in his first year than Bush carried out during his entire presidency. A total of 563 strikes, largely by  <tag>  Instrument  </tag>  drones, targeted  <tag>  Target  </tag>  Pakistan,  <tag>  Target  </tag>  Somalia and  <tag>  Target  </tag>  Yemen during Obama ’ s two terms, compared to 57 strikes under  <tag>  Attacker  </tag>  Bush. Between 384 and 807 civilians were  <tgr>  killed  <tgr>  in those countries, according to reports logged by the Bureau. The use of drones aligned with Obama ’ s ambition to keep up the war against al Qaeda while extricating the US military from intractable, costly ground wars in the Middle East and Asia. But the targeted killing programme has drawn much criticism. The Obama administration has insisted that drone strikes are so “ exceptionally surgical and precise ” that they pluck off terror suspects while not putting “ innocent men, women and children in danger ”. This claim has been contested by numerous human rights groups, however, and the Bureau ’ s figures on civilian casualties also demonstrate that this is often not the case. The White House released long - awaited figures last July on the number of people killed in drone strikes between January 2009 and the end of 2015, an announcement which insiders said was a direct response to pressure from the Bureau and other organisations that collect data. However the US ’ s estimate of the number of civilians killed – between 64 and 116 – contrasted strongly with the number recorded by the Bureau, which at 380 to 801 was six times higher.
+output:
+ civilians died at countries place from  <arg>  medical issue, killed by  <arg>  killer
+**********
+start scoring
+gen_file:checkpoints/iterative_decoding_12/epoch_2_test_step_1_predictions.jsonl
+test_file:data/wikievents/test_no_ontology.jsonl
+paired args: 49, inconsistent args: 25, raito: 0.5102040816326531
+Evaluation by matching head words only....
+Event-level identification: P: 62.09
+Event-level : P: 62.09
+gold arg num: 563
+Role identification: P: 74.15, R: 69.80, F: 71.91
+Role: P: 67.74, R: 63.77, F: 65.69
+Coref Role identification: P: 75.28, R: 70.87, F: 73.01
+Coref Role: P: 68.87, R: 64.83, F: 66.79
+len: 365 34 66
+mean: 0.9260145826267888 0.8807060693506322 0.834487407646998
+var: 0.01575495057495728 0.030895039485948923 0.0297593005431395
+min: 0.33586814999580383 0.3528245687484741 0.39684444665908813
+max: 0.9999972581863403 0.9998671611150106 0.9999715089797974
+start getting new testset
+source:checkpoints/iterative_decoding_12/epoch_2_test_step_1_results_for_predict.json
+target:preprocessed/preprocessed_iterative_decoding_12/test_step_1_data.json
+total_event: 364
+has close events: 341
+longest context:434
+longest target 35
+**********
+INIT DATA FILE: preprocessed/preprocessed_iterative_decoding_12/test_step_1_data.json
+sample:75
+input:
+ <arg>  detonated or exploded  <arg>  explosive device using  <arg>  to attack  <arg>  target at  <arg>  place On 27 August 1975 a Provisional IRA bomb  <tgr>  exploded  <tgr>  without warning at the Caterham Arms public house in Caterham, Surrey, England. There were no fatalities but 33  <tag>  Victim  </tag>  people were injured, some severely. Two off - duty  <tag>  Victim  </tag>  soldiers lost their legs as a result of the bombing. == Background == In February 1975 the Provisional Irish Republican Army agreed to a truce and ceasefire with the British government and the Northern Ireland Office. Seven " incident centres " were established in Irish nationalist areas in Northern Ireland to monitor the ceasefire and the activity of the security forces. Before the truce, the IRA active service unit ( ASU ) later dubbed the Balcombe Street Gang ( due to the December 1975 Balcombe Street siege ) had been carrying out bomb and gun attacks in Southern England since autumn 1974, mostly in and around London. Their last previous attack was an assassination attempt on former Prime Minister Edward Heath but he was not home when the attackers threw a bomb into his bedroom window on 22 December 1974. == The bombing ==
+output:
+ IRA detonated or exploded bomb explosive device using  <arg>  to attack Caterham Arms public house target at Surrey place
+**********
+start scoring
+gen_file:checkpoints/iterative_decoding_12/epoch_2_test_step_2_predictions.jsonl
+test_file:data/wikievents/test_no_ontology.jsonl
+paired args: 49, inconsistent args: 25, raito: 0.5102040816326531
+Evaluation by matching head words only....
+Event-level identification: P: 62.09
+Event-level : P: 62.09
+gold arg num: 563
+Role identification: P: 74.05, R: 69.45, F: 71.68
+Role: P: 67.61, R: 63.41, F: 65.44
+Coref Role identification: P: 75.38, R: 70.69, F: 72.96
+Coref Role: P: 68.94, R: 64.65, F: 66.73
+len: 364 34 67
+mean: 0.9325562513222863 0.8877001441089936 0.8334590952787826
+var: 0.01225267744992817 0.027921052778178322 0.029998475185604737
+min: 0.46865397691726685 0.4242854118347168 0.39684444665908813
+max: 0.9999972581863403 0.9998671611150106 0.9999715089797974
+start getting new testset
+source:checkpoints/iterative_decoding_12/epoch_2_test_step_2_results_for_predict.json
+target:preprocessed/preprocessed_iterative_decoding_12/test_step_2_data.json
+total_event: 364
+has close events: 341
+longest context:434
+longest target 35
+**********
+INIT DATA FILE: preprocessed/preprocessed_iterative_decoding_12/test_step_2_data.json
+sample:96
+input:
+ <arg>  arrested or jailed  <arg>  for  <arg>  crime at  <arg>  place == The bombing == The Balcombe Street Gang planted a time bomb in the Caterham Arms public house in Caterham, Surrey. The IRA unit placed the 7lb bomb in a duffel bag under a seat. There was no warning and the bomb exploded at 9 : 20, injuring 23 civilians and 10 off - duty soldiers. The pub was used by members of the Welsh Guards who were based at the barracks nearby. Some of the injuries were very serious, with at least three soldiers losing limbs. The blast blew the roof off the pub in the process. This attack marked the start of a renewed bombing campaign ( Phase Two ) in England and the end of the truce with the British Government. The next day, the same IRA unit exploded a bomb in Oxford Street, injuring several people. == Aftermath == One of the police  <tag>  Researcher  </tag>  officers in charge of the investigation into the bombing described it as a " carbon copy " of the Guildford pub bombings in October 1974 for which four  <tag>  Defendant  </tag>  people were already serving their sentences. The cell's campaign would continue until December 1975 when they were  <tgr>  caught  <tgr>  at the siege of Balcombe Street. The unit would eventually end up planting close to 50 bombs in London and elsewhere in southern England and carrying out several shootings which, along with the bombings, caused the deaths of nearly 20  <tag>  Victim  </tag>  people, injured  <tag>  Victim  </tag>  hundreds and caused millions of pounds worth of damage to property. == See also == * Chronology of Provisional Irish Republican Army actions ( 1970 – 79 ) == References ==
+output:
+ <arg>  arrested or jailed they for  <arg>  crime at  <arg>  place
+**********
+start scoring
+gen_file:checkpoints/iterative_decoding_12/epoch_2_test_step_3_predictions.jsonl
+test_file:data/wikievents/test_no_ontology.jsonl
+paired args: 49, inconsistent args: 25, raito: 0.5102040816326531
+Evaluation by matching head words only....
+Event-level identification: P: 61.81
+Event-level : P: 61.81
+gold arg num: 563
+Role identification: P: 73.91, R: 69.45, F: 71.61
+Role: P: 67.49, R: 63.41, F: 65.38
+Coref Role identification: P: 75.24, R: 70.69, F: 72.89
+Coref Role: P: 68.81, R: 64.65, F: 66.67
+len: 364 34 66
+mean: 0.9327702733532104 0.8839953350183232 0.8367595975146149
+var: 0.012274569592198097 0.031191077540337703 0.028405136159841977
+min: 0.4324174225330353 0.354673832654953 0.39684444665908813
+max: 0.9999972581863403 0.9998671611150106 0.9999715089797974
+start getting new testset
+source:checkpoints/iterative_decoding_12/epoch_2_test_step_3_results_for_predict.json
+target:preprocessed/preprocessed_iterative_decoding_12/test_step_3_data.json
+total_event: 364
+has close events: 341
+longest context:434
+longest target 35
+**********
+INIT DATA FILE: preprocessed/preprocessed_iterative_decoding_12/test_step_3_data.json
+sample:261
+input:
+ <arg>  communicated with  <arg>  about  <arg>  topic at  <arg>  place (document does not specify in person or not, or one-way or not) Police initially appeared at first to be at a loss, but soon claimed success with a series of raids and two arrests. Arrest warrants have been issued for 15 others. The two suspects were brought to the court in handcuffs wearing brown prison garb. Members of the media were not allowed to enter the court and the indictments took place before the two suspects arrived, said defense lawyer Chuchart Kanpai. Doubts about motive Early speculation about the bombing had suggested it might be the work of Uighur separatists who were angry that  <tag>  Transporter  </tag>  Thailand in July forcibly repatriated more than 100  <tag>  PassengerArtifact  </tag>  Uighurs to  <tag>  Destination  </tag>  China, where it is feared they face persecution. The theory was bolstered by the fact that the Erawan Shrine is popular among Chinese tourists, who figured prominently among the  <tag>  Target  </tag>  victims of the bombing. But Thai officials  <tgr>  reject  <tgr>  any political or religious motive, sticking to the theory that it was a revenge for disrupting a human - smuggling gang. Still, skepticism about the  <tag>  Participant  </tag>  police explanation on the  <tag>  Target  </tag>  shrine attack has abounded because of leaks, contradictions, misstatements and secrecy surrounding the investigation. The two suspects are being tried at a military court on an army base in Bangkok because cases of “ national security ” have been handled by the military since last May, when the army seized power in a coup from an elected government. Former National Police Chief Somyot Poomphanmuang said before his retirement in September that the case against the two suspects was supported by closed - circuit television footage, witnesses, DNA matching and physical evidence, in addition to their confessions.
+output:
+ officials communicated with  <arg>  about  <arg>  topic at  <arg>  place (document does not specify in person or not, or one-way or not)
+**********
+start scoring
+gen_file:checkpoints/iterative_decoding_12/epoch_2_test_step_4_predictions.jsonl
+test_file:data/wikievents/test_no_ontology.jsonl
+paired args: 49, inconsistent args: 25, raito: 0.5102040816326531
+Evaluation by matching head words only....
+Event-level identification: P: 62.09
+Event-level : P: 62.09
+gold arg num: 563
+Role identification: P: 74.24, R: 69.63, F: 71.86
+Role: P: 67.80, R: 63.59, F: 65.63
+Coref Role identification: P: 75.57, R: 70.87, F: 73.14
+Coref Role: P: 69.13, R: 64.83, F: 66.91
+len: 365 34 65
+mean: 0.9311291827136543 0.8838963466045124 0.8416998643141527
+var: 0.012810660999244255 0.03105138017686256 0.026314940868737986
+min: 0.4324174225330353 0.354673832654953 0.39684444665908813
+max: 0.9999972581863403 0.9998671611150106 0.9999715089797974
+start getting new testset
+source:checkpoints/iterative_decoding_12/epoch_2_test_step_4_results_for_predict.json
+target:preprocessed/preprocessed_iterative_decoding_12/test_step_4_data.json
+total_event: 364
+has close events: 341
+longest context:434
+longest target 35
+**********
+INIT DATA FILE: preprocessed/preprocessed_iterative_decoding_12/test_step_4_data.json
+sample:227
+input:
+ <arg>  attacked  <arg>  using  <arg>  at  <arg>  place In this incident 22 were killed and another 38 were injured in the explosion. Children and women are among the dead and wounded in both attacks, also multiple soldiers were killed. The Taliban claimed responsibility for the attacks, and said they will commit more attacks to discourage people from voting in the upcoming presidential elections. == Attacks == === Charikar === The attack took place in Charikar, at a police training ground. At the time, Afghan president Ashraf Ghani was holding a political rally at the site, attended by thousands of people. A suicide bomber riding a motorcycle drove into a crowd near a security checkpoint and detonated his explosives. 26 people and the bomber were killed, and 42 others injured. Women and children were among the victims of the attack. President Ghani was unharmed in the attack, remaining protected by a secure compound about half a mile from the site of the blast. === Kabul === A few hours after the first attack, a second suicide bombing took place in  <tag>  Target  </tag>  Massoud Square near the  <tag>  Place  </tag>  Kabul Green Zone, in an area where several government buildings, the US embassy and NATO headquarters, are located. 22  <tag>  Victim  </tag>  people were killed in this  <tgr>  attack  <tgr>  and  <tag>  Victim  </tag>  38 injured. == Responsibility == The  <tag>  Communicator Communicator Communicator  </tag>  Taliban claimed responsibility for both attacks, and stated that the attacks were aimed at disrupting the Afghan presidential election, scheduled to take place on September 28. == References ==
+output:
+ <arg>  attacked  <arg>  using  <arg>  at  <arg>  place
+**********
+start scoring
+gen_file:checkpoints/iterative_decoding_12/epoch_2_test_step_5_predictions.jsonl
+test_file:data/wikievents/test_no_ontology.jsonl
+paired args: 49, inconsistent args: 25, raito: 0.5102040816326531
+Evaluation by matching head words only....
+Event-level identification: P: 62.09
+Event-level : P: 62.09
+gold arg num: 563
+Role identification: P: 74.24, R: 69.63, F: 71.86
+Role: P: 67.80, R: 63.59, F: 65.63
+Coref Role identification: P: 75.57, R: 70.87, F: 73.14
+Coref Role: P: 69.13, R: 64.83, F: 66.91
+len: 365 34 65
+mean: 0.9309703515331514 0.8838963466045124 0.8419936947333507
+var: 0.01280593125624541 0.03105138017686256 0.02638082429427313
+min: 0.4324174225330353 0.354673832654953 0.39684444665908813
+max: 0.9999972581863403 0.9998671611150106 0.9999715089797974
+--------------------------------------------------------------------------------

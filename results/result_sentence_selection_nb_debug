@@ -1,0 +1,1105 @@
+load from checkpoints/debug_iter/epoch_5.ckpt
+start scoring
+gen_file:checkpoints/debug_iter/epoch_5_test_predictions.jsonl
+test_file:./data/wikievents/test_no_ontology.jsonl
+{(6, 6, 'Life.Die.Unspecified', 'Victim'), (18, 20, 'Life.Die.Unspecified', 'Place'), (1, 1, 'Life.Die.Unspecified', 'Killer')}
+{(6, 6, 'Life.Die.Unspecified', 'Victim'), (1, 1, 'Life.Die.Unspecified', 'Killer'), (20, 20, 'Life.Die.Unspecified', 'Place')}
+********************************************************************************
+{(46, 47, 'Conflict.Attack.DetonateExplode', 'Place')}
+{(47, 47, 'Conflict.Attack.DetonateExplode', 'Place')}
+********************************************************************************
+{(36, 36, 'Life.Die.Unspecified', 'Victim')}
+{(36, 36, 'Life.Die.Unspecified', 'Victim')}
+********************************************************************************
+{(86, 86, 'Conflict.Attack.DetonateExplode', 'Attacker'), (91, 91, 'Conflict.Attack.DetonateExplode', 'ExplosiveDevice')}
+{(86, 86, 'Conflict.Attack.DetonateExplode', 'Attacker'), (91, 91, 'Conflict.Attack.DetonateExplode', 'ExplosiveDevice')}
+********************************************************************************
+{(86, 86, 'Conflict.Attack.DetonateExplode', 'Attacker'), (91, 91, 'Conflict.Attack.DetonateExplode', 'ExplosiveDevice'), (102, 102, 'Conflict.Attack.DetonateExplode', 'Place')}
+{(86, 86, 'Conflict.Attack.DetonateExplode', 'Attacker'), (91, 91, 'Conflict.Attack.DetonateExplode', 'ExplosiveDevice'), (102, 102, 'Conflict.Attack.DetonateExplode', 'Place')}
+********************************************************************************
+{(140, 140, 'Conflict.Attack.DetonateExplode', 'Target'), (127, 127, 'Conflict.Attack.DetonateExplode', 'Attacker'), (130, 130, 'Conflict.Attack.DetonateExplode', 'Place')}
+{(140, 140, 'Conflict.Attack.DetonateExplode', 'Target'), (127, 127, 'Conflict.Attack.DetonateExplode', 'Attacker'), (130, 130, 'Conflict.Attack.DetonateExplode', 'Place')}
+********************************************************************************
+{(194, 194, 'Life.Die.Unspecified', 'Victim')}
+{(194, 194, 'Life.Die.Unspecified', 'Victim')}
+********************************************************************************
+{(270, 270, 'Cognitive.IdentifyCategorize.Unspecified', 'Place'), (261, 261, 'Cognitive.IdentifyCategorize.Unspecified', 'Identifier')}
+{(270, 270, 'Cognitive.IdentifyCategorize.Unspecified', 'Place'), (261, 261, 'Cognitive.IdentifyCategorize.Unspecified', 'Identifier')}
+********************************************************************************
+{(841, 841, 'Conflict.Attack.DetonateExplode', 'Place')}
+{(841, 841, 'Conflict.Attack.DetonateExplode', 'Place')}
+********************************************************************************
+{(848, 848, 'Life.Injure.Unspecified', 'Victim')}
+{(848, 848, 'Life.Injure.Unspecified', 'Victim')}
+********************************************************************************
+{(844, 844, 'Life.Die.Unspecified', 'Victim')}
+{(844, 844, 'Life.Die.Unspecified', 'Victim')}
+********************************************************************************
+{(852, 852, 'Conflict.Attack.DetonateExplode', 'Attacker'), (862, 864, 'Conflict.Attack.DetonateExplode', 'Place'), (860, 860, 'Conflict.Attack.DetonateExplode', 'Target')}
+{(852, 852, 'Conflict.Attack.DetonateExplode', 'Attacker'), (860, 860, 'Conflict.Attack.DetonateExplode', 'Target'), (864, 864, 'Conflict.Attack.DetonateExplode', 'Place')}
+********************************************************************************
+{(230, 230, 'Life.Die.Unspecified', 'Victim')}
+{(230, 230, 'Life.Die.Unspecified', 'Victim')}
+********************************************************************************
+{(219, 219, 'Contact.Contact.Correspondence', 'Participant'), (211, 211, 'Contact.Contact.Correspondence', 'Participant')}
+{(219, 219, 'Contact.Contact.Correspondence', 'Participant'), (211, 211, 'Contact.Contact.Correspondence', 'Participant')}
+********************************************************************************
+{(279, 279, 'Movement.Transportation.Unspecified', 'PassengerArtifact'), (283, 284, 'Movement.Transportation.Unspecified', 'Destination')}
+{(284, 284, 'Movement.Transportation.Unspecified', 'Destination'), (279, 279, 'Movement.Transportation.Unspecified', 'PassengerArtifact')}
+********************************************************************************
+{(293, 293, 'Movement.Transportation.Unspecified', 'Destination'), (287, 287, 'Movement.Transportation.Unspecified', 'PassengerArtifact')}
+{(293, 293, 'Movement.Transportation.Unspecified', 'Destination'), (287, 287, 'Movement.Transportation.Unspecified', 'PassengerArtifact')}
+********************************************************************************
+{(207, 207, 'Conflict.Attack.DetonateExplode', 'Place')}
+{(207, 207, 'Conflict.Attack.DetonateExplode', 'Place')}
+********************************************************************************
+{(919, 919, 'Life.Die.Unspecified', 'Victim')}
+{(919, 919, 'Life.Die.Unspecified', 'Victim')}
+********************************************************************************
+{(821, 823, 'Life.Injure.Unspecified', 'Victim'), (800, 800, 'Life.Injure.Unspecified', 'Injurer')}
+{(821, 821, 'Life.Injure.Unspecified', 'Victim'), (800, 800, 'Life.Injure.Unspecified', 'Injurer')}
+********************************************************************************
+{(815, 815, 'Life.Die.Unspecified', 'Victim'), (800, 800, 'Life.Die.Unspecified', 'Killer')}
+{(815, 815, 'Life.Die.Unspecified', 'Victim'), (800, 800, 'Life.Die.Unspecified', 'Killer')}
+********************************************************************************
+{(805, 805, 'Conflict.Attack.DetonateExplode', 'ExplosiveDevice'), (808, 810, 'Conflict.Attack.DetonateExplode', 'Place'), (800, 800, 'Conflict.Attack.DetonateExplode', 'Attacker')}
+{(805, 805, 'Conflict.Attack.DetonateExplode', 'ExplosiveDevice'), (800, 800, 'Conflict.Attack.DetonateExplode', 'Attacker'), (809, 809, 'Conflict.Attack.DetonateExplode', 'Place')}
+********************************************************************************
+{(545, 545, 'Contact.Contact.Meet', 'Place'), (543, 543, 'Contact.Contact.Meet', 'Participant'), (534, 534, 'Contact.Contact.Meet', 'Participant')}
+{(545, 545, 'Contact.Contact.Meet', 'Place'), (543, 543, 'Contact.Contact.Meet', 'Participant'), (534, 534, 'Contact.Contact.Meet', 'Participant')}
+********************************************************************************
+set()
+set()
+********************************************************************************
+{(510, 510, 'Life.Die.Unspecified', 'Victim'), (499, 499, 'Life.Die.Unspecified', 'Killer')}
+{(510, 510, 'Life.Die.Unspecified', 'Victim'), (499, 499, 'Life.Die.Unspecified', 'Killer')}
+********************************************************************************
+{(499, 499, 'Life.Injure.Unspecified', 'Injurer'), (510, 510, 'Life.Injure.Unspecified', 'Victim')}
+{(499, 499, 'Life.Injure.Unspecified', 'Injurer'), (510, 510, 'Life.Injure.Unspecified', 'Victim')}
+********************************************************************************
+set()
+set()
+********************************************************************************
+{(12, 12, 'Justice.Sentence.Unspecified', 'JudgeCourt'), (14, 14, 'Justice.Sentence.Unspecified', 'Defendant')}
+{(12, 12, 'Justice.Sentence.Unspecified', 'JudgeCourt'), (14, 14, 'Justice.Sentence.Unspecified', 'Defendant')}
+********************************************************************************
+{(14, 14, 'Life.Die.Unspecified', 'Victim'), (12, 12, 'Life.Die.Unspecified', 'Killer')}
+{(14, 14, 'Life.Die.Unspecified', 'Victim'), (12, 12, 'Life.Die.Unspecified', 'Killer')}
+********************************************************************************
+set()
+set()
+********************************************************************************
+set()
+set()
+********************************************************************************
+set()
+set()
+********************************************************************************
+{(169, 169, 'Life.Die.Unspecified', 'Victim')}
+{(169, 169, 'Life.Die.Unspecified', 'Victim')}
+********************************************************************************
+{(186, 186, 'Life.Die.Unspecified', 'Killer'), (193, 193, 'Life.Die.Unspecified', 'Victim')}
+{(186, 186, 'Life.Die.Unspecified', 'Killer'), (193, 193, 'Life.Die.Unspecified', 'Victim')}
+********************************************************************************
+{(186, 186, 'Life.Injure.Unspecified', 'Injurer'), (196, 196, 'Life.Injure.Unspecified', 'Victim')}
+{(186, 186, 'Life.Injure.Unspecified', 'Injurer'), (196, 196, 'Life.Injure.Unspecified', 'Victim')}
+********************************************************************************
+{(186, 186, 'Conflict.Attack.DetonateExplode', 'Attacker')}
+{(186, 186, 'Conflict.Attack.DetonateExplode', 'Attacker')}
+********************************************************************************
+{(218, 218, 'Conflict.Attack.DetonateExplode', 'Attacker'), (213, 213, 'Conflict.Attack.DetonateExplode', 'Attacker'), (228, 228, 'Conflict.Attack.DetonateExplode', 'ExplosiveDevice')}
+{(218, 218, 'Conflict.Attack.DetonateExplode', 'Attacker'), (213, 213, 'Conflict.Attack.DetonateExplode', 'Attacker'), (228, 228, 'Conflict.Attack.DetonateExplode', 'ExplosiveDevice')}
+********************************************************************************
+{(250, 250, 'Conflict.Attack.Unspecified', 'Target')}
+{(250, 250, 'Conflict.Attack.Unspecified', 'Target')}
+********************************************************************************
+{(261, 261, 'Life.Die.Unspecified', 'Victim')}
+{(261, 261, 'Life.Die.Unspecified', 'Victim')}
+********************************************************************************
+{(280, 280, 'Justice.ChargeIndict.Unspecified', 'Defendant')}
+{(280, 280, 'Justice.ChargeIndict.Unspecified', 'Defendant')}
+********************************************************************************
+set()
+set()
+********************************************************************************
+{(285, 285, 'Life.Die.Unspecified', 'Victim')}
+{(285, 285, 'Life.Die.Unspecified', 'Victim')}
+********************************************************************************
+{(333, 333, 'Justice.Sentence.Unspecified', 'Defendant')}
+{(333, 333, 'Justice.Sentence.Unspecified', 'Defendant')}
+********************************************************************************
+{(447, 448, 'Life.Die.Unspecified', 'Victim')}
+{(448, 448, 'Life.Die.Unspecified', 'Victim')}
+********************************************************************************
+set()
+set()
+********************************************************************************
+set()
+set()
+********************************************************************************
+{(576, 576, 'Conflict.Attack.Unspecified', 'Attacker')}
+{(576, 576, 'Conflict.Attack.Unspecified', 'Attacker')}
+********************************************************************************
+{(607, 607, 'Life.Die.Unspecified', 'Victim')}
+{(607, 607, 'Life.Die.Unspecified', 'Victim')}
+********************************************************************************
+{(597, 597, 'Conflict.Attack.Unspecified', 'Attacker'), (607, 607, 'Conflict.Attack.Unspecified', 'Target')}
+{(597, 597, 'Conflict.Attack.Unspecified', 'Attacker'), (607, 607, 'Conflict.Attack.Unspecified', 'Target')}
+********************************************************************************
+set()
+set()
+********************************************************************************
+{(639, 639, 'Life.Injure.Unspecified', 'Victim')}
+{(639, 639, 'Life.Injure.Unspecified', 'Victim')}
+********************************************************************************
+{(535, 535, 'Life.Injure.Unspecified', 'Victim')}
+{(535, 535, 'Life.Injure.Unspecified', 'Victim')}
+********************************************************************************
+{(755, 755, 'Conflict.Attack.Unspecified', 'Target'), (730, 730, 'Conflict.Attack.Unspecified', 'Attacker')}
+{(755, 755, 'Conflict.Attack.Unspecified', 'Target'), (730, 730, 'Conflict.Attack.Unspecified', 'Attacker')}
+********************************************************************************
+{(807, 807, 'Life.Die.Unspecified', 'Victim')}
+{(807, 807, 'Life.Die.Unspecified', 'Victim')}
+********************************************************************************
+set()
+set()
+********************************************************************************
+{(844, 844, 'ArtifactExistence.DamageDestroyDisableDismantle.Destroy', 'Destroyer')}
+{(844, 844, 'ArtifactExistence.DamageDestroyDisableDismantle.Destroy', 'Destroyer')}
+********************************************************************************
+{(848, 848, 'Life.Die.Unspecified', 'Victim')}
+{(848, 848, 'Life.Die.Unspecified', 'Victim')}
+********************************************************************************
+{(868, 868, 'Justice.Sentence.Unspecified', 'Defendant')}
+{(868, 868, 'Justice.Sentence.Unspecified', 'Defendant')}
+********************************************************************************
+{(5, 6, 'Conflict.Attack.Unspecified', 'Instrument')}
+{(6, 6, 'Conflict.Attack.Unspecified', 'Instrument')}
+********************************************************************************
+{(34, 34, 'Conflict.Attack.Unspecified', 'Instrument'), (30, 30, 'Conflict.Attack.Unspecified', 'Attacker')}
+{(34, 34, 'Conflict.Attack.Unspecified', 'Instrument'), (30, 30, 'Conflict.Attack.Unspecified', 'Attacker')}
+********************************************************************************
+{(61, 61, 'Conflict.Attack.Unspecified', 'Instrument'), (66, 66, 'Conflict.Attack.Unspecified', 'Target'), (68, 68, 'Conflict.Attack.Unspecified', 'Target'), (64, 64, 'Conflict.Attack.Unspecified', 'Target')}
+{(61, 61, 'Conflict.Attack.Unspecified', 'Instrument'), (66, 66, 'Conflict.Attack.Unspecified', 'Target'), (68, 68, 'Conflict.Attack.Unspecified', 'Target'), (64, 64, 'Conflict.Attack.Unspecified', 'Target')}
+********************************************************************************
+{(81, 81, 'Conflict.Attack.Unspecified', 'Attacker')}
+{(81, 81, 'Conflict.Attack.Unspecified', 'Attacker')}
+********************************************************************************
+{(87, 87, 'Life.Die.Unspecified', 'Victim'), (92, 92, 'Life.Die.Unspecified', 'Place')}
+{(87, 87, 'Life.Die.Unspecified', 'Victim'), (92, 92, 'Life.Die.Unspecified', 'Place')}
+********************************************************************************
+{(154, 154, 'Conflict.Attack.Unspecified', 'Instrument')}
+{(154, 154, 'Conflict.Attack.Unspecified', 'Instrument')}
+********************************************************************************
+{(230, 230, 'Life.Die.Unspecified', 'Victim')}
+{(230, 230, 'Life.Die.Unspecified', 'Victim')}
+********************************************************************************
+{(233, 233, 'Conflict.Attack.Unspecified', 'Instrument')}
+{(233, 233, 'Conflict.Attack.Unspecified', 'Instrument')}
+********************************************************************************
+{(275, 275, 'Life.Die.Unspecified', 'Victim'), (267, 267, 'Life.Die.Unspecified', 'Killer')}
+{(275, 275, 'Life.Die.Unspecified', 'Victim'), (267, 267, 'Life.Die.Unspecified', 'Killer')}
+********************************************************************************
+{(313, 313, 'Life.Die.Unspecified', 'Place')}
+{(313, 313, 'Life.Die.Unspecified', 'Place')}
+********************************************************************************
+{(313, 313, 'Conflict.Attack.Unspecified', 'Place'), (317, 317, 'Conflict.Attack.Unspecified', 'Instrument'), (316, 316, 'Conflict.Attack.Unspecified', 'Attacker')}
+{(313, 313, 'Conflict.Attack.Unspecified', 'Place'), (317, 317, 'Conflict.Attack.Unspecified', 'Instrument'), (316, 316, 'Conflict.Attack.Unspecified', 'Attacker')}
+********************************************************************************
+{(337, 337, 'Conflict.Attack.DetonateExplode', 'Target'), (343, 343, 'Conflict.Attack.DetonateExplode', 'Attacker')}
+{(337, 337, 'Conflict.Attack.DetonateExplode', 'Target'), (343, 343, 'Conflict.Attack.DetonateExplode', 'Attacker')}
+********************************************************************************
+{(385, 385, 'Life.Die.Unspecified', 'Victim')}
+{(385, 385, 'Life.Die.Unspecified', 'Victim')}
+********************************************************************************
+{(396, 396, 'Life.Die.Unspecified', 'Victim')}
+{(396, 396, 'Life.Die.Unspecified', 'Victim')}
+********************************************************************************
+set()
+set()
+********************************************************************************
+{(486, 486, 'Conflict.Attack.Unspecified', 'Place')}
+{(486, 486, 'Conflict.Attack.Unspecified', 'Place')}
+********************************************************************************
+{(464, 464, 'Conflict.Attack.Unspecified', 'Attacker'), (467, 467, 'Conflict.Attack.Unspecified', 'Instrument')}
+{(464, 464, 'Conflict.Attack.Unspecified', 'Attacker'), (467, 467, 'Conflict.Attack.Unspecified', 'Instrument')}
+********************************************************************************
+set()
+set()
+********************************************************************************
+{(13, 16, 'Conflict.Attack.DetonateExplode', 'Target'), (5, 6, 'Conflict.Attack.DetonateExplode', 'Attacker'), (7, 7, 'Conflict.Attack.DetonateExplode', 'ExplosiveDevice')}
+{(7, 7, 'Conflict.Attack.DetonateExplode', 'ExplosiveDevice'), (16, 16, 'Conflict.Attack.DetonateExplode', 'Target'), (6, 6, 'Conflict.Attack.DetonateExplode', 'Attacker')}
+********************************************************************************
+{(30, 30, 'Life.Injure.Unspecified', 'Victim')}
+{(30, 30, 'Life.Injure.Unspecified', 'Victim')}
+********************************************************************************
+{(120, 122, 'Conflict.Attack.Unspecified', 'Attacker'), (143, 143, 'Conflict.Attack.Unspecified', 'Place'), (137, 137, 'Conflict.Attack.Unspecified', 'Instrument')}
+{(143, 143, 'Conflict.Attack.Unspecified', 'Place'), (122, 122, 'Conflict.Attack.Unspecified', 'Attacker'), (137, 137, 'Conflict.Attack.Unspecified', 'Instrument')}
+********************************************************************************
+{(232, 232, 'Conflict.Attack.DetonateExplode', 'ExplosiveDevice')}
+{(232, 232, 'Conflict.Attack.DetonateExplode', 'ExplosiveDevice')}
+********************************************************************************
+{(241, 241, 'Life.Injure.Unspecified', 'Victim'), (247, 247, 'Life.Injure.Unspecified', 'Victim')}
+{(241, 241, 'Life.Injure.Unspecified', 'Victim'), (247, 247, 'Life.Injure.Unspecified', 'Victim')}
+********************************************************************************
+{(332, 332, 'Conflict.Attack.DetonateExplode', 'ExplosiveDevice'), (334, 335, 'Conflict.Attack.DetonateExplode', 'Place'), (329, 329, 'Conflict.Attack.DetonateExplode', 'Attacker')}
+{(332, 332, 'Conflict.Attack.DetonateExplode', 'ExplosiveDevice'), (335, 335, 'Conflict.Attack.DetonateExplode', 'Place'), (329, 329, 'Conflict.Attack.DetonateExplode', 'Attacker')}
+********************************************************************************
+{(332, 332, 'Life.Injure.Unspecified', 'Instrument'), (339, 339, 'Life.Injure.Unspecified', 'Victim'), (329, 329, 'Life.Injure.Unspecified', 'Injurer')}
+{(332, 332, 'Life.Injure.Unspecified', 'Instrument'), (339, 339, 'Life.Injure.Unspecified', 'Victim'), (329, 329, 'Life.Injure.Unspecified', 'Injurer')}
+********************************************************************************
+{(287, 287, 'ArtifactExistence.DamageDestroyDisableDismantle.Damage', 'Artifact')}
+{(287, 287, 'ArtifactExistence.DamageDestroyDisableDismantle.Damage', 'Artifact')}
+********************************************************************************
+{(440, 440, 'Life.Die.Unspecified', 'Victim')}
+{(440, 440, 'Life.Die.Unspecified', 'Victim')}
+********************************************************************************
+{(443, 443, 'Life.Injure.Unspecified', 'Victim')}
+{(443, 443, 'Life.Injure.Unspecified', 'Victim')}
+********************************************************************************
+{(453, 453, 'ArtifactExistence.DamageDestroyDisableDismantle.Damage', 'Artifact')}
+{(453, 453, 'ArtifactExistence.DamageDestroyDisableDismantle.Damage', 'Artifact')}
+********************************************************************************
+{(41, 41, 'Life.Injure.Unspecified', 'Victim')}
+{(41, 41, 'Life.Injure.Unspecified', 'Victim')}
+********************************************************************************
+{(166, 167, 'Conflict.Attack.Unspecified', 'Target'), (154, 154, 'Conflict.Attack.Unspecified', 'Attacker')}
+{(167, 167, 'Conflict.Attack.Unspecified', 'Target'), (154, 154, 'Conflict.Attack.Unspecified', 'Attacker')}
+********************************************************************************
+{(175, 175, 'Conflict.Attack.DetonateExplode', 'Attacker'), (178, 178, 'Conflict.Attack.DetonateExplode', 'ExplosiveDevice')}
+{(175, 175, 'Conflict.Attack.DetonateExplode', 'Attacker'), (178, 178, 'Conflict.Attack.DetonateExplode', 'ExplosiveDevice')}
+********************************************************************************
+{(279, 279, 'Life.Injure.Unspecified', 'Victim')}
+{(279, 279, 'Life.Injure.Unspecified', 'Victim')}
+********************************************************************************
+{(279, 279, 'Life.Injure.Unspecified', 'Victim')}
+{(279, 279, 'Life.Injure.Unspecified', 'Victim')}
+********************************************************************************
+{(199, 199, 'ArtifactExistence.ManufactureAssemble.Unspecified', 'Artifact'), (193, 195, 'ArtifactExistence.ManufactureAssemble.Unspecified', 'ManufacturerAssembler'), (202, 203, 'ArtifactExistence.ManufactureAssemble.Unspecified', 'Place')}
+{(195, 195, 'ArtifactExistence.ManufactureAssemble.Unspecified', 'ManufacturerAssembler'), (199, 199, 'ArtifactExistence.ManufactureAssemble.Unspecified', 'Artifact'), (203, 203, 'ArtifactExistence.ManufactureAssemble.Unspecified', 'Place')}
+********************************************************************************
+{(87, 88, 'Cognitive.Inspection.SensoryObserve', 'Place')}
+{(87, 87, 'Cognitive.Inspection.SensoryObserve', 'Place')}
+********************************************************************************
+{(220, 221, 'ArtifactExistence.ManufactureAssemble.Unspecified', 'Components'), (213, 213, 'ArtifactExistence.ManufactureAssemble.Unspecified', 'ManufacturerAssembler'), (217, 217, 'ArtifactExistence.ManufactureAssemble.Unspecified', 'Artifact')}
+{(221, 221, 'ArtifactExistence.ManufactureAssemble.Unspecified', 'Components'), (213, 213, 'ArtifactExistence.ManufactureAssemble.Unspecified', 'ManufacturerAssembler'), (217, 217, 'ArtifactExistence.ManufactureAssemble.Unspecified', 'Artifact')}
+********************************************************************************
+{(348, 348, 'Cognitive.Research.Unspecified', 'Researcher')}
+{(348, 348, 'Cognitive.Research.Unspecified', 'Researcher')}
+********************************************************************************
+{(376, 376, 'Justice.Sentence.Unspecified', 'Defendant')}
+{(376, 376, 'Justice.Sentence.Unspecified', 'Defendant')}
+********************************************************************************
+{(394, 394, 'Justice.ArrestJailDetain.Unspecified', 'Detainee')}
+{(394, 394, 'Justice.ArrestJailDetain.Unspecified', 'Detainee')}
+********************************************************************************
+{(66, 66, 'Contact.Contact.Unspecified', 'Topic'), (59, 62, 'Contact.Contact.Unspecified', 'Participant'), (71, 72, 'Contact.Contact.Unspecified', 'Participant')}
+{(72, 72, 'Contact.Contact.Unspecified', 'Participant'), (62, 62, 'Contact.Contact.Unspecified', 'Participant'), (66, 66, 'Contact.Contact.Unspecified', 'Topic')}
+********************************************************************************
+{(148, 148, 'Cognitive.Inspection.SensoryObserve', 'Observer')}
+{(148, 148, 'Cognitive.Inspection.SensoryObserve', 'Observer')}
+********************************************************************************
+{(329, 329, 'Contact.ThreatenCoerce.Unspecified', 'Communicator'), (324, 325, 'Contact.ThreatenCoerce.Unspecified', 'Recipient')}
+{(329, 329, 'Contact.ThreatenCoerce.Unspecified', 'Communicator'), (325, 325, 'Contact.ThreatenCoerce.Unspecified', 'Recipient')}
+********************************************************************************
+{(1099, 1099, 'Life.Injure.Unspecified', 'Victim')}
+{(1099, 1099, 'Life.Injure.Unspecified', 'Victim')}
+********************************************************************************
+set()
+set()
+********************************************************************************
+{(1908, 1908, 'Life.Die.Unspecified', 'Victim'), (1917, 1917, 'Life.Die.Unspecified', 'Killer')}
+{(1908, 1908, 'Life.Die.Unspecified', 'Victim'), (1917, 1917, 'Life.Die.Unspecified', 'Killer')}
+********************************************************************************
+set()
+set()
+********************************************************************************
+{(57, 57, 'Contact.Contact.Broadcast', 'Communicator')}
+{(57, 57, 'Contact.Contact.Broadcast', 'Communicator')}
+********************************************************************************
+{(62, 62, 'Conflict.Attack.DetonateExplode', 'ExplosiveDevice'), (65, 66, 'Conflict.Attack.DetonateExplode', 'Place')}
+{(66, 66, 'Conflict.Attack.DetonateExplode', 'Place'), (62, 62, 'Conflict.Attack.DetonateExplode', 'ExplosiveDevice')}
+********************************************************************************
+{(121, 122, 'Cognitive.IdentifyCategorize.Unspecified', 'IdentifiedObject'), (124, 124, 'Cognitive.IdentifyCategorize.Unspecified', 'Place'), (114, 114, 'Cognitive.IdentifyCategorize.Unspecified', 'Identifier')}
+{(124, 124, 'Cognitive.IdentifyCategorize.Unspecified', 'Place'), (114, 114, 'Cognitive.IdentifyCategorize.Unspecified', 'Identifier'), (122, 122, 'Cognitive.IdentifyCategorize.Unspecified', 'IdentifiedObject')}
+********************************************************************************
+{(180, 180, 'ArtifactExistence.DamageDestroyDisableDismantle.Dismantle', 'Dismantler'), (185, 185, 'ArtifactExistence.DamageDestroyDisableDismantle.Dismantle', 'Artifact')}
+{(180, 180, 'ArtifactExistence.DamageDestroyDisableDismantle.Dismantle', 'Dismantler'), (185, 185, 'ArtifactExistence.DamageDestroyDisableDismantle.Dismantle', 'Artifact')}
+********************************************************************************
+{(227, 229, 'Contact.Contact.Broadcast', 'Communicator')}
+{(229, 229, 'Contact.Contact.Broadcast', 'Communicator')}
+********************************************************************************
+{(268, 269, 'Contact.Contact.Broadcast', 'Communicator')}
+{(269, 269, 'Contact.Contact.Broadcast', 'Communicator')}
+********************************************************************************
+{(367, 368, 'Contact.Contact.Broadcast', 'Communicator')}
+{(368, 368, 'Contact.Contact.Broadcast', 'Communicator')}
+********************************************************************************
+{(407, 407, 'Contact.Contact.Broadcast', 'Communicator')}
+{(407, 407, 'Contact.Contact.Broadcast', 'Communicator')}
+********************************************************************************
+set()
+set()
+********************************************************************************
+{(584, 584, 'Cognitive.IdentifyCategorize.Unspecified', 'IdentifiedObject'), (577, 577, 'Cognitive.IdentifyCategorize.Unspecified', 'Identifier')}
+{(584, 584, 'Cognitive.IdentifyCategorize.Unspecified', 'IdentifiedObject'), (577, 577, 'Cognitive.IdentifyCategorize.Unspecified', 'Identifier')}
+********************************************************************************
+{(639, 639, 'Contact.Contact.Broadcast', 'Communicator')}
+{(639, 639, 'Contact.Contact.Broadcast', 'Communicator')}
+********************************************************************************
+{(694, 694, 'ArtifactExistence.DamageDestroyDisableDismantle.Dismantle', 'Instrument'), (689, 689, 'ArtifactExistence.DamageDestroyDisableDismantle.Dismantle', 'Artifact')}
+{(694, 694, 'ArtifactExistence.DamageDestroyDisableDismantle.Dismantle', 'Instrument'), (689, 689, 'ArtifactExistence.DamageDestroyDisableDismantle.Dismantle', 'Artifact')}
+********************************************************************************
+set()
+set()
+********************************************************************************
+{(850, 850, 'Contact.Contact.Broadcast', 'Communicator')}
+{(850, 850, 'Contact.Contact.Broadcast', 'Communicator')}
+********************************************************************************
+{(875, 875, 'Contact.Contact.Broadcast', 'Communicator')}
+{(875, 875, 'Contact.Contact.Broadcast', 'Communicator')}
+********************************************************************************
+{(919, 919, 'Contact.Contact.Broadcast', 'Communicator'), (922, 922, 'Contact.Contact.Broadcast', 'Topic')}
+{(919, 919, 'Contact.Contact.Broadcast', 'Communicator'), (922, 922, 'Contact.Contact.Broadcast', 'Topic')}
+********************************************************************************
+{(939, 939, 'Contact.Contact.Broadcast', 'Communicator')}
+{(939, 939, 'Contact.Contact.Broadcast', 'Communicator')}
+********************************************************************************
+{(955, 955, 'Contact.Contact.Broadcast', 'Communicator')}
+{(955, 955, 'Contact.Contact.Broadcast', 'Communicator')}
+********************************************************************************
+{(1013, 1013, 'Contact.Contact.Broadcast', 'Communicator')}
+{(1013, 1013, 'Contact.Contact.Broadcast', 'Communicator')}
+********************************************************************************
+{(1036, 1036, 'Contact.Contact.Broadcast', 'Communicator')}
+{(1036, 1036, 'Contact.Contact.Broadcast', 'Communicator')}
+********************************************************************************
+{(1069, 1069, 'Contact.Contact.Broadcast', 'Communicator')}
+{(1069, 1069, 'Contact.Contact.Broadcast', 'Communicator')}
+********************************************************************************
+{(1078, 1079, 'Conflict.Attack.DetonateExplode', 'Place')}
+{(1079, 1079, 'Conflict.Attack.DetonateExplode', 'Place')}
+********************************************************************************
+{(1099, 1100, 'Movement.Transportation.Unspecified', 'PassengerArtifact'), (1105, 1105, 'Movement.Transportation.Unspecified', 'Destination')}
+{(1105, 1105, 'Movement.Transportation.Unspecified', 'Destination'), (1099, 1099, 'Movement.Transportation.Unspecified', 'PassengerArtifact')}
+********************************************************************************
+{(1107, 1107, 'Contact.Contact.Broadcast', 'Communicator')}
+{(1107, 1107, 'Contact.Contact.Broadcast', 'Communicator')}
+********************************************************************************
+{(1119, 1119, 'Medical.Intervention.Unspecified', 'Patient')}
+{(1119, 1119, 'Medical.Intervention.Unspecified', 'Patient')}
+********************************************************************************
+{(1128, 1128, 'Contact.Contact.Broadcast', 'Communicator')}
+{(1128, 1128, 'Contact.Contact.Broadcast', 'Communicator')}
+********************************************************************************
+{(1134, 1137, 'Medical.Intervention.Unspecified', 'Treater'), (1144, 1144, 'Medical.Intervention.Unspecified', 'Patient')}
+{(1137, 1137, 'Medical.Intervention.Unspecified', 'Treater'), (1144, 1144, 'Medical.Intervention.Unspecified', 'Patient')}
+********************************************************************************
+{(1132, 1132, 'Contact.Contact.Broadcast', 'Communicator')}
+{(1132, 1132, 'Contact.Contact.Broadcast', 'Communicator')}
+********************************************************************************
+{(1328, 1328, 'Contact.Contact.Broadcast', 'Communicator')}
+{(1328, 1328, 'Contact.Contact.Broadcast', 'Communicator')}
+********************************************************************************
+{(1363, 1363, 'Contact.Contact.Broadcast', 'Communicator')}
+{(1363, 1363, 'Contact.Contact.Broadcast', 'Communicator')}
+********************************************************************************
+{(1607, 1607, 'Contact.Contact.Broadcast', 'Communicator')}
+{(1607, 1607, 'Contact.Contact.Broadcast', 'Communicator')}
+********************************************************************************
+{(1927, 1927, 'Contact.Contact.Broadcast', 'Communicator'), (1931, 1931, 'Contact.Contact.Broadcast', 'Topic')}
+{(1927, 1927, 'Contact.Contact.Broadcast', 'Communicator'), (1931, 1931, 'Contact.Contact.Broadcast', 'Topic')}
+********************************************************************************
+{(1944, 1944, 'Contact.Contact.Broadcast', 'Communicator')}
+{(1944, 1944, 'Contact.Contact.Broadcast', 'Communicator')}
+********************************************************************************
+set()
+set()
+********************************************************************************
+{(190, 190, 'Conflict.Attack.DetonateExplode', 'ExplosiveDevice'), (196, 196, 'Conflict.Attack.DetonateExplode', 'Instrument'), (186, 186, 'Conflict.Attack.DetonateExplode', 'Place')}
+{(190, 190, 'Conflict.Attack.DetonateExplode', 'ExplosiveDevice'), (196, 196, 'Conflict.Attack.DetonateExplode', 'Instrument'), (186, 186, 'Conflict.Attack.DetonateExplode', 'Place')}
+********************************************************************************
+{(212, 213, 'Conflict.Attack.DetonateExplode', 'Target'), (201, 201, 'Conflict.Attack.DetonateExplode', 'ExplosiveDevice')}
+{(213, 213, 'Conflict.Attack.DetonateExplode', 'Target'), (201, 201, 'Conflict.Attack.DetonateExplode', 'ExplosiveDevice')}
+********************************************************************************
+{(252, 252, 'Conflict.Attack.DetonateExplode', 'Target'), (257, 257, 'Conflict.Attack.DetonateExplode', 'Target'), (245, 245, 'Conflict.Attack.DetonateExplode', 'ExplosiveDevice'), (254, 254, 'Conflict.Attack.DetonateExplode', 'Target'), (250, 250, 'Conflict.Attack.DetonateExplode', 'Target')}
+{(252, 252, 'Conflict.Attack.DetonateExplode', 'Target'), (257, 257, 'Conflict.Attack.DetonateExplode', 'Target'), (245, 245, 'Conflict.Attack.DetonateExplode', 'ExplosiveDevice'), (254, 254, 'Conflict.Attack.DetonateExplode', 'Target'), (250, 250, 'Conflict.Attack.DetonateExplode', 'Target')}
+********************************************************************************
+set()
+set()
+********************************************************************************
+{(393, 393, 'Life.Die.Unspecified', 'Victim'), (404, 404, 'Life.Die.Unspecified', 'Place')}
+{(393, 393, 'Life.Die.Unspecified', 'Victim'), (404, 404, 'Life.Die.Unspecified', 'Place')}
+********************************************************************************
+{(398, 398, 'Life.Injure.Unspecified', 'Victim')}
+{(398, 398, 'Life.Injure.Unspecified', 'Victim')}
+********************************************************************************
+{(478, 478, 'Conflict.Attack.DetonateExplode', 'Attacker')}
+{(478, 478, 'Conflict.Attack.DetonateExplode', 'Attacker')}
+********************************************************************************
+{(472, 472, 'Contact.Contact.Broadcast', 'Communicator')}
+{(472, 472, 'Contact.Contact.Broadcast', 'Communicator')}
+********************************************************************************
+{(12, 14, 'Justice.ChargeIndict.Unspecified', 'Defendant')}
+{(14, 14, 'Justice.ChargeIndict.Unspecified', 'Defendant')}
+********************************************************************************
+{(27, 26, 'Conflict.Attack.DetonateExplode', 'ExplosiveDevice'), (24, 24, 'Conflict.Attack.DetonateExplode', 'Attacker')}
+{(27, 27, 'Conflict.Attack.DetonateExplode', 'ExplosiveDevice'), (24, 24, 'Conflict.Attack.DetonateExplode', 'Attacker')}
+********************************************************************************
+{(12, 14, 'Life.Injure.Unspecified', 'Injurer'), (40, 40, 'Life.Injure.Unspecified', 'Victim')}
+{(40, 40, 'Life.Injure.Unspecified', 'Victim'), (14, 14, 'Life.Injure.Unspecified', 'Injurer')}
+********************************************************************************
+{(49, 49, 'Justice.TrialHearing.Unspecified', 'Defendant'), (59, 59, 'Justice.TrialHearing.Unspecified', 'Place')}
+{(49, 49, 'Justice.TrialHearing.Unspecified', 'Defendant'), (59, 59, 'Justice.TrialHearing.Unspecified', 'Place')}
+********************************************************************************
+{(70, 70, 'Life.Injure.Unspecified', 'Victim'), (78, 78, 'Life.Injure.Unspecified', 'Injurer')}
+{(70, 70, 'Life.Injure.Unspecified', 'Victim'), (78, 78, 'Life.Injure.Unspecified', 'Injurer')}
+********************************************************************************
+{(140, 140, 'Conflict.Attack.DetonateExplode', 'Attacker'), (150, 150, 'Conflict.Attack.DetonateExplode', 'Place')}
+{(140, 140, 'Conflict.Attack.DetonateExplode', 'Attacker'), (150, 150, 'Conflict.Attack.DetonateExplode', 'Place')}
+********************************************************************************
+{(161, 161, 'Life.Die.Unspecified', 'Victim')}
+{(161, 161, 'Life.Die.Unspecified', 'Victim')}
+********************************************************************************
+{(165, 165, 'Life.Injure.Unspecified', 'Victim')}
+{(165, 165, 'Life.Injure.Unspecified', 'Victim')}
+********************************************************************************
+set()
+set()
+********************************************************************************
+{(179, 179, 'Conflict.Attack.DetonateExplode', 'Attacker'), (176, 176, 'Conflict.Attack.DetonateExplode', 'ExplosiveDevice'), (191, 192, 'Conflict.Attack.DetonateExplode', 'Place')}
+{(179, 179, 'Conflict.Attack.DetonateExplode', 'Attacker'), (176, 176, 'Conflict.Attack.DetonateExplode', 'ExplosiveDevice'), (192, 192, 'Conflict.Attack.DetonateExplode', 'Place')}
+********************************************************************************
+{(200, 200, 'Life.Injure.Unspecified', 'Victim')}
+{(200, 200, 'Life.Injure.Unspecified', 'Victim')}
+********************************************************************************
+{(206, 206, 'Conflict.Attack.DetonateExplode', 'Attacker'), (209, 209, 'Conflict.Attack.DetonateExplode', 'ExplosiveDevice'), (227, 227, 'Conflict.Attack.DetonateExplode', 'Place')}
+{(206, 206, 'Conflict.Attack.DetonateExplode', 'Attacker'), (209, 209, 'Conflict.Attack.DetonateExplode', 'ExplosiveDevice'), (227, 227, 'Conflict.Attack.DetonateExplode', 'Place')}
+********************************************************************************
+{(249, 249, 'Justice.ChargeIndict.Unspecified', 'Prosecutor'), (251, 252, 'Justice.ChargeIndict.Unspecified', 'JudgeCourt'), (242, 242, 'Justice.ChargeIndict.Unspecified', 'Defendant')}
+{(252, 252, 'Justice.ChargeIndict.Unspecified', 'JudgeCourt'), (249, 249, 'Justice.ChargeIndict.Unspecified', 'Prosecutor'), (242, 242, 'Justice.ChargeIndict.Unspecified', 'Defendant')}
+********************************************************************************
+{(264, 264, 'Justice.ArrestJailDetain.Unspecified', 'Jailer'), (275, 275, 'Justice.ArrestJailDetain.Unspecified', 'Place'), (254, 254, 'Justice.ArrestJailDetain.Unspecified', 'Detainee')}
+{(264, 264, 'Justice.ArrestJailDetain.Unspecified', 'Jailer'), (275, 275, 'Justice.ArrestJailDetain.Unspecified', 'Place'), (254, 254, 'Justice.ArrestJailDetain.Unspecified', 'Detainee')}
+********************************************************************************
+{(283, 283, 'Life.Injure.Unspecified', 'Victim')}
+{(283, 283, 'Life.Injure.Unspecified', 'Victim')}
+********************************************************************************
+{(297, 297, 'Justice.ChargeIndict.Unspecified', 'Defendant')}
+{(297, 297, 'Justice.ChargeIndict.Unspecified', 'Defendant')}
+********************************************************************************
+{(354, 354, 'Conflict.Attack.DetonateExplode', 'ExplosiveDevice'), (375, 375, 'Conflict.Attack.DetonateExplode', 'Attacker'), (349, 351, 'Conflict.Attack.DetonateExplode', 'Place')}
+{(351, 351, 'Conflict.Attack.DetonateExplode', 'Place'), (354, 354, 'Conflict.Attack.DetonateExplode', 'ExplosiveDevice'), (375, 375, 'Conflict.Attack.DetonateExplode', 'Attacker')}
+********************************************************************************
+{(375, 375, 'Transaction.ExchangeBuySell.Unspecified', 'Recipient'), (378, 378, 'Transaction.ExchangeBuySell.Unspecified', 'AcquiredEntity')}
+{(375, 375, 'Transaction.ExchangeBuySell.Unspecified', 'Recipient'), (378, 378, 'Transaction.ExchangeBuySell.Unspecified', 'AcquiredEntity')}
+********************************************************************************
+{(441, 441, 'Justice.TrialHearing.Unspecified', 'Defendant')}
+{(441, 441, 'Justice.TrialHearing.Unspecified', 'Defendant')}
+********************************************************************************
+set()
+set()
+********************************************************************************
+{(329, 329, 'Conflict.Attack.DetonateExplode', 'Attacker')}
+{(329, 329, 'Conflict.Attack.DetonateExplode', 'Attacker')}
+********************************************************************************
+{(172, 172, 'Life.Die.Unspecified', 'Killer'), (165, 166, 'Life.Die.Unspecified', 'Victim')}
+{(166, 166, 'Life.Die.Unspecified', 'Victim'), (172, 172, 'Life.Die.Unspecified', 'Killer')}
+********************************************************************************
+{(180, 180, 'Justice.ArrestJailDetain.Unspecified', 'Detainee')}
+{(180, 180, 'Justice.ArrestJailDetain.Unspecified', 'Detainee')}
+********************************************************************************
+{(190, 190, 'Conflict.Attack.DetonateExplode', 'Place')}
+{(190, 190, 'Conflict.Attack.DetonateExplode', 'Place')}
+********************************************************************************
+{(233, 234, 'Life.Die.Unspecified', 'Victim'), (241, 241, 'Life.Die.Unspecified', 'Killer')}
+{(241, 241, 'Life.Die.Unspecified', 'Killer'), (234, 234, 'Life.Die.Unspecified', 'Victim')}
+********************************************************************************
+{(318, 318, 'Justice.ChargeIndict.Unspecified', 'Defendant')}
+{(318, 318, 'Justice.ChargeIndict.Unspecified', 'Defendant')}
+********************************************************************************
+{(410, 411, 'Conflict.Attack.DetonateExplode', 'Target'), (402, 402, 'Conflict.Attack.DetonateExplode', 'Attacker'), (407, 407, 'Conflict.Attack.DetonateExplode', 'ExplosiveDevice')}
+{(411, 411, 'Conflict.Attack.DetonateExplode', 'Target'), (402, 402, 'Conflict.Attack.DetonateExplode', 'Attacker'), (407, 407, 'Conflict.Attack.DetonateExplode', 'ExplosiveDevice')}
+********************************************************************************
+{(416, 416, 'Life.Die.Unspecified', 'Victim'), (402, 402, 'Life.Die.Unspecified', 'Killer')}
+{(416, 416, 'Life.Die.Unspecified', 'Victim'), (402, 402, 'Life.Die.Unspecified', 'Killer')}
+********************************************************************************
+{(419, 419, 'Life.Injure.Unspecified', 'Victim'), (402, 402, 'Life.Injure.Unspecified', 'Injurer')}
+{(419, 419, 'Life.Injure.Unspecified', 'Victim'), (402, 402, 'Life.Injure.Unspecified', 'Injurer')}
+********************************************************************************
+{(665, 665, 'Cognitive.Inspection.SensoryObserve', 'ObservedEntity'), (662, 662, 'Cognitive.Inspection.SensoryObserve', 'Observer')}
+{(665, 665, 'Cognitive.Inspection.SensoryObserve', 'ObservedEntity'), (662, 662, 'Cognitive.Inspection.SensoryObserve', 'Observer')}
+********************************************************************************
+{(636, 637, 'Transaction.ExchangeBuySell.Unspecified', 'Recipient')}
+{(637, 637, 'Transaction.ExchangeBuySell.Unspecified', 'Recipient')}
+********************************************************************************
+{(591, 591, 'Transaction.ExchangeBuySell.Unspecified', 'Recipient')}
+{(591, 591, 'Transaction.ExchangeBuySell.Unspecified', 'Recipient')}
+********************************************************************************
+{(571, 572, 'Cognitive.IdentifyCategorize.Unspecified', 'IdentifiedRole'), (577, 578, 'Cognitive.IdentifyCategorize.Unspecified', 'Place')}
+{(572, 572, 'Cognitive.IdentifyCategorize.Unspecified', 'IdentifiedRole'), (578, 578, 'Cognitive.IdentifyCategorize.Unspecified', 'Place')}
+********************************************************************************
+{(552, 552, 'Life.Injure.Unspecified', 'Victim')}
+{(552, 552, 'Life.Injure.Unspecified', 'Victim')}
+********************************************************************************
+{(533, 533, 'Conflict.Attack.DetonateExplode', 'Attacker'), (527, 527, 'Conflict.Attack.DetonateExplode', 'ExplosiveDevice'), (540, 541, 'Conflict.Attack.DetonateExplode', 'Target')}
+{(533, 533, 'Conflict.Attack.DetonateExplode', 'Attacker'), (527, 527, 'Conflict.Attack.DetonateExplode', 'ExplosiveDevice'), (541, 541, 'Conflict.Attack.DetonateExplode', 'Target')}
+********************************************************************************
+{(486, 487, 'Transaction.ExchangeBuySell.Unspecified', 'Recipient')}
+{(487, 487, 'Transaction.ExchangeBuySell.Unspecified', 'Recipient')}
+********************************************************************************
+{(419, 419, 'Transaction.ExchangeBuySell.Unspecified', 'AcquiredEntity'), (416, 417, 'Transaction.ExchangeBuySell.Unspecified', 'Recipient')}
+{(419, 419, 'Transaction.ExchangeBuySell.Unspecified', 'AcquiredEntity'), (417, 417, 'Transaction.ExchangeBuySell.Unspecified', 'Recipient')}
+********************************************************************************
+{(387, 387, 'Transaction.ExchangeBuySell.Unspecified', 'AcquiredEntity'), (381, 381, 'Transaction.ExchangeBuySell.Unspecified', 'Recipient'), (389, 390, 'Transaction.ExchangeBuySell.Unspecified', 'Giver')}
+{(387, 387, 'Transaction.ExchangeBuySell.Unspecified', 'AcquiredEntity'), (390, 390, 'Transaction.ExchangeBuySell.Unspecified', 'Giver'), (381, 381, 'Transaction.ExchangeBuySell.Unspecified', 'Recipient')}
+********************************************************************************
+{(370, 370, 'Transaction.ExchangeBuySell.Unspecified', 'AcquiredEntity'), (362, 363, 'Transaction.ExchangeBuySell.Unspecified', 'Recipient'), (372, 373, 'Transaction.ExchangeBuySell.Unspecified', 'Giver')}
+{(370, 370, 'Transaction.ExchangeBuySell.Unspecified', 'AcquiredEntity'), (373, 373, 'Transaction.ExchangeBuySell.Unspecified', 'Giver'), (363, 363, 'Transaction.ExchangeBuySell.Unspecified', 'Recipient')}
+********************************************************************************
+{(333, 333, 'Transaction.ExchangeBuySell.Unspecified', 'Recipient'), (350, 350, 'Transaction.ExchangeBuySell.Unspecified', 'AcquiredEntity')}
+{(333, 333, 'Transaction.ExchangeBuySell.Unspecified', 'Recipient'), (350, 350, 'Transaction.ExchangeBuySell.Unspecified', 'AcquiredEntity')}
+********************************************************************************
+{(317, 318, 'Transaction.ExchangeBuySell.Unspecified', 'Recipient'), (321, 321, 'Transaction.ExchangeBuySell.Unspecified', 'AcquiredEntity')}
+{(318, 318, 'Transaction.ExchangeBuySell.Unspecified', 'Recipient'), (321, 321, 'Transaction.ExchangeBuySell.Unspecified', 'AcquiredEntity')}
+********************************************************************************
+{(160, 160, 'Transaction.ExchangeBuySell.Unspecified', 'AcquiredEntity'), (144, 145, 'Transaction.ExchangeBuySell.Unspecified', 'Recipient')}
+{(160, 160, 'Transaction.ExchangeBuySell.Unspecified', 'AcquiredEntity'), (145, 145, 'Transaction.ExchangeBuySell.Unspecified', 'Recipient')}
+********************************************************************************
+{(689, 690, 'Cognitive.Inspection.SensoryObserve', 'ObservedEntity'), (682, 682, 'Cognitive.Inspection.SensoryObserve', 'Observer'), (680, 680, 'Cognitive.Inspection.SensoryObserve', 'Place')}
+{(690, 690, 'Cognitive.Inspection.SensoryObserve', 'ObservedEntity'), (682, 682, 'Cognitive.Inspection.SensoryObserve', 'Observer'), (680, 680, 'Cognitive.Inspection.SensoryObserve', 'Place')}
+********************************************************************************
+{(59, 60, 'Personnel.StartPosition.Unspecified', 'PlaceOfEmployment'), (40, 40, 'Personnel.StartPosition.Unspecified', 'Employee'), (38, 38, 'Personnel.StartPosition.Unspecified', 'Employee')}
+{(60, 60, 'Personnel.StartPosition.Unspecified', 'PlaceOfEmployment'), (40, 40, 'Personnel.StartPosition.Unspecified', 'Employee'), (38, 38, 'Personnel.StartPosition.Unspecified', 'Employee')}
+********************************************************************************
+{(78, 79, 'Transaction.ExchangeBuySell.Unspecified', 'AcquiredEntity'), (75, 75, 'Transaction.ExchangeBuySell.Unspecified', 'Recipient')}
+{(75, 75, 'Transaction.ExchangeBuySell.Unspecified', 'Recipient'), (79, 79, 'Transaction.ExchangeBuySell.Unspecified', 'AcquiredEntity')}
+********************************************************************************
+{(108, 108, 'Transaction.ExchangeBuySell.Unspecified', 'Recipient')}
+{(108, 108, 'Transaction.ExchangeBuySell.Unspecified', 'Recipient')}
+********************************************************************************
+{(191, 192, 'Transaction.ExchangeBuySell.Unspecified', 'Recipient'), (198, 199, 'Transaction.ExchangeBuySell.Unspecified', 'AcquiredEntity')}
+{(199, 199, 'Transaction.ExchangeBuySell.Unspecified', 'AcquiredEntity'), (192, 192, 'Transaction.ExchangeBuySell.Unspecified', 'Recipient')}
+********************************************************************************
+{(533, 533, 'Life.Die.Unspecified', 'Killer'), (544, 544, 'Life.Die.Unspecified', 'Victim')}
+{(533, 533, 'Life.Die.Unspecified', 'Killer'), (544, 544, 'Life.Die.Unspecified', 'Victim')}
+********************************************************************************
+{(533, 533, 'Life.Injure.Unspecified', 'Injurer'), (549, 549, 'Life.Injure.Unspecified', 'Victim')}
+{(533, 533, 'Life.Injure.Unspecified', 'Injurer'), (549, 549, 'Life.Injure.Unspecified', 'Victim')}
+********************************************************************************
+{(194, 194, 'Contact.Contact.Meet', 'Participant'), (191, 192, 'Contact.Contact.Meet', 'Participant')}
+{(194, 194, 'Contact.Contact.Meet', 'Participant'), (192, 192, 'Contact.Contact.Meet', 'Participant')}
+********************************************************************************
+{(689, 690, 'Conflict.Attack.Unspecified', 'Instrument'), (697, 697, 'Conflict.Attack.Unspecified', 'Place')}
+{(690, 690, 'Conflict.Attack.Unspecified', 'Instrument'), (697, 697, 'Conflict.Attack.Unspecified', 'Place')}
+********************************************************************************
+{(419, 419, 'Transaction.ExchangeBuySell.Unspecified', 'AcquiredEntity'), (416, 417, 'Transaction.ExchangeBuySell.Unspecified', 'Recipient'), (431, 431, 'Transaction.ExchangeBuySell.Unspecified', 'PaymentBarter')}
+{(419, 419, 'Transaction.ExchangeBuySell.Unspecified', 'AcquiredEntity'), (417, 417, 'Transaction.ExchangeBuySell.Unspecified', 'Recipient'), (431, 431, 'Transaction.ExchangeBuySell.Unspecified', 'PaymentBarter')}
+********************************************************************************
+{(191, 192, 'Life.Die.Unspecified', 'Killer'), (212, 213, 'Life.Die.Unspecified', 'Victim')}
+{(192, 192, 'Life.Die.Unspecified', 'Killer'), (213, 213, 'Life.Die.Unspecified', 'Victim')}
+********************************************************************************
+{(227, 228, 'Conflict.Attack.Unspecified', 'Attacker'), (219, 219, 'Conflict.Attack.Unspecified', 'Target'), (221, 221, 'Conflict.Attack.Unspecified', 'Place')}
+{(228, 228, 'Conflict.Attack.Unspecified', 'Attacker'), (219, 219, 'Conflict.Attack.Unspecified', 'Target'), (221, 221, 'Conflict.Attack.Unspecified', 'Place')}
+********************************************************************************
+{(38, 39, 'Conflict.Attack.DetonateExplode', 'Place'), (36, 36, 'Conflict.Attack.DetonateExplode', 'Target')}
+{(39, 39, 'Conflict.Attack.DetonateExplode', 'Place'), (36, 36, 'Conflict.Attack.DetonateExplode', 'Target')}
+********************************************************************************
+{(54, 55, 'Conflict.Attack.Unspecified', 'Target'), (58, 59, 'Conflict.Attack.Unspecified', 'Place')}
+{(55, 55, 'Conflict.Attack.Unspecified', 'Target'), (59, 59, 'Conflict.Attack.Unspecified', 'Place')}
+********************************************************************************
+{(79, 81, 'ArtifactExistence.DamageDestroyDisableDismantle.Destroy', 'Artifact')}
+{(81, 81, 'ArtifactExistence.DamageDestroyDisableDismantle.Destroy', 'Artifact')}
+********************************************************************************
+{(87, 87, 'Conflict.Attack.DetonateExplode', 'Target')}
+{(87, 87, 'Conflict.Attack.DetonateExplode', 'Target')}
+********************************************************************************
+{(13, 15, 'Conflict.Attack.DetonateExplode', 'Place')}
+{(13, 13, 'Conflict.Attack.DetonateExplode', 'Place')}
+********************************************************************************
+{(13, 15, 'Life.Die.Unspecified', 'Place'), (11, 11, 'Life.Die.Unspecified', 'Victim')}
+{(11, 11, 'Life.Die.Unspecified', 'Victim'), (13, 13, 'Life.Die.Unspecified', 'Place')}
+********************************************************************************
+set()
+set()
+********************************************************************************
+{(33, 33, 'Life.Die.Unspecified', 'Victim')}
+{(33, 33, 'Life.Die.Unspecified', 'Victim')}
+********************************************************************************
+{(37, 37, 'Life.Injure.Unspecified', 'Victim')}
+{(37, 37, 'Life.Injure.Unspecified', 'Victim')}
+********************************************************************************
+{(51, 51, 'Conflict.Attack.DetonateExplode', 'Place')}
+{(51, 51, 'Conflict.Attack.DetonateExplode', 'Place')}
+********************************************************************************
+{(60, 60, 'Life.Die.Unspecified', 'Victim')}
+{(60, 60, 'Life.Die.Unspecified', 'Victim')}
+********************************************************************************
+{(65, 65, 'Life.Die.Unspecified', 'Victim')}
+{(65, 65, 'Life.Die.Unspecified', 'Victim')}
+********************************************************************************
+set()
+set()
+********************************************************************************
+{(87, 87, 'Life.Die.Unspecified', 'Victim')}
+{(87, 87, 'Life.Die.Unspecified', 'Victim')}
+********************************************************************************
+set()
+set()
+********************************************************************************
+{(92, 92, 'Contact.Contact.Broadcast', 'Communicator')}
+{(92, 92, 'Contact.Contact.Broadcast', 'Communicator')}
+********************************************************************************
+{(92, 92, 'Conflict.Attack.DetonateExplode', 'Attacker')}
+{(92, 92, 'Conflict.Attack.DetonateExplode', 'Attacker')}
+********************************************************************************
+{(108, 108, 'Conflict.Attack.Unspecified', 'Target'), (101, 101, 'Conflict.Attack.Unspecified', 'Attacker')}
+{(108, 108, 'Conflict.Attack.Unspecified', 'Target'), (101, 101, 'Conflict.Attack.Unspecified', 'Attacker')}
+********************************************************************************
+{(133, 134, 'Conflict.Attack.Unspecified', 'Place')}
+{(134, 134, 'Conflict.Attack.Unspecified', 'Place')}
+********************************************************************************
+{(164, 164, 'Movement.Transportation.IllegalTransportation', 'Vehicle'), (176, 176, 'Movement.Transportation.IllegalTransportation', 'PassengerArtifact'), (161, 161, 'Movement.Transportation.IllegalTransportation', 'Transporter')}
+{(164, 164, 'Movement.Transportation.IllegalTransportation', 'Vehicle'), (176, 176, 'Movement.Transportation.IllegalTransportation', 'PassengerArtifact'), (161, 161, 'Movement.Transportation.IllegalTransportation', 'Transporter')}
+********************************************************************************
+{(176, 176, 'Conflict.Attack.DetonateExplode', 'ExplosiveDevice'), (182, 182, 'Conflict.Attack.DetonateExplode', 'Attacker')}
+{(176, 176, 'Conflict.Attack.DetonateExplode', 'ExplosiveDevice'), (182, 182, 'Conflict.Attack.DetonateExplode', 'Attacker')}
+********************************************************************************
+{(182, 182, 'Life.Die.Unspecified', 'Victim'), (179, 179, 'Life.Die.Unspecified', 'Victim')}
+{(182, 182, 'Life.Die.Unspecified', 'Victim'), (179, 179, 'Life.Die.Unspecified', 'Victim')}
+********************************************************************************
+{(188, 188, 'Life.Injure.Unspecified', 'Victim')}
+{(188, 188, 'Life.Injure.Unspecified', 'Victim')}
+********************************************************************************
+{(197, 197, 'Conflict.Attack.DetonateExplode', 'Target'), (191, 191, 'Conflict.Attack.DetonateExplode', 'Target'), (193, 193, 'Conflict.Attack.DetonateExplode', 'Target')}
+{(197, 197, 'Conflict.Attack.DetonateExplode', 'Target'), (191, 191, 'Conflict.Attack.DetonateExplode', 'Target'), (193, 193, 'Conflict.Attack.DetonateExplode', 'Target')}
+********************************************************************************
+set()
+set()
+********************************************************************************
+{(245, 246, 'Conflict.Attack.Unspecified', 'Place')}
+{(246, 246, 'Conflict.Attack.Unspecified', 'Place')}
+********************************************************************************
+{(272, 272, 'Life.Die.Unspecified', 'Victim')}
+{(272, 272, 'Life.Die.Unspecified', 'Victim')}
+********************************************************************************
+{(272, 272, 'Conflict.Attack.Unspecified', 'Target')}
+{(272, 272, 'Conflict.Attack.Unspecified', 'Target')}
+********************************************************************************
+{(279, 279, 'Life.Injure.Unspecified', 'Victim')}
+{(279, 279, 'Life.Injure.Unspecified', 'Victim')}
+********************************************************************************
+{(286, 286, 'Contact.Contact.Broadcast', 'Communicator')}
+{(286, 286, 'Contact.Contact.Broadcast', 'Communicator')}
+********************************************************************************
+{(286, 286, 'Conflict.Attack.Unspecified', 'Attacker')}
+{(286, 286, 'Conflict.Attack.Unspecified', 'Attacker')}
+********************************************************************************
+set()
+set()
+********************************************************************************
+{(101, 101, 'Contact.ThreatenCoerce.Unspecified', 'Communicator'), (108, 108, 'Contact.ThreatenCoerce.Unspecified', 'Recipient')}
+{(101, 101, 'Contact.ThreatenCoerce.Unspecified', 'Communicator'), (108, 108, 'Contact.ThreatenCoerce.Unspecified', 'Recipient')}
+********************************************************************************
+{(92, 92, 'Contact.Contact.Broadcast', 'Communicator')}
+{(92, 92, 'Contact.Contact.Broadcast', 'Communicator')}
+********************************************************************************
+{(222, 222, 'Conflict.Attack.DetonateExplode', 'Place')}
+{(222, 222, 'Conflict.Attack.DetonateExplode', 'Place')}
+********************************************************************************
+{(245, 246, 'Conflict.Attack.DetonateExplode', 'Place')}
+{(246, 246, 'Conflict.Attack.DetonateExplode', 'Place')}
+********************************************************************************
+{(286, 286, 'Contact.Contact.Broadcast', 'Communicator')}
+{(286, 286, 'Contact.Contact.Broadcast', 'Communicator')}
+********************************************************************************
+{(3, 3, 'Justice.ChargeIndict.Unspecified', 'Defendant'), (1, 1, 'Justice.ChargeIndict.Unspecified', 'Prosecutor')}
+{(3, 3, 'Justice.ChargeIndict.Unspecified', 'Defendant'), (1, 1, 'Justice.ChargeIndict.Unspecified', 'Prosecutor')}
+********************************************************************************
+{(6, 6, 'Conflict.Attack.Unspecified', 'Target')}
+{(6, 6, 'Conflict.Attack.Unspecified', 'Target')}
+********************************************************************************
+set()
+set()
+********************************************************************************
+{(9, 9, 'Conflict.Attack.DetonateExplode', 'Place'), (27, 27, 'Conflict.Attack.DetonateExplode', 'Target')}
+{(9, 9, 'Conflict.Attack.DetonateExplode', 'Place'), (27, 27, 'Conflict.Attack.DetonateExplode', 'Target')}
+********************************************************************************
+{(31, 31, 'Life.Die.Unspecified', 'Victim')}
+{(31, 31, 'Life.Die.Unspecified', 'Victim')}
+********************************************************************************
+{(38, 37, 'Justice.ChargeIndict.Unspecified', 'JudgeCourt'), (38, 42, 'Justice.ChargeIndict.Unspecified', 'Defendant')}
+{(39, 39, 'Justice.ChargeIndict.Unspecified', 'Defendant'), (38, 38, 'Justice.ChargeIndict.Unspecified', 'JudgeCourt')}
+********************************************************************************
+set()
+set()
+********************************************************************************
+{(99, 99, 'Justice.ArrestJailDetain.Unspecified', 'Detainee'), (97, 97, 'Justice.ArrestJailDetain.Unspecified', 'Detainee')}
+{(99, 99, 'Justice.ArrestJailDetain.Unspecified', 'Detainee'), (97, 97, 'Justice.ArrestJailDetain.Unspecified', 'Detainee')}
+********************************************************************************
+{(122, 122, 'Justice.ArrestJailDetain.Unspecified', 'Detainee')}
+{(122, 122, 'Justice.ArrestJailDetain.Unspecified', 'Detainee')}
+********************************************************************************
+{(139, 139, 'Contact.Contact.Unspecified', 'Participant')}
+{(139, 139, 'Contact.Contact.Unspecified', 'Participant')}
+********************************************************************************
+{(152, 152, 'Conflict.Attack.DetonateExplode', 'Attacker')}
+{(152, 152, 'Conflict.Attack.DetonateExplode', 'Attacker')}
+********************************************************************************
+{(189, 189, 'Conflict.Attack.DetonateExplode', 'Place'), (171, 172, 'Conflict.Attack.DetonateExplode', 'Target')}
+{(189, 189, 'Conflict.Attack.DetonateExplode', 'Place'), (172, 172, 'Conflict.Attack.DetonateExplode', 'Target')}
+********************************************************************************
+{(196, 196, 'Life.Die.Unspecified', 'Victim')}
+{(196, 196, 'Life.Die.Unspecified', 'Victim')}
+********************************************************************************
+{(201, 201, 'Life.Injure.Unspecified', 'Victim')}
+{(201, 201, 'Life.Injure.Unspecified', 'Victim')}
+********************************************************************************
+{(210, 210, 'Life.Die.Unspecified', 'Victim')}
+{(210, 210, 'Life.Die.Unspecified', 'Victim')}
+********************************************************************************
+{(219, 219, 'Conflict.Attack.DetonateExplode', 'Place')}
+{(219, 219, 'Conflict.Attack.DetonateExplode', 'Place')}
+********************************************************************************
+{(270, 270, 'Justice.ArrestJailDetain.Unspecified', 'Jailer')}
+{(270, 270, 'Justice.ArrestJailDetain.Unspecified', 'Jailer')}
+********************************************************************************
+{(270, 270, 'Conflict.Attack.Unspecified', 'Attacker')}
+{(270, 270, 'Conflict.Attack.Unspecified', 'Attacker')}
+********************************************************************************
+{(270, 270, 'Contact.Contact.Unspecified', 'Participant')}
+{(270, 270, 'Contact.Contact.Unspecified', 'Participant')}
+********************************************************************************
+{(337, 337, 'Justice.ChargeIndict.Unspecified', 'Defendant')}
+{(337, 337, 'Justice.ChargeIndict.Unspecified', 'Defendant')}
+********************************************************************************
+{(337, 337, 'Movement.Transportation.Unspecified', 'PassengerArtifact')}
+{(337, 337, 'Movement.Transportation.Unspecified', 'PassengerArtifact')}
+********************************************************************************
+set()
+set()
+********************************************************************************
+{(376, 376, 'Movement.Transportation.Unspecified', 'PassengerArtifact'), (378, 378, 'Movement.Transportation.Unspecified', 'Destination')}
+{(376, 376, 'Movement.Transportation.Unspecified', 'PassengerArtifact'), (378, 378, 'Movement.Transportation.Unspecified', 'Destination')}
+********************************************************************************
+{(410, 410, 'Conflict.Attack.DetonateExplode', 'Target')}
+{(410, 410, 'Conflict.Attack.DetonateExplode', 'Target')}
+********************************************************************************
+{(417, 417, 'Contact.Contact.Unspecified', 'Participant')}
+{(417, 417, 'Contact.Contact.Unspecified', 'Participant')}
+********************************************************************************
+{(451, 451, 'Conflict.Attack.DetonateExplode', 'Target')}
+{(451, 451, 'Conflict.Attack.DetonateExplode', 'Target')}
+********************************************************************************
+{(447, 447, 'Contact.Contact.Unspecified', 'Participant')}
+{(447, 447, 'Contact.Contact.Unspecified', 'Participant')}
+********************************************************************************
+{(470, 470, 'Justice.TrialHearing.Unspecified', 'Defendant'), (483, 483, 'Justice.TrialHearing.Unspecified', 'Place'), (474, 473, 'Justice.TrialHearing.Unspecified', 'JudgeCourt')}
+{(470, 470, 'Justice.TrialHearing.Unspecified', 'Defendant'), (483, 483, 'Justice.TrialHearing.Unspecified', 'Place'), (474, 474, 'Justice.TrialHearing.Unspecified', 'JudgeCourt')}
+********************************************************************************
+{(518, 519, 'Contact.Contact.Unspecified', 'Participant')}
+{(519, 519, 'Contact.Contact.Unspecified', 'Participant')}
+********************************************************************************
+{(612, 612, 'Movement.Transportation.Unspecified', 'Origin'), (609, 609, 'Movement.Transportation.Unspecified', 'PassengerArtifact')}
+{(612, 612, 'Movement.Transportation.Unspecified', 'Origin'), (609, 609, 'Movement.Transportation.Unspecified', 'PassengerArtifact')}
+********************************************************************************
+{(629, 629, 'Conflict.Attack.DetonateExplode', 'Place')}
+{(629, 629, 'Conflict.Attack.DetonateExplode', 'Place')}
+********************************************************************************
+{(657, 657, 'Conflict.Attack.DetonateExplode', 'ExplosiveDevice'), (650, 650, 'Conflict.Attack.DetonateExplode', 'Attacker')}
+{(657, 657, 'Conflict.Attack.DetonateExplode', 'ExplosiveDevice'), (650, 650, 'Conflict.Attack.DetonateExplode', 'Attacker')}
+********************************************************************************
+{(681, 681, 'Justice.ArrestJailDetain.Unspecified', 'Detainee')}
+{(681, 681, 'Justice.ArrestJailDetain.Unspecified', 'Detainee')}
+********************************************************************************
+{(696, 696, 'Justice.ArrestJailDetain.Unspecified', 'Jailer'), (688, 688, 'Justice.ArrestJailDetain.Unspecified', 'Detainee'), (695, 695, 'Justice.ArrestJailDetain.Unspecified', 'Place')}
+{(696, 696, 'Justice.ArrestJailDetain.Unspecified', 'Jailer'), (688, 688, 'Justice.ArrestJailDetain.Unspecified', 'Detainee'), (695, 695, 'Justice.ArrestJailDetain.Unspecified', 'Place')}
+********************************************************************************
+{(714, 714, 'Justice.ArrestJailDetain.Unspecified', 'Place'), (704, 704, 'Justice.ArrestJailDetain.Unspecified', 'Detainee')}
+{(714, 714, 'Justice.ArrestJailDetain.Unspecified', 'Place'), (704, 704, 'Justice.ArrestJailDetain.Unspecified', 'Detainee')}
+********************************************************************************
+{(727, 727, 'Contact.Contact.Unspecified', 'Participant')}
+{(727, 727, 'Contact.Contact.Unspecified', 'Participant')}
+********************************************************************************
+{(751, 751, 'Contact.Contact.Unspecified', 'Topic'), (747, 747, 'Contact.Contact.Unspecified', 'Participant')}
+{(751, 751, 'Contact.Contact.Unspecified', 'Topic'), (747, 747, 'Contact.Contact.Unspecified', 'Participant')}
+********************************************************************************
+{(780, 780, 'Contact.Contact.Unspecified', 'Participant')}
+{(780, 780, 'Contact.Contact.Unspecified', 'Participant')}
+********************************************************************************
+set()
+set()
+********************************************************************************
+{(241, 241, 'Contact.Contact.Unspecified', 'Participant')}
+{(241, 241, 'Contact.Contact.Unspecified', 'Participant')}
+********************************************************************************
+{(343, 344, 'Contact.Contact.Unspecified', 'Participant')}
+{(344, 344, 'Contact.Contact.Unspecified', 'Participant')}
+********************************************************************************
+{(11, 11, 'Conflict.Attack.Unspecified', 'Target'), (3, 3, 'Conflict.Attack.Unspecified', 'Instrument')}
+{(11, 11, 'Conflict.Attack.Unspecified', 'Target'), (3, 3, 'Conflict.Attack.Unspecified', 'Instrument')}
+********************************************************************************
+{(32, 32, 'Conflict.Attack.DetonateExplode', 'ExplosiveDevice'), (41, 41, 'Conflict.Attack.DetonateExplode', 'Target')}
+{(32, 32, 'Conflict.Attack.DetonateExplode', 'ExplosiveDevice'), (41, 41, 'Conflict.Attack.DetonateExplode', 'Target')}
+********************************************************************************
+{(63, 64, 'Conflict.Attack.Unspecified', 'Target'), (67, 67, 'Conflict.Attack.Unspecified', 'Instrument')}
+{(64, 64, 'Conflict.Attack.Unspecified', 'Target'), (67, 67, 'Conflict.Attack.Unspecified', 'Instrument')}
+********************************************************************************
+{(193, 193, 'Justice.InvestigateCrime.Unspecified', 'Investigator')}
+{(193, 193, 'Justice.InvestigateCrime.Unspecified', 'Investigator')}
+********************************************************************************
+{(471, 471, 'Conflict.Attack.DetonateExplode', 'Place'), (464, 464, 'Conflict.Attack.DetonateExplode', 'Instrument')}
+{(471, 471, 'Conflict.Attack.DetonateExplode', 'Place'), (464, 464, 'Conflict.Attack.DetonateExplode', 'Instrument')}
+********************************************************************************
+{(464, 464, 'ArtifactExistence.DamageDestroyDisableDismantle.DisableDefuse', 'Artifact')}
+{(464, 464, 'ArtifactExistence.DamageDestroyDisableDismantle.DisableDefuse', 'Artifact')}
+********************************************************************************
+{(504, 504, 'Disaster.Crash.Unspecified', 'CrashObject'), (488, 488, 'Disaster.Crash.Unspecified', 'Vehicle')}
+{(504, 504, 'Disaster.Crash.Unspecified', 'CrashObject'), (488, 488, 'Disaster.Crash.Unspecified', 'Vehicle')}
+********************************************************************************
+{(658, 658, 'Conflict.Attack.Unspecified', 'Target'), (656, 656, 'Conflict.Attack.Unspecified', 'Instrument')}
+{(658, 658, 'Conflict.Attack.Unspecified', 'Target'), (656, 656, 'Conflict.Attack.Unspecified', 'Instrument')}
+********************************************************************************
+{(594, 594, 'Conflict.Attack.DetonateExplode', 'Place')}
+{(594, 594, 'Conflict.Attack.DetonateExplode', 'Place')}
+********************************************************************************
+{(567, 567, 'Disaster.Crash.Unspecified', 'Vehicle')}
+{(567, 567, 'Disaster.Crash.Unspecified', 'Vehicle')}
+********************************************************************************
+{(705, 705, 'Conflict.Attack.DetonateExplode', 'Instrument')}
+{(705, 705, 'Conflict.Attack.DetonateExplode', 'Instrument')}
+********************************************************************************
+{(734, 734, 'Disaster.Crash.Unspecified', 'Vehicle')}
+{(734, 734, 'Disaster.Crash.Unspecified', 'Vehicle')}
+********************************************************************************
+{(40, 41, 'Contact.Contact.Broadcast', 'Communicator')}
+{(41, 41, 'Contact.Contact.Broadcast', 'Communicator')}
+********************************************************************************
+{(437, 438, 'Contact.Contact.Unspecified', 'Participant')}
+{(438, 438, 'Contact.Contact.Unspecified', 'Participant')}
+********************************************************************************
+{(506, 506, 'Contact.Contact.Unspecified', 'Participant')}
+{(506, 506, 'Contact.Contact.Unspecified', 'Participant')}
+********************************************************************************
+{(725, 725, 'Contact.Contact.Broadcast', 'Communicator')}
+{(725, 725, 'Contact.Contact.Broadcast', 'Communicator')}
+********************************************************************************
+{(5, 5, 'Conflict.Attack.Unspecified', 'Place'), (10, 10, 'Conflict.Attack.Unspecified', 'Target')}
+{(5, 5, 'Conflict.Attack.Unspecified', 'Place'), (10, 10, 'Conflict.Attack.Unspecified', 'Target')}
+********************************************************************************
+{(10, 10, 'Life.Die.Unspecified', 'Victim'), (5, 5, 'Life.Die.Unspecified', 'Place')}
+{(10, 10, 'Life.Die.Unspecified', 'Victim'), (5, 5, 'Life.Die.Unspecified', 'Place')}
+********************************************************************************
+{(105, 105, 'Conflict.Attack.DetonateExplode', 'Target'), (97, 97, 'Conflict.Attack.DetonateExplode', 'ExplosiveDevice'), (110, 110, 'Conflict.Attack.DetonateExplode', 'Place')}
+{(105, 105, 'Conflict.Attack.DetonateExplode', 'Target'), (97, 97, 'Conflict.Attack.DetonateExplode', 'ExplosiveDevice'), (110, 110, 'Conflict.Attack.DetonateExplode', 'Place')}
+********************************************************************************
+{(115, 115, 'Life.Die.Unspecified', 'Victim')}
+{(115, 115, 'Life.Die.Unspecified', 'Victim')}
+********************************************************************************
+{(204, 204, 'Life.Die.Unspecified', 'Victim'), (212, 212, 'Life.Die.Unspecified', 'Victim')}
+{(204, 204, 'Life.Die.Unspecified', 'Victim'), (212, 212, 'Life.Die.Unspecified', 'Victim')}
+********************************************************************************
+{(236, 236, 'Conflict.Attack.DetonateExplode', 'Target')}
+{(236, 236, 'Conflict.Attack.DetonateExplode', 'Target')}
+********************************************************************************
+{(284, 284, 'Life.Die.Unspecified', 'Victim')}
+{(284, 284, 'Life.Die.Unspecified', 'Victim')}
+********************************************************************************
+{(376, 376, 'Conflict.Attack.DetonateExplode', 'Place')}
+{(376, 376, 'Conflict.Attack.DetonateExplode', 'Place')}
+********************************************************************************
+{(417, 417, 'Conflict.Attack.DetonateExplode', 'ExplosiveDevice'), (424, 425, 'Conflict.Attack.DetonateExplode', 'Place')}
+{(417, 417, 'Conflict.Attack.DetonateExplode', 'ExplosiveDevice'), (425, 425, 'Conflict.Attack.DetonateExplode', 'Place')}
+********************************************************************************
+{(463, 463, 'Conflict.Attack.Unspecified', 'Place'), (451, 451, 'Conflict.Attack.Unspecified', 'Attacker'), (458, 458, 'Conflict.Attack.Unspecified', 'Target')}
+{(463, 463, 'Conflict.Attack.Unspecified', 'Place'), (451, 451, 'Conflict.Attack.Unspecified', 'Attacker'), (458, 458, 'Conflict.Attack.Unspecified', 'Target')}
+********************************************************************************
+{(470, 470, 'Life.Die.Unspecified', 'Victim'), (463, 463, 'Life.Die.Unspecified', 'Place')}
+{(470, 470, 'Life.Die.Unspecified', 'Victim'), (463, 463, 'Life.Die.Unspecified', 'Place')}
+********************************************************************************
+{(474, 474, 'Life.Injure.Unspecified', 'Victim')}
+{(474, 474, 'Life.Injure.Unspecified', 'Victim')}
+********************************************************************************
+{(495, 495, 'Conflict.Attack.Unspecified', 'Place'), (503, 503, 'Conflict.Attack.Unspecified', 'Place')}
+{(495, 495, 'Conflict.Attack.Unspecified', 'Place'), (503, 503, 'Conflict.Attack.Unspecified', 'Place')}
+********************************************************************************
+{(517, 517, 'Conflict.Attack.DetonateExplode', 'ExplosiveDevice'), (542, 542, 'Conflict.Attack.DetonateExplode', 'Place'), (534, 534, 'Conflict.Attack.DetonateExplode', 'Place')}
+{(517, 517, 'Conflict.Attack.DetonateExplode', 'ExplosiveDevice'), (542, 542, 'Conflict.Attack.DetonateExplode', 'Place'), (534, 534, 'Conflict.Attack.DetonateExplode', 'Place')}
+********************************************************************************
+{(570, 570, 'Conflict.Attack.DetonateExplode', 'Place'), (555, 555, 'Conflict.Attack.DetonateExplode', 'ExplosiveDevice'), (576, 576, 'Conflict.Attack.DetonateExplode', 'Place')}
+{(570, 570, 'Conflict.Attack.DetonateExplode', 'Place'), (555, 555, 'Conflict.Attack.DetonateExplode', 'ExplosiveDevice'), (576, 576, 'Conflict.Attack.DetonateExplode', 'Place')}
+********************************************************************************
+{(579, 579, 'Life.Die.Unspecified', 'Victim')}
+{(579, 579, 'Life.Die.Unspecified', 'Victim')}
+********************************************************************************
+{(644, 644, 'Conflict.Attack.DetonateExplode', 'ExplosiveDevice'), (640, 640, 'Conflict.Attack.DetonateExplode', 'Place')}
+{(644, 644, 'Conflict.Attack.DetonateExplode', 'ExplosiveDevice'), (640, 640, 'Conflict.Attack.DetonateExplode', 'Place')}
+********************************************************************************
+{(687, 687, 'Conflict.Attack.DetonateExplode', 'Place')}
+{(687, 687, 'Conflict.Attack.DetonateExplode', 'Place')}
+********************************************************************************
+{(0, 0, 'Contact.RequestCommand.Unspecified', 'Communicator'), (2, 2, 'Contact.RequestCommand.Unspecified', 'Recipient')}
+{(0, 0, 'Contact.RequestCommand.Unspecified', 'Communicator'), (2, 2, 'Contact.RequestCommand.Unspecified', 'Recipient')}
+********************************************************************************
+{(0, 0, 'Control.ImpedeInterfereWith.Unspecified', 'Impeder')}
+{(0, 0, 'Control.ImpedeInterfereWith.Unspecified', 'Impeder')}
+********************************************************************************
+{(54, 54, 'Conflict.Attack.DetonateExplode', 'Place')}
+{(54, 54, 'Conflict.Attack.DetonateExplode', 'Place')}
+********************************************************************************
+{(69, 69, 'Contact.RequestCommand.Unspecified', 'Recipient'), (63, 64, 'Contact.RequestCommand.Unspecified', 'Communicator')}
+{(69, 69, 'Contact.RequestCommand.Unspecified', 'Recipient'), (64, 64, 'Contact.RequestCommand.Unspecified', 'Communicator')}
+********************************************************************************
+{(151, 151, 'Life.Die.Unspecified', 'Victim'), (156, 156, 'Life.Die.Unspecified', 'Victim')}
+{(151, 151, 'Life.Die.Unspecified', 'Victim'), (156, 156, 'Life.Die.Unspecified', 'Victim')}
+********************************************************************************
+{(145, 145, 'Conflict.Attack.DetonateExplode', 'Target'), (147, 147, 'Conflict.Attack.DetonateExplode', 'Place'), (138, 138, 'Conflict.Attack.DetonateExplode', 'Attacker')}
+{(145, 145, 'Conflict.Attack.DetonateExplode', 'Target'), (147, 147, 'Conflict.Attack.DetonateExplode', 'Place'), (138, 138, 'Conflict.Attack.DetonateExplode', 'Attacker')}
+********************************************************************************
+{(300, 300, 'Contact.RequestCommand.Unspecified', 'Recipient'), (302, 302, 'Contact.RequestCommand.Unspecified', 'Communicator')}
+{(300, 300, 'Contact.RequestCommand.Unspecified', 'Recipient'), (302, 302, 'Contact.RequestCommand.Unspecified', 'Communicator')}
+********************************************************************************
+{(302, 302, 'Justice.ArrestJailDetain.Unspecified', 'Jailer'), (308, 309, 'Justice.ArrestJailDetain.Unspecified', 'Detainee')}
+{(302, 302, 'Justice.ArrestJailDetain.Unspecified', 'Jailer'), (309, 309, 'Justice.ArrestJailDetain.Unspecified', 'Detainee')}
+********************************************************************************
+set()
+set()
+********************************************************************************
+{(47, 47, 'Conflict.Attack.DetonateExplode', 'Place'), (48, 48, 'Conflict.Attack.DetonateExplode', 'Target'), (42, 42, 'Conflict.Attack.DetonateExplode', 'Attacker')}
+{(47, 47, 'Conflict.Attack.DetonateExplode', 'Place'), (48, 48, 'Conflict.Attack.DetonateExplode', 'Target'), (42, 42, 'Conflict.Attack.DetonateExplode', 'Attacker')}
+********************************************************************************
+{(113, 120, 'Conflict.Attack.Unspecified', 'Target'), (107, 107, 'Conflict.Attack.Unspecified', 'Attacker')}
+{(114, 114, 'Conflict.Attack.Unspecified', 'Target'), (107, 107, 'Conflict.Attack.Unspecified', 'Attacker')}
+********************************************************************************
+{(292, 292, 'Conflict.Attack.DetonateExplode', 'Place'), (293, 293, 'Conflict.Attack.DetonateExplode', 'Target')}
+{(292, 292, 'Conflict.Attack.DetonateExplode', 'Place'), (293, 293, 'Conflict.Attack.DetonateExplode', 'Target')}
+********************************************************************************
+{(321, 321, 'Life.Die.Unspecified', 'Victim')}
+{(321, 321, 'Life.Die.Unspecified', 'Victim')}
+********************************************************************************
+{(325, 325, 'Life.Injure.Unspecified', 'Victim')}
+{(325, 325, 'Life.Injure.Unspecified', 'Victim')}
+********************************************************************************
+{(329, 329, 'Life.Injure.Unspecified', 'Victim')}
+{(329, 329, 'Life.Injure.Unspecified', 'Victim')}
+********************************************************************************
+{(360, 360, 'Justice.ArrestJailDetain.Unspecified', 'Detainee')}
+{(360, 360, 'Justice.ArrestJailDetain.Unspecified', 'Detainee')}
+********************************************************************************
+{(534, 534, 'Conflict.Attack.DetonateExplode', 'Target'), (533, 533, 'Conflict.Attack.DetonateExplode', 'Place')}
+{(534, 534, 'Conflict.Attack.DetonateExplode', 'Target'), (533, 533, 'Conflict.Attack.DetonateExplode', 'Place')}
+********************************************************************************
+{(603, 603, 'Conflict.Attack.DetonateExplode', 'Place'), (570, 570, 'Conflict.Attack.DetonateExplode', 'Target')}
+{(603, 603, 'Conflict.Attack.DetonateExplode', 'Place'), (570, 570, 'Conflict.Attack.DetonateExplode', 'Target')}
+********************************************************************************
+{(634, 634, 'Life.Die.Unspecified', 'Place'), (627, 627, 'Life.Die.Unspecified', 'Victim')}
+{(634, 634, 'Life.Die.Unspecified', 'Place'), (627, 627, 'Life.Die.Unspecified', 'Victim')}
+********************************************************************************
+{(662, 662, 'Life.Die.Unspecified', 'Victim')}
+{(662, 662, 'Life.Die.Unspecified', 'Victim')}
+********************************************************************************
+{(669, 669, 'Life.Injure.Unspecified', 'Victim')}
+{(669, 669, 'Life.Injure.Unspecified', 'Victim')}
+********************************************************************************
+{(991, 991, 'Conflict.Attack.DetonateExplode', 'Target'), (990, 990, 'Conflict.Attack.DetonateExplode', 'Place')}
+{(991, 991, 'Conflict.Attack.DetonateExplode', 'Target'), (990, 990, 'Conflict.Attack.DetonateExplode', 'Place')}
+********************************************************************************
+{(1037, 1038, 'Conflict.Attack.DetonateExplode', 'Target'), (1034, 1034, 'Conflict.Attack.DetonateExplode', 'Place')}
+{(1034, 1034, 'Conflict.Attack.DetonateExplode', 'Place'), (1037, 1037, 'Conflict.Attack.DetonateExplode', 'Target')}
+********************************************************************************
+{(131, 132, 'Life.Die.Unspecified', 'Victim')}
+{(132, 132, 'Life.Die.Unspecified', 'Victim')}
+********************************************************************************
+{(161, 161, 'Contact.Contact.Unspecified', 'Participant')}
+{(161, 161, 'Contact.Contact.Unspecified', 'Participant')}
+********************************************************************************
+{(416, 416, 'Contact.Contact.Unspecified', 'Participant')}
+{(416, 416, 'Contact.Contact.Unspecified', 'Participant')}
+********************************************************************************
+{(484, 484, 'Contact.Contact.Unspecified', 'Participant')}
+{(484, 484, 'Contact.Contact.Unspecified', 'Participant')}
+********************************************************************************
+{(552, 552, 'Contact.Contact.Unspecified', 'Participant')}
+{(552, 552, 'Contact.Contact.Unspecified', 'Participant')}
+********************************************************************************
+{(598, 598, 'Contact.Contact.Unspecified', 'Participant')}
+{(598, 598, 'Contact.Contact.Unspecified', 'Participant')}
+********************************************************************************
+{(710, 711, 'Contact.Contact.Unspecified', 'Participant'), (695, 695, 'Contact.Contact.Unspecified', 'Participant')}
+{(711, 711, 'Contact.Contact.Unspecified', 'Participant'), (695, 695, 'Contact.Contact.Unspecified', 'Participant')}
+********************************************************************************
+{(710, 711, 'Contact.Contact.Meet', 'Participant')}
+{(711, 711, 'Contact.Contact.Meet', 'Participant')}
+********************************************************************************
+{(775, 777, 'Conflict.Attack.DetonateExplode', 'Target'), (773, 773, 'Conflict.Attack.DetonateExplode', 'ExplosiveDevice'), (753, 753, 'Conflict.Attack.DetonateExplode', 'Attacker')}
+{(777, 777, 'Conflict.Attack.DetonateExplode', 'Target'), (773, 773, 'Conflict.Attack.DetonateExplode', 'ExplosiveDevice'), (753, 753, 'Conflict.Attack.DetonateExplode', 'Attacker')}
+********************************************************************************
+{(782, 782, 'Conflict.Attack.DetonateExplode', 'Target'), (759, 759, 'Conflict.Attack.DetonateExplode', 'Place')}
+{(782, 782, 'Conflict.Attack.DetonateExplode', 'Target'), (759, 759, 'Conflict.Attack.DetonateExplode', 'Place')}
+********************************************************************************
+{(848, 849, 'Contact.Contact.Correspondence', 'Participant'), (863, 863, 'Contact.Contact.Correspondence', 'Participant')}
+{(863, 863, 'Contact.Contact.Correspondence', 'Participant'), (849, 849, 'Contact.Contact.Correspondence', 'Participant')}
+********************************************************************************
+{(902, 903, 'Conflict.Attack.DetonateExplode', 'Target'), (899, 899, 'Conflict.Attack.DetonateExplode', 'ExplosiveDevice')}
+{(903, 903, 'Conflict.Attack.DetonateExplode', 'Target'), (899, 899, 'Conflict.Attack.DetonateExplode', 'ExplosiveDevice')}
+********************************************************************************
+{(933, 933, 'Contact.Contact.Unspecified', 'Participant')}
+{(933, 933, 'Contact.Contact.Unspecified', 'Participant')}
+********************************************************************************
+{(1249, 1249, 'Contact.Contact.Unspecified', 'Participant')}
+{(1249, 1249, 'Contact.Contact.Unspecified', 'Participant')}
+********************************************************************************
+{(16, 16, 'Justice.ArrestJailDetain.Unspecified', 'Detainee'), (12, 12, 'Justice.ArrestJailDetain.Unspecified', 'Jailer')}
+{(16, 16, 'Justice.ArrestJailDetain.Unspecified', 'Detainee'), (12, 12, 'Justice.ArrestJailDetain.Unspecified', 'Jailer')}
+********************************************************************************
+{(77, 77, 'Cognitive.IdentifyCategorize.Unspecified', 'IdentifiedObject')}
+{(77, 77, 'Cognitive.IdentifyCategorize.Unspecified', 'IdentifiedObject')}
+********************************************************************************
+{(520, 520, 'Disaster.Crash.Unspecified', 'DriverPassenger'), (524, 525, 'Disaster.Crash.Unspecified', 'Place'), (512, 512, 'Disaster.Crash.Unspecified', 'Vehicle')}
+{(520, 520, 'Disaster.Crash.Unspecified', 'DriverPassenger'), (512, 512, 'Disaster.Crash.Unspecified', 'Vehicle'), (525, 525, 'Disaster.Crash.Unspecified', 'Place')}
+********************************************************************************
+set()
+set()
+********************************************************************************
+{(143, 143, 'Justice.ArrestJailDetain.Unspecified', 'Detainee')}
+{(143, 143, 'Justice.ArrestJailDetain.Unspecified', 'Detainee')}
+********************************************************************************
+{(161, 161, 'GenericCrime.GenericCrime.GenericCrime', 'Place'), (143, 143, 'GenericCrime.GenericCrime.GenericCrime', 'Perpetrator')}
+{(161, 161, 'GenericCrime.GenericCrime.GenericCrime', 'Place'), (143, 143, 'GenericCrime.GenericCrime.GenericCrime', 'Perpetrator')}
+********************************************************************************
+{(92, 94, 'Conflict.Attack.Unspecified', 'Instrument'), (89, 89, 'Conflict.Attack.Unspecified', 'Attacker')}
+{(94, 94, 'Conflict.Attack.Unspecified', 'Instrument'), (89, 89, 'Conflict.Attack.Unspecified', 'Attacker')}
+********************************************************************************
+{(0, 1, 'GenericCrime.GenericCrime.GenericCrime', 'Perpetrator')}
+{(0, 0, 'GenericCrime.GenericCrime.GenericCrime', 'Perpetrator')}
+********************************************************************************
+set()
+set()
+********************************************************************************
+{(31, 32, 'Conflict.Attack.Unspecified', 'Target')}
+{(32, 32, 'Conflict.Attack.Unspecified', 'Target')}
+********************************************************************************
+set()
+set()
+********************************************************************************
+{(44, 44, 'Life.Die.Unspecified', 'Victim')}
+{(44, 44, 'Life.Die.Unspecified', 'Victim')}
+********************************************************************************
+set()
+set()
+********************************************************************************
+{(51, 51, 'ArtifactExistence.DamageDestroyDisableDismantle.Destroy', 'Artifact')}
+{(51, 51, 'ArtifactExistence.DamageDestroyDisableDismantle.Destroy', 'Artifact')}
+********************************************************************************
+set()
+set()
+********************************************************************************
+paired args: 49, inconsistent args: 23, raito: 0.46938775510204084
+Evaluation by matching head words only....
+Event-level identification: P: 62.09
+Event-level : P: 62.09
+gold arg num: 563
+Role identification: P: 74.19, R: 69.45, F: 71.74
+Role: P: 67.74, R: 63.41, F: 65.50
+Coref Role identification: P: 75.33, R: 70.52, F: 72.84
+Coref Role: P: 68.88, R: 64.48, F: 66.61

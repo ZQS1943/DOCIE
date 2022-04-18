@@ -1,0 +1,57 @@
+load from checkpoints/baseline_info_12/epoch_5.ckpt
+start scoring
+gen_file:checkpoints/baseline_info_12/epoch_5_test_step_0_predictions.jsonl
+test_file:data/wikievents/test_info_no_ontology.jsonl
+paired args: 426, inconsistent args: 165, raito: 0.3873239436619718
+Evaluation by matching head words only....
+Event-level identification: P: 50.00
+Event-level : P: 50.00
+gold arg num: 552
+Role identification: P: 61.26, R: 56.16, F: 58.60
+Role: P: 55.73, R: 51.09, F: 53.31
+Coref Role identification: P: 65.02, R: 59.60, F: 62.19
+Coref Role: P: 59.09, R: 54.17, F: 56.52
+len: 299 30 70
+mean: 0.8524160563102701 0.7938665508727233 0.7539498947915577
+var: 0.025629862559302344 0.0323690596472113 0.04801982326673109
+min: 0.2824042737483978 0.40820103883743286 0.2996974289417267
+max: 0.9999173879623413 0.9986830155054729 0.9993009567260742
+--------------------------------------------------------------------------------
+load from checkpoints/baseline_info_12/epoch_4.ckpt
+start scoring
+gen_file:checkpoints/baseline_info_12/epoch_4_test_step_0_predictions.jsonl
+test_file:data/wikievents/test_info_no_ontology.jsonl
+paired args: 426, inconsistent args: 173, raito: 0.4061032863849765
+Evaluation by matching head words only....
+Event-level identification: P: 48.63
+Event-level : P: 48.63
+gold arg num: 552
+Role identification: P: 58.65, R: 55.25, F: 56.90
+Role: P: 53.27, R: 50.18, F: 51.68
+Coref Role identification: P: 62.31, R: 58.70, F: 60.45
+Coref Role: P: 56.54, R: 53.26, F: 54.85
+len: 294 30 78
+mean: 0.8418442279821462 0.7832501207623217 0.7362155923858668
+var: 0.029364112002474633 0.034424589590654205 0.04716031841313927
+min: 0.21517398953437805 0.351822167634964 0.2468419075012207
+max: 0.9998403787612915 0.9980285167694092 0.9987592101097107
+--------------------------------------------------------------------------------
+load from checkpoints/baseline_info_12/epoch_3.ckpt
+start scoring
+gen_file:checkpoints/baseline_info_12/epoch_3_test_step_0_predictions.jsonl
+test_file:data/wikievents/test_info_no_ontology.jsonl
+paired args: 426, inconsistent args: 175, raito: 0.4107981220657277
+Evaluation by matching head words only....
+Event-level identification: P: 49.73
+Event-level : P: 49.73
+gold arg num: 552
+Role identification: P: 60.00, R: 55.43, F: 57.63
+Role: P: 54.51, R: 50.36, F: 52.35
+Coref Role identification: P: 63.53, R: 58.70, F: 61.02
+Coref Role: P: 57.84, R: 53.44, F: 55.56
+len: 295 29 75
+mean: 0.8226779189008497 0.8005610742616928 0.7041457506903895
+var: 0.03220156513457099 0.02600759666875242 0.05102685257419799
+min: 0.2607365846633911 0.4768029451370239 0.2561433017253876
+max: 0.9995428025722504 0.995917946100235 0.9978040655454
+--------------------------------------------------------------------------------

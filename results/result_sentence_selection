@@ -1,0 +1,114 @@
+load from checkpoints/sentence_selection/epoch_0.ckpt
+source:./data/wikievents/test_no_ontology.jsonl
+target:./preprocessed_sentence_selection/test_data.jsonl
+total_event: 364
+arg_tgr_not_same_sent_event: 2
+longest context:430
+longest target 36
+start scoring
+gen_file:checkpoints/sentence_selection/epoch_0_test_predictions.jsonl
+test_file:./data/wikievents/test_no_ontology.jsonl
+paired args: 49, inconsistent args: 17, raito: 0.3469387755102041
+Evaluation by matching head words only....
+Event-level identification: P: 52.20
+Event-level : P: 52.20
+gold arg num: 563
+Role identification: P: 70.58, R: 58.79, F: 64.15
+Role: P: 62.26, R: 51.87, F: 56.59
+Coref Role identification: P: 71.86, R: 59.86, F: 65.31
+Coref Role: P: 63.54, R: 52.93, F: 57.75
+load from checkpoints/sentence_selection/epoch_1.ckpt
+source:./data/wikievents/test_no_ontology.jsonl
+target:./preprocessed_sentence_selection/test_data.jsonl
+total_event: 364
+arg_tgr_not_same_sent_event: 2
+longest context:430
+longest target 36
+start scoring
+gen_file:checkpoints/sentence_selection/epoch_1_test_predictions.jsonl
+test_file:./data/wikievents/test_no_ontology.jsonl
+paired args: 49, inconsistent args: 25, raito: 0.5102040816326531
+Evaluation by matching head words only....
+Event-level identification: P: 55.49
+Event-level : P: 55.49
+gold arg num: 563
+Role identification: P: 74.29, R: 60.04, F: 66.40
+Role: P: 68.79, R: 55.60, F: 61.49
+Coref Role identification: P: 75.60, R: 61.10, F: 67.58
+Coref Role: P: 69.89, R: 56.48, F: 62.48
+load from checkpoints/sentence_selection/epoch_2.ckpt
+source:./data/wikievents/test_no_ontology.jsonl
+target:./preprocessed_sentence_selection/test_data.jsonl
+total_event: 364
+arg_tgr_not_same_sent_event: 2
+longest context:430
+longest target 36
+start scoring
+gen_file:checkpoints/sentence_selection/epoch_2_test_predictions.jsonl
+test_file:./data/wikievents/test_no_ontology.jsonl
+paired args: 49, inconsistent args: 20, raito: 0.40816326530612246
+Evaluation by matching head words only....
+Event-level identification: P: 51.65
+Event-level : P: 51.65
+gold arg num: 563
+Role identification: P: 77.75, R: 55.24, F: 64.59
+Role: P: 71.25, R: 50.62, F: 59.19
+Coref Role identification: P: 79.00, R: 56.13, F: 65.63
+Coref Role: P: 72.25, R: 51.33, F: 60.02
+load from checkpoints/sentence_selection/epoch_3.ckpt
+source:./data/wikievents/test_no_ontology.jsonl
+target:./preprocessed_sentence_selection/test_data.jsonl
+total_event: 364
+arg_tgr_not_same_sent_event: 2
+longest context:430
+longest target 36
+start scoring
+gen_file:checkpoints/sentence_selection/epoch_3_test_predictions.jsonl
+test_file:./data/wikievents/test_no_ontology.jsonl
+paired args: 49, inconsistent args: 21, raito: 0.42857142857142855
+Evaluation by matching head words only....
+Event-level identification: P: 59.89
+Event-level : P: 59.89
+gold arg num: 563
+Role identification: P: 72.01, R: 66.25, F: 69.01
+Role: P: 65.64, R: 60.39, F: 62.90
+Coref Role identification: P: 73.55, R: 67.67, F: 70.49
+Coref Role: P: 67.18, R: 61.81, F: 64.38
+load from checkpoints/sentence_selection/epoch_4.ckpt
+source:./data/wikievents/test_no_ontology.jsonl
+target:./preprocessed_sentence_selection/test_data.jsonl
+total_event: 364
+arg_tgr_not_same_sent_event: 2
+longest context:430
+longest target 36
+start scoring
+gen_file:checkpoints/sentence_selection/epoch_4_test_predictions.jsonl
+test_file:./data/wikievents/test_no_ontology.jsonl
+paired args: 49, inconsistent args: 22, raito: 0.4489795918367347
+Evaluation by matching head words only....
+Event-level identification: P: 59.89
+Event-level : P: 59.89
+gold arg num: 563
+Role identification: P: 74.30, R: 65.72, F: 69.75
+Role: P: 67.27, R: 59.50, F: 63.15
+Coref Role identification: P: 76.51, R: 67.67, F: 71.82
+Coref Role: P: 69.48, R: 61.46, F: 65.22
+load from checkpoints/sentence_selection/epoch_5.ckpt
+source:./data/wikievents/test_no_ontology.jsonl
+target:./preprocessed_sentence_selection/test_data.jsonl
+total_event: 364
+arg_tgr_not_same_sent_event: 2
+longest context:430
+longest target 36
+start scoring
+gen_file:checkpoints/sentence_selection/epoch_5_test_predictions.jsonl
+test_file:./data/wikievents/test_no_ontology.jsonl
+paired args: 49, inconsistent args: 23, raito: 0.46938775510204084
+Evaluation by matching head words only....
+Event-level identification: P: 59.89
+Event-level : P: 59.89
+gold arg num: 563
+Role identification: P: 73.40, R: 65.19, F: 69.05
+Role: P: 67.00, R: 59.50, F: 63.03
+Coref Role identification: P: 75.40, R: 66.96, F: 70.93
+Coref Role: P: 69.00, R: 61.28, F: 64.91

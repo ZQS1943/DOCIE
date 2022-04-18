@@ -1,0 +1,42 @@
+load from checkpoints/iterative_fast_5e-5/epoch_5.ckpt
+start scoring
+paired args: 49, inconsistent args: 23, raito: 0.46938775510204084
+Evaluation by matching head words only....
+Event-level identification: P: 62.09
+Event-level : P: 62.09
+gold arg num: 563
+Role identification: P: 74.19, R: 69.45, F: 71.74
+Role: P: 67.74, R: 63.41, F: 65.50
+Coref Role identification: P: 75.33, R: 70.52, F: 72.84
+Coref Role: P: 68.88, R: 64.48, F: 66.61
+start getting new testset
+total_event: 364
+has close events: 341
+longest context:434
+longest target 32
+start scoring
+paired args: 49, inconsistent args: 24, raito: 0.4897959183673469
+Evaluation by matching head words only....
+Event-level identification: P: 62.36
+Event-level : P: 62.36
+gold arg num: 563
+Role identification: P: 76.40, R: 70.16, F: 73.15
+Role: P: 69.63, R: 63.94, F: 66.67
+Coref Role identification: P: 77.56, R: 71.23, F: 74.26
+Coref Role: P: 70.79, R: 65.01, F: 67.78
+start getting new testset
+total_event: 364
+has close events: 341
+longest context:434
+longest target 32
+start scoring
+paired args: 49, inconsistent args: 25, raito: 0.5102040816326531
+Evaluation by matching head words only....
+Event-level identification: P: 63.46
+Event-level : P: 63.46
+gold arg num: 563
+Role identification: P: 76.73, R: 70.87, F: 73.68
+Role: P: 70.00, R: 64.65, F: 67.22
+Coref Role identification: P: 77.88, R: 71.94, F: 74.79
+Coref Role: P: 71.15, R: 65.72, F: 68.33
+--------------------------------------------------------------------------------

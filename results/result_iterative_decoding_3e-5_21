@@ -1,0 +1,389 @@
+load from checkpoints/iterative_decoding_3e-5_21/epoch_5.ckpt
+start scoring
+gen_file:checkpoints/iterative_decoding_3e-5_21/epoch_5_test_step_0_predictions.jsonl
+test_file:data/wikievents/test_no_ontology.jsonl
+paired args: 49, inconsistent args: 26, raito: 0.5306122448979592
+Evaluation by matching head words only....
+Event-level identification: P: 65.38
+Event-level : P: 65.38
+gold arg num: 563
+Role identification: P: 73.55, R: 72.11, F: 72.83
+Role: P: 67.39, R: 66.07, F: 66.73
+Coref Role identification: P: 74.46, R: 73.00, F: 73.72
+Coref Role: P: 68.30, R: 66.96, F: 67.62
+len: 377 34 68
+mean: 0.9452669758006631 0.9078335385112202 0.8776092245882632
+var: 0.00969162860426896 0.018514157039517046 0.019676226849230326
+min: 0.40901970863342285 0.40925896167755127 0.414257675409317
+max: 0.9999981721242269 0.9999914169311523 0.9999687671661377
+start getting new testset
+source:checkpoints/iterative_decoding_3e-5_21/epoch_5_test_step_0_results_for_predict.json
+target:preprocessed/preprocessed_iterative_decoding_3e-5_21/test_step_0_data.json
+trigger_dis:40
+total_event: 364
+has close events: 332
+longest context:429
+longest target 35
+start scoring
+gen_file:checkpoints/iterative_decoding_3e-5_21/epoch_5_test_step_1_predictions.jsonl
+test_file:data/wikievents/test_no_ontology.jsonl
+paired args: 49, inconsistent args: 24, raito: 0.4897959183673469
+Evaluation by matching head words only....
+Event-level identification: P: 65.93
+Event-level : P: 65.93
+gold arg num: 563
+Role identification: P: 73.99, R: 71.76, F: 72.86
+Role: P: 67.22, R: 65.19, F: 66.19
+Coref Role identification: P: 75.27, R: 73.00, F: 74.12
+Coref Role: P: 68.50, R: 66.43, F: 67.45
+len: 374 37 68
+mean: 0.942094923389397 0.9181552485202079 0.8479433342376176
+var: 0.011130747683199748 0.01695590818033046 0.0280739835418972
+min: 0.41895249485969543 0.4231218993663788 0.3820999562740326
+max: 0.9999990463256836 0.9999977747599283 0.9999803900718689
+start getting new testset
+source:checkpoints/iterative_decoding_3e-5_21/epoch_5_test_step_1_results_for_predict.json
+target:preprocessed/preprocessed_iterative_decoding_3e-5_21/test_step_1_data.json
+trigger_dis:40
+total_event: 364
+has close events: 332
+longest context:429
+longest target 35
+start scoring
+gen_file:checkpoints/iterative_decoding_3e-5_21/epoch_5_test_step_2_predictions.jsonl
+test_file:data/wikievents/test_no_ontology.jsonl
+paired args: 49, inconsistent args: 24, raito: 0.4897959183673469
+Evaluation by matching head words only....
+Event-level identification: P: 65.38
+Event-level : P: 65.38
+gold arg num: 563
+Role identification: P: 73.99, R: 71.76, F: 72.86
+Role: P: 67.03, R: 65.01, F: 66.01
+Coref Role identification: P: 75.27, R: 73.00, F: 74.12
+Coref Role: P: 68.32, R: 66.25, F: 67.27
+len: 373 38 68
+mean: 0.942432501448259 0.9181730939532844 0.8525371446085521
+var: 0.011129552989867288 0.016343740431369453 0.026264808122441426
+min: 0.41895249485969543 0.4231218993663788 0.3820999562740326
+max: 0.9999990463256836 0.9999977747599283 0.9999802708625793
+start getting new testset
+source:checkpoints/iterative_decoding_3e-5_21/epoch_5_test_step_2_results_for_predict.json
+target:preprocessed/preprocessed_iterative_decoding_3e-5_21/test_step_2_data.json
+trigger_dis:40
+total_event: 364
+has close events: 332
+longest context:429
+longest target 35
+start scoring
+gen_file:checkpoints/iterative_decoding_3e-5_21/epoch_5_test_step_3_predictions.jsonl
+test_file:data/wikievents/test_no_ontology.jsonl
+paired args: 49, inconsistent args: 24, raito: 0.4897959183673469
+Evaluation by matching head words only....
+Event-level identification: P: 65.38
+Event-level : P: 65.38
+gold arg num: 563
+Role identification: P: 74.04, R: 71.94, F: 72.97
+Role: P: 67.09, R: 65.19, F: 66.13
+Coref Role identification: P: 75.32, R: 73.18, F: 74.23
+Coref Role: P: 68.37, R: 66.43, F: 67.39
+len: 374 38 68
+mean: 0.9416403367845381 0.9170861228119422 0.8533823805453341
+var: 0.011166358163907718 0.01659362409799671 0.02486752942350974
+min: 0.41895249485969543 0.4231218993663788 0.3820999562740326
+max: 0.9999990463256836 0.9999977747599283 0.9999802708625793
+start getting new testset
+source:checkpoints/iterative_decoding_3e-5_21/epoch_5_test_step_3_results_for_predict.json
+target:preprocessed/preprocessed_iterative_decoding_3e-5_21/test_step_3_data.json
+trigger_dis:40
+total_event: 364
+has close events: 332
+longest context:429
+longest target 35
+start scoring
+gen_file:checkpoints/iterative_decoding_3e-5_21/epoch_5_test_step_4_predictions.jsonl
+test_file:data/wikievents/test_no_ontology.jsonl
+paired args: 49, inconsistent args: 24, raito: 0.4897959183673469
+Evaluation by matching head words only....
+Event-level identification: P: 65.66
+Event-level : P: 65.66
+gold arg num: 563
+Role identification: P: 74.09, R: 72.11, F: 73.09
+Role: P: 67.15, R: 65.36, F: 66.25
+Coref Role identification: P: 75.36, R: 73.36, F: 74.35
+Coref Role: P: 68.43, R: 66.61, F: 67.51
+len: 375 38 68
+mean: 0.9408188786316802 0.9170861228119422 0.853681740491024
+var: 0.011352223916333974 0.01659362409799671 0.024702468855323376
+min: 0.41895249485969543 0.4231218993663788 0.3820999562740326
+max: 0.9999990463256836 0.9999977747599283 0.9999802708625793
+start getting new testset
+source:checkpoints/iterative_decoding_3e-5_21/epoch_5_test_step_4_results_for_predict.json
+target:preprocessed/preprocessed_iterative_decoding_3e-5_21/test_step_4_data.json
+trigger_dis:40
+total_event: 364
+has close events: 332
+longest context:429
+longest target 35
+start scoring
+gen_file:checkpoints/iterative_decoding_3e-5_21/epoch_5_test_step_5_predictions.jsonl
+test_file:data/wikievents/test_no_ontology.jsonl
+paired args: 49, inconsistent args: 24, raito: 0.4897959183673469
+Evaluation by matching head words only....
+Event-level identification: P: 65.66
+Event-level : P: 65.66
+gold arg num: 563
+Role identification: P: 74.04, R: 71.94, F: 72.97
+Role: P: 67.09, R: 65.19, F: 66.13
+Coref Role identification: P: 75.32, R: 73.18, F: 74.23
+Coref Role: P: 68.37, R: 66.43, F: 67.39
+len: 374 38 68
+mean: 0.941635022462034 0.9170861228119422 0.8540932579708644
+var: 0.011315064711591416 0.01659362409799671 0.02450925576853856
+min: 0.41895249485969543 0.4231218993663788 0.3820999562740326
+max: 0.9999990463256836 0.9999977747599283 0.9999802708625793
+--------------------------------------------------------------------------------
+load from checkpoints/iterative_decoding_3e-5_21/epoch_4.ckpt
+start scoring
+gen_file:checkpoints/iterative_decoding_3e-5_21/epoch_4_test_step_0_predictions.jsonl
+test_file:data/wikievents/test_no_ontology.jsonl
+paired args: 49, inconsistent args: 25, raito: 0.5102040816326531
+Evaluation by matching head words only....
+Event-level identification: P: 66.21
+Event-level : P: 66.21
+gold arg num: 563
+Role identification: P: 71.21, R: 73.36, F: 72.27
+Role: P: 64.83, R: 66.79, F: 65.79
+Coref Role identification: P: 71.90, R: 74.07, F: 72.97
+Coref Role: P: 65.52, R: 67.50, F: 66.49
+len: 380 37 78
+mean: 0.9482062035033427 0.9065487043143394 0.869189071009981
+var: 0.00826979735877364 0.016105151592324958 0.020020973607703108
+min: 0.432941734790802 0.5528936982154846 0.4017219841480255
+max: 0.9999958276748657 0.9999920129776001 0.9999231696128845
+start getting new testset
+source:checkpoints/iterative_decoding_3e-5_21/epoch_4_test_step_0_results_for_predict.json
+target:preprocessed/preprocessed_iterative_decoding_3e-5_21/test_step_0_data.json
+trigger_dis:40
+total_event: 364
+has close events: 332
+longest context:429
+longest target 35
+start scoring
+gen_file:checkpoints/iterative_decoding_3e-5_21/epoch_4_test_step_1_predictions.jsonl
+test_file:data/wikievents/test_no_ontology.jsonl
+paired args: 49, inconsistent args: 24, raito: 0.4897959183673469
+Evaluation by matching head words only....
+Event-level identification: P: 67.31
+Event-level : P: 67.31
+gold arg num: 563
+Role identification: P: 73.10, R: 73.36, F: 73.23
+Role: P: 66.55, R: 66.79, F: 66.67
+Coref Role identification: P: 73.81, R: 74.07, F: 73.94
+Coref Role: P: 67.26, R: 67.50, F: 67.38
+len: 380 37 75
+mean: 0.9359545398954809 0.9186771374047187 0.8590867590241963
+var: 0.012891363832706575 0.01503722692725085 0.025429186362816016
+min: 0.3986172080039978 0.5412577390670776 0.30858612060546875
+max: 0.9999956289927164 0.9999939600626627 0.9999538660049438
+start getting new testset
+source:checkpoints/iterative_decoding_3e-5_21/epoch_4_test_step_1_results_for_predict.json
+target:preprocessed/preprocessed_iterative_decoding_3e-5_21/test_step_1_data.json
+trigger_dis:40
+total_event: 364
+has close events: 332
+longest context:429
+longest target 38
+start scoring
+gen_file:checkpoints/iterative_decoding_3e-5_21/epoch_4_test_step_2_predictions.jsonl
+test_file:data/wikievents/test_no_ontology.jsonl
+paired args: 49, inconsistent args: 25, raito: 0.5102040816326531
+Evaluation by matching head words only....
+Event-level identification: P: 67.03
+Event-level : P: 67.03
+gold arg num: 563
+Role identification: P: 72.76, R: 73.53, F: 73.14
+Role: P: 66.08, R: 66.79, F: 66.43
+Coref Role identification: P: 73.46, R: 74.25, F: 73.85
+Coref Role: P: 66.78, R: 67.50, F: 67.14
+len: 380 38 77
+mean: 0.9390638872900777 0.9187748300046997 0.8536660764124486
+var: 0.012475475618576643 0.014815154158503608 0.028007654405078984
+min: 0.3986172080039978 0.5412577390670776 0.2798539698123932
+max: 0.9999956289927164 0.9999939600626627 0.9999498724937439
+start getting new testset
+source:checkpoints/iterative_decoding_3e-5_21/epoch_4_test_step_2_results_for_predict.json
+target:preprocessed/preprocessed_iterative_decoding_3e-5_21/test_step_2_data.json
+trigger_dis:40
+total_event: 364
+has close events: 332
+longest context:429
+longest target 38
+start scoring
+gen_file:checkpoints/iterative_decoding_3e-5_21/epoch_4_test_step_3_predictions.jsonl
+test_file:data/wikievents/test_no_ontology.jsonl
+paired args: 49, inconsistent args: 24, raito: 0.4897959183673469
+Evaluation by matching head words only....
+Event-level identification: P: 67.03
+Event-level : P: 67.03
+gold arg num: 563
+Role identification: P: 73.36, R: 73.36, F: 73.36
+Role: P: 66.79, R: 66.79, F: 66.79
+Coref Role identification: P: 74.25, R: 74.25, F: 74.25
+Coref Role: P: 67.67, R: 67.67, F: 67.67
+len: 381 37 74
+mean: 0.9379854831872038 0.9205145764630887 0.8684097107824261
+var: 0.012478922553093684 0.015100548456254942 0.023075044262403734
+min: 0.3986172080039978 0.5412577390670776 0.3384815454483032
+max: 0.9999956289927164 0.9999939600626627 0.9999498724937439
+start getting new testset
+source:checkpoints/iterative_decoding_3e-5_21/epoch_4_test_step_3_results_for_predict.json
+target:preprocessed/preprocessed_iterative_decoding_3e-5_21/test_step_3_data.json
+trigger_dis:40
+total_event: 364
+has close events: 332
+longest context:429
+longest target 38
+start scoring
+gen_file:checkpoints/iterative_decoding_3e-5_21/epoch_4_test_step_4_predictions.jsonl
+test_file:data/wikievents/test_no_ontology.jsonl
+paired args: 49, inconsistent args: 25, raito: 0.5102040816326531
+Evaluation by matching head words only....
+Event-level identification: P: 67.03
+Event-level : P: 67.03
+gold arg num: 563
+Role identification: P: 73.45, R: 73.71, F: 73.58
+Role: P: 66.73, R: 66.96, F: 66.84
+Coref Role identification: P: 74.16, R: 74.42, F: 74.29
+Coref Role: P: 67.43, R: 67.67, F: 67.55
+len: 381 38 72
+mean: 0.9389103526420947 0.919203919136808 0.8694931928896241
+var: 0.012408962018836005 0.0147667250393395 0.023425287240464936
+min: 0.3986172080039978 0.5412577390670776 0.3384815454483032
+max: 0.9999956289927164 0.9999939600626627 0.9999498724937439
+start getting new testset
+source:checkpoints/iterative_decoding_3e-5_21/epoch_4_test_step_4_results_for_predict.json
+target:preprocessed/preprocessed_iterative_decoding_3e-5_21/test_step_4_data.json
+trigger_dis:40
+total_event: 364
+has close events: 332
+longest context:429
+longest target 38
+start scoring
+gen_file:checkpoints/iterative_decoding_3e-5_21/epoch_4_test_step_5_predictions.jsonl
+test_file:data/wikievents/test_no_ontology.jsonl
+paired args: 49, inconsistent args: 24, raito: 0.4897959183673469
+Evaluation by matching head words only....
+Event-level identification: P: 67.03
+Event-level : P: 67.03
+gold arg num: 563
+Role identification: P: 73.36, R: 73.36, F: 73.36
+Role: P: 66.79, R: 66.79, F: 66.79
+Coref Role identification: P: 74.07, R: 74.07, F: 74.07
+Coref Role: P: 67.50, R: 67.50, F: 67.50
+len: 380 37 74
+mean: 0.9401510796532869 0.9205145764630887 0.8587372352008347
+var: 0.011761633448509818 0.015100548456254942 0.027192559102200864
+min: 0.3986172080039978 0.5412577390670776 0.30858612060546875
+max: 0.9999956289927164 0.9999939600626627 0.9999498724937439
+--------------------------------------------------------------------------------
+load from checkpoints/iterative_decoding_3e-5_21/epoch_3.ckpt
+start scoring
+gen_file:checkpoints/iterative_decoding_3e-5_21/epoch_3_test_step_0_predictions.jsonl
+test_file:data/wikievents/test_no_ontology.jsonl
+paired args: 49, inconsistent args: 26, raito: 0.5306122448979592
+Evaluation by matching head words only....
+Event-level identification: P: 67.31
+Event-level : P: 67.31
+gold arg num: 563
+Role identification: P: 70.22, R: 74.96, F: 72.51
+Role: P: 64.39, R: 68.74, F: 66.49
+Coref Role identification: P: 71.05, R: 75.84, F: 73.37
+Coref Role: P: 65.22, R: 69.63, F: 67.35
+len: 392 35 88
+mean: 0.9286655934844593 0.8916882231831551 0.8480542744274693
+var: 0.012960711635714918 0.020610606603569732 0.023103734926742434
+min: 0.31093358993530273 0.4868283271789551 0.310702383518219
+max: 0.9999865293502808 0.9998382727305094 0.9995306730270386
+start getting new testset
+source:checkpoints/iterative_decoding_3e-5_21/epoch_3_test_step_0_results_for_predict.json
+target:preprocessed/preprocessed_iterative_decoding_3e-5_21/test_step_0_data.json
+trigger_dis:40
+total_event: 364
+has close events: 332
+longest context:429
+longest target 35
+start scoring
+gen_file:checkpoints/iterative_decoding_3e-5_21/epoch_3_test_step_1_predictions.jsonl
+test_file:data/wikievents/test_no_ontology.jsonl
+paired args: 49, inconsistent args: 24, raito: 0.4897959183673469
+Evaluation by matching head words only....
+Event-level identification: P: 67.58
+Event-level : P: 67.58
+gold arg num: 563
+Role identification: P: 71.14, R: 75.31, F: 73.17
+Role: P: 64.60, R: 68.38, F: 66.44
+Coref Role identification: P: 72.32, R: 76.55, F: 74.37
+Coref Role: P: 65.77, R: 69.63, F: 67.64
+len: 392 39 82
+mean: 0.9245999331990934 0.8575658535218648 0.8451936585793327
+var: 0.01581661021210223 0.027121875018448687 0.03087929697659611
+min: 0.3019294738769531 0.46420779824256897 0.27229076623916626
+max: 0.9999929666519165 0.9999349117279053 0.9997281134128571
+start getting new testset
+source:checkpoints/iterative_decoding_3e-5_21/epoch_3_test_step_1_results_for_predict.json
+target:preprocessed/preprocessed_iterative_decoding_3e-5_21/test_step_1_data.json
+trigger_dis:40
+total_event: 364
+has close events: 332
+longest context:429
+longest target 36
+start scoring
+gen_file:checkpoints/iterative_decoding_3e-5_21/epoch_3_test_step_2_predictions.jsonl
+test_file:data/wikievents/test_no_ontology.jsonl
+paired args: 49, inconsistent args: 25, raito: 0.5102040816326531
+Evaluation by matching head words only....
+Event-level identification: P: 67.31
+Event-level : P: 67.31
+gold arg num: 563
+Role identification: P: 70.62, R: 75.13, F: 72.81
+Role: P: 64.11, R: 68.21, F: 66.09
+Coref Role identification: P: 71.79, R: 76.38, F: 74.01
+Coref Role: P: 65.28, R: 69.45, F: 67.30
+len: 391 39 84
+mean: 0.9241823839269234 0.8703830882779554 0.8485549700953973
+var: 0.01637237790284394 0.02555049411809546 0.02797435499579518
+min: 0.29465872049331665 0.474890798330307 0.27229076623916626
+max: 0.9999929666519165 0.9999349117279053 0.9997322857379913
+start getting new testset
+source:checkpoints/iterative_decoding_3e-5_21/epoch_3_test_step_2_results_for_predict.json
+target:preprocessed/preprocessed_iterative_decoding_3e-5_21/test_step_2_data.json
+trigger_dis:40
+total_event: 364
+has close events: 332
+longest context:429
+longest target 36
+start scoring
+gen_file:checkpoints/iterative_decoding_3e-5_21/epoch_3_test_step_3_predictions.jsonl
+test_file:data/wikievents/test_no_ontology.jsonl
+paired args: 49, inconsistent args: 24, raito: 0.4897959183673469
+Evaluation by matching head words only....
+Event-level identification: P: 67.03
+Event-level : P: 67.03
+gold arg num: 563
+Role identification: P: 70.69, R: 74.96, F: 72.76
+Role: P: 64.15, R: 68.03, F: 66.03
+Coref Role identification: P: 71.86, R: 76.20, F: 73.97
+Coref Role: P: 65.33, R: 69.27, F: 67.24
+len: 390 39 84
+mean: 0.9245858806689483 0.8673167876962924 0.8463149518168793
+var: 0.01614268016389021 0.0256690133992888 0.03031359141674963
+min: 0.29465872049331665 0.47714293003082275 0.27229076623916626
+max: 0.9999929666519165 0.9999349117279053 0.9997322857379913
+start getting new testset
+source:checkpoints/iterative_decoding_3e-5_21/epoch_3_test_step_3_results_for_predict.json
+target:preprocessed/preprocessed_iterative_decoding_3e-5_21/test_step_3_data.json
+trigger_dis:40
+total_event: 364
+has close events: 332
+longest context:429
+longest target 36

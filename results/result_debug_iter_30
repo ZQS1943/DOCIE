@@ -1,0 +1,182 @@
+load from checkpoints/debug_iter/epoch_5.ckpt
+**********
+INIT DATA FILE: preprocessed/preprocessed_KAIROS/test.jsonl
+sample:327
+input:
+ <arg>  arrested or jailed  <arg>  for  <arg>  crime at  <arg>  place But he was later told that the IRA unit involved had tried to use “ a succession of phone boxes ” which were out of order, significantly delaying the bomb - warning call. Video Loading Video Unavailable Click to play Tap to play The video will start in 8 Cancel Play now Listen to our recreation of the Birmingham pub bombings warning call - made to the Birmingham Post & Mail newsroom Conway, who makes the admissions in his new memoir, also revealed that soon after the bombings the IRA ’ s England Operational Commander and his adjutant “ made it back home ” to Dublin for an urgent de - brief and to assess the impact of the disaster as far as the terrorists were concerned. Birmingham pub bombings : Minute by minute - 24 hours that changed our city forever Funding for the terrorists dried up almost overnight and the bombings, which left 21 dead and almost 200 injured, including many maimed for life, cost them hugely in the propaganda war. And in an interview he confirmed that the IRA hierarchy in Dublin knew all along that the six Irishmen  <tgr>  arrested  <tgr>  for the explosions were innocent “ from the get go, from the very start. ” Now, Julie and Brian Hambleton, who lost their sister Maxine in the bombings and lead the city ’ s Justice4the21 campaign, called on West Midlands Police and David Cameron to take immediate action. Julie said : “ I am expecting West Midlands Police Chief Constable Chris Sims and West Midlands Police Force to interview with Mr Conway with immediate effect. “ And I hope that Mr Cameron, who a week ago told The House of Commons that the pub bombers must be found, takes note of this development and ensures that the police follow this through. ” Brian added : “ The police keep saying they won ’ t do anything because there is no fresh evidence. Well, here it is in black and white. It ’ s an admission. They have got to do something with this information. ” The Birmingham pub bombings - The 28 numbers that add up to a cover - up, say campaigners
+output:
+ <arg>  arrested or jailed Irishmen for  <arg>  crime at  <arg>  place
+**********
+checkpoints/debug_iter/epoch_5_test_step_0_predictions.jsonl
+start scoring
+gen_file:checkpoints/debug_iter/epoch_5_test_step_0_predictions.jsonl
+test_file:data/wikievents/test_no_ontology.jsonl
+paired args: 49, inconsistent args: 23, raito: 0.46938775510204084
+Evaluation by matching head words only....
+Event-level identification: P: 62.36
+Event-level : P: 62.36
+gold arg num: 563
+Role identification: P: 74.76, R: 69.98, F: 72.29
+Role: P: 68.12, R: 63.77, F: 65.87
+Coref Role identification: P: 75.90, R: 71.05, F: 73.39
+Coref Role: P: 69.26, R: 64.83, F: 66.97
+365 35 63
+0.9468976948767492 0.9285858250799632 0.8787815987643322
+0.0123363637991386 0.017054920875525344 0.028436681808626796
+start getting new testset
+source:checkpoints/debug_iter/epoch_5_test_step_0_results_for_predict.json
+target:preprocessed/preprocessed_debug_iter/test_step_0_data.json
+total_event: 364
+has close events: 305
+longest context:443
+longest target 35
+**********
+INIT DATA FILE: preprocessed/preprocessed_debug_iter/test_step_0_data.json
+sample:95
+input:
+ <arg>  court or judge sentenced  <arg>  for  <arg>  crime to  <arg>  sentence in  <arg>  place == The bombing == The Balcombe Street Gang planted a time bomb in the Caterham Arms public house in Caterham, Surrey. The IRA unit placed the 7lb bomb in a duffel bag under a seat. There was no warning and the bomb exploded at 9 : 20, injuring 23 civilians and 10 off - duty soldiers. The pub was used by members of the Welsh Guards who were based at the barracks nearby. Some of the injuries were very serious, with at least three soldiers losing limbs. The blast blew the roof off the pub in the process. This attack marked the start of a renewed bombing campaign ( Phase Two ) in England and the end of the truce with the British Government. The next day, the same IRA unit exploded a bomb in Oxford Street, injuring several people. == Aftermath == One of the police officers in charge of the investigation into the bombing described it as a " carbon copy " of the Guildford pub bombings in October 1974 for which four people were already serving their  <tgr>  sentences  <tgr> . The cell's campaign would continue until December 1975 when  <tag>  Detainee  </tag>  they were caught at the siege of Balcombe Street. The unit would eventually end up planting close to 50 bombs in London and elsewhere in southern England and carrying out several shootings which, along with the bombings, caused the deaths of nearly 20 people, injured hundreds and caused millions of pounds worth of damage to property. == See also == * Chronology of Provisional Irish Republican Army actions ( 1970 – 79 ) == References ==
+output:
+ <arg>  court or judge sentenced people for  <arg>  crime to  <arg>  sentence in  <arg>  place
+**********
+checkpoints/debug_iter/epoch_5_test_step_1_predictions.jsonl
+start scoring
+gen_file:checkpoints/debug_iter/epoch_5_test_step_1_predictions.jsonl
+test_file:data/wikievents/test_no_ontology.jsonl
+paired args: 49, inconsistent args: 25, raito: 0.5102040816326531
+Evaluation by matching head words only....
+Event-level identification: P: 61.81
+Event-level : P: 61.81
+gold arg num: 563
+Role identification: P: 77.28, R: 70.69, F: 73.84
+Role: P: 70.29, R: 64.30, F: 67.16
+Coref Role identification: P: 78.45, R: 71.76, F: 74.95
+Coref Role: P: 71.46, R: 65.36, F: 68.27
+368 36 56
+0.9461608898650347 0.951644308332886 0.8812781857356191
+0.011629530152521628 0.0035207137400258947 0.027092825244349923
+start getting new testset
+source:checkpoints/debug_iter/epoch_5_test_step_1_results_for_predict.json
+target:preprocessed/preprocessed_debug_iter/test_step_1_data.json
+total_event: 364
+has close events: 305
+longest context:446
+longest target 35
+**********
+INIT DATA FILE: preprocessed/preprocessed_debug_iter/test_step_1_data.json
+sample:222
+input:
+ <arg>  was injured by  <arg>  using  <arg>  in  <arg>  body part with  <arg>  medical issue at  <arg>  place On 17 September 2019, two suicide bombings killed over 48 people in Charikar and Kabul, Afghanistan. The first attack occurred at a rally for president Ashraf Ghani which killed over 26 and wounded over 42. Ghani was unharmed in the incident. The second bombing occurred in Kabul near the US embassy. In this incident 22 were killed and another 38 were injured in the explosion. Children and women are among the dead and wounded in both attacks, also multiple soldiers were killed. The Taliban claimed responsibility for the attacks, and said they will commit more attacks to discourage people from voting in the upcoming presidential elections. == Attacks == === Charikar === The attack took place in Charikar, at a police training ground. At the time, Afghan president Ashraf Ghani was holding a political rally at the site, attended by thousands of people. A suicide  <tag>  Transporter  </tag>  bomber riding a  <tag>  Vehicle  </tag>  motorcycle drove into a crowd near a security  <tag>  Destination  </tag>  checkpoint and detonated his  <tag>  PassengerArtifact PassengerArtifact  </tag>  explosives. 26  <tag>  Victim  </tag>  people and the  <tag>  Attacker Attacker  </tag>  bomber were killed, and 42 others  <tgr>  injured  <tgr> . Women and children were among the  <tag>  Target  </tag>  victims of the attack. President Ghani was unharmed in the attack, remaining protected by a secure compound about half a mile from the site of the blast. === Kabul === A few hours after the first attack, a second suicide bombing took place in Massoud Square near the Kabul Green Zone, in an area where several government buildings, the US embassy and NATO headquarters, are located. 22 people were killed in this attack and 38 injured. == Responsibility == The Taliban claimed responsibility for both attacks, and stated that the attacks were aimed at disrupting the Afghan presidential election, scheduled to take place on September 28. == References ==
+output:
+ others was injured by  <arg>  using  <arg>  in  <arg>  body part with  <arg>  medical issue at  <arg>  place
+**********
+checkpoints/debug_iter/epoch_5_test_step_2_predictions.jsonl
+start scoring
+gen_file:checkpoints/debug_iter/epoch_5_test_step_2_predictions.jsonl
+test_file:data/wikievents/test_no_ontology.jsonl
+paired args: 49, inconsistent args: 25, raito: 0.5102040816326531
+Evaluation by matching head words only....
+Event-level identification: P: 61.81
+Event-level : P: 61.81
+gold arg num: 563
+Role identification: P: 77.43, R: 70.69, F: 73.91
+Role: P: 70.43, R: 64.30, F: 67.22
+Coref Role identification: P: 78.60, R: 71.76, F: 75.02
+Coref Role: P: 71.60, R: 65.36, F: 68.34
+368 36 55
+0.9472828428135519 0.9475023639068085 0.8864398634192919
+0.011370937355213866 0.004333728772754682 0.025030875164824738
+start getting new testset
+source:checkpoints/debug_iter/epoch_5_test_step_2_results_for_predict.json
+target:preprocessed/preprocessed_debug_iter/test_step_2_data.json
+total_event: 364
+has close events: 305
+longest context:446
+longest target 35
+**********
+INIT DATA FILE: preprocessed/preprocessed_debug_iter/test_step_2_data.json
+sample:342
+input:
+ <arg>  met face-to-face with  <arg>  about  <arg>  topic at  <arg>  place The Birmingham pub bombings - The 28 numbers that add up to a cover - up, say campaigners Mr Conway, now a criminal lawyer in Dublin, says in the book that where off - duty soldiers were the targets of bombings “ I had little sympathy for either the soldiers or the unfortunate civilians who had been sharing their drinking space. ” He continued : “ The Birmingham bombs were another matter. " The bombings came after British police disrupted funeral arrangements for James McDade, a volunteer who had himself died in a premature explosion in England. “ Tempers were high and I, for one, certainly at first feared that the local IRA had knowingly caused these dreadful casualties – 21 people were killed and a great many others injured. ” “ I was appalled and personally ashamed of the bombing, which went against everything we claimed to stand for. ”  <tag>  Participant  </tag>  He said he told two other senior IRA figures, Dave O ’ Connell and  <tag>  Participant  </tag>  Kevin Mallon “ exactly what I thought ” when they  <tgr>  met up  <tgr> . “ In fact, both men were themselves furious, fully recognising not just the damage the bombing had caused to the IRA but its immorality as well. ” McDade, a lieutenant in the Birmingham Brigade of the IRA, blew himself up while trying to plant a bomb at Coventry Telephone exchange a week before the pub bombings. Neither The Mulberry Bush nor The Tavern in The Town had any military connection. Normal IRA procedure at the time for any attack on non - military targets was to give a 30 - minute warning in order for full evacuations to take place. Read our docudrama minute - by - minute recreation of the events of November 21 1974
+output:
+ I met face-to-face with  <arg>  about  <arg>  topic at  <arg>  place
+**********
+checkpoints/debug_iter/epoch_5_test_step_3_predictions.jsonl
+start scoring
+gen_file:checkpoints/debug_iter/epoch_5_test_step_3_predictions.jsonl
+test_file:data/wikievents/test_no_ontology.jsonl
+paired args: 49, inconsistent args: 25, raito: 0.5102040816326531
+Evaluation by matching head words only....
+Event-level identification: P: 61.81
+Event-level : P: 61.81
+gold arg num: 563
+Role identification: P: 77.43, R: 70.69, F: 73.91
+Role: P: 70.43, R: 64.30, F: 67.22
+Coref Role identification: P: 78.60, R: 71.76, F: 75.02
+Coref Role: P: 71.60, R: 65.36, F: 68.34
+368 36 55
+0.9472931268823437 0.9475023639068085 0.8865264418751303
+0.011371979387302078 0.004333728772754682 0.025044234968347682
+start getting new testset
+source:checkpoints/debug_iter/epoch_5_test_step_3_results_for_predict.json
+target:preprocessed/preprocessed_debug_iter/test_step_3_data.json
+total_event: 364
+has close events: 305
+longest context:446
+longest target 35
+**********
+INIT DATA FILE: preprocessed/preprocessed_debug_iter/test_step_3_data.json
+sample:55
+input:
+ <arg>  died at  <arg>  place from  <arg>  medical issue, killed by  <arg>  killer Rebekah Gregory, a Texas woman who lost a leg in the bombing, defiantly told Tsarnaev she was not his victim. “ While your intention was to destroy America, what you have really accomplished is actually quite the opposite — you've unified us, ” she said. " We are Boston strong, we are America strong, and choosing to mess with us was a terrible idea. So how's that for your VICTIM impact statement? ”'He is a leech'Several victims condemned Tsarnaev for coming to the U. S. as an immigrant from Russia, enjoying the benefits of living here and then attacking American citizens. “ He is a leech, abusing the privilege of American freedom, and he spit in the face of the American dream, ” said Jennifer Rogers, an older sister of slain MIT Officer Sean Collier. Bill Richard, whose 8 - year - old son, Martin, was the youngest person killed in the bombing, said Tsarnaev could have backed out of the plot and reported his brother to authorities. Instead, Richard said, “ he chose hate.  <tag>  Destroyer  </tag>  He chose destruction. He chose  <tgr>  death  <tgr> . This is all on him. ” Richard noted that his family would have preferred that  <tag>  Defendant  </tag>  Tsarnaev receive a life sentence so that he could have had “ a lifetime to reconcile with himself what he did that day. ” Richard said his family has chosen love, kindness and peace, adding : “ That is what makes us different than him. ” Fatima Tlisova of VOA's Russian service contributed to this report from Boston. Some information for this report came from Reuters and AP.
+output:
+ He died at  <arg>  place from  <arg>  medical issue, killed by  <arg>  killer
+**********
+checkpoints/debug_iter/epoch_5_test_step_4_predictions.jsonl
+start scoring
+gen_file:checkpoints/debug_iter/epoch_5_test_step_4_predictions.jsonl
+test_file:data/wikievents/test_no_ontology.jsonl
+paired args: 49, inconsistent args: 25, raito: 0.5102040816326531
+Evaluation by matching head words only....
+Event-level identification: P: 61.81
+Event-level : P: 61.81
+gold arg num: 563
+Role identification: P: 77.43, R: 70.69, F: 73.91
+Role: P: 70.43, R: 64.30, F: 67.22
+Coref Role identification: P: 78.60, R: 71.76, F: 75.02
+Coref Role: P: 71.60, R: 65.36, F: 68.34
+368 36 55
+0.9472931268823437 0.9475023639068085 0.8865264418751303
+0.011371979387302078 0.004333728772754682 0.025044234968347682
+start getting new testset
+source:checkpoints/debug_iter/epoch_5_test_step_4_results_for_predict.json
+target:preprocessed/preprocessed_debug_iter/test_step_4_data.json
+total_event: 364
+has close events: 305
+longest context:446
+longest target 35
+**********
+INIT DATA FILE: preprocessed/preprocessed_debug_iter/test_step_4_data.json
+sample:227
+input:
+ <arg>  attacked  <arg>  using  <arg>  at  <arg>  place On 17 September 2019, two suicide bombings killed over 48 people in Charikar and Kabul, Afghanistan. The first attack occurred at a rally for president Ashraf Ghani which killed over 26 and wounded over 42. Ghani was unharmed in the incident. The second bombing occurred in Kabul near the US embassy. In this incident 22 were killed and another 38 were injured in the explosion. Children and women are among the dead and wounded in both attacks, also multiple soldiers were killed. The Taliban claimed responsibility for the attacks, and said they will commit more attacks to discourage people from voting in the upcoming presidential elections. == Attacks == === Charikar === The attack took place in Charikar, at a police training ground. At the time, Afghan president Ashraf Ghani was holding a political rally at the site, attended by thousands of people. A suicide bomber riding a motorcycle drove into a crowd near a security checkpoint and detonated his explosives. 26 people and the bomber were killed, and 42 others injured. Women and children were among the victims of the attack. President Ghani was unharmed in the attack, remaining protected by a secure compound about half a mile from the site of the blast. === Kabul === A few hours after the first attack, a second suicide bombing took place in Massoud Square near the Kabul Green Zone, in an area where several government buildings, the US embassy and NATO headquarters, are located. 22  <tag>  Victim  </tag>  people were killed in this  <tgr>  attack  <tgr>  and  <tag>  Victim  </tag>  38 injured. == Responsibility == The  <tag>  Communicator Communicator Communicator  </tag>  Taliban claimed responsibility for both attacks, and stated that the attacks were aimed at disrupting the Afghan presidential election, scheduled to take place on September 28. == References ==
+output:
+ <arg>  attacked people using  <arg>  at  <arg>  place
+**********
+checkpoints/debug_iter/epoch_5_test_step_5_predictions.jsonl
+start scoring
+gen_file:checkpoints/debug_iter/epoch_5_test_step_5_predictions.jsonl
+test_file:data/wikievents/test_no_ontology.jsonl
+paired args: 49, inconsistent args: 25, raito: 0.5102040816326531
+Evaluation by matching head words only....
+Event-level identification: P: 61.81
+Event-level : P: 61.81
+gold arg num: 563
+Role identification: P: 77.43, R: 70.69, F: 73.91
+Role: P: 70.43, R: 64.30, F: 67.22
+Coref Role identification: P: 78.60, R: 71.76, F: 75.02
+Coref Role: P: 71.60, R: 65.36, F: 68.34
+368 36 55
+0.9472931268823437 0.9475023639068085 0.8865264418751303
+0.011371979387302078 0.004333728772754682 0.025044234968347682
+--------------------------------------------------------------------------------
+v

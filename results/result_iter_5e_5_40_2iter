@@ -1,0 +1,108 @@
+load from checkpoints/iterative_fast_5e-5/epoch_2.ckpt
+start scoring
+paired args: 49, inconsistent args: 20, raito: 0.40816326530612246
+Evaluation by matching head words only....
+Event-level identification: P: 64.29
+Event-level : P: 64.29
+gold arg num: 563
+Role identification: P: 74.22, R: 72.11, F: 73.15
+Role: P: 68.01, R: 66.07, F: 67.03
+Coref Role identification: P: 75.14, R: 73.00, F: 74.05
+Coref Role: P: 68.92, R: 66.96, F: 67.93
+start getting new testset
+total_event: 364
+has close events: 332
+longest context:429
+longest target 32
+start scoring
+paired args: 49, inconsistent args: 20, raito: 0.40816326530612246
+Evaluation by matching head words only....
+Event-level identification: P: 62.64
+Event-level : P: 62.64
+gold arg num: 563
+Role identification: P: 75.48, R: 70.52, F: 72.91
+Role: P: 68.82, R: 64.30, F: 66.48
+Coref Role identification: P: 77.00, R: 71.94, F: 74.38
+Coref Role: P: 70.34, R: 65.72, F: 67.95
+--------------------------------------------------------------------------------
+load from checkpoints/iterative_fast_5e-5/epoch_3.ckpt
+start scoring
+paired args: 49, inconsistent args: 24, raito: 0.4897959183673469
+Evaluation by matching head words only....
+Event-level identification: P: 63.74
+Event-level : P: 63.74
+gold arg num: 563
+Role identification: P: 70.54, R: 72.29, F: 71.40
+Role: P: 63.95, R: 65.54, F: 64.74
+Coref Role identification: P: 72.10, R: 73.89, F: 72.98
+Coref Role: P: 65.51, R: 67.14, F: 66.32
+start getting new testset
+total_event: 364
+has close events: 332
+longest context:429
+longest target 32
+start scoring
+paired args: 49, inconsistent args: 22, raito: 0.4489795918367347
+Evaluation by matching head words only....
+Event-level identification: P: 62.64
+Event-level : P: 62.64
+gold arg num: 563
+Role identification: P: 72.06, R: 71.94, F: 72.00
+Role: P: 64.59, R: 64.48, F: 64.53
+Coref Role identification: P: 73.67, R: 73.53, F: 73.60
+Coref Role: P: 66.19, R: 66.07, F: 66.13
+--------------------------------------------------------------------------------
+load from checkpoints/iterative_fast_5e-5/epoch_4.ckpt
+start scoring
+paired args: 49, inconsistent args: 24, raito: 0.4897959183673469
+Evaluation by matching head words only....
+Event-level identification: P: 63.74
+Event-level : P: 63.74
+gold arg num: 563
+Role identification: P: 71.53, R: 70.52, F: 71.02
+Role: P: 65.59, R: 64.65, F: 65.12
+Coref Role identification: P: 72.61, R: 71.58, F: 72.09
+Coref Role: P: 66.67, R: 65.72, F: 66.19
+start getting new testset
+total_event: 364
+has close events: 332
+longest context:429
+longest target 32
+start scoring
+paired args: 49, inconsistent args: 25, raito: 0.5102040816326531
+Evaluation by matching head words only....
+Event-level identification: P: 63.19
+Event-level : P: 63.19
+gold arg num: 563
+Role identification: P: 74.63, R: 71.05, F: 72.79
+Role: P: 67.54, R: 64.30, F: 65.88
+Coref Role identification: P: 75.75, R: 72.11, F: 73.89
+Coref Role: P: 68.66, R: 65.36, F: 66.97
+--------------------------------------------------------------------------------
+load from checkpoints/iterative_fast_5e-5/epoch_5.ckpt
+start scoring
+paired args: 49, inconsistent args: 23, raito: 0.46938775510204084
+Evaluation by matching head words only....
+Event-level identification: P: 62.09
+Event-level : P: 62.09
+gold arg num: 563
+Role identification: P: 74.19, R: 69.45, F: 71.74
+Role: P: 67.74, R: 63.41, F: 65.50
+Coref Role identification: P: 75.33, R: 70.52, F: 72.84
+Coref Role: P: 68.88, R: 64.48, F: 66.61
+start getting new testset
+total_event: 364
+has close events: 332
+longest context:429
+longest target 32
+start scoring
+paired args: 49, inconsistent args: 24, raito: 0.4897959183673469
+Evaluation by matching head words only....
+Event-level identification: P: 62.09
+Event-level : P: 62.09
+gold arg num: 563
+Role identification: P: 76.06, R: 69.98, F: 72.90
+Role: P: 69.31, R: 63.77, F: 66.42
+Coref Role identification: P: 77.22, R: 71.05, F: 74.01
+Coref Role: P: 70.46, R: 64.83, F: 67.53
+--------------------------------------------------------------------------------

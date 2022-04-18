@@ -1,0 +1,181 @@
+load from checkpoints/debug_iter/epoch_5.ckpt
+**********
+INIT DATA FILE: preprocessed/preprocessed_KAIROS/test.jsonl
+sample:327
+input:
+ <arg>  arrested or jailed  <arg>  for  <arg>  crime at  <arg>  place But he was later told that the IRA unit involved had tried to use “ a succession of phone boxes ” which were out of order, significantly delaying the bomb - warning call. Video Loading Video Unavailable Click to play Tap to play The video will start in 8 Cancel Play now Listen to our recreation of the Birmingham pub bombings warning call - made to the Birmingham Post & Mail newsroom Conway, who makes the admissions in his new memoir, also revealed that soon after the bombings the IRA ’ s England Operational Commander and his adjutant “ made it back home ” to Dublin for an urgent de - brief and to assess the impact of the disaster as far as the terrorists were concerned. Birmingham pub bombings : Minute by minute - 24 hours that changed our city forever Funding for the terrorists dried up almost overnight and the bombings, which left 21 dead and almost 200 injured, including many maimed for life, cost them hugely in the propaganda war. And in an interview he confirmed that the IRA hierarchy in Dublin knew all along that the six Irishmen  <tgr>  arrested  <tgr>  for the explosions were innocent “ from the get go, from the very start. ” Now, Julie and Brian Hambleton, who lost their sister Maxine in the bombings and lead the city ’ s Justice4the21 campaign, called on West Midlands Police and David Cameron to take immediate action. Julie said : “ I am expecting West Midlands Police Chief Constable Chris Sims and West Midlands Police Force to interview with Mr Conway with immediate effect. “ And I hope that Mr Cameron, who a week ago told The House of Commons that the pub bombers must be found, takes note of this development and ensures that the police follow this through. ” Brian added : “ The police keep saying they won ’ t do anything because there is no fresh evidence. Well, here it is in black and white. It ’ s an admission. They have got to do something with this information. ” The Birmingham pub bombings - The 28 numbers that add up to a cover - up, say campaigners
+output:
+ <arg>  arrested or jailed Irishmen for  <arg>  crime at  <arg>  place
+**********
+checkpoints/debug_iter/epoch_5_test_step_0_predictions.jsonl
+start scoring
+gen_file:checkpoints/debug_iter/epoch_5_test_step_0_predictions.jsonl
+test_file:data/wikievents/test_no_ontology.jsonl
+paired args: 49, inconsistent args: 23, raito: 0.46938775510204084
+Evaluation by matching head words only....
+Event-level identification: P: 62.36
+Event-level : P: 62.36
+gold arg num: 563
+Role identification: P: 74.76, R: 69.98, F: 72.29
+Role: P: 68.12, R: 63.77, F: 65.87
+Coref Role identification: P: 75.90, R: 71.05, F: 73.39
+Coref Role: P: 69.26, R: 64.83, F: 66.97
+365 35 63
+0.9468976948767492 0.9285858250799632 0.8787815987643322
+0.0123363637991386 0.017054920875525344 0.028436681808626803
+start getting new testset
+source:checkpoints/debug_iter/epoch_5_test_step_0_results_for_predict.json
+target:preprocessed/preprocessed_debug_iter/test_step_0_data.json
+total_event: 364
+has close events: 332
+longest context:450
+longest target 35
+**********
+INIT DATA FILE: preprocessed/preprocessed_debug_iter/test_step_0_data.json
+sample:95
+input:
+ <arg>  court or judge sentenced  <arg>  for  <arg>  crime to  <arg>  sentence in  <arg>  place == The bombing == The Balcombe Street Gang planted a time bomb in the Caterham Arms public house in Caterham, Surrey. The IRA unit placed the 7lb bomb in a duffel bag under a seat. There was no warning and the bomb exploded at 9 : 20, injuring 23 civilians and 10 off - duty soldiers. The pub was used by members of the Welsh Guards who were based at the barracks nearby. Some of the injuries were very serious, with at least three soldiers losing limbs. The blast blew the roof off the pub in the process. This attack marked the start of a renewed bombing campaign ( Phase Two ) in England and the end of the truce with the British Government. The next day, the same IRA unit exploded a bomb in Oxford Street, injuring several people. == Aftermath == One of the police  <tag>  Researcher  </tag>  officers in charge of the investigation into the bombing described it as a " carbon copy " of the Guildford pub bombings in October 1974 for which four people were already serving their  <tgr>  sentences  <tgr> . The cell's campaign would continue until December 1975 when  <tag>  Detainee  </tag>  they were caught at the siege of Balcombe Street. The unit would eventually end up planting close to 50 bombs in London and elsewhere in southern England and carrying out several shootings which, along with the bombings, caused the deaths of nearly 20 people, injured hundreds and caused millions of pounds worth of damage to property. == See also == * Chronology of Provisional Irish Republican Army actions ( 1970 – 79 ) == References ==
+output:
+ <arg>  court or judge sentenced people for  <arg>  crime to  <arg>  sentence in  <arg>  place
+**********
+checkpoints/debug_iter/epoch_5_test_step_1_predictions.jsonl
+start scoring
+gen_file:checkpoints/debug_iter/epoch_5_test_step_1_predictions.jsonl
+test_file:data/wikievents/test_no_ontology.jsonl
+paired args: 49, inconsistent args: 25, raito: 0.5102040816326531
+Evaluation by matching head words only....
+Event-level identification: P: 62.09
+Event-level : P: 62.09
+gold arg num: 563
+Role identification: P: 77.93, R: 70.87, F: 74.23
+Role: P: 70.90, R: 64.48, F: 67.53
+Coref Role identification: P: 79.10, R: 71.94, F: 75.35
+Coref Role: P: 72.07, R: 65.54, F: 68.65
+369 36 52
+0.945111221936988 0.9518544457498052 0.9018194881450927
+0.011817293976131562 0.0036524972122458583 0.01961406283219956
+start getting new testset
+source:checkpoints/debug_iter/epoch_5_test_step_1_results_for_predict.json
+target:preprocessed/preprocessed_debug_iter/test_step_1_data.json
+total_event: 364
+has close events: 332
+longest context:445
+longest target 35
+**********
+INIT DATA FILE: preprocessed/preprocessed_debug_iter/test_step_1_data.json
+sample:128
+input:
+ <arg>  treater treated  <arg>  patient for  <arg>  medical issue with  <arg>  means at  <arg>  place AD Cuomo said officials “ have no reason to believe at this time that there is any further immediate threat, ” though the National Guard and the New York State Police were deploying an additional 1, 000 personnel to bus terminals, airports and subways “ just to err on the side of caution. ” AD Cuomo said the blast in Chelsea “ caused significant property damage, ” though he a nearby subway station was structurally safe. He said law enforcement would work diligently to identify and locate those responsible. “ Whoever placed these bombs, we will find, and they will be brought to justice, ” Cuomo said. The explosion in the area of  <tag>  Place  </tag>  23rd Street between Sixth and Seventh avenues occurred about 8 : 30 p. m. police said. Several of  <tag>  Victim Victim  </tag>  those injured were brought to area  <tag>  Destination  </tag>  hospitals, Donald, the police spokesman, posted on Twitter. AD All victims were  <tgr>  treated  <tgr>  and released by Sunday morning,  <tag>  Communicator  </tag>  Cuomo said. A  <tag>  Communicator  </tag>  spokeswoman for  <tag>  Treater  </tag>  Lenox Health Greenwich Village, which treated nine of the  <tag>  Patient  </tag>  victims, said patients were treated for minor injuries that included lacerations to the head and body. Other hospitals declined to provide specifics about the extent of patients ’ injuries from the explosion. AD Photos and accounts posted on social media Saturday night showed large crowds — as well as a large law enforcement presence — in the area near where the explosion occurred. Soleil Filomena, 64, was leaving a convenience store at Seventh Avenue and 23rd Street when she heard the explosion. “ It was so loud it just went through my whole body, ” she said. “ People started running up 23rd Street, and I started running with them. ” AD Filomena said she saw a “ big black cloud in the sky. ” After the explosion, she said her “ ear was ringing for 15 minutes. ”
+output:
+ <arg>  treater treated victims patient for  <arg>  medical issue with  <arg>  means at  <arg>  place
+**********
+checkpoints/debug_iter/epoch_5_test_step_2_predictions.jsonl
+start scoring
+gen_file:checkpoints/debug_iter/epoch_5_test_step_2_predictions.jsonl
+test_file:data/wikievents/test_no_ontology.jsonl
+paired args: 49, inconsistent args: 25, raito: 0.5102040816326531
+Evaluation by matching head words only....
+Event-level identification: P: 62.36
+Event-level : P: 62.36
+gold arg num: 563
+Role identification: P: 78.17, R: 71.23, F: 74.54
+Role: P: 71.15, R: 64.83, F: 67.84
+Coref Role identification: P: 79.34, R: 72.29, F: 75.65
+Coref Role: P: 72.32, R: 65.90, F: 68.96
+371 36 51
+0.9433538279064589 0.9519177607837178 0.9101983635708658
+0.012412277696871962 0.003990366658759698 0.016690091679317037
+start getting new testset
+source:checkpoints/debug_iter/epoch_5_test_step_2_results_for_predict.json
+target:preprocessed/preprocessed_debug_iter/test_step_2_data.json
+total_event: 364
+has close events: 332
+longest context:445
+longest target 35
+**********
+INIT DATA FILE: preprocessed/preprocessed_debug_iter/test_step_2_data.json
+sample:148
+input:
+ <arg>  was injured by  <arg>  using  <arg>  in  <arg>  body part with  <arg>  medical issue at  <arg>  place Accused New York City Bomber Pleads Not Guilty Accused New York bomber  <tag>  Defendant  </tag>  Ahmad Khan Rahimi pleaded not guilty on Thursday to federal charges that  <tag>  Attacker  </tag>  he set off an explosive device in September on a crowded city street,  <tgr>  injuring  <tgr>  30 people. Wearing a dark blue jump suit,  <tag>  Defendant  </tag>  Rahimi, 28, shuffled slowly into federal court in Manhattan and had several coughing fits during the brief hearing.  <tag>  Victim  </tag>  He suffered serious injuries in a shootout with  <tag>  Injurer  </tag>  police two days after the bombing. He spoke only once, when U. S. District Judge Richard Berman asked him to confirm that he intended to plead not guilty to an eight - count indictment filed on Wednesday. " Yes, sir, " Rahimi said. Prosecutors have accused the Afghan - born U. S. citizen of setting off an explosion in Manhattan's Chelsea neighborhood on Sept. 17. It did not kill anyone but hurt 30 people. The attack came hours after authorities say another pipe bomb planted by Rahimi went off along the course of a charity road race in New Jersey, although that detonation did not injure anyone. Federal prosecutors also say Rahimi left another bomb in Chelsea that did not go off and several explosive devices in a bag at a train station in Elizabeth, New Jersey. In addition to the New York indictment, Rahimi faces charges from federal and state prosecutors in New Jersey. He was captured after a manhunt that ended when police officers discovered him sleeping in the doorway of a bar in Linden, New Jersey. The confrontation left him with several gunshot wounds, delaying the filing of federal charges and forcing him to make his first court appearance in New Jersey from a hospital bed.
+output:
+ people was injured by Ahmad Khan Rahimi using  <arg>  in  <arg>  body part with  <arg>  medical issue at  <arg>  place
+**********
+checkpoints/debug_iter/epoch_5_test_step_3_predictions.jsonl
+start scoring
+gen_file:checkpoints/debug_iter/epoch_5_test_step_3_predictions.jsonl
+test_file:data/wikievents/test_no_ontology.jsonl
+paired args: 49, inconsistent args: 25, raito: 0.5102040816326531
+Evaluation by matching head words only....
+Event-level identification: P: 62.36
+Event-level : P: 62.36
+gold arg num: 563
+Role identification: P: 78.17, R: 71.23, F: 74.54
+Role: P: 71.15, R: 64.83, F: 67.84
+Coref Role identification: P: 79.34, R: 72.29, F: 75.65
+Coref Role: P: 72.32, R: 65.90, F: 68.96
+371 36 51
+0.94398125901926 0.9506444880177105 0.9108720737020436
+0.012191274155032723 0.004136887634179765 0.016539381319537853
+start getting new testset
+source:checkpoints/debug_iter/epoch_5_test_step_3_results_for_predict.json
+target:preprocessed/preprocessed_debug_iter/test_step_3_data.json
+total_event: 364
+has close events: 332
+longest context:445
+longest target 35
+**********
+INIT DATA FILE: preprocessed/preprocessed_debug_iter/test_step_3_data.json
+sample:83
+input:
+ <arg>  died at  <arg>  place from  <arg>  medical issue, killed by  <arg>  killer == The bombing == The Balcombe Street Gang planted a time bomb in the Caterham Arms public house in Caterham, Surrey. The IRA unit placed the 7lb bomb in a duffel bag under a seat. There was no warning and the bomb exploded at 9 : 20, injuring 23 civilians and 10 off - duty soldiers. The pub was used by members of the Welsh Guards who were based at the barracks nearby. Some of the injuries were very serious, with at least three soldiers losing limbs. The blast blew the roof off the pub in the process. This attack marked the start of a renewed bombing campaign ( Phase Two ) in England and the end of the truce with the British Government. The next day, the same IRA unit exploded a bomb in Oxford Street, injuring several people. == Aftermath == One of the police officers in charge of the investigation into the bombing described it as a " carbon copy " of the Guildford pub bombings in October 1974 for which four people were already serving their sentences. The cell's campaign would continue until December 1975 when  <tag>  Detainee  </tag>  they were caught at the siege of Balcombe Street. The unit would eventually end up planting close to 50 bombs in London and elsewhere in southern England and carrying out several shootings which, along with the bombings, caused the  <tgr>  deaths  <tgr>  of nearly 20 people, injured  <tag>  Victim  </tag>  hundreds and caused millions of pounds worth of damage to  <tag>  Artifact  </tag>  property. == See also == * Chronology of Provisional Irish Republican Army actions ( 1970 – 79 ) == References ==
+output:
+ people died at  <arg>  place from  <arg>  medical issue, killed by  <arg>  killer
+**********
+checkpoints/debug_iter/epoch_5_test_step_4_predictions.jsonl
+start scoring
+gen_file:checkpoints/debug_iter/epoch_5_test_step_4_predictions.jsonl
+test_file:data/wikievents/test_no_ontology.jsonl
+paired args: 49, inconsistent args: 25, raito: 0.5102040816326531
+Evaluation by matching head words only....
+Event-level identification: P: 62.36
+Event-level : P: 62.36
+gold arg num: 563
+Role identification: P: 78.17, R: 71.23, F: 74.54
+Role: P: 71.15, R: 64.83, F: 67.84
+Coref Role identification: P: 79.34, R: 72.29, F: 75.65
+Coref Role: P: 72.32, R: 65.90, F: 68.96
+371 36 51
+0.9445010162209894 0.9506444880177105 0.9093316559373424
+0.012137346333841614 0.004136887634179765 0.016601164997267437
+start getting new testset
+source:checkpoints/debug_iter/epoch_5_test_step_4_results_for_predict.json
+target:preprocessed/preprocessed_debug_iter/test_step_4_data.json
+total_event: 364
+has close events: 332
+longest context:445
+longest target 35
+**********
+INIT DATA FILE: preprocessed/preprocessed_debug_iter/test_step_4_data.json
+sample:298
+input:
+ <arg>  died at  <arg>  place from  <arg>  medical issue, killed by  <arg>  killer Officials said at least 214 people were wounded in 27 different attacks launched in 18 cities, shattering a relative calm which had held in the lead - up to the start on Saturday of the holy Muslim fasting month of Ramadan. In Monday's deadliest attack -- a string of roadside bombs and a car bomb followed by a suicide attack targeting emergency responders in the town of Taji -- at least 42 people were killed and 40 wounded, according to two medical officials. " I heard explosions in the distance so I left my house and I saw a car outside, " said 40 - year - old Taji resident Abu Mohammed, who added that police inspectors concluded the vehicle was a car bomb. " We asked the neighbors to leave their houses, but when they were leaving, the bomb went off. " Abu Mohammed said he witnessed the  <tgr>  deaths  <tgr>  of an elderly woman carrying a newborn baby and of the policeman who had first concluded the car was packed with explosives. An Agence France Presse reporter at the scene said a row of  <tag>  Target  </tag>  houses were completely destroyed, and residents were rummaging through the rubble in search of victims and their belongings. In Baghdad, meanwhile, a car bomb outside a government office responsible for producing identity papers in the Shiite bastion of Sadr City killed at least 12 people and wounded 22 others, security and medical officials said. " This attack is a terrible crime against humanity, because they did it during Ramadan, while people are fasting, " said one elderly witness who declined to be identified. An AFP journalist said eight nearby cars were badly burned and many of the victims of the 9 : 30 am ( 0630 GMT ) attack could not be identified because their papers were inside the offices that were targeted.
+output:
+ woman and policeman died at  <arg>  place from  <arg>  medical issue, killed by  <arg>  killer
+**********
+checkpoints/debug_iter/epoch_5_test_step_5_predictions.jsonl
+start scoring
+gen_file:checkpoints/debug_iter/epoch_5_test_step_5_predictions.jsonl
+test_file:data/wikievents/test_no_ontology.jsonl
+paired args: 49, inconsistent args: 25, raito: 0.5102040816326531
+Evaluation by matching head words only....
+Event-level identification: P: 62.36
+Event-level : P: 62.36
+gold arg num: 563
+Role identification: P: 78.17, R: 71.23, F: 74.54
+Role: P: 71.15, R: 64.83, F: 67.84
+Coref Role identification: P: 79.34, R: 72.29, F: 75.65
+Coref Role: P: 72.32, R: 65.90, F: 68.96
+371 36 51
+0.9437637352018351 0.9506444880177105 0.9096204906961758
+0.01236671050873073 0.004136887634179765 0.016571505266095347
+--------------------------------------------------------------------------------
