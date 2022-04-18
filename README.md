@@ -1,18 +1,22 @@
-# Argument Extraction by Generation
-
 This repository contains the code of the paper titled "EA$^2$E: Improving Consistency with Event Awareness for Document-level Argument Extraction" accpeted in Findings of the Annual Conference of the North American Chapter of the Association for Computational Linguistics: NAACL 2022.
 
 ## Set up
-
+```sh
+git clone https://github.com/ZQS1943/DOCIE.git
+cd DOCIE
 conda create --name eaae python=3.9 
 conda activate eaae
 pip install -r requirement.txt
 python -m spacy download en_core_web_sm
+```
 
 ## Run
-To run the EA^2E model, use sh scripts/train_eaae.sh
-To test the model, use sh scripts/test_bart_gen.sh
-
+To train and test the EA$^2$E model, use 
+```sh
+sh scripts/train_eaae.sh
+sh scripts/test_bart_gen.sh
+```
+In Tesla P100, the training takes about 10min for each epoch.
 
 ## Datasets
 - ACE05 (Access from LDC[https://catalog.ldc.upenn.edu/LDC2006T06] and preprocessing following OneIE[http://blender.cs.illinois.edu/software/oneie/])
