@@ -3,3 +3,6 @@ logs/
 data/
 preprocessed_*/
 __pycache__/
+eval*
+tmp*
+select*
