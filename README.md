@@ -1,21 +1,18 @@
 # Argument Extraction by Generation
 
-Code for paper "Document-Level Argument Extraction by Conditional Generation". NAACL 21'
+This repository contains the code of the paper titled "EA$^2$E: Improving Consistency with Event Awareness for Document-level Argument Extraction" accpeted in Findings of the Annual Conference of the North American Chapter of the Association for Computational Linguistics: NAACL 2022.
 
+## Set up
 
-## Dependencies 
-- pytorch=1.6 
-- transformers=3.1.0
-- pytorch-lightning=1.0.6
-- spacy=3.0 # conflicts with transformers
-- pytorch-struct=0.4 
+conda create --name eaae python=3.9 
+conda activate eaae
+pip install -r requirement.txt
+python -m spacy download en_core_web_sm
 
-
-## Model Checkpoints 
-Checkpoints trained from this repo are shared for the WikiEvents dataset and the ACE dataset are available at: [s3://gen-arg-data/checkpoints/].
+## Run
+To run the EA^2E model, use sh scripts/train_eaae.sh
+To test the model, use sh scripts/test_bart_gen.sh
 
 
 ## Datasets
-- RAMS (Download at [https://nlp.jhu.edu/rams/])
 - ACE05 (Access from LDC[https://catalog.ldc.upenn.edu/LDC2006T06] and preprocessing following OneIE[http://blender.cs.illinois.edu/software/oneie/])
-- WikiEvents (Available here [s3://gen-arg-data/wikievents/])

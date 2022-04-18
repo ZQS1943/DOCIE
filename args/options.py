@@ -2,7 +2,7 @@ import argparse
 
 def define_arguments(parser):
     parser.add_argument("--model", type=str, default='constrained-gen', choices=['gen','constrained-gen'])
-    parser.add_argument("--dataset", type=str, default='KAIROS', choices=['RAMS', 'ACE', 'KAIROS'])
+    parser.add_argument("--dataset", type=str, default='KAIROS', choices=['ACE', 'KAIROS'])
     parser.add_argument('--tmp_dir', type=str)
     parser.add_argument("--ckpt_name", default=None, type=str, help="The output directory where the model checkpoints and predictions will be written.")
     parser.add_argument("--load_ckpt", default=None, type=str)
@@ -25,7 +25,7 @@ def define_arguments(parser):
     parser.add_argument("--num_iterative_epochs", default=2, type=int, help='The number of iterative epochs.')
     parser.add_argument('--save_top_k', default=3, type=int, help="save top k ckpts.")
     parser.add_argument("--max_steps", default=-1, type=int, help="If > 0: set total number of training steps to perform. Override num_train_epochs.")
-    parser.add_argument("--train_batch_size", default=4, type=int, help="Batch size per GPU/CPU for training.")
+    parser.add_argument("--train_batch_size", default=2, type=int, help="Batch size per GPU/CPU for training.")
     parser.add_argument("--eval_batch_size", default=4, type=int, help="Batch size per GPU/CPU for evaluation.")
     parser.add_argument("--learning_rate", default=3e-5, type=float, help="The initial learning rate for Adam.")
     parser.add_argument("--accumulate_grad_batches", type=int, default=8, help="Number of updates steps to accumulate before performing a backward/update pass.")
@@ -44,7 +44,6 @@ def define_arguments(parser):
     parser.add_argument("--alpha", type=float, default=1, help="loss = loss_extraction + alpha * loss_dis, -1 means automatic")
     parser.add_argument("--score_th", type=float, default=0.0)
     parser.add_argument("--trg_dis", type=int, default=40)
-    parser.add_argument("--role_num", type=int, default=85)
 
 def parse_arguments():
     parser = argparse.ArgumentParser()

@@ -14,7 +14,7 @@ from transformers.modeling_utils import unwrap_model
 
 # import wandb
 
-from src.genie.get_new_data_file import get_new_data_file
+
 from src.genie.scorer_class import scorer_bert_crf
 from src.model.constrained_gen import BartConstrainedGen
 from src.data.get_data import get_data_seq
@@ -91,9 +91,12 @@ def main():
     if not os.path.exists(args.data_file):
         os.makedirs(args.data_file)
 
-    
+    if args.dataset == 'ACE':
+        num_labels = 25
+    else:
+        num_labels = 85
 
-    config = BertConfig.from_pretrained('bert-large-cased', num_labels=args.role_num)
+    config = BertConfig.from_pretrained('bert-large-cased', num_labels=num_labels)
     tokenizer = BertTokenizer.from_pretrained('bert-large-cased')
     model = BERT_CRF.from_pretrained('bert-large-cased', config = config)
     device = f'cuda:{args.gpus}'

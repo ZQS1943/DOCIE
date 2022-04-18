@@ -16,7 +16,7 @@ from transformers.modeling_utils import unwrap_model
 
 # import wandb
 
-from src.genie.get_new_data_file import get_new_data_file
+
 from src.genie.scorer_class import scorer
 from src.model.constrained_gen import BartConstrainedGen
 from src.data.get_data import get_data_tag_only

@@ -10,7 +10,9 @@ import numpy as np
 
 from .utils import load_ontology,find_arg_span_original_text, compute_f1, get_entity_span, find_head, WhitespaceTokenizer
 
-nlp = spacy.load('en_core_web_sm')
+import en_core_web_sm
+nlp = en_core_web_sm.load()
+# nlp = spacy.load('en_core_web_sm')
 nlp.tokenizer = WhitespaceTokenizer(nlp.vocab)
 
 '''

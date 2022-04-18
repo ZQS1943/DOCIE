@@ -307,7 +307,7 @@ def create_instance_seq(ex, ontology_dict, index=0, id2entity=None, tokenizer=No
         start = entity['start'] - offset
         end = entity['end'] - offset
         if start < 0 or end >= len(context):
-            print(f"skip:{start},{end}-{arg['role']}")
+            # print(f"skip:{start},{end}-{arg['role']}")
             continue
         # if ' '.join(context[start:end]) != entity['text']:
         #     print(' '.join(context[start:end]), entity['text'])
