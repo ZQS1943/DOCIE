@@ -1,5 +1,0 @@
-load from checkpoints/fold_1/epoch_2.ckpt
-start scoring
-gen_file:checkpoints/fold_1/epoch_2_test_step_0_predictions.jsonl
-test_file:data/wikievents/10fold/fold_1/test.jsonl
-{'predicted': ' members died at  <arg>  place from  <arg>  medical issue, killed by The Taliban killer', 'gold': ' members died at  <arg>  place from  <arg>  medical issue, killed by The Taliban killer', 'doc_id': 'wiki_mass_car_bombings_1_news_8'}
