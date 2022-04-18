@@ -20,3 +20,4 @@ In Tesla P100, the training takes about 15min for each epoch.
 
 ## Datasets
 - ACE05 (Access from LDC[https://catalog.ldc.upenn.edu/LDC2006T06] and preprocessing following OneIE[http://blender.cs.illinois.edu/software/oneie/])
+- WIKIEVENTS (contained in this repo, we use src/genie/no_ontology.py to remove the events with event types that are not in the ontology.)
