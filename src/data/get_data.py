@@ -12,7 +12,7 @@ from transformers.file_utils import torch_required
 from transformers.utils.dummy_tokenizers_objects import DPRQuestionEncoderTokenizerFast 
 
 from .data import IEDataset, my_collate_event_aware
-from ..genie.utils import load_ontology, check_pronoun, clean_mention
+from genie.utils import load_ontology, check_pronoun, clean_mention
 from .data_utils import create_instance_tag_other_event, create_instance_tag_comparing, create_instance_normal,create_instance_normal_sentence_selection,create_instance_tag_other_event_sentence_selection, create_instance_two_event,create_instance_seq
 
 from tqdm import tqdm

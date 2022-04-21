@@ -7,7 +7,7 @@ DATASET='KAIROS'
 CKPT_NAME='bert_12'
 EPOCH='5'
 
-python test_bert_crf.py \
+python src/test_bert_crf.py \
      --load_ckpt=checkpoints/${CKPT_NAME}/epoch_${EPOCH}.ckpt \
      --gpus ${GPU} \
      --dataset=${DATASET} \

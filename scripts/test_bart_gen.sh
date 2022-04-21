@@ -9,7 +9,7 @@ DATASET='KAIROS'
 CKPT_NAME='comparing_50'
 EPOCH='5'
 
-python test_bart_gen.py \
+python src/test_bart_gen.py \
      --load_ckpt=checkpoints/${CKPT_NAME}/epoch_${EPOCH}.ckpt \
      --num_iterative_epochs 6 \
      --gpus ${GPU} \

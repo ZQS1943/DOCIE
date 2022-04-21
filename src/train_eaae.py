@@ -6,7 +6,6 @@ import timeit
 from datetime import datetime 
 
 import torch 
-from torch import nn
 from torch.nn import MSELoss
 from torch.nn.utils import clip_grad_norm_
 from torch.utils.data import DataLoader
@@ -15,9 +14,9 @@ from transformers.modeling_utils import unwrap_model
 # import wandb
 
 
-from src.genie.scorer_class import scorer
-from src.model.constrained_gen import BartConstrainedGen
-from src.data.get_data import get_data_seq
+from genie.scorer_class import scorer
+from model.constrained_gen import BartConstrainedGen
+from data.get_data import get_data_tag_comparing, get_data_normal
 
 
 logger = logging.getLogger(__name__)
@@ -26,36 +25,13 @@ import os
 from args.options import parse_arguments
 from transformers import set_seed, AdamW, get_linear_schedule_with_warmup
 
-from transformers import BertTokenizer, BertForTokenClassification, BertModel, BertPreTrainedModel, BertConfig
-from src.data.data import IEDataset, my_collate_comparing, my_collate_seq
+from transformers import BartTokenizer, BartConfig
+from data.data import IEDataset, my_collate_comparing, my_collate
 
 from tqdm import tqdm
 import json
-import numpy as np
-from torchcrf import CRF
 
-class BERT_CRF(BertPreTrainedModel):
-    def __init__(self, config):
-        super().__init__(config)
-        self.num_labels = config.num_labels
 
-        self.bert = BertModel(config, add_pooling_layer=False)
-        self.dropout = nn.Dropout(config.hidden_dropout_prob)
-        self.classifier = nn.Linear(config.hidden_size, config.num_labels)
-        self.crf = CRF(config.num_labels, batch_first=True)
-
-        self.init_weights()
-
-    def forward(self, input_ids, attention_mask=None, labels=None):
-        sequence_output = self.bert(input_ids=input_ids, attention_mask=attention_mask, head_mask=None)[0]
-        logits = self.classifier(sequence_output)
-        attention_mask = torch.tensor(attention_mask, dtype=torch.uint8)
-        if labels == None:
-            tags = self.crf.decode(logits, mask = attention_mask)
-            return tags
-        else:
-            loss = - self.crf(logits, labels, mask = attention_mask)
-            return loss
 
 
 class score_args:
@@ -88,38 +64,34 @@ def main():
     if not os.path.exists(args.data_file):
         os.makedirs(args.data_file)
 
-    if args.dataset == 'ACE':
-        num_labels = 25
-    else:
-        num_labels = 85
+    
 
-    config = BertConfig.from_pretrained('bert-large-cased', num_labels=num_labels)
-    tokenizer = BertTokenizer.from_pretrained('bert-large-cased')
-    model = BERT_CRF.from_pretrained('bert-large-cased', config = config)
+    config = BartConfig.from_pretrained('facebook/bart-large')
+    tokenizer = BartTokenizer.from_pretrained('facebook/bart-large')
+    tokenizer.add_tokens([' <arg>',' <tgr>',' <tag>', ' </tag>'])
+    model = BartConstrainedGen(config, tokenizer)
+    model.resize_token_embeddings()
     device = f'cuda:{args.gpus}'
     model.to(device)
 
     if args.load_ckpt:
         print(f"load from {args.load_ckpt}")
         model.load_state_dict(torch.load(args.load_ckpt,map_location=model.device)['state_dict']) 
-    # assert 1==0
     
-
     if args.dataset == "ACE":
         source = './data/ace05/train.wikievents.json'
     elif args.dataset == "KAIROS":
         if args.use_info:
-            source = './data/wikievents/train_info_no_ontology.jsonl'
+            source = './data/wikievents/train_info_no_ontology.jsonl'    
         else:
             source = './data/wikievents/train_no_ontology.jsonl'
-    target = f'./{args.data_file}/train_data.jsonl'
-    get_data_seq(source = source, target = target, tokenizer = tokenizer, dataset = args.dataset)
+    target = f'./{args.data_file}/train_data_comparing.jsonl'
+    get_data_tag_comparing(source = source, target = target, tokenizer = tokenizer, trigger_dis=args.trg_dis, dataset = args.dataset)
     train_dataset = IEDataset(target)
     train_dataloader = DataLoader(train_dataset, 
-            collate_fn=my_collate_seq,
+            collate_fn=my_collate_comparing,
             batch_size=args.train_batch_size, 
             shuffle=True)
-
 
     if args.dataset == "ACE":
         source = './data/ace05/dev.wikievents.json'
@@ -128,11 +100,11 @@ def main():
             source = './data/wikievents/dev_info_no_ontology.jsonl'
         else:
             source = './data/wikievents/dev_no_ontology.jsonl'
-    target = f'./{args.data_file}/dev_data.jsonl'
-    get_data_seq(source = source, target = target, tokenizer = tokenizer, dataset = args.dataset)
-    eval_dataset = IEDataset(target)    
+    target = f'./{args.data_file}/dev_data_normal.jsonl'
+    get_data_normal(source = source, target = target, tokenizer = tokenizer, dataset = args.dataset) 
+    eval_dataset = IEDataset(target, tokenizer = tokenizer)
     eval_dataloader = DataLoader(eval_dataset, num_workers=2, 
-            collate_fn=my_collate_seq,
+            collate_fn=my_collate,
             batch_size=args.eval_batch_size, 
             shuffle=True)
 
@@ -177,15 +149,34 @@ def main():
             inputs = {
                     "input_ids": batch["input_token_ids"].to(device),
                     "attention_mask": batch["input_attn_mask"].to(device),
-                    "labels":batch['labels'].to(device)
+                    "decoder_input_ids": batch['tgt_token_ids'].to(device),
+                    "decoder_attention_mask": batch["tgt_attn_mask"].to(device),   
+                    "task": 0 
                 }
-            loss = model(**inputs)
-            loss = loss / args.accumulate_grad_batches
+            outputs, encoder_last_hidden_state = model(**inputs)
+            loss = outputs[0]
+            loss1 = torch.mean(loss) 
+
+            inputs = {
+                    "input_ids": batch["compare_token_ids"].to(device),
+                    "attention_mask": batch["compare_attn_mask"].to(device),
+                    "decoder_input_ids": batch['tgt_token_ids'].to(device),
+                    "decoder_attention_mask": batch["tgt_attn_mask"].to(device),   
+                    "task": 0 
+                }
+            outputs,encoder_last_hidden_state_compare = model(**inputs)
+            loss = outputs[0]
+            loss2 = torch.mean(loss) 
+
+            argument_hidden_state_1 = encoder_last_hidden_state[batch['input_mask']]
+            argument_hidden_state_2 = encoder_last_hidden_state_compare[batch['compare_mask']]
+            loss3 = mseloss(argument_hidden_state_1, argument_hidden_state_2)
+
+            loss = (loss1 + loss2 + args.alpha * loss3) / args.accumulate_grad_batches
             loss.backward()
 
             pbar.update(1)
-            pbar.set_postfix({'loss': float(loss)})
-            # pbar.set_postfix({'loss1': float(loss1)})
+            pbar.set_postfix({'loss1': float(loss1), 'loss2':float(loss2), 'loss3':float(loss3)})
 
 
             
@@ -199,10 +190,13 @@ def main():
                 inputs = {
                     "input_ids": batch["input_token_ids"].to(device),
                     "attention_mask": batch["input_attn_mask"].to(device),
-                    "labels":batch['labels'].to(device)
+                    "decoder_input_ids": batch['tgt_token_ids'].to(device),
+                    "decoder_attention_mask": batch["tgt_attn_mask"].to(device),   
+                    "task": 0 
                 }
                 
-                loss = model(**inputs)
+                outputs,_ = model(**inputs)
+                loss = outputs[0]
                 loss = torch.mean(loss)
                 avg_loss.append(loss)
                 pbar.update(1)

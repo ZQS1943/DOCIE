@@ -14,9 +14,9 @@ from transformers.modeling_utils import unwrap_model
 # import wandb
 
 
-from src.genie.scorer_class import scorer
-from src.model.constrained_gen import BartConstrainedGen
-from src.data.get_data import get_data_normal
+from genie.scorer_class import scorer
+from model.constrained_gen import BartConstrainedGen
+from data.get_data import get_data_normal
 
 
 logger = logging.getLogger(__name__)
@@ -26,7 +26,7 @@ from args.options import parse_arguments
 from transformers import set_seed, AdamW, get_linear_schedule_with_warmup
 
 from transformers import BartTokenizer, BartConfig
-from src.data.data import IEDataset, my_collate_comparing, my_collate
+from data.data import IEDataset, my_collate_comparing, my_collate
 
 from tqdm import tqdm
 import json

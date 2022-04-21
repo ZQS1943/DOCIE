@@ -9,7 +9,7 @@ alpha='0.5'
 DATASET='KAIROS'
 CKPT_NAME='eaae_'${TRG_DIS}'_'${alpha}'_'${DATASET}
 
-python train_eaae.py \
+python src/train_eaae.py \
     --ckpt_name=${CKPT_NAME} \
     --gpus ${GPU} \
     --accumulate_grad_batches=4 \

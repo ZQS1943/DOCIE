@@ -7,7 +7,7 @@ GPU='1'
 DATASET='KAIROS'
 CKPT_NAME='baseline_bert_crf_'${DATASET}
 
-python train_baseline_bert_crf.py \
+python src/train_baseline_bert_crf.py \
     --ckpt_name=${CKPT_NAME} \
     --train_batch_size=4 \
     --gpus ${GPU} \

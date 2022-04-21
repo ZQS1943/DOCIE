@@ -1,7 +1,7 @@
 import json 
 import spacy 
 from spacy.tokens import Doc
-PRONOUN_FILE='pronoun_list.txt'
+PRONOUN_FILE='./data/pronoun_list.txt'
 pronoun_set = set() 
 with open(PRONOUN_FILE, 'r') as f:
     for line in f:
@@ -68,7 +68,7 @@ def load_ontology(dataset, ontology_file=None):
     if not ontology_file: # use the default file path 
         if not dataset:
             raise ValueError
-        with open('event_role_{}.json'.format(dataset),'r') as f:
+        with open('./data/event_role_{}.json'.format(dataset),'r') as f:
             ontology_dict = json.load(f)
     else:
         with open(ontology_file,'r') as f:
