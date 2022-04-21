@@ -1,5 +1,13 @@
 This repository contains the code of the paper titled ["EA$^2$E: Improving Consistency with Event Awareness for Document-level Argument Extraction"](https://blender.cs.illinois.edu/paper/docie2022b.pdf) accpeted in Findings of the Annual Conference of the North American Chapter of the Association for Computational Linguistics: NAACL 2022.
+
+## Code
 Our code is based on [this repository](https://github.com/raspberryice/gen-arg).
+```
+./data: dataset
+./scripts: running scripts
+./src: all codes
+```
+
 
 ## Set up
 ```sh
