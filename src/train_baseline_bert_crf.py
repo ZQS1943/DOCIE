@@ -17,7 +17,7 @@ from transformers.modeling_utils import unwrap_model
 
 from genie.scorer_class import scorer
 from model.constrained_gen import BartConstrainedGen
-from data.get_data import get_data_seq
+from data_utils.get_data import get_data_seq
 
 
 logger = logging.getLogger(__name__)
@@ -27,7 +27,7 @@ from args.options import parse_arguments
 from transformers import set_seed, AdamW, get_linear_schedule_with_warmup
 
 from transformers import BertTokenizer, BertForTokenClassification, BertModel, BertPreTrainedModel, BertConfig
-from data.data import IEDataset, my_collate_comparing, my_collate_seq
+from data_utils.data import IEDataset, my_collate_comparing, my_collate_seq
 
 from tqdm import tqdm
 import json
