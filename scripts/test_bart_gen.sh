@@ -6,7 +6,7 @@ set -x
 GPU='0'
 TRG_DIS='40'
 DATASET='KAIROS'
-CKPT_NAME='comparing_50'
+CKPT_NAME='comparing_0.5_40_42'
 EPOCH='5'
 
 python src/test_bart_gen.py \
