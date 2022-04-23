@@ -1,6 +1,5 @@
 checkpoints/
 logs/
-data/
 preprocessed/
 __pycache__/
 eval*
