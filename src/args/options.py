@@ -18,11 +18,12 @@ def define_arguments(parser):
 
 
     parser.add_argument('--use_info', action='store_true', default=False, help='use informative mentions instead of the nearest mention.')
+    parser.add_argument('--eval_on_dev', action='store_true', default=False, help='use informative mentions instead of the nearest mention.')
     parser.add_argument('--mark_trigger', default=True, action='store_true')
     parser.add_argument('--sample-gen', action='store_true', help='Do sampling when generation.')
 
-    parser.add_argument("--num_train_epochs", default=5, type=int, help="Total number of training epochs to perform.")
-    parser.add_argument("--num_iterative_epochs", default=2, type=int, help='The number of iterative epochs.')
+    parser.add_argument("--num_train_epochs", default=4, type=int, help="Total number of training epochs to perform.")
+    parser.add_argument("--num_iterative_epochs", default=1, type=int, help='The number of iterative epochs.')
     parser.add_argument('--save_top_k', default=3, type=int, help="save top k ckpts.")
     parser.add_argument("--max_steps", default=-1, type=int, help="If > 0: set total number of training steps to perform. Override num_train_epochs.")
     parser.add_argument("--train_batch_size", default=2, type=int, help="Batch size per GPU/CPU for training.")

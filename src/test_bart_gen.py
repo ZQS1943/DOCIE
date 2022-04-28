@@ -74,15 +74,18 @@ def main():
     
     print(f"load from {args.load_ckpt}")
     model.load_state_dict(torch.load(args.load_ckpt,map_location=model.device)['state_dict']) 
-    
+
+    file_name = 'test'
+    if args.eval_on_dev:
+        file_name = 'dev'
     if args.dataset == "ACE":
-        source = './data/ace05/test.wikievents.json'
+        source = f'./data/ace05/{file_name}.wikievents.json'
     elif args.dataset == "KAIROS":
         if args.use_info:
-            source = './data/wikievents/test_info_no_ontology.jsonl'
+            source = f'./data/wikievents/{file_name}_info_no_ontology.jsonl'
         else:
-            source = './data/wikievents/test_no_ontology.jsonl'
-    target = f'./{args.data_file}/test_data.jsonl'
+            source = f'./data/wikievents/{file_name}_no_ontology.jsonl'
+    target = f'./{args.data_file}/{file_name}_data.jsonl'
     get_data_normal(source = source, target = target, tokenizer = tokenizer, dataset = args.dataset) 
     eval_dataset = IEDataset(target, tokenizer = tokenizer)
 
@@ -94,7 +97,7 @@ def main():
 
     for iter_step in range(args.num_iterative_epochs):
         pbar_et = tqdm(total=len(eval_dataloader))
-        result_dir = (args.load_ckpt).replace(".ckpt",f"_test_step_{iter_step}_predictions.jsonl")
+        result_dir = (args.load_ckpt).replace(".ckpt",f"_{file_name}_step_{iter_step}_predictions.jsonl")
         model.eval()
         with open(result_dir, 'w') as writer: 
             for step, batch in enumerate(eval_dataloader):
@@ -123,21 +126,21 @@ def main():
         
         print("start scoring")
         if args.dataset == "ACE":
-            test_file = 'data/ace05/test.wikievents.coref.json'
+            test_file = f'data/ace05/{file_name}.wikievents.coref.json'
             coref_file = None
         elif args.dataset == "KAIROS":
             if args.use_info:
-                test_file = 'data/wikievents/test_info_no_ontology.jsonl'
+                test_file = f'data/wikievents/{file_name}_info_no_ontology.jsonl'
             else:
-                test_file = 'data/wikievents/test_no_ontology.jsonl'
-            coref_file = 'data/wikievents/coref/test.jsonlines'
+                test_file = f'data/wikievents/{file_name}_no_ontology.jsonl'
+            coref_file = f'data/wikievents/coref/{file_name}.jsonlines'
         scorer(score_args(result_dir, test_file, coref_file, args.score_th, args.dataset))
 
         if iter_step == args.num_iterative_epochs - 1:
             print('-'*80)
             continue
         data_dir = result_dir.replace("predictions","results_for_predict")[:-1]
-        target = f'{args.data_file}/test_step_{iter_step}_data.json'
+        target = f'{args.data_file}/{file_name}_step_{iter_step}_data.json'
         print("start getting new testset")
         get_data_tag_only(source = data_dir, target = target, tokenizer = tokenizer, trigger_dis = args.trg_dis, dataset = args.dataset)
 
