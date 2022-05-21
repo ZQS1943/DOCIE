@@ -490,10 +490,21 @@ def scorer(args):
     pred_arg_num =0 
     gold_arg_num =0
     arg_idn_num =0 
-    arg_class_num =0 
+    arg_idn_num_list = []
+    arg_class_num =0
+    arg_class_num_list = [] 
 
     arg_idn_coref_num =0
+    arg_idn_coref_num_list = []
     arg_class_coref_num =0
+    arg_class_coref_num_list = []
+
+    gold_set_list = []
+    pred_set_list = []
+    pred_list = []
+    context_words_list = []
+
+
 
     event_idn_num =0
     event_class_num =0
@@ -504,6 +515,7 @@ def scorer(args):
         # if key != 138:
         #     continue
         context_words = ex['tokens']
+        context_words_list.append(context_words)
         doc_id = ex['doc_id']
         doc = None 
         if args.head_only:
@@ -517,6 +529,7 @@ def scorer(args):
         template = ontology_dict[evt_type]['template']
         # extract argument text 
         predicted_args = extract_args_from_template(ex,template, ontology_dict)
+        pred_list.append(ex['predicted'].strip().split())
         # {'Victim': [['members']], 'Killer': [['Taliban']]}
 
         # get trigger 
@@ -603,7 +616,9 @@ def scorer(args):
                     canonical_id = coref_mapping[doc_id][span]
                     gold_canonical_set.add((canonical_id, evt_type, argname))
         
-        
+        gold_set_list.append(gold_set)
+        pred_set_list.append(predicted_set)
+
         pred_arg_num += len(predicted_set)
         gold_arg_num += len(gold_set)
         # check matches 
@@ -656,6 +671,13 @@ def scorer(args):
         # arg_class_num_tmp = {arg_class_num_tmp},
         # arg_idn_coref_num_tmp = {arg_idn_coref_num_tmp},
         # arg_class_coref_num_tmp = {arg_class_coref_num_tmp}''')
+
+        arg_idn_num_list.append(arg_idn_num_tmp)
+        arg_class_num_list.append(arg_class_num_tmp)
+        arg_idn_coref_num_list.append(arg_idn_coref_num_tmp)
+        arg_class_coref_num_list.append(arg_class_coref_num_tmp)
+
+
         examples[key]["arg_class_coref_num_tmp"] = arg_class_coref_num_tmp
         examples[key]["exact_match"] = False
         if len(gold_set) == arg_class_num_tmp + arg_class_coref_num_tmp:
@@ -730,6 +752,19 @@ def scorer(args):
         for docid in docid2doc:
             f.write(json.dumps(docid2doc[docid]) + '\n')   
 
+    result['arg_idn_num_list'] = arg_idn_num_list
+    result['arg_class_num_list'] = arg_class_num_list
+    result['arg_idn_coref_num_list'] = arg_idn_coref_num_list
+    result['arg_class_coref_num_list'] = arg_class_coref_num_list
+    # gold_set_list = []
+    # pred_set_list = []
+    # pred_list = []
+    result['gold_set_list'] = gold_set_list
+    result['pred_set_list'] = pred_set_list
+    result['pred_list'] = pred_list
+    result['context_words_list'] = context_words_list
+
+    
     return result    
 
 
@@ -745,7 +780,7 @@ if __name__ == '__main__':
     parser.add_argument('--score_th', type=float,default='0.0')
     arg_scorer = parser.parse_args() 
 
-    scorer(arg_scorer)
+    # scorer(arg_scorer)
 
 
     

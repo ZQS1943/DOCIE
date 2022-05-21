@@ -3,7 +3,6 @@ import argparse
 def define_arguments(parser):
     parser.add_argument("--model", type=str, default='constrained-gen', choices=['gen','constrained-gen'])
     parser.add_argument("--dataset", type=str, default='KAIROS', choices=['ACE', 'KAIROS'])
-    parser.add_argument('--tmp_dir', type=str)
     parser.add_argument("--ckpt_name", default=None, type=str, help="The output directory where the model checkpoints and predictions will be written.")
     parser.add_argument("--load_ckpt", default=None, type=str)
     parser.add_argument("--eval_only", action="store_true")
@@ -18,7 +17,7 @@ def define_arguments(parser):
 
 
     parser.add_argument('--use_info', action='store_true', default=False, help='use informative mentions instead of the nearest mention.')
-    parser.add_argument('--eval_on_dev', action='store_true', default=False, help='use informative mentions instead of the nearest mention.')
+    parser.add_argument('--eval_on_dev', action='store_true', default=False)
     parser.add_argument('--mark_trigger', default=True, action='store_true')
     parser.add_argument('--sample-gen', action='store_true', help='Do sampling when generation.')
 
