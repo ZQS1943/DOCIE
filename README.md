@@ -4,6 +4,7 @@ This repository contains the code of the paper titled ["EA$^2$E: Improving Consi
 Our code is based on [this repository](https://github.com/raspberryice/gen-arg).
 ```
 ./data: dataset
+./docs: some documents
 ./scripts: running scripts
 ./src: all codes
 ```
